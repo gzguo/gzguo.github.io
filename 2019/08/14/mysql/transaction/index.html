@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>mysql transaction | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="mysql事务mysql中，事务其实是一个最小的不可分割的单元，事务能保证一个业务的完整性 比如我们的银行转账 a –&amp;gt;-100 update user set money = money - 10 where name = ‘a’; b –&amp;gt;+100 update user set money = money + 10 where name = ‘b’; 实际的程序中：如果只有一条语">
+<meta property="og:type" content="article">
+<meta property="og:title" content="mysql transaction">
+<meta property="og:url" content="http://yoursite.com/2019/08/14/mysql/transaction/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="mysql事务mysql中，事务其实是一个最小的不可分割的单元，事务能保证一个业务的完整性 比如我们的银行转账 a –&amp;gt;-100 update user set money = money - 10 where name = ‘a’; b –&amp;gt;+100 update user set money = money + 10 where name = ‘b’; 实际的程序中：如果只有一条语">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-08-14T02:21:01.848Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="mysql transaction">
+<meta name="twitter:description" content="mysql事务mysql中，事务其实是一个最小的不可分割的单元，事务能保证一个业务的完整性 比如我们的银行转账 a –&amp;gt;-100 update user set money = money - 10 where name = ‘a’; b –&amp;gt;+100 update user set money = money + 10 where name = ‘b’; 实际的程序中：如果只有一条语">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-mysql/transaction" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/08/14/mysql/transaction/" class="article-date">
+  <time datetime="2019-08-14T03:45:32.218Z" itemprop="datePublished">2019-08-14</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      mysql transaction
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="mysql事务"><a href="#mysql事务" class="headerlink" title="mysql事务"></a>mysql事务</h2><p>mysql中，事务其实是一个最小的不可分割的单元，事务能保证一个业务的完整性</p>
+<p>比如我们的银行转账</p>
+<p>a –&gt;-100</p>
+<p>update user set money = money - 10 where name = ‘a’;</p>
+<p>b –&gt;+100</p>
+<p>update user set money = money + 10 where name = ‘b’;</p>
+<p>实际的程序中：如果只有一条语句执行成功，而另外一条没有执行成功出现数据前后不一致</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">update</span> <span class="keyword">user</span> <span class="keyword">set</span> money = money - <span class="number">10</span> <span class="keyword">where</span> <span class="keyword">name</span> = <span class="string">'a'</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">update</span> <span class="keyword">user</span> <span class="keyword">set</span> money = money + <span class="number">10</span> <span class="keyword">where</span> <span class="keyword">name</span> = <span class="string">'b'</span>;</span><br></pre></td></tr></table></figure>
+
+<p>多条sql语句，可能会有同时成功的要求，不然的话就同时失败</p>
+<h2 id="mysql如何控制事务："><a href="#mysql如何控制事务：" class="headerlink" title="mysql如何控制事务："></a>mysql如何控制事务：</h2><p>1.mysql默认是开启事务的(自动提交)</p>
+<p>mysql&gt; select @@autocommit;<br>+————–+<br>| @@autocommit |<br>+————–+<br>|            1 |<br>+————–+<br>1 row in set (0.03 sec)</p>
+<p>默认事务开启的作用是：当我们去执行sql语句的时候，效果会立刻体现出来且不能回滚</p>
+<p>create database bank;</p>
+<p>mysql&gt; create table user(<br>    -&gt; id int primary key,<br>    -&gt; name varchar(20),<br>    -&gt; money int<br>    -&gt; );<br>Query OK, 0 rows affected (0.04 sec)</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> <span class="keyword">user</span> <span class="keyword">values</span>(<span class="number">1</span>,<span class="string">'a'</span>,<span class="number">1000</span>);</span><br></pre></td></tr></table></figure>
+
+<p>事务回滚：撤销sql语句执行效果</p>
+<p>即使执行了rollback，仍然回不到插入数据之前，说明现在不能回滚，有什么办法可以反悔呢？</p>
+<p>mysql&gt; rollback;<br>Query OK, 0 rows affected (0.00 sec)</p>
+<p>mysql&gt; select * from user;<br>+—-+——+——-+<br>| id | name | money |<br>+—-+——+——-+<br>|  1 | a    |  1000 |<br>+—-+——+——-+<br>1 rows in set (0.04 sec)</p>
+<p>有什么办法可以反悔呢？</p>
+<p><u><em>设置mysql自动提交为false：*</em>set autocommit = 0;***</u></p>
+<p>上面的操作关闭了mysql的自动提交（commit）</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> <span class="keyword">user</span> <span class="keyword">values</span>(<span class="number">2</span>,<span class="string">'b'</span>,<span class="number">1000</span>);</span><br></pre></td></tr></table></figure>
+
+<p>mysql&gt; select * from user;<br>+—-+——+——-+<br>| id | name | money |<br>+—-+——+——-+<br>|  1 | a    |  1000 |<br>|  2 | b    |  1000 |<br>+—-+——+——-+<br>2 rows in set (0.03 sec)</p>
+<p>mysql&gt; <u><em>rollback;</em></u><br>Query OK, 0 rows affected (0.01 sec)</p>
+<p>mysql&gt; select * from user;<br>+—-+——+——-+<br>| id | name | money |<br>+—-+——+——-+<br>|  1 | a    |  1000 |<br>+—-+——+——-+<br>1 row in set (0.02 sec)</p>
+<p>现在可以取消插入的操作了</p>
+<p>mysql&gt; insert into user values(2,’b’,1000);<br>Query OK, 1 row affected (0.01 sec)</p>
+<p>mysql&gt; <u><em>commit;</em></u><br>Query OK, 0 rows affected (0.00 sec)</p>
+<p>mysql&gt; rollback;<br>Query OK, 0 rows affected (0.00 sec)</p>
+<p>mysql&gt; select * from user;<br>+—-+——+——-+<br>| id | name | money |<br>+—-+——+——-+<br>|  1 | a    |  1000 |<br>|  2 | b    |  1000 |<br>+—-+——+——-+<br>2 rows in set (0.03 sec)</p>
+<p>*<u>事务：自动提交 autocommit = 1</u>*</p>
+<p>*<u>手动提交 自己打commit命令</u>*</p>
+<p>*<u>事务回滚 rollback</u>*</p>
+<p>如果说这个时候转账</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">update</span> <span class="keyword">user</span> <span class="keyword">set</span> money = money - <span class="number">10</span> <span class="keyword">where</span> <span class="keyword">name</span> = <span class="string">'a'</span>;                                                                                               </span><br><span class="line"><span class="keyword">update</span> <span class="keyword">user</span> <span class="keyword">set</span> money = money + <span class="number">10</span> <span class="keyword">where</span> <span class="keyword">name</span> = <span class="string">'b'</span>;</span><br></pre></td></tr></table></figure>
+
+<p>mysql&gt; update user set money = money - 10 where name = ‘a’;                                                                                               update user set money = money + 10 where name = ‘b’;<br>Query OK, 1 row affected (0.00 sec)<br>Rows matched: 1  Changed: 1  Warnings: 0<br>Query OK, 1 row affected (0.00 sec)<br>Rows matched: 1  Changed: 1  Warnings: 0<br>mysql&gt; select * from user;<br>+—-+——+——-+<br>| id | name | money |<br>+—-+——+——-+<br>|  1 | a    |   990 |<br>|  2 | b    |  1010 |<br>+—-+——+——-+<br>2 rows in set (0.05 sec)</p>
+<p>mysql&gt; rollback;<br>Query OK, 0 rows affected (0.00 sec)</p>
+<p>mysql&gt; select * from user;<br>+—-+——+——-+<br>| id | name | money |<br>+—-+——+——-+<br>|  1 | a    |  1000 |<br>|  2 | b    |  1000 |<br>+—-+——+——-+<br>2 rows in set (0.04 sec)</p>
+<p>事务给我们提供一个反悔的机会</p>
+<h2 id="begin-或者start-transaction"><a href="#begin-或者start-transaction" class="headerlink" title="begin;或者start transaction"></a><strong>begin;</strong>或者<strong>start transaction</strong></h2><p>;都可以帮我们手动开启一个事务</p>
+<p>mysql&gt; update user set money = money - 10 where name = ‘a’;                                                                                               update user set money = money + 10 where name = ‘b’;<br>Query OK, 1 row affected (0.02 sec)<br>Rows matched: 1  Changed: 1  Warnings: 0<br>Query OK, 1 row affected (0.01 sec)<br>Rows matched: 1  Changed: 1  Warnings: 0<br>mysql&gt; select * from user;<br>+—-+——+——-+<br>| id | name | money |<br>+—-+——+——-+<br>|  1 | a    |   990 |<br>|  2 | b    |  1010 |<br>+—-+——+——-+<br>2 rows in set (0.04 sec)</p>
+<p>mysql&gt; rollback;<br>Query OK, 0 rows affected (0.00 sec)</p>
+<p>mysql&gt; select * from user;<br>+—-+——+——-+<br>| id | name | money |<br>+—-+——+——-+<br>|  1 | a    |   990 |<br>|  2 | b    |  1010 |<br>+—-+——+——-+<br>2 rows in set (0.04 sec)</p>
+<p><strong>begin;</strong> 手动开启事务（start transaction）                                                                                                                                                                            </p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">update</span> <span class="keyword">user</span> <span class="keyword">set</span> money = money - <span class="number">10</span> <span class="keyword">where</span> <span class="keyword">name</span> = <span class="string">'a'</span>;                                                                                               </span><br><span class="line"><span class="keyword">update</span> <span class="keyword">user</span> <span class="keyword">set</span> money = money + <span class="number">10</span> <span class="keyword">where</span> <span class="keyword">name</span> = <span class="string">'b'</span>;</span><br></pre></td></tr></table></figure>
+
+<p>mysql&gt; begin;                                                                                                                                                                                      update user set money = money - 10 where name = ‘a’;                                                                                               update user set money = money + 10 where name = ‘b’;<br>Query OK, 0 rows affected (0.00 sec)</p>
+<p>Query OK, 1 row affected (0.00 sec)<br>Rows matched: 1  Changed: 1  Warnings: 0<br>Query OK, 1 row affected (0.00 sec)<br>Rows matched: 1  Changed: 1  Warnings: 0<br>mysql&gt; select * from user;<br>+—-+——+——-+<br>| id | name | money |<br>+—-+——+——-+<br>|  1 | a    |   980 |<br>|  2 | b    |  1020 |<br>+—-+——+——-+<br>2 rows in set (0.04 sec)</p>
+<p>mysql&gt; rollback;<br>Query OK, 0 rows affected (0.01 sec)</p>
+<p>mysql&gt; select * from user;<br>+—-+——+——-+<br>| id | name | money |<br>+—-+——+——-+<br>|  1 | a    |   990 |<br>|  2 | b    |  1010 |<br>+—-+——+——-+<br>2 rows in set (0.04 sec)</p>
+<p>注意事务开启之后，一旦commit（提交），就不可以回滚（事务在提交的时候就结束了）</p>
+<h2 id="事物的特征："><a href="#事物的特征：" class="headerlink" title="事物的特征："></a>事物的特征：</h2><p>事物的四大特征：</p>
+<p>1.原子性（A）：事务是最小的单位，不可再分割</p>
+<p>2.一致性（C）：事务要求，同一事务的sql语句，必须保证同时成功或者同时失败</p>
+<p>3.隔离性（I）：事务1和事务2之间是具有隔离性的</p>
+<p>4.持久性（D）：事务一旦结束（commit，rollback），就不可返回</p>
+<p>事务开启：</p>
+<p>1.修改默认提交：set sutocommit = 0;</p>
+<p>2.begin;</p>
+<p>3.start transaction;</p>
+<p>事务手动提交：commit;</p>
+<p>事务手动回滚：rollback;</p>
+<h3 id="事物的隔离性"><a href="#事物的隔离性" class="headerlink" title="事物的隔离性:"></a>事物的隔离性:</h3><p>1.read uncommitted;   读未提交的</p>
+<p>2.read committed;   读已提交的</p>
+<p>3.repeatable read;   可以重复读</p>
+<p>4.serializable;   串行化</p>
+<h4 id="1-read-uncommitted"><a href="#1-read-uncommitted" class="headerlink" title="1.read uncommitted;"></a>1.read uncommitted;</h4><p>如果有事务a和事务b，a事务对数据进行操作，事务没有被提交，但是b可以看到a操作的结果</p>
+<p>bank数据库 user表</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> <span class="keyword">user</span> <span class="keyword">values</span>(<span class="number">3</span>,<span class="string">'小明'</span>,<span class="number">1000</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> <span class="keyword">user</span> <span class="keyword">values</span>(<span class="number">4</span>,<span class="string">'淘宝店'</span>,<span class="number">1000</span>);</span><br></pre></td></tr></table></figure>
+
+<p>小明去淘宝店买东西，淘宝店查看钱是否到账？</p>
+<p>如何查看数据库的隔离级别？</p>
+<p>mysql8.0</p>
+<p>系统级别：</p>
+<p>select @@global.transaction_isolation;</p>
+<p>会话级别：</p>
+<p>select @@transaction_isolation;</p>
+<p>mysql&gt; select @@global.transaction_isolation;</p>
+<p>mysql默认隔离级别：</p>
+<p>+——————————–+<br>| @@global.transaction_isolation |<br>+——————————–+<br>| REPEATABLE-READ                |<br>+——————————–+<br>1 row in set (0.04 sec)</p>
+<p>mysql 5.x</p>
+<p>select @@global.tx_isolation;</p>
+<p>select @@tx_isolation;</p>
+<p>如何修改隔离级别？</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">set</span> global transaction isolation level <span class="built_in">read</span> uncommitted;</span><br></pre></td></tr></table></figure>
+
+<p>mysql&gt; set global transaction isolation level read uncommitted;<br>Query OK, 0 rows affected (0.02 sec)</p>
+<p>mysql&gt; select @@global.transaction_isolation;<br>+——————————–+<br>| @@global.transaction_isolation |<br>+——————————–+<br>| READ-UNCOMMITTED               |<br>+——————————–+<br>1 row in set (0.04 sec)</p>
+<p>好了开始转帐，小明买鞋子：800块钱</p>
+<p>小明》》城都 ATM</p>
+<p>淘宝店》》广州 ATM</p>
+<p>mysql&gt; select * from user;<br>+—-+——–+——-+<br>| id | name   | money |<br>+—-+——–+——-+<br>|  1 | a      |   980 |<br>|  2 | b      |  1020 |<br>|  3 | 小明   |  1000 |<br>|  4 | 淘宝店 |  1000 |<br>+—-+——–+——-+<br>4 rows in set (0.05 sec)</p>
+<p>start transaction;</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">update</span> <span class="keyword">user</span> <span class="keyword">set</span> money = money<span class="number">-800</span> <span class="keyword">where</span> <span class="keyword">name</span> = <span class="string">'小明'</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">update</span> <span class="keyword">user</span> <span class="keyword">set</span> money = money+<span class="number">800</span> <span class="keyword">where</span> <span class="keyword">name</span> = <span class="string">'淘宝店'</span>;</span><br></pre></td></tr></table></figure>
+
+<p>mysql&gt; start transaction;</p>
+<p>update user set money = money-800 where name = ‘小明’;</p>
+<p>update user set money = money+800 where name = ‘淘宝店’;<br>Query OK, 0 rows affected (0.00 sec)</p>
+<p>Query OK, 1 row affected (0.01 sec)<br>Rows matched: 1  Changed: 1  Warnings: 0<br>Query OK, 1 row affected (0.00 sec)<br>Rows matched: 1  Changed: 1  Warnings: 0<br>mysql&gt; select * from user;<br>+—-+——–+——-+<br>| id | name   | money |<br>+—-+——–+——-+<br>|  1 | a      |   980 |<br>|  2 | b      |  1020 |<br>|  3 | 小明   |   200 |<br>|  4 | 淘宝店 |  1800 |<br>+—-+——–+——-+<br>4 rows in set (0.04 sec)</p>
+<p>给淘宝店打电话，说你去查一下，是不是到账了</p>
+<p>淘宝店在广州查账</p>
+<p>发货</p>
+<p>淘宝店晚上请女朋友吃好吃的</p>
+<p>1800</p>
+<p>小明rollback</p>
+<p>mysql&gt; rollback;<br>Query OK, 0 rows affected (0.01 sec)</p>
+<p>mysql&gt; select * from user;<br>+—-+——–+——-+<br>| id | name   | money |<br>+—-+——–+——-+<br>|  1 | a      |   980 |<br>|  2 | b      |  1020 |<br>|  3 | 小明   |  1000 |<br>|  4 | 淘宝店 |  1000 |<br>+—-+——–+——-+<br>4 rows in set (0.04 sec)</p>
+<p>结账的时候发现钱不够</p>
+<p>如果两个不同的地方，都在进行操作，如果事务a开启之后，他的数据可以被其他事务读取到</p>
+<p>这样就会出现脏读</p>
+<p>脏读：一个事务读取到另外一个事物没有提交的数据就叫做脏读</p>
+<p>实际开发不允许脏读出现</p>
+<h4 id="2-read-committed"><a href="#2-read-committed" class="headerlink" title="2.read committed;"></a>2.read committed;</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">set</span> global transaction isolation level <span class="built_in">read</span> committed;</span><br><span class="line"></span><br><span class="line">select @@global.transaction_isolation;</span><br></pre></td></tr></table></figure>
+
+<p>mysql&gt; set global transaction isolation level read committed;</p>
+<p>select @@global.transaction_isolation;<br>Query OK, 0 rows affected (0.00 sec)</p>
+<p>+——————————–+<br>| @@global.transaction_isolation |<br>+——————————–+<br>| READ-COMMITTED                 |<br>+——————————–+<br>1 row in set (0.03 sec)</p>
+<p>bank数据库 user表</p>
+<p>小张：银行的会计</p>
+<p>start transaction;</p>
+<p>select * from user;</p>
+<p>mysql&gt; select * from user;<br>+—-+——–+——-+<br>| id | name   | money |<br>+—-+——–+——-+<br>|  1 | a      |   980 |<br>|  2 | b      |  1020 |<br>|  3 | 小明   |  1000 |<br>|  4 | 淘宝店 |  1000 |<br>+—-+——–+——-+<br>4 rows in set (0.04 sec)</p>
+<p>小张上厕所去了。。。顺便抽烟</p>
+<p>小王：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">start</span> <span class="keyword">transaction</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> <span class="keyword">user</span> <span class="keyword">values</span>(<span class="number">5</span>,<span class="string">'c'</span>,<span class="number">100</span>);</span><br></pre></td></tr></table></figure>
+
+<p>commit;</p>
+<p>mysql&gt; start transaction;</p>
+<p>insert into user values(5,’c’,100);</p>
+<p>commit;<br>Query OK, 0 rows affected (0.00 sec)</p>
+<p>Query OK, 1 row affected (0.01 sec)<br>Query OK, 0 rows affected (0.01 sec)</p>
+<p>mysql&gt; select * from user;<br>+—-+——–+——-+<br>| id | name   | money |<br>+—-+——–+——-+<br>|  1 | a      |   980 |<br>|  2 | b      |  1020 |<br>|  3 | 小明   |  1000 |<br>|  4 | 淘宝店 |  1000 |<br>|  5 | c      |   100 |<br>+—-+——–+——-+<br>5 rows in set (0.04 sec)</p>
+<p>小张上完厕所抽完烟回来了，小王没有commit的时候，小张执行select * from user；</p>
+<p>mysql&gt; select * from user;<br>+—-+———–+——-+<br>| id | name      | money |<br>+—-+———–+——-+<br>|  1 | a         |   980 |<br>|  2 | b         |  1020 |<br>|  3 | 小明      |  1000 |<br>|  4 | 淘宝店    |  1000 |<br>|  5 | c         |   100 |<br>+—-+———–+——-+<br>5 rows in set (0.00 sec)</p>
+<p>但是执行select avg(money) from user;</p>
+<p>mysql&gt; select avg(money) from user;<br>+————+<br>| avg(money) |<br>+————+<br>| 820.0000   |<br>+————+<br>1 row in set (0.07 sec)</p>
+<p>money的平均值不是1000，变少了</p>
+<p>虽然我只能读到另一个事务提交的数据，但是还是会出现问题，就是读取同一个表的数据，发现前后不一致，这种不可重复读现象，read committed</p>
+<h4 id="3-repeatable-read-可以重复读"><a href="#3-repeatable-read-可以重复读" class="headerlink" title="3.repeatable read;   可以重复读"></a>3.repeatable read;   可以重复读</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">set</span> global transaction isolation level repeatable <span class="built_in">read</span>;</span><br><span class="line"></span><br><span class="line">select @@global.transaction_isolation;</span><br></pre></td></tr></table></figure>
+
+<p>mysql&gt; set global transaction isolation level repeatable read;</p>
+<p>select @@global.transaction_isolation;</p>
+<p>Query OK, 0 rows affected (0.00 sec)</p>
+<p>+——————————–+<br>| @@global.transaction_isolation |<br>+——————————–+<br>| REPEATABLE-READ                |<br>+——————————–+<br>1 row in set (0.03 sec)</p>
+<p>张全蛋</p>
+<p>start transaction;</p>
+<p>insert into user values(6,’d’,1000);</p>
+<p>张全蛋可以查到6号信息</p>
+<p>王尼玛：</p>
+<p>start transaction;</p>
+<p>王尼玛查不到6号信息</p>
+<p>但是王尼玛不能插入6号，会报错</p>
+<p>这种现象叫做幻读</p>
+<p>事务a和事务b同时操作一张表，事务a提交的数据，也不能读到，就可能造成幻读</p>
+<h4 id="serializable-串行化"><a href="#serializable-串行化" class="headerlink" title="serializable:串行化"></a>serializable:串行化</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">set</span> global transaction isolation level serializable;</span><br><span class="line"></span><br><span class="line">select @@global.transaction_isolation;</span><br></pre></td></tr></table></figure>
+
+<p>还是张全蛋和王尼玛，做了和上面一样的事</p>
+<p>当user表被另外一个事务操作的时候，其他的事务是不可以执行的，进入排队状态，直到操作事务的那个人commit之后，才会执行</p>
+<p>串行化commit之后，其他事务立刻执行，但时间长了，可能会失效</p>
+<p>串行化问题：性能特差</p>
+<p>read uncommitted &gt;read commited&gt;repeatable read&gt;serializable</p>
+<p>隔离级别越高，性能越差</p>
+<p>mysql默认隔离级别事 peteatable read</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/08/14/mysql/transaction/" data-id="cjzappull0003wctbld1jjqey" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2019/08/14/mysql/select/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">mysql select</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/08/14/mysql/transaction/">mysql transaction</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/14/mysql/select/">mysql select</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/14/mysql/mysql/">mysql start</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/14/java/java基础/">java start</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/14/mybatis/mybatis-start/">mybatis-start</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
