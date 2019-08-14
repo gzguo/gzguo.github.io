@@ -5,19 +5,19 @@
   
 
   
-  <title>Hexo</title>
+  <title>mysql select | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="select语句select特殊功能：distinct(排重)：select distinct 字段名 from 数据表; between…and：select * from 数据表 where 字段名 between 值 and 值; 相当于select * from 数据表 where 字段名&amp;gt;字段值 and 字段名&amp;lt;字段值; in：select * from 数据表 where">
+  <meta name="description" content="select特殊功能：distinct(排重)：select distinct 字段名 from 数据表; between…and：select * from 数据表 where 字段名 between 值 and 值; 相当于select * from 数据表 where 字段名&amp;gt;字段值 and 字段名&amp;lt;字段值; in：select * from 数据表 where 字段名 in(8">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo">
+<meta property="og:title" content="mysql select">
 <meta property="og:url" content="http://yoursite.com/2019/08/14/mysql/select/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="select语句select特殊功能：distinct(排重)：select distinct 字段名 from 数据表; between…and：select * from 数据表 where 字段名 between 值 and 值; 相当于select * from 数据表 where 字段名&amp;gt;字段值 and 字段名&amp;lt;字段值; in：select * from 数据表 where">
+<meta property="og:description" content="select特殊功能：distinct(排重)：select distinct 字段名 from 数据表; between…and：select * from 数据表 where 字段名 between 值 and 值; 相当于select * from 数据表 where 字段名&amp;gt;字段值 and 字段名&amp;lt;字段值; in：select * from 数据表 where 字段名 in(8">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-08-14T01:47:56.782Z">
+<meta property="og:updated_time" content="2019-08-14T02:17:10.982Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
-<meta name="twitter:description" content="select语句select特殊功能：distinct(排重)：select distinct 字段名 from 数据表; between…and：select * from 数据表 where 字段名 between 值 and 值; 相当于select * from 数据表 where 字段名&amp;gt;字段值 and 字段名&amp;lt;字段值; in：select * from 数据表 where">
+<meta name="twitter:title" content="mysql select">
+<meta name="twitter:description" content="select特殊功能：distinct(排重)：select distinct 字段名 from 数据表; between…and：select * from 数据表 where 字段名 between 值 and 值; 相当于select * from 数据表 where 字段名&amp;gt;字段值 and 字段名&amp;lt;字段值; in：select * from 数据表 where 字段名 in(8">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -74,9 +74,19 @@
   <div class="article-inner">
     
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      mysql select
+    </h1>
+  
+
+      </header>
+    
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="select语句"><a href="#select语句" class="headerlink" title="select语句"></a>select语句</h1><h2 id="select特殊功能："><a href="#select特殊功能：" class="headerlink" title="select特殊功能："></a>select特殊功能：</h2><p><strong>distinct(排重)</strong>：select distinct 字段名 from 数据表;</p>
+        <h2 id="select特殊功能："><a href="#select特殊功能：" class="headerlink" title="select特殊功能："></a>select特殊功能：</h2><p><strong>distinct(排重)</strong>：select distinct 字段名 from 数据表;</p>
 <p><strong>between…and</strong>：select * from 数据表 where 字段名 between 值 and 值; 相当于select * from 数据表 where 字段名&gt;字段值 and 字段名&lt;字段值;</p>
 <p><strong>in</strong>：select * from 数据表 where 字段名 in(85，86，87);</p>
 <p><strong>or</strong>：select * from 数据表 where 字段名1 = ‘值’ or 字段名2 = ‘值’;(升序查询 asc从小到大)select * from 数据表 order by 字段名 asc; order by：系统默认是升序 desc降序（从大到小）</p>
@@ -108,46 +118,75 @@
 <p>注意：排序有缺陷，如果最大值有两条，她只能查到一条</p>
 <p><strong>查询score表中至少有两名学生选修的并以3开头的课程的平均分数</strong></p>
 <p><strong>having</strong>(分组条件)：having字句可以让我们筛选成组后的各种数据，where字句在聚合前先筛选记录，也就是说作用在group by和having字句前。而 having子句在聚合后对组记录进行筛选。</p>
-<p><u><em>select</em></u> cno <u><em>from</em></u> score <u><em>group by</em></u> cno <u><em>having count</em></u>(cno)&gt;=2 <u><em>and</em></u> cno <u><em>like</em></u> ‘3%’;   <em>%代表的是任意的东西   3%代表以3开头的任意东西</em></p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> cno <span class="keyword">from</span> score <span class="keyword">group</span> <span class="keyword">by</span> cno <span class="keyword">having</span> <span class="keyword">count</span>(cno)&gt;=<span class="number">2</span> <span class="keyword">and</span> cno <span class="keyword">like</span> <span class="string">'3%'</span>;</span><br></pre></td></tr></table></figure>
+
+<p>  %代表的是任意的东西   3%代表以3开头的任意东西</p>
 <h2 id="多表查询："><a href="#多表查询：" class="headerlink" title="多表查询："></a>多表查询：</h2><p><strong>精髓</strong>：他们是根据相等的地方进行联系的</p>
 <p>两张表：</p>
 <p>查询当条件相同时，把数据替换掉</p>
-<p><u><em>select</em></u> sname,cno,degree *<u>from</u>* student,score <u><em>where</em></u> student.sno = score.sno;</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> sname,cno,degree <span class="keyword">from</span> student,score <span class="keyword">where</span> student.sno = score.sno;</span><br></pre></td></tr></table></figure>
+
 <p>三张表：</p>
-<p><u><em>select</em></u> sname,cname,degree <u><em>from</em></u> student,course,score <u><em>where</em></u> student.sno = score.sno                                                                             <u><em>and</em></u> course.cno = score.cno;</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> sname,cname,degree <span class="keyword">from</span> student,course,score <span class="keyword">where</span> student.sno = score.sno                                                                 </span><br><span class="line"><span class="keyword">and</span> course.cno = score.cno;</span><br></pre></td></tr></table></figure>
+
 <h2 id="子查询："><a href="#子查询：" class="headerlink" title="子查询："></a>子查询：</h2><p><strong>精髓</strong>：分开步骤去查</p>
-<p>查一个班的学生：<u><em>select</em></u> * <u><em>from</em></u> student <u><em>where</em></u> class = ‘95031’;</p>
-<p>查学生的分数：<u><em>select</em></u> * <u><em>from</em></u> score <u><em>where</em></u> class = ‘95031’;</p>
+<p>查一个班的学生：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span> student <span class="keyword">where</span> <span class="keyword">class</span> = <span class="string">'95031'</span>;</span><br></pre></td></tr></table></figure>
+
+<p>查学生的分数：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span> score <span class="keyword">where</span> <span class="keyword">class</span> = <span class="string">'95031'</span>;</span><br></pre></td></tr></table></figure>
+
 <p>查一个班学生的平均成绩：                                                                     </p>
-<p><u><em>select</em></u> cno,avg(degree)  <u><em>from</em></u> score  <u><em>where</em></u> sno <u><em>in</em></u> <strong>(<u><em>select</em></u> sno <u><em>from</em></u> student <u><em>where</em></u> class = ‘95031’)</strong>                          <u><em>group by</em></u> cno;</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> cno,<span class="keyword">avg</span>(degree)  <span class="keyword">from</span> score  <span class="keyword">where</span> sno <span class="keyword">in</span> (<span class="keyword">select</span> sno <span class="keyword">from</span> student <span class="keyword">where</span> <span class="keyword">class</span> = <span class="string">'95031'</span>) <span class="keyword">group</span> <span class="keyword">by</span> cno;</span><br></pre></td></tr></table></figure>
+
 <p>查询选修3-105课程成绩高于109号同学3-105成绩的所有同学的记录</p>
-<p><u><em>select</em></u> * <u><em>from</em></u> score <u><em>where</em></u> cno=’3-105’ and degree&gt;(<u><em>select</em></u> degree <u><em>from</em></u> score where sno=’109’ <u><em>and</em></u> cno=’3-105’);</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span> score <span class="keyword">where</span> cno=<span class="string">'3-105'</span> <span class="keyword">and</span> degree&gt;(<span class="keyword">select</span> degree <span class="keyword">from</span> score <span class="keyword">where</span> sno=<span class="string">'109'</span> <span class="keyword">and</span> cno=<span class="string">'3-105'</span>);</span><br></pre></td></tr></table></figure>
+
 <p>查询成绩高于学号为109、课程号为3-105的成绩的记录</p>
-<p><u><em>select</em></u> * <u><em>from</em></u> score <u><em>where</em></u> degree&gt;(<u><em>select</em></u> degree <u><em>from</em></u> score where sno=’109’ <u><em>and</em></u> cno=’3-105’);</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span>* score <span class="keyword">where</span> degree&gt;(<span class="keyword">select</span> degree <span class="keyword">from</span> score <span class="keyword">where</span> sno=<span class="string">'109'</span> <span class="keyword">and</span> cno=<span class="string">'3-105'</span>);</span><br></pre></td></tr></table></figure>
+
 <p>查询与学号为108和101的同学同年出生的所有学生</p>
-<p>查询学号为108和101的学生：select * from student where sno in(108,101);</p>
-<p>查询学号为108和101学生的出生年份：select <u><em>year(sbirthday)</em></u> from student where sno in(108,101);</p>
-<p>select * from student where year(sbirthday) in(select year(sbirthday) from student where sno in(108,101));</p>
+<p>查询学号为108和101的学生：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span> student <span class="keyword">where</span> sno <span class="keyword">in</span>(<span class="number">108</span>,<span class="number">101</span>);</span><br></pre></td></tr></table></figure>
+
+<p>查询学号为108和101学生的出生年份：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> &lt;u&gt;*<span class="keyword">year</span>(sbirthday)*&lt;/u&gt; <span class="keyword">from</span> student <span class="keyword">where</span> sno <span class="keyword">in</span>(<span class="number">108</span>,<span class="number">101</span>);</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span> student <span class="keyword">where</span> <span class="keyword">year</span>(sbirthday) <span class="keyword">in</span>(<span class="keyword">select</span> <span class="keyword">year</span>(sbirthday) <span class="keyword">from</span> student <span class="keyword">where</span> sno <span class="keyword">in</span>(<span class="number">108</span>,<span class="number">101</span>));</span><br></pre></td></tr></table></figure>
+
 <p>查询张旭教师任课的学生成绩：</p>
 <p>教师表中查询tno：select tno from teacher where tname=’张旭’;</p>
-<p>查询他任的课cno：select cno from cource where tno=(select tno from teacher where tname=’张旭’);</p>
-<p>select * from score where cno in(select cno from cource where tno=(select tno from teacher where tname=’张旭’));</p>
+<p>查询他任的课cno：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> cno <span class="keyword">from</span> cource <span class="keyword">where</span> tno=(<span class="keyword">select</span> tno <span class="keyword">from</span> teacher <span class="keyword">where</span> tname=<span class="string">'张旭'</span>);</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span> score <span class="keyword">where</span> cno <span class="keyword">in</span>(<span class="keyword">select</span> cno <span class="keyword">from</span> cource <span class="keyword">where</span> tno=(<span class="keyword">select</span> tno <span class="keyword">from</span> teacher <span class="keyword">where</span> tname=<span class="string">'张旭'</span>));</span><br></pre></td></tr></table></figure>
+
 <p>查询某课程的同学数多余5人的教师姓名：</p>
 <p>课程数大于五的cno：select cno from score group by cno having count(*)&gt;5;</p>
-<p>查询tno：select tno from course where cno in(select cno from score group by cno having count(*)&gt;5); </p>
-<p>select tname from teacher where tno in(select tno from course where cno=(select cno from score group by cno having count(*)&gt;5));</p>
+<p>查询tno：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> tno <span class="keyword">from</span> course <span class="keyword">where</span> cno <span class="keyword">in</span>(<span class="keyword">select</span> cno <span class="keyword">from</span> score <span class="keyword">group</span> <span class="keyword">by</span> cno <span class="keyword">having</span> <span class="keyword">count</span>(*)&gt;<span class="number">5</span>);</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> tname <span class="keyword">from</span> teacher <span class="keyword">where</span> tno <span class="keyword">in</span>(<span class="keyword">select</span> tno <span class="keyword">from</span> course <span class="keyword">where</span> cno=(<span class="keyword">select</span> cno <span class="keyword">from</span> score <span class="keyword">group</span> <span class="keyword">by</span> cno <span class="keyword">having</span> <span class="keyword">count</span>(*)&gt;<span class="number">5</span>));</span><br></pre></td></tr></table></figure>
+
 <p>查看计算机系和电子工程系不同职称的教师的tname和pref</p>
-<p>select prof from teacher where depart = ‘电子工程系’ and prof not in(select * from teacher where depart = ‘计算机系’)</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> prof <span class="keyword">from</span> teacher <span class="keyword">where</span> depart = <span class="string">'电子工程系'</span> <span class="keyword">and</span> prof <span class="keyword">not</span> <span class="keyword">in</span>(<span class="keyword">select</span> * <span class="keyword">from</span> teacher <span class="keyword">where</span> depart = <span class="string">'计算机系'</span>)</span><br></pre></td></tr></table></figure>
+
 <p><u><strong><em>union</em></strong></u></p>
-<p>select * from teacher where depart = ‘计算机系’ and prof not in(select prof from teacher where depart = ‘电子工程系’ );</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span> teacher <span class="keyword">where</span> depart = <span class="string">'计算机系'</span> <span class="keyword">and</span> prof <span class="keyword">not</span> <span class="keyword">in</span>(<span class="keyword">select</span> prof <span class="keyword">from</span> teacher <span class="keyword">where</span> depart = <span class="string">'电子工程系'</span> );</span><br></pre></td></tr></table></figure>
+
 <p>查询选修学号为3-105课程且成绩至少高于选修编号3-245的同学的Cno、Sno和Degree，并按Degree从高到底依次排序</p>
-<p>select cno,sno,degree from score                                                                                                                                  where cno=’3-105’                                                                                                                                                              and degree&gt;<u><strong>any</strong></u>(select degree from score where cno=’3-245’)                                                                 order by degree desc;   //从高到低</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> cno,sno,degree <span class="keyword">from</span> score                                         </span><br><span class="line"><span class="keyword">where</span> cno=<span class="string">'3-105'</span></span><br><span class="line"><span class="keyword">and</span> degree&gt;&lt;u&gt;**<span class="keyword">any</span>**&lt;/u&gt;(<span class="keyword">select</span> degree <span class="keyword">from</span> score <span class="keyword">where</span> cno=<span class="string">'3-245'</span>)   </span><br><span class="line"><span class="keyword">order</span> <span class="keyword">by</span> degree <span class="keyword">desc</span>;</span><br></pre></td></tr></table></figure>
+
+<p>   //从高到低</p>
 <p>复制表数据做条件查询：</p>
-<p>select * from score a where degree&lt;(select avg(degree) from score b where a.cno=b.cno);</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span> score a <span class="keyword">where</span> degree&lt;(<span class="keyword">select</span> <span class="keyword">avg</span>(degree) <span class="keyword">from</span> score b <span class="keyword">where</span> a.cno=b.cno);</span><br></pre></td></tr></table></figure>
+
 <p>查询至少有两名男生的班级：</p>
-<p>select class from student where ssex = ‘男’ group by class having count(*) &gt; 1;</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="keyword">class</span> <span class="keyword">from</span> student <span class="keyword">where</span> ssex = <span class="string">'男'</span> <span class="keyword">group</span> <span class="keyword">by</span> <span class="keyword">class</span> <span class="keyword">having</span> <span class="keyword">count</span>(*) &gt; <span class="number">1</span>;</span><br></pre></td></tr></table></figure>
+
 <p>按等级查询：</p>
-<p>select sno,cno,grade from score,grade where degree between low and upp;</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> sno,cno,grade <span class="keyword">from</span> score,grade <span class="keyword">where</span> degree <span class="keyword">between</span> <span class="keyword">low</span> <span class="keyword">and</span> upp;</span><br></pre></td></tr></table></figure>
+
 <h2 id="sql的四种链接查询："><a href="#sql的四种链接查询：" class="headerlink" title="sql的四种链接查询："></a>sql的四种链接查询：</h2><p><strong>内链接：</strong></p>
 <p>inner join 或者 join</p>
 <p><strong>外连接：</strong></p>
@@ -176,31 +215,37 @@
 <p>insert into person values(3,’王五’,6);</p>
 <p>并没有创建外键，如果创建的话person里面的第三条数据插不进去</p>
 <p><strong>inner join查询</strong>：(内连接)</p>
-<p><u><em>select</em></u> * <u><em>from</em></u> person p <u><em>inner join</em></u> card c <u><em>on</em></u> p.cardId = c.id;</p>
-<p>select * from person p, card c where c.id = p.cardId;</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span> person p <span class="keyword">inner</span> <span class="keyword">join</span> card c <span class="keyword">on</span> p.cardId = c.id;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span> person p, card c <span class="keyword">where</span> c.id = p.cardId;</span><br></pre></td></tr></table></figure>
+
 <p>内联查询：其实就是相当于把两个表里面的数据，通过某个字段相对应，把有关系的数据查询出来</p>
 <p>mysql&gt; select * from person p, card c where c.id = p.cardId;<br>+—-+——+——–+—-+——–+<br>| id | name | cardId | id | name   |<br>+—-+——+——–+—-+——–+<br>|  1 | 张三 |      1 |  1 | 饭卡   |<br>|  2 | 李四 |      3 |  3 | 农行卡 |<br>+—-+——+——–+—-+——–+</p>
 <p><strong>left join:</strong>（左外连接)outer</p>
-<p>select * from person left join card on person.cardId = card.id;</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span> person <span class="keyword">left</span> <span class="keyword">join</span> card <span class="keyword">on</span> person.cardId = card.id;</span><br></pre></td></tr></table></figure>
+
 <p>左外连接：会把左边表里的数据全部取出来，而右边表里的数据有就显示出来，没有就会变成NULL</p>
 <p>mysql&gt; select * from person left join card on person.cardId = card.id;<br>+—-+——+——–+——+——–+<br>| id | name | cardId | id   | name   |<br>+—-+——+——–+——+——–+<br>|  1 | 张三 |      1 |    1 | 饭卡   |<br>|  2 | 李四 |      3 |    3 | 农行卡 |<br>|  3 | 王五 |      6 | NULL | NULL   |<br>+—-+——+——–+——+——–+</p>
 <p><strong>right join：</strong>(右外连接)outer</p>
-<p>select * from person right join card on person.cardId = card.id;</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span> person <span class="keyword">right</span> <span class="keyword">join</span> card <span class="keyword">on</span> person.cardId = card.id;</span><br></pre></td></tr></table></figure>
+
 <p>左外连接：会把右边表里的数据全部取出来，而左边表里的数据有就显示出来，没有就会变成NULL</p>
 <p>mysql&gt; select * from person right join card on person.cardId = card.id;<br>+——+——+——–+—-+——–+<br>| id   | name | cardId | id | name   |<br>+——+——+——–+—-+——–+<br>|    1 | 张三 |      1 |  1 | 饭卡   |<br>|    2 | 李四 |      3 |  3 | 农行卡 |<br>| NULL | NULL | NULL   |  2 | 建行卡 |<br>| NULL | NULL | NULL   |  4 | 工商卡 |<br>| NULL | NULL | NULL   |  5 | 邮政卡 |<br>+——+——+——–+—-+——–+</p>
 <p><strong>full join：</strong>（全外连接）</p>
-<p>select * from person full join card on person.cardId = card.id;</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span> person <span class="keyword">full</span> <span class="keyword">join</span> card <span class="keyword">on</span> person.cardId = card.id;</span><br></pre></td></tr></table></figure>
+
 <p>mysql&gt; select * from person full join card on person.cardId = card.id;<br>1054 - Unknown column ‘person.cardId’ in ‘on clause’</p>
 <p>原因是mysql不支持full join</p>
 <p><u><em>全外连接我们想要的结果：</em></u></p>
-<p>select * from person left join card on person.cardId = card.id                                                                                            union                                                                                                                                                                                                 select * from person right join card on person.cardId = card.id;     </p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span> person <span class="keyword">left</span> <span class="keyword">join</span> card <span class="keyword">on</span> person.cardId = card.id          </span><br><span class="line"><span class="keyword">union</span>    </span><br><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span> person <span class="keyword">right</span> <span class="keyword">join</span> card <span class="keyword">on</span> person.cardId = card.id;</span><br></pre></td></tr></table></figure>
+
 <p>+——+——+——–+——+——–+<br>| id   | name | cardId | id   | name   |<br>+——+——+——–+——+——–+<br>|    1 | 张三 |      1 |    1 | 饭卡   |<br>|    2 | 李四 |      3 |    3 | 农行卡 |<br>|    3 | 王五 |      6 | NULL | NULL   |<br>| NULL | NULL | NULL   |    2 | 建行卡 |<br>| NULL | NULL | NULL   |    4 | 工商卡 |<br>| NULL | NULL | NULL   |    5 | 邮政卡 |<br>+——+——+——–+——+——–+                                                                   </p>
 <p>连接的好处：<strong>可以不创建外键</strong></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/08/14/mysql/select/" data-id="cjzaljacp00055gtbknz8r39j" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/08/14/mysql/select/" data-id="cjzalu6da00040stbqkokk7m6" class="article-share-link">Share</a>
       
       
     </footer>
@@ -213,7 +258,7 @@
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          (no title)
+          mysql transaction
         
       </div>
     </a>
@@ -221,7 +266,7 @@
   
     <a href="/2019/08/14/mysql/mysql/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title"></div>
+      <div class="article-nav-title">mysql start</div>
     </a>
   
 </nav>
@@ -258,23 +303,23 @@
       <ul>
         
           <li>
-            <a href="/2019/08/14/mybatis/高级/">(no title)</a>
+            <a href="/2019/08/14/mybatis/高级/">mybatis high</a>
           </li>
         
           <li>
-            <a href="/2019/08/14/mybatis/基础/">(no title)</a>
+            <a href="/2019/08/14/mybatis/基础/">mybatis start</a>
           </li>
         
           <li>
-            <a href="/2019/08/14/java/java基础/">(no title)</a>
+            <a href="/2019/08/14/java/java基础/">java start</a>
           </li>
         
           <li>
-            <a href="/2019/08/14/mysql/transaction/">(no title)</a>
+            <a href="/2019/08/14/mysql/transaction/">mysql transaction</a>
           </li>
         
           <li>
-            <a href="/2019/08/14/mysql/select/">(no title)</a>
+            <a href="/2019/08/14/mysql/select/">mysql select</a>
           </li>
         
       </ul>

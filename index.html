@@ -72,6 +72,16 @@
   <div class="article-inner">
     
     
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/08/14/mybatis/高级/">mybatis high</a>
+    </h1>
+  
+
+      </header>
+    
     <div class="article-entry" itemprop="articleBody">
       
         <p><strong>课程复习</strong>：</p>
@@ -241,7 +251,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/08/14/mybatis/高级/" data-id="cjzaljacl00035gtbm2esz0uk" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/08/14/mybatis/高级/" data-id="cjzalu6d700030stbh3uxypts" class="article-share-link">Share</a>
       
       
     </footer>
@@ -260,6 +270,16 @@
   </div>
   <div class="article-inner">
     
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/08/14/mybatis/基础/">mybatis start</a>
+    </h1>
+  
+
+      </header>
     
     <div class="article-entry" itemprop="articleBody">
       
@@ -522,7 +542,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/08/14/mybatis/基础/" data-id="cjzaljacq00065gtbvmkpp7f5" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/08/14/mybatis/基础/" data-id="cjzalu6de00060stb33x6klor" class="article-share-link">Share</a>
       
       
     </footer>
@@ -541,6 +561,16 @@
   </div>
   <div class="article-inner">
     
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/08/14/java/java基础/">java start</a>
+    </h1>
+  
+
+      </header>
     
     <div class="article-entry" itemprop="articleBody">
       
@@ -576,7 +606,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/08/14/java/java基础/" data-id="cjzaljacg00015gtbnylwrl4b" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/08/14/java/java基础/" data-id="cjzalu6d300020stb9ls9fbpo" class="article-share-link">Share</a>
       
       
     </footer>
@@ -596,24 +626,35 @@
   <div class="article-inner">
     
     
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/08/14/mysql/transaction/">mysql transaction</a>
+    </h1>
+  
+
+      </header>
+    
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="mysql事务"><a href="#mysql事务" class="headerlink" title="mysql事务"></a>mysql事务</h1><h2 id="mysql事务-1"><a href="#mysql事务-1" class="headerlink" title="mysql事务"></a>mysql事务</h2><p>mysql中，事务其实是一个最小的不可分割的单元，事务能保证一个业务的完整性</p>
+        <h2 id="mysql事务"><a href="#mysql事务" class="headerlink" title="mysql事务"></a>mysql事务</h2><p>mysql中，事务其实是一个最小的不可分割的单元，事务能保证一个业务的完整性</p>
 <p>比如我们的银行转账</p>
 <p>a –&gt;-100</p>
 <p>update user set money = money - 10 where name = ‘a’;</p>
 <p>b –&gt;+100</p>
 <p>update user set money = money + 10 where name = ‘b’;</p>
 <p>实际的程序中：如果只有一条语句执行成功，而另外一条没有执行成功出现数据前后不一致</p>
-<p>update user set money = money - 10 where name = ‘a’;</p>
-<p>update user set money = money + 10 where name = ‘b’;</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">update</span> <span class="keyword">user</span> <span class="keyword">set</span> money = money - <span class="number">10</span> <span class="keyword">where</span> <span class="keyword">name</span> = <span class="string">'a'</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">update</span> <span class="keyword">user</span> <span class="keyword">set</span> money = money + <span class="number">10</span> <span class="keyword">where</span> <span class="keyword">name</span> = <span class="string">'b'</span>;</span><br></pre></td></tr></table></figure>
+
 <p>多条sql语句，可能会有同时成功的要求，不然的话就同时失败</p>
 <h2 id="mysql如何控制事务："><a href="#mysql如何控制事务：" class="headerlink" title="mysql如何控制事务："></a>mysql如何控制事务：</h2><p>1.mysql默认是开启事务的(自动提交)</p>
 <p>mysql&gt; select @@autocommit;<br>+————–+<br>| @@autocommit |<br>+————–+<br>|            1 |<br>+————–+<br>1 row in set (0.03 sec)</p>
 <p>默认事务开启的作用是：当我们去执行sql语句的时候，效果会立刻体现出来且不能回滚</p>
 <p>create database bank;</p>
 <p>mysql&gt; create table user(<br>    -&gt; id int primary key,<br>    -&gt; name varchar(20),<br>    -&gt; money int<br>    -&gt; );<br>Query OK, 0 rows affected (0.04 sec)</p>
-<p>insert into user values(1,’a’,1000);</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> <span class="keyword">user</span> <span class="keyword">values</span>(<span class="number">1</span>,<span class="string">'a'</span>,<span class="number">1000</span>);</span><br></pre></td></tr></table></figure>
+
 <p>事务回滚：撤销sql语句执行效果</p>
 <p>即使执行了rollback，仍然回不到插入数据之前，说明现在不能回滚，有什么办法可以反悔呢？</p>
 <p>mysql&gt; rollback;<br>Query OK, 0 rows affected (0.00 sec)</p>
@@ -621,7 +662,8 @@
 <p>有什么办法可以反悔呢？</p>
 <p><u><em>设置mysql自动提交为false：*</em>set autocommit = 0;***</u></p>
 <p>上面的操作关闭了mysql的自动提交（commit）</p>
-<p>insert into user values(2,’b’,1000);</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> <span class="keyword">user</span> <span class="keyword">values</span>(<span class="number">2</span>,<span class="string">'b'</span>,<span class="number">1000</span>);</span><br></pre></td></tr></table></figure>
+
 <p>mysql&gt; select * from user;<br>+—-+——+——-+<br>| id | name | money |<br>+—-+——+——-+<br>|  1 | a    |  1000 |<br>|  2 | b    |  1000 |<br>+—-+——+——-+<br>2 rows in set (0.03 sec)</p>
 <p>mysql&gt; <u><em>rollback;</em></u><br>Query OK, 0 rows affected (0.01 sec)</p>
 <p>mysql&gt; select * from user;<br>+—-+——+——-+<br>| id | name | money |<br>+—-+——+——-+<br>|  1 | a    |  1000 |<br>+—-+——+——-+<br>1 row in set (0.02 sec)</p>
@@ -634,7 +676,8 @@
 <p>*<u>手动提交 自己打commit命令</u>*</p>
 <p>*<u>事务回滚 rollback</u>*</p>
 <p>如果说这个时候转账</p>
-<p>update user set money = money - 10 where name = ‘a’;                                                                                               update user set money = money + 10 where name = ‘b’;</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">update</span> <span class="keyword">user</span> <span class="keyword">set</span> money = money - <span class="number">10</span> <span class="keyword">where</span> <span class="keyword">name</span> = <span class="string">'a'</span>;                                                                                               </span><br><span class="line"><span class="keyword">update</span> <span class="keyword">user</span> <span class="keyword">set</span> money = money + <span class="number">10</span> <span class="keyword">where</span> <span class="keyword">name</span> = <span class="string">'b'</span>;</span><br></pre></td></tr></table></figure>
+
 <p>mysql&gt; update user set money = money - 10 where name = ‘a’;                                                                                               update user set money = money + 10 where name = ‘b’;<br>Query OK, 1 row affected (0.00 sec)<br>Rows matched: 1  Changed: 1  Warnings: 0<br>Query OK, 1 row affected (0.00 sec)<br>Rows matched: 1  Changed: 1  Warnings: 0<br>mysql&gt; select * from user;<br>+—-+——+——-+<br>| id | name | money |<br>+—-+——+——-+<br>|  1 | a    |   990 |<br>|  2 | b    |  1010 |<br>+—-+——+——-+<br>2 rows in set (0.05 sec)</p>
 <p>mysql&gt; rollback;<br>Query OK, 0 rows affected (0.00 sec)</p>
 <p>mysql&gt; select * from user;<br>+—-+——+——-+<br>| id | name | money |<br>+—-+——+——-+<br>|  1 | a    |  1000 |<br>|  2 | b    |  1000 |<br>+—-+——+——-+<br>2 rows in set (0.04 sec)</p>
@@ -643,7 +686,9 @@
 <p>mysql&gt; update user set money = money - 10 where name = ‘a’;                                                                                               update user set money = money + 10 where name = ‘b’;<br>Query OK, 1 row affected (0.02 sec)<br>Rows matched: 1  Changed: 1  Warnings: 0<br>Query OK, 1 row affected (0.01 sec)<br>Rows matched: 1  Changed: 1  Warnings: 0<br>mysql&gt; select * from user;<br>+—-+——+——-+<br>| id | name | money |<br>+—-+——+——-+<br>|  1 | a    |   990 |<br>|  2 | b    |  1010 |<br>+—-+——+——-+<br>2 rows in set (0.04 sec)</p>
 <p>mysql&gt; rollback;<br>Query OK, 0 rows affected (0.00 sec)</p>
 <p>mysql&gt; select * from user;<br>+—-+——+——-+<br>| id | name | money |<br>+—-+——+——-+<br>|  1 | a    |   990 |<br>|  2 | b    |  1010 |<br>+—-+——+——-+<br>2 rows in set (0.04 sec)</p>
-<p><strong>begin;</strong> 手动开启事务（start transaction）                                                                                                                                                                            update user set money = money - 10 where name = ‘a’;                                                                                               update user set money = money + 10 where name = ‘b’;</p>
+<p><strong>begin;</strong> 手动开启事务（start transaction）                                                                                                                                                                            </p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">update</span> <span class="keyword">user</span> <span class="keyword">set</span> money = money - <span class="number">10</span> <span class="keyword">where</span> <span class="keyword">name</span> = <span class="string">'a'</span>;                                                                                               </span><br><span class="line"><span class="keyword">update</span> <span class="keyword">user</span> <span class="keyword">set</span> money = money + <span class="number">10</span> <span class="keyword">where</span> <span class="keyword">name</span> = <span class="string">'b'</span>;</span><br></pre></td></tr></table></figure>
+
 <p>mysql&gt; begin;                                                                                                                                                                                      update user set money = money - 10 where name = ‘a’;                                                                                               update user set money = money + 10 where name = ‘b’;<br>Query OK, 0 rows affected (0.00 sec)</p>
 <p>Query OK, 1 row affected (0.00 sec)<br>Rows matched: 1  Changed: 1  Warnings: 0<br>Query OK, 1 row affected (0.00 sec)<br>Rows matched: 1  Changed: 1  Warnings: 0<br>mysql&gt; select * from user;<br>+—-+——+——-+<br>| id | name | money |<br>+—-+——+——-+<br>|  1 | a    |   980 |<br>|  2 | b    |  1020 |<br>+—-+——+——-+<br>2 rows in set (0.04 sec)</p>
 <p>mysql&gt; rollback;<br>Query OK, 0 rows affected (0.01 sec)</p>
@@ -666,8 +711,8 @@
 <p>4.serializable;   串行化</p>
 <h4 id="1-read-uncommitted"><a href="#1-read-uncommitted" class="headerlink" title="1.read uncommitted;"></a>1.read uncommitted;</h4><p>如果有事务a和事务b，a事务对数据进行操作，事务没有被提交，但是b可以看到a操作的结果</p>
 <p>bank数据库 user表</p>
-<p>insert into user values(3,’小明’,1000);</p>
-<p>insert into user values(4,’淘宝店’,1000);</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> <span class="keyword">user</span> <span class="keyword">values</span>(<span class="number">3</span>,<span class="string">'小明'</span>,<span class="number">1000</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> <span class="keyword">user</span> <span class="keyword">values</span>(<span class="number">4</span>,<span class="string">'淘宝店'</span>,<span class="number">1000</span>);</span><br></pre></td></tr></table></figure>
+
 <p>小明去淘宝店买东西，淘宝店查看钱是否到账？</p>
 <p>如何查看数据库的隔离级别？</p>
 <p>mysql8.0</p>
@@ -682,7 +727,8 @@
 <p>select @@global.tx_isolation;</p>
 <p>select @@tx_isolation;</p>
 <p>如何修改隔离级别？</p>
-<p>set global transaction isolation level read uncommitted;</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">set</span> global transaction isolation level <span class="built_in">read</span> uncommitted;</span><br></pre></td></tr></table></figure>
+
 <p>mysql&gt; set global transaction isolation level read uncommitted;<br>Query OK, 0 rows affected (0.02 sec)</p>
 <p>mysql&gt; select @@global.transaction_isolation;<br>+——————————–+<br>| @@global.transaction_isolation |<br>+——————————–+<br>| READ-UNCOMMITTED               |<br>+——————————–+<br>1 row in set (0.04 sec)</p>
 <p>好了开始转帐，小明买鞋子：800块钱</p>
@@ -690,8 +736,8 @@
 <p>淘宝店》》广州 ATM</p>
 <p>mysql&gt; select * from user;<br>+—-+——–+——-+<br>| id | name   | money |<br>+—-+——–+——-+<br>|  1 | a      |   980 |<br>|  2 | b      |  1020 |<br>|  3 | 小明   |  1000 |<br>|  4 | 淘宝店 |  1000 |<br>+—-+——–+——-+<br>4 rows in set (0.05 sec)</p>
 <p>start transaction;</p>
-<p>update user set money = money-800 where name = ‘小明’;</p>
-<p>update user set money = money+800 where name = ‘淘宝店’;</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">update</span> <span class="keyword">user</span> <span class="keyword">set</span> money = money<span class="number">-800</span> <span class="keyword">where</span> <span class="keyword">name</span> = <span class="string">'小明'</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">update</span> <span class="keyword">user</span> <span class="keyword">set</span> money = money+<span class="number">800</span> <span class="keyword">where</span> <span class="keyword">name</span> = <span class="string">'淘宝店'</span>;</span><br></pre></td></tr></table></figure>
+
 <p>mysql&gt; start transaction;</p>
 <p>update user set money = money-800 where name = ‘小明’;</p>
 <p>update user set money = money+800 where name = ‘淘宝店’;<br>Query OK, 0 rows affected (0.00 sec)</p>
@@ -709,8 +755,8 @@
 <p>这样就会出现脏读</p>
 <p>脏读：一个事务读取到另外一个事物没有提交的数据就叫做脏读</p>
 <p>实际开发不允许脏读出现</p>
-<h4 id="2-read-committed"><a href="#2-read-committed" class="headerlink" title="2.read committed;"></a>2.read committed;</h4><p>set global transaction isolation level read committed;</p>
-<p>select @@global.transaction_isolation;</p>
+<h4 id="2-read-committed"><a href="#2-read-committed" class="headerlink" title="2.read committed;"></a>2.read committed;</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">set</span> global transaction isolation level <span class="built_in">read</span> committed;</span><br><span class="line"></span><br><span class="line">select @@global.transaction_isolation;</span><br></pre></td></tr></table></figure>
+
 <p>mysql&gt; set global transaction isolation level read committed;</p>
 <p>select @@global.transaction_isolation;<br>Query OK, 0 rows affected (0.00 sec)</p>
 <p>+——————————–+<br>| @@global.transaction_isolation |<br>+——————————–+<br>| READ-COMMITTED                 |<br>+——————————–+<br>1 row in set (0.03 sec)</p>
@@ -721,8 +767,8 @@
 <p>mysql&gt; select * from user;<br>+—-+——–+——-+<br>| id | name   | money |<br>+—-+——–+——-+<br>|  1 | a      |   980 |<br>|  2 | b      |  1020 |<br>|  3 | 小明   |  1000 |<br>|  4 | 淘宝店 |  1000 |<br>+—-+——–+——-+<br>4 rows in set (0.04 sec)</p>
 <p>小张上厕所去了。。。顺便抽烟</p>
 <p>小王：</p>
-<p>start transaction;</p>
-<p>insert into user values(5,’c’,100);</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">start</span> <span class="keyword">transaction</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> <span class="keyword">user</span> <span class="keyword">values</span>(<span class="number">5</span>,<span class="string">'c'</span>,<span class="number">100</span>);</span><br></pre></td></tr></table></figure>
+
 <p>commit;</p>
 <p>mysql&gt; start transaction;</p>
 <p>insert into user values(5,’c’,100);</p>
@@ -735,8 +781,8 @@
 <p>mysql&gt; select avg(money) from user;<br>+————+<br>| avg(money) |<br>+————+<br>| 820.0000   |<br>+————+<br>1 row in set (0.07 sec)</p>
 <p>money的平均值不是1000，变少了</p>
 <p>虽然我只能读到另一个事务提交的数据，但是还是会出现问题，就是读取同一个表的数据，发现前后不一致，这种不可重复读现象，read committed</p>
-<h4 id="3-repeatable-read-可以重复读"><a href="#3-repeatable-read-可以重复读" class="headerlink" title="3.repeatable read;   可以重复读"></a>3.repeatable read;   可以重复读</h4><p>set global transaction isolation level repeatable read;</p>
-<p>select @@global.transaction_isolation;</p>
+<h4 id="3-repeatable-read-可以重复读"><a href="#3-repeatable-read-可以重复读" class="headerlink" title="3.repeatable read;   可以重复读"></a>3.repeatable read;   可以重复读</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">set</span> global transaction isolation level repeatable <span class="built_in">read</span>;</span><br><span class="line"></span><br><span class="line">select @@global.transaction_isolation;</span><br></pre></td></tr></table></figure>
+
 <p>mysql&gt; set global transaction isolation level repeatable read;</p>
 <p>select @@global.transaction_isolation;</p>
 <p>Query OK, 0 rows affected (0.00 sec)</p>
@@ -751,8 +797,8 @@
 <p>但是王尼玛不能插入6号，会报错</p>
 <p>这种现象叫做幻读</p>
 <p>事务a和事务b同时操作一张表，事务a提交的数据，也不能读到，就可能造成幻读</p>
-<h4 id="serializable-串行化"><a href="#serializable-串行化" class="headerlink" title="serializable:串行化"></a>serializable:串行化</h4><p>set global transaction isolation level serializable;</p>
-<p>select @@global.transaction_isolation;</p>
+<h4 id="serializable-串行化"><a href="#serializable-串行化" class="headerlink" title="serializable:串行化"></a>serializable:串行化</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">set</span> global transaction isolation level serializable;</span><br><span class="line"></span><br><span class="line">select @@global.transaction_isolation;</span><br></pre></td></tr></table></figure>
+
 <p>还是张全蛋和王尼玛，做了和上面一样的事</p>
 <p>当user表被另外一个事务操作的时候，其他的事务是不可以执行的，进入排队状态，直到操作事务的那个人commit之后，才会执行</p>
 <p>串行化commit之后，其他事务立刻执行，但时间长了，可能会失效</p>
@@ -764,7 +810,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/08/14/mysql/transaction/" data-id="cjzaljaco00045gtbds0ua6h1" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/08/14/mysql/transaction/" data-id="cjzalu6dd00050stbqvrskkkm" class="article-share-link">Share</a>
       
       
     </footer>
@@ -784,9 +830,19 @@
   <div class="article-inner">
     
     
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/08/14/mysql/select/">mysql select</a>
+    </h1>
+  
+
+      </header>
+    
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="select语句"><a href="#select语句" class="headerlink" title="select语句"></a>select语句</h1><h2 id="select特殊功能："><a href="#select特殊功能：" class="headerlink" title="select特殊功能："></a>select特殊功能：</h2><p><strong>distinct(排重)</strong>：select distinct 字段名 from 数据表;</p>
+        <h2 id="select特殊功能："><a href="#select特殊功能：" class="headerlink" title="select特殊功能："></a>select特殊功能：</h2><p><strong>distinct(排重)</strong>：select distinct 字段名 from 数据表;</p>
 <p><strong>between…and</strong>：select * from 数据表 where 字段名 between 值 and 值; 相当于select * from 数据表 where 字段名&gt;字段值 and 字段名&lt;字段值;</p>
 <p><strong>in</strong>：select * from 数据表 where 字段名 in(85，86，87);</p>
 <p><strong>or</strong>：select * from 数据表 where 字段名1 = ‘值’ or 字段名2 = ‘值’;(升序查询 asc从小到大)select * from 数据表 order by 字段名 asc; order by：系统默认是升序 desc降序（从大到小）</p>
@@ -818,46 +874,75 @@
 <p>注意：排序有缺陷，如果最大值有两条，她只能查到一条</p>
 <p><strong>查询score表中至少有两名学生选修的并以3开头的课程的平均分数</strong></p>
 <p><strong>having</strong>(分组条件)：having字句可以让我们筛选成组后的各种数据，where字句在聚合前先筛选记录，也就是说作用在group by和having字句前。而 having子句在聚合后对组记录进行筛选。</p>
-<p><u><em>select</em></u> cno <u><em>from</em></u> score <u><em>group by</em></u> cno <u><em>having count</em></u>(cno)&gt;=2 <u><em>and</em></u> cno <u><em>like</em></u> ‘3%’;   <em>%代表的是任意的东西   3%代表以3开头的任意东西</em></p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> cno <span class="keyword">from</span> score <span class="keyword">group</span> <span class="keyword">by</span> cno <span class="keyword">having</span> <span class="keyword">count</span>(cno)&gt;=<span class="number">2</span> <span class="keyword">and</span> cno <span class="keyword">like</span> <span class="string">'3%'</span>;</span><br></pre></td></tr></table></figure>
+
+<p>  %代表的是任意的东西   3%代表以3开头的任意东西</p>
 <h2 id="多表查询："><a href="#多表查询：" class="headerlink" title="多表查询："></a>多表查询：</h2><p><strong>精髓</strong>：他们是根据相等的地方进行联系的</p>
 <p>两张表：</p>
 <p>查询当条件相同时，把数据替换掉</p>
-<p><u><em>select</em></u> sname,cno,degree *<u>from</u>* student,score <u><em>where</em></u> student.sno = score.sno;</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> sname,cno,degree <span class="keyword">from</span> student,score <span class="keyword">where</span> student.sno = score.sno;</span><br></pre></td></tr></table></figure>
+
 <p>三张表：</p>
-<p><u><em>select</em></u> sname,cname,degree <u><em>from</em></u> student,course,score <u><em>where</em></u> student.sno = score.sno                                                                             <u><em>and</em></u> course.cno = score.cno;</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> sname,cname,degree <span class="keyword">from</span> student,course,score <span class="keyword">where</span> student.sno = score.sno                                                                 </span><br><span class="line"><span class="keyword">and</span> course.cno = score.cno;</span><br></pre></td></tr></table></figure>
+
 <h2 id="子查询："><a href="#子查询：" class="headerlink" title="子查询："></a>子查询：</h2><p><strong>精髓</strong>：分开步骤去查</p>
-<p>查一个班的学生：<u><em>select</em></u> * <u><em>from</em></u> student <u><em>where</em></u> class = ‘95031’;</p>
-<p>查学生的分数：<u><em>select</em></u> * <u><em>from</em></u> score <u><em>where</em></u> class = ‘95031’;</p>
+<p>查一个班的学生：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span> student <span class="keyword">where</span> <span class="keyword">class</span> = <span class="string">'95031'</span>;</span><br></pre></td></tr></table></figure>
+
+<p>查学生的分数：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span> score <span class="keyword">where</span> <span class="keyword">class</span> = <span class="string">'95031'</span>;</span><br></pre></td></tr></table></figure>
+
 <p>查一个班学生的平均成绩：                                                                     </p>
-<p><u><em>select</em></u> cno,avg(degree)  <u><em>from</em></u> score  <u><em>where</em></u> sno <u><em>in</em></u> <strong>(<u><em>select</em></u> sno <u><em>from</em></u> student <u><em>where</em></u> class = ‘95031’)</strong>                          <u><em>group by</em></u> cno;</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> cno,<span class="keyword">avg</span>(degree)  <span class="keyword">from</span> score  <span class="keyword">where</span> sno <span class="keyword">in</span> (<span class="keyword">select</span> sno <span class="keyword">from</span> student <span class="keyword">where</span> <span class="keyword">class</span> = <span class="string">'95031'</span>) <span class="keyword">group</span> <span class="keyword">by</span> cno;</span><br></pre></td></tr></table></figure>
+
 <p>查询选修3-105课程成绩高于109号同学3-105成绩的所有同学的记录</p>
-<p><u><em>select</em></u> * <u><em>from</em></u> score <u><em>where</em></u> cno=’3-105’ and degree&gt;(<u><em>select</em></u> degree <u><em>from</em></u> score where sno=’109’ <u><em>and</em></u> cno=’3-105’);</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span> score <span class="keyword">where</span> cno=<span class="string">'3-105'</span> <span class="keyword">and</span> degree&gt;(<span class="keyword">select</span> degree <span class="keyword">from</span> score <span class="keyword">where</span> sno=<span class="string">'109'</span> <span class="keyword">and</span> cno=<span class="string">'3-105'</span>);</span><br></pre></td></tr></table></figure>
+
 <p>查询成绩高于学号为109、课程号为3-105的成绩的记录</p>
-<p><u><em>select</em></u> * <u><em>from</em></u> score <u><em>where</em></u> degree&gt;(<u><em>select</em></u> degree <u><em>from</em></u> score where sno=’109’ <u><em>and</em></u> cno=’3-105’);</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span>* score <span class="keyword">where</span> degree&gt;(<span class="keyword">select</span> degree <span class="keyword">from</span> score <span class="keyword">where</span> sno=<span class="string">'109'</span> <span class="keyword">and</span> cno=<span class="string">'3-105'</span>);</span><br></pre></td></tr></table></figure>
+
 <p>查询与学号为108和101的同学同年出生的所有学生</p>
-<p>查询学号为108和101的学生：select * from student where sno in(108,101);</p>
-<p>查询学号为108和101学生的出生年份：select <u><em>year(sbirthday)</em></u> from student where sno in(108,101);</p>
-<p>select * from student where year(sbirthday) in(select year(sbirthday) from student where sno in(108,101));</p>
+<p>查询学号为108和101的学生：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span> student <span class="keyword">where</span> sno <span class="keyword">in</span>(<span class="number">108</span>,<span class="number">101</span>);</span><br></pre></td></tr></table></figure>
+
+<p>查询学号为108和101学生的出生年份：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> &lt;u&gt;*<span class="keyword">year</span>(sbirthday)*&lt;/u&gt; <span class="keyword">from</span> student <span class="keyword">where</span> sno <span class="keyword">in</span>(<span class="number">108</span>,<span class="number">101</span>);</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span> student <span class="keyword">where</span> <span class="keyword">year</span>(sbirthday) <span class="keyword">in</span>(<span class="keyword">select</span> <span class="keyword">year</span>(sbirthday) <span class="keyword">from</span> student <span class="keyword">where</span> sno <span class="keyword">in</span>(<span class="number">108</span>,<span class="number">101</span>));</span><br></pre></td></tr></table></figure>
+
 <p>查询张旭教师任课的学生成绩：</p>
 <p>教师表中查询tno：select tno from teacher where tname=’张旭’;</p>
-<p>查询他任的课cno：select cno from cource where tno=(select tno from teacher where tname=’张旭’);</p>
-<p>select * from score where cno in(select cno from cource where tno=(select tno from teacher where tname=’张旭’));</p>
+<p>查询他任的课cno：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> cno <span class="keyword">from</span> cource <span class="keyword">where</span> tno=(<span class="keyword">select</span> tno <span class="keyword">from</span> teacher <span class="keyword">where</span> tname=<span class="string">'张旭'</span>);</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span> score <span class="keyword">where</span> cno <span class="keyword">in</span>(<span class="keyword">select</span> cno <span class="keyword">from</span> cource <span class="keyword">where</span> tno=(<span class="keyword">select</span> tno <span class="keyword">from</span> teacher <span class="keyword">where</span> tname=<span class="string">'张旭'</span>));</span><br></pre></td></tr></table></figure>
+
 <p>查询某课程的同学数多余5人的教师姓名：</p>
 <p>课程数大于五的cno：select cno from score group by cno having count(*)&gt;5;</p>
-<p>查询tno：select tno from course where cno in(select cno from score group by cno having count(*)&gt;5); </p>
-<p>select tname from teacher where tno in(select tno from course where cno=(select cno from score group by cno having count(*)&gt;5));</p>
+<p>查询tno：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> tno <span class="keyword">from</span> course <span class="keyword">where</span> cno <span class="keyword">in</span>(<span class="keyword">select</span> cno <span class="keyword">from</span> score <span class="keyword">group</span> <span class="keyword">by</span> cno <span class="keyword">having</span> <span class="keyword">count</span>(*)&gt;<span class="number">5</span>);</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> tname <span class="keyword">from</span> teacher <span class="keyword">where</span> tno <span class="keyword">in</span>(<span class="keyword">select</span> tno <span class="keyword">from</span> course <span class="keyword">where</span> cno=(<span class="keyword">select</span> cno <span class="keyword">from</span> score <span class="keyword">group</span> <span class="keyword">by</span> cno <span class="keyword">having</span> <span class="keyword">count</span>(*)&gt;<span class="number">5</span>));</span><br></pre></td></tr></table></figure>
+
 <p>查看计算机系和电子工程系不同职称的教师的tname和pref</p>
-<p>select prof from teacher where depart = ‘电子工程系’ and prof not in(select * from teacher where depart = ‘计算机系’)</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> prof <span class="keyword">from</span> teacher <span class="keyword">where</span> depart = <span class="string">'电子工程系'</span> <span class="keyword">and</span> prof <span class="keyword">not</span> <span class="keyword">in</span>(<span class="keyword">select</span> * <span class="keyword">from</span> teacher <span class="keyword">where</span> depart = <span class="string">'计算机系'</span>)</span><br></pre></td></tr></table></figure>
+
 <p><u><strong><em>union</em></strong></u></p>
-<p>select * from teacher where depart = ‘计算机系’ and prof not in(select prof from teacher where depart = ‘电子工程系’ );</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span> teacher <span class="keyword">where</span> depart = <span class="string">'计算机系'</span> <span class="keyword">and</span> prof <span class="keyword">not</span> <span class="keyword">in</span>(<span class="keyword">select</span> prof <span class="keyword">from</span> teacher <span class="keyword">where</span> depart = <span class="string">'电子工程系'</span> );</span><br></pre></td></tr></table></figure>
+
 <p>查询选修学号为3-105课程且成绩至少高于选修编号3-245的同学的Cno、Sno和Degree，并按Degree从高到底依次排序</p>
-<p>select cno,sno,degree from score                                                                                                                                  where cno=’3-105’                                                                                                                                                              and degree&gt;<u><strong>any</strong></u>(select degree from score where cno=’3-245’)                                                                 order by degree desc;   //从高到低</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> cno,sno,degree <span class="keyword">from</span> score                                         </span><br><span class="line"><span class="keyword">where</span> cno=<span class="string">'3-105'</span></span><br><span class="line"><span class="keyword">and</span> degree&gt;&lt;u&gt;**<span class="keyword">any</span>**&lt;/u&gt;(<span class="keyword">select</span> degree <span class="keyword">from</span> score <span class="keyword">where</span> cno=<span class="string">'3-245'</span>)   </span><br><span class="line"><span class="keyword">order</span> <span class="keyword">by</span> degree <span class="keyword">desc</span>;</span><br></pre></td></tr></table></figure>
+
+<p>   //从高到低</p>
 <p>复制表数据做条件查询：</p>
-<p>select * from score a where degree&lt;(select avg(degree) from score b where a.cno=b.cno);</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span> score a <span class="keyword">where</span> degree&lt;(<span class="keyword">select</span> <span class="keyword">avg</span>(degree) <span class="keyword">from</span> score b <span class="keyword">where</span> a.cno=b.cno);</span><br></pre></td></tr></table></figure>
+
 <p>查询至少有两名男生的班级：</p>
-<p>select class from student where ssex = ‘男’ group by class having count(*) &gt; 1;</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="keyword">class</span> <span class="keyword">from</span> student <span class="keyword">where</span> ssex = <span class="string">'男'</span> <span class="keyword">group</span> <span class="keyword">by</span> <span class="keyword">class</span> <span class="keyword">having</span> <span class="keyword">count</span>(*) &gt; <span class="number">1</span>;</span><br></pre></td></tr></table></figure>
+
 <p>按等级查询：</p>
-<p>select sno,cno,grade from score,grade where degree between low and upp;</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> sno,cno,grade <span class="keyword">from</span> score,grade <span class="keyword">where</span> degree <span class="keyword">between</span> <span class="keyword">low</span> <span class="keyword">and</span> upp;</span><br></pre></td></tr></table></figure>
+
 <h2 id="sql的四种链接查询："><a href="#sql的四种链接查询：" class="headerlink" title="sql的四种链接查询："></a>sql的四种链接查询：</h2><p><strong>内链接：</strong></p>
 <p>inner join 或者 join</p>
 <p><strong>外连接：</strong></p>
@@ -886,31 +971,37 @@
 <p>insert into person values(3,’王五’,6);</p>
 <p>并没有创建外键，如果创建的话person里面的第三条数据插不进去</p>
 <p><strong>inner join查询</strong>：(内连接)</p>
-<p><u><em>select</em></u> * <u><em>from</em></u> person p <u><em>inner join</em></u> card c <u><em>on</em></u> p.cardId = c.id;</p>
-<p>select * from person p, card c where c.id = p.cardId;</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span> person p <span class="keyword">inner</span> <span class="keyword">join</span> card c <span class="keyword">on</span> p.cardId = c.id;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span> person p, card c <span class="keyword">where</span> c.id = p.cardId;</span><br></pre></td></tr></table></figure>
+
 <p>内联查询：其实就是相当于把两个表里面的数据，通过某个字段相对应，把有关系的数据查询出来</p>
 <p>mysql&gt; select * from person p, card c where c.id = p.cardId;<br>+—-+——+——–+—-+——–+<br>| id | name | cardId | id | name   |<br>+—-+——+——–+—-+——–+<br>|  1 | 张三 |      1 |  1 | 饭卡   |<br>|  2 | 李四 |      3 |  3 | 农行卡 |<br>+—-+——+——–+—-+——–+</p>
 <p><strong>left join:</strong>（左外连接)outer</p>
-<p>select * from person left join card on person.cardId = card.id;</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span> person <span class="keyword">left</span> <span class="keyword">join</span> card <span class="keyword">on</span> person.cardId = card.id;</span><br></pre></td></tr></table></figure>
+
 <p>左外连接：会把左边表里的数据全部取出来，而右边表里的数据有就显示出来，没有就会变成NULL</p>
 <p>mysql&gt; select * from person left join card on person.cardId = card.id;<br>+—-+——+——–+——+——–+<br>| id | name | cardId | id   | name   |<br>+—-+——+——–+——+——–+<br>|  1 | 张三 |      1 |    1 | 饭卡   |<br>|  2 | 李四 |      3 |    3 | 农行卡 |<br>|  3 | 王五 |      6 | NULL | NULL   |<br>+—-+——+——–+——+——–+</p>
 <p><strong>right join：</strong>(右外连接)outer</p>
-<p>select * from person right join card on person.cardId = card.id;</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span> person <span class="keyword">right</span> <span class="keyword">join</span> card <span class="keyword">on</span> person.cardId = card.id;</span><br></pre></td></tr></table></figure>
+
 <p>左外连接：会把右边表里的数据全部取出来，而左边表里的数据有就显示出来，没有就会变成NULL</p>
 <p>mysql&gt; select * from person right join card on person.cardId = card.id;<br>+——+——+——–+—-+——–+<br>| id   | name | cardId | id | name   |<br>+——+——+——–+—-+——–+<br>|    1 | 张三 |      1 |  1 | 饭卡   |<br>|    2 | 李四 |      3 |  3 | 农行卡 |<br>| NULL | NULL | NULL   |  2 | 建行卡 |<br>| NULL | NULL | NULL   |  4 | 工商卡 |<br>| NULL | NULL | NULL   |  5 | 邮政卡 |<br>+——+——+——–+—-+——–+</p>
 <p><strong>full join：</strong>（全外连接）</p>
-<p>select * from person full join card on person.cardId = card.id;</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span> person <span class="keyword">full</span> <span class="keyword">join</span> card <span class="keyword">on</span> person.cardId = card.id;</span><br></pre></td></tr></table></figure>
+
 <p>mysql&gt; select * from person full join card on person.cardId = card.id;<br>1054 - Unknown column ‘person.cardId’ in ‘on clause’</p>
 <p>原因是mysql不支持full join</p>
 <p><u><em>全外连接我们想要的结果：</em></u></p>
-<p>select * from person left join card on person.cardId = card.id                                                                                            union                                                                                                                                                                                                 select * from person right join card on person.cardId = card.id;     </p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span> person <span class="keyword">left</span> <span class="keyword">join</span> card <span class="keyword">on</span> person.cardId = card.id          </span><br><span class="line"><span class="keyword">union</span>    </span><br><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span> person <span class="keyword">right</span> <span class="keyword">join</span> card <span class="keyword">on</span> person.cardId = card.id;</span><br></pre></td></tr></table></figure>
+
 <p>+——+——+——–+——+——–+<br>| id   | name | cardId | id   | name   |<br>+——+——+——–+——+——–+<br>|    1 | 张三 |      1 |    1 | 饭卡   |<br>|    2 | 李四 |      3 |    3 | 农行卡 |<br>|    3 | 王五 |      6 | NULL | NULL   |<br>| NULL | NULL | NULL   |    2 | 建行卡 |<br>| NULL | NULL | NULL   |    4 | 工商卡 |<br>| NULL | NULL | NULL   |    5 | 邮政卡 |<br>+——+——+——–+——+——–+                                                                   </p>
 <p>连接的好处：<strong>可以不创建外键</strong></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/08/14/mysql/select/" data-id="cjzaljacp00055gtbknz8r39j" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/08/14/mysql/select/" data-id="cjzalu6da00040stbqkokk7m6" class="article-share-link">Share</a>
       
       
     </footer>
@@ -930,9 +1021,19 @@
   <div class="article-inner">
     
     
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/08/14/mysql/mysql/">mysql start</a>
+    </h1>
+  
+
+      </header>
+    
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="mysql的基础"><a href="#mysql的基础" class="headerlink" title="mysql的基础"></a>mysql的基础</h1><h2 id="mysql操作数据库和数据表"><a href="#mysql操作数据库和数据表" class="headerlink" title="mysql操作数据库和数据表"></a>mysql操作数据库和数据表</h2><p>create table 表名(字段名 类型 主键 非空);   建表</p>
+        <h2 id="mysql操作数据库和数据表"><a href="#mysql操作数据库和数据表" class="headerlink" title="mysql操作数据库和数据表"></a>mysql操作数据库和数据表</h2><p>create table 表名(字段名 类型 主键 非空);   建表</p>
 <p>create database 数据库名;   建库 </p>
 <p>use 数据库名;   使用某个数据库</p>
 <p>show databases：查看数据库</p>
@@ -973,12 +1074,11 @@
 <p>除主键之外的其他列，只依赖与主键的部分字段：<strong>拆表</strong></p>
 <h3 id="第三范式"><a href="#第三范式" class="headerlink" title="第三范式"></a>第三范式</h3><p>必须满足第二范式</p>
 <p><strong>除主键列的其他列之间不能用传递依赖关系</strong></p>
-<p><a href="https://www.bilibili.com/video/av39807944/?p=17" target="_blank" rel="noopener">参考视频</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/08/14/mysql/mysql/" data-id="cjzaljaci00025gtbr25tyfzz" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/08/14/mysql/mysql/" data-id="cjzalu6d100010stbzktqax6k" class="article-share-link">Share</a>
       
       
     </footer>
@@ -1027,7 +1127,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/08/13/hello-world/" data-id="cjzaljabz00005gtb4u5mkon9" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/08/13/hello-world/" data-id="cjzalu6cr00000stbi4nl409m" class="article-share-link">Share</a>
       
       
     </footer>
@@ -1068,23 +1168,23 @@
       <ul>
         
           <li>
-            <a href="/2019/08/14/mybatis/高级/">(no title)</a>
+            <a href="/2019/08/14/mybatis/高级/">mybatis high</a>
           </li>
         
           <li>
-            <a href="/2019/08/14/mybatis/基础/">(no title)</a>
+            <a href="/2019/08/14/mybatis/基础/">mybatis start</a>
           </li>
         
           <li>
-            <a href="/2019/08/14/java/java基础/">(no title)</a>
+            <a href="/2019/08/14/java/java基础/">java start</a>
           </li>
         
           <li>
-            <a href="/2019/08/14/mysql/transaction/">(no title)</a>
+            <a href="/2019/08/14/mysql/transaction/">mysql transaction</a>
           </li>
         
           <li>
-            <a href="/2019/08/14/mysql/select/">(no title)</a>
+            <a href="/2019/08/14/mysql/select/">mysql select</a>
           </li>
         
       </ul>
