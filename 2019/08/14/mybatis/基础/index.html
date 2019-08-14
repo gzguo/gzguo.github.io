@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="对原生态jdbc程序问题的总结（单独使用jdbc开发） 数据库用的时候连接，不用的时候释放，频繁操作   通过连接池节约资源 sql语句硬编码，不利于系统维护   使用配置文件把他配起来 mybatis框架原理特点mybatis是持久层框架，是apache下的项目 mybatis让程序主要精力放在sql上，通过mybatis提供的映射方式，简化sql mybatis将输入参数自动进行输入映射，将查">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/2019/08/14/mybatis/基础/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="对原生态jdbc程序问题的总结（单独使用jdbc开发） 数据库用的时候连接，不用的时候释放，频繁操作   通过连接池节约资源 sql语句硬编码，不利于系统维护   使用配置文件把他配起来 mybatis框架原理特点mybatis是持久层框架，是apache下的项目 mybatis让程序主要精力放在sql上，通过mybatis提供的映射方式，简化sql mybatis将输入参数自动进行输入映射，将查">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="c:%5CUsers%5C%E9%83%AD%E6%8C%AF%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1565315234136.png">
+<meta property="og:image" content="c:%5CUsers%5C%E9%83%AD%E6%8C%AF%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1565316318487.png">
+<meta property="og:image" content="c:%5CUsers%5C%E9%83%AD%E6%8C%AF%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1565343104480.png">
+<meta property="og:updated_time" content="2019-08-10T11:47:15.932Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo">
+<meta name="twitter:description" content="对原生态jdbc程序问题的总结（单独使用jdbc开发） 数据库用的时候连接，不用的时候释放，频繁操作   通过连接池节约资源 sql语句硬编码，不利于系统维护   使用配置文件把他配起来 mybatis框架原理特点mybatis是持久层框架，是apache下的项目 mybatis让程序主要精力放在sql上，通过mybatis提供的映射方式，简化sql mybatis将输入参数自动进行输入映射，将查">
+<meta name="twitter:image" content="c:%5CUsers%5C%E9%83%AD%E6%8C%AF%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1565315234136.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-mybatis/基础" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/08/14/mybatis/基础/" class="article-date">
+  <time datetime="2019-08-14T01:37:27.058Z" itemprop="datePublished">2019-08-14</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="对原生态jdbc程序问题的总结"><a href="#对原生态jdbc程序问题的总结" class="headerlink" title="对原生态jdbc程序问题的总结"></a>对原生态jdbc程序问题的总结</h2><p>（单独使用jdbc开发）</p>
+<p>数据库用的时候连接，不用的时候释放，频繁操作   通过连接池节约资源</p>
+<p>sql语句硬编码，不利于系统维护   使用配置文件把他配起来</p>
+<h2 id="mybatis框架原理"><a href="#mybatis框架原理" class="headerlink" title="mybatis框架原理"></a>mybatis框架原理</h2><h3 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h3><p>mybatis是持久层框架，是apache下的项目</p>
+<p>mybatis让程序主要精力放在sql上，通过mybatis提供的映射方式，简化sql</p>
+<p>mybatis将输入参数自动进行输入映射，将查询结果集映射成java对象</p>
+<h3 id="mybatis框架"><a href="#mybatis框架" class="headerlink" title="mybatis框架"></a>mybatis框架</h3><p>先完成基本配置：</p>
+<p>SqlMapConfig.xml：是mybatis的全局配置文件（名称不固定）。配置了数据源（c3p0）、事务（spring）等mybatis运行环境。配置里有个特别的东西（mapper.xml）这个文件里是映射关系（配置sql语句）通过配置文件生成会话工厂（SqlSessionFactory）</p>
+<p>操作数据库：</p>
+<p>SqlSessionFactory（会话工厂）创建 -&gt;SqlSession（接口）：会话 作用：操作数据库（发出sql增删改查）内部通过执行器（Excutor接口）操作数据库,两种实现方式（基本执行器、缓存执行器）。</p>
+<p>这个执行器需要很多参数，所以mybatis提供了一个<em>底层的封装对象（mapped statement）</em>作用：对数据库存储封装，包括sql语句，输入参数，输出结果类型，终于连接上了数据库</p>
+<p>输入参数类型：pojo、java简单类型、hashmap</p>
+<p>输出结果类型：pojo、java简单类型、hashmap</p>
+<h2 id="mybatis入门程序"><a href="#mybatis入门程序" class="headerlink" title="mybatis入门程序"></a>mybatis入门程序</h2><h3 id="增删改查"><a href="#增删改查" class="headerlink" title="增删改查"></a>增删改查</h3><p><em>lib下的一般是依赖包</em></p>
+<h4 id="查询用户信息"><a href="#查询用户信息" class="headerlink" title="查询用户信息"></a>查询用户信息</h4><p>根据用户名称模糊查询用户信息</p>
+<p><u>首先在映射文件中配置sql语句</u>   映射：（hibernate：orm：对象关系映射，实体类和数据表映射）咱们的xml映射分为输入映射、输出映射</p>
+<p>映射文件名 :user.xml(ibatis)、xxxMapper.xml(mybatis)</p>
+<p>namespace命名空间，sql的隔离</p>
+<p>映射文件中的sql语句会封装到<em>mapped statement</em>对象中</p>
+<p>在SqlMapConfig.xml中加载刚刚写好的xxxMapper.xml</p>
+<mappers>   
+
+<p>​            <mapper resource="路径/xxxMapper.xml"></mapper></p>
+</mappers>
+
+<p>程序编写，创建会话工厂，连接数据库</p>
+<p><code>//mybatis配置文件</code></p>
+<p>String resource = “sqlmap/SqlMapConfig.xml”;</p>
+<p><code>得到配置文件的流</code></p>
+<p><code>Resource.getResourceAsStream(resource);</code></p>
+<p><code>//创建会话工厂传入mybatis的配置文件信息，需要一个配置文件流</code></p>
+<p><code>SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);</code></p>
+<p><code>//通过工厂得到会话SqlSession</code></p>
+<p><code>SqlSession sqlSession = sqlSessionFactory.openSession();</code></p>
+<p><code>//通过SqlSession操作数据库</code></p>
+<p><code>//第一个参数：映射文件中的statement的id，等于=namespace+&quot;.&quot;+statement的id</code></p>
+<p><code>//第二个参数：指定和映射文件中所匹配的parameterType类型的参数</code></p>
+<p>User user = sqlSession.selectOne(statement,parameter);</p>
+<p><code>//提交事务</code></p>
+<p><code>sqlSession.commit();</code></p>
+<p><code>//释放资源</code></p>
+<p>sqlSession.close();</p>
+<h5 id="sql语句的格式"><a href="#sql语句的格式" class="headerlink" title="sql语句的格式"></a>sql语句的格式</h5><p>id：标识映射文件中的sql</p>
+<p>将sql语句封装到mapped statement 对象中，所以id称为statement的id</p>
+<p>parameterType：指定输入参数的类型</p>
+<p>#{}表示一个占位符号</p>
+<p>${}表示一个拼接符号，会引起sql注入（拼接的时候写where 1=1）</p>
+<p>#{id}：其中的id表示接入输入的参数，参数名称就是id，如果输入参数是简单类型，#{}中的参数名可以任意，可以实value或其他的名称都行</p>
+<p>resultType：指定输出结果的类型，表示将单条记录映射成java对象</p>
+<p>selectOne表示查询出1条记录进行映射</p>
+<p>selectList表示查询出一个列表（多条记录）进行映射</p>
+<h4 id="添加用户"><a href="#添加用户" class="headerlink" title="添加用户"></a>添加用户</h4><p>parameterType：指定输入参数类型是pojo（包括用户信息）</p>
+<p>#{}中指定的pojo的属性名，接收到pojo对象的属性值OGNL获取对象的属性值</p>
+<p>sql后面不要加;</p>
+<p><strong>自增主键返回</strong>：执行insert提交之前自动生成一个自增主键。通过mysql函数获取到刚插入记录的自增主键（select last_insert_idid();）在inseert之后调用</p>
+<p><code>&lt;insert id = &quot;insertUser&quot; parameterType = &quot;cn.itcast.mybatis.po.User&quot;&gt;</code></p>
+<p><code>&lt;!--keyProperty：将查询到主键值设置到parameterType指定的对象的哪个属性</code></p>
+<p><code>order：select last_insert_id()执行顺序，相对于insert语句来说他的执行顺序</code></p>
+<p><code>resultType:指定select last_insert_id()结果的类型--&gt;</code></p>
+<p><code>&lt;selectKey keyProperty=&quot;id&quot; order=&quot;after&quot; resultType=&quot;java.lang.Integer&quot;&gt;</code></p>
+<p>​            <code>select last_insert_id();</code></p>
+<p><code>&lt;/selectKey&gt;</code></p>
+<p><code>insert into user(username,birthday,sex,address) values(#{username},#{birthday},#{sex},#{adress})</code></p>
+<p><code>&lt;/insert&gt;</code></p>
+<p><strong>非自增主键的返回</strong>：</p>
+<p>mysql的uuid()函数生成主键，需要修改id字段类型的为String，长度设置为35位</p>
+<p>执行思路：先通过uuid();查询到主键，将主键注入到sql语句中，执行uuid();语句顺序相对于insert语句之前执行</p>
+<h4 id="删除用户"><a href="#删除用户" class="headerlink" title="删除用户"></a>删除用户</h4><p>sqlSession.update(statement,parameter);</p>
+<p>sqlSession.delete(statement,parameter);</p>
+<p>sqlSession.selectOne/List(statement,parameter);</p>
+<p>sqlSession.insert(statement,parameter);</p>
+<h4 id="更新用户"><a href="#更新用户" class="headerlink" title="更新用户"></a>更新用户</h4><h3 id="入门程序的总结"><a href="#入门程序的总结" class="headerlink" title="入门程序的总结"></a>入门程序的总结</h3><p>#{}表示一个占位符，接受输入参数，类型可以是简单类型、pojo、hashmap，如果接受简单类型，#{}中可以写成value或其他名称</p>
+<p>#{}接受pojo对象值，通过OGNL读取对象的属性值，通过属性.属性.属性…的方式获取属性值</p>
+<p>${}表示一个拼接符，会出现sql注入，不建议使用。接受输入参数，类型可以是简单类型、pojo、hashmap，如果接受简单类型，#{}中只能写成value</p>
+<p>${}接受pojo对象值，通过OGNL读取对象的属性值，通过属性.属性.属性…的方式获取属性值</p>
+<h4 id="mybatis和hibernate本质区别和应用场景"><a href="#mybatis和hibernate本质区别和应用场景" class="headerlink" title="mybatis和hibernate本质区别和应用场景"></a>mybatis和hibernate本质区别和应用场景</h4><p><strong>hibernate</strong>：入门门槛较高，是一个标准的ORM框架（对象关系映射），不需要程序员写sql，sql语句自动生成。对sql语句的优化、修改比较困难</p>
+<p><strong>应用场景</strong>：适应于需求变化较少的中小型的项目，比如：后台管理系统，erp、orm、oa…</p>
+<p><strong>mybatis</strong>：专注于sql本身，需要程序员自己编写sql语句，sql修改、优化比较方便。mybatis是一个不完全的ORM框架，虽然程序员自己写sql，但是存在映射（输入映射、输出映射）</p>
+<p><strong>应用场景</strong>：适应于需求项目较多的项目，比如：互联网项目</p>
+<p>企业进行技术选型，以低成本、高回报作为技术选型的原则，根据项目组的项目力量进行选择</p>
+<h2 id="mybatis开发dao的两种方法"><a href="#mybatis开发dao的两种方法" class="headerlink" title="mybatis开发dao的两种方法"></a>mybatis开发dao的两种方法</h2><h3 id="SqlSession使用范围（单例）"><a href="#SqlSession使用范围（单例）" class="headerlink" title="SqlSession使用范围（单例）"></a>SqlSession使用范围（单例）</h3><p>通过<strong>SqlSessionFactoryBuilder</strong>创建SqlSessionFactory，将SqlSessionFactoryBuilder当成一个工具类即可，不需要使用单例管理SqlSessionFactoryBuilder。在需要创建工厂的时候只需要创建一次SqlSessionFactoryBuilder即可（因为下面的SqlSessionFactory是单例管理的）</p>
+<p>通过<strong>SqlSessionFactory</strong>创建SqlSession，通过使用单例模式管理sqlSessionFactory（工厂一旦创建，就一直使用一个实例）</p>
+<p>将来mybatis和spring整合后，使用单例模式管理sqlSessionFactory</p>
+<p>SqlSession：是一个面向用户（程序员）的接口提供了很多操作数据库的方法：如：selectOne、selectList。是线程不安全的，在SqlSession的实现类中，除了有接口中的方法（操作数据库的方法）、还有数据域的属性（多例不安全）。<em>SqlSession最佳的应用场合在方法体内，定义成局部变量</em></p>
+<h3 id="原始dao开发方法"><a href="#原始dao开发方法" class="headerlink" title="原始dao开发方法"></a>原始dao开发方法</h3><h4 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h4><p><strong>需要编写dao接口和dao实现类</strong></p>
+<p>需要向dao实现类中注入SqlSessionFactory，在方法体中通过SqlSessionFactory常见SqlSession</p>
+<h4 id="dao接口"><a href="#dao接口" class="headerlink" title="dao接口"></a>dao接口</h4><h4 id="dao接口实现类"><a href="#dao接口实现类" class="headerlink" title="dao接口实现类"></a>dao接口实现类</h4><p><code>//需要向dao实现类中注入SqlSessionFactory</code></p>
+<p><code>这里通过构造方法注入</code></p>
+<p><code>private SqlSessionFactory sqlSessionFactory;</code></p>
+<p><code>public 类名 (SqlSessionFactory sqlSessionFactory){</code></p>
+<p><code>this.sqlSessionFactory = sqlSessionFactory;</code></p>
+<p><code>}</code></p>
+<p><img src="C:%5CUsers%5C%E9%83%AD%E6%8C%AF%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1565315234136.png" alt="1565315234136"></p>
+<p>@Befor是在测试类之前执行的类：需要创建会话工厂，供测试类通过构造器注入</p>
+<p>@Text是测试类：创建UserDao这个实现类的时候，UserDaoImpl构造器需要一个sqlSessionFactory，有@Befor提供；创建成功后可以开始调用UserDao里面的方法</p>
+<h4 id="总结原始dao开发的问题"><a href="#总结原始dao开发的问题" class="headerlink" title="总结原始dao开发的问题"></a>总结原始dao开发的问题</h4><p>1.dao接口的实现类的方法中存在大量的模板方法，设想能否将这些代码提取出来，大大减轻程序员的工作量</p>
+<p>2.第一个参数：看这个蓝色的地方：是个硬编码（statement的id硬编码）</p>
+<p>3.第二个参数的类型是泛型，即使传入参数错误，在编译阶段也不报错，不利于程序员开发</p>
+<p><img src="C:%5CUsers%5C%E9%83%AD%E6%8C%AF%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1565316318487.png" alt="1565316318487"></p>
+<h3 id="mybatis的mapper代理的开发方法"><a href="#mybatis的mapper代理的开发方法" class="headerlink" title="mybatis的mapper代理的开发方法"></a>mybatis的mapper代理的开发方法</h3><p>程序员编写mapper.xml映射文件</p>
+<p>程序员编写mapper接口（相当于dao接口）需要遵循一些开发规范，mybatis可以自动生成mapper接口实现类代理对象。</p>
+<p>mybatis可以自动生成mapper接口实现类的代理对象</p>
+<h4 id="开发规范"><a href="#开发规范" class="headerlink" title="开发规范"></a>开发规范</h4><p>1.在mapper.xml中namespace等于mapper接口的地址</p>
+<p>2.mapper.java接口中的方法名，和mapper.xml中的statement的id一致</p>
+<p>3.mapper.java接口中的方法输入参数类型和mapper.xml中statement中的statement的parameterType指定的类型一致</p>
+<p>4.mapper.java中的返回值类型和mapper.xml中的statement中的resultType指定的类型一致</p>
+<h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><p>以上的开发规范主要是对下边的代码进行统一的生成</p>
+<p>namespace变成了mapper.java的路径，mapper.java中的方法名是mapper.xml的staement的id，mybatis会自动拼接这两个东西生成原始Dao开发的第一个参数，第二个参数由第三条和第四条规范实现了</p>
+<p><code>User user = sqlSession.selectOne(&quot;namespace+statement的id&quot;,占位符对应的输入参数);</code></p>
+<p><code>sqlSession.insert(&quot;&quot;,);</code></p>
+<p><code>//开启会话，无论是什么开发，都得开启会话</code></p>
+<p><code>SqlSession sqlSession = sqlSessionFactory.openSession();</code></p>
+<p><code>//创建UserMapper对象,mybatis自动生成mapper代理对象</code></p>
+<p><code>UserMapper userMapper = sqlSession.getMapper(UserMapper.class);</code></p>
+<p><code>调用userMapper的方法</code></p>
+<p>注意：要在SqlMapConfig.xml中加载mapper.xml</p>
+<h4 id="问题总结"><a href="#问题总结" class="headerlink" title="问题总结"></a>问题总结</h4><h5 id="代理对象内部调用selectOne或selectList"><a href="#代理对象内部调用selectOne或selectList" class="headerlink" title="代理对象内部调用selectOne或selectList"></a>代理对象内部调用selectOne或selectList</h5><p>如果mapper方法返回单个pojo对象（非集合对象），代理对象的内部通过selectOne查询数据库</p>
+<p>如果mapper方法返回对象集合，代理对象内部通过selectList查询数据库</p>
+<h5 id="mapper接口方法的参数个数"><a href="#mapper接口方法的参数个数" class="headerlink" title="mapper接口方法的参数个数"></a>mapper接口方法的参数个数</h5><p>mapper接口方法的参数个数只能有一个，系统是否不利于系统维护</p>
+<p>系统框架中，dao层的代码是被业务层共用的，即使mapper接口只有一个参数，可以使用包装类型的pojo瞒住不同业务方法的参数</p>
+<p>注意：持久层中方法的参数可以用包装类型、map等，但是service方法中建议不要使用包装类型（不利于业务层的可扩展性）</p>
+<h2 id="Mapper代理开发和dao原始开发总结"><a href="#Mapper代理开发和dao原始开发总结" class="headerlink" title="***Mapper代理开发和dao原始开发总结"></a>***Mapper代理开发和dao原始开发总结</h2><h3 id="原始开发："><a href="#原始开发：" class="headerlink" title="原始开发："></a>原始开发：</h3><p>映射文件中的sql语句会封装到<em>mapped statement</em>对象中</p>
+<p>在SqlMapConfig.xml中加载刚刚写好的xxxMapper.xml</p>
+<mappers>   
+
+<p>​            <mapper resource="路径/xxxMapper.xml"></mapper></p>
+</mappers>
+
+<p>程序编写，创建会话工厂，连接数据库</p>
+<p><code>//mybatis配置文件</code></p>
+<p>String resource = “sqlmap/SqlMapConfig.xml”;</p>
+<p><code>得到配置文件的流</code></p>
+<p><code>Resource.getResourceAsStream(resource);</code></p>
+<p><code>//创建会话工厂传入mybatis的配置文件信息，需要一个配置文件流</code></p>
+<p><code>SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);</code></p>
+<p><code>//通过工厂得到会话SqlSession</code>，这个不论是怎么开发都必须有的</p>
+<p><code>SqlSession sqlSession = sqlSessionFactory.openSession();</code></p>
+<p><code>//通过SqlSession操作数据库</code></p>
+<p><code>//第一个参数：映射文件中的statement的id，等于=namespace+&quot;.&quot;+statement的id</code></p>
+<p><code>//第二个参数：指定和映射文件中所匹配的parameterType类型的参数</code>这里有缺陷</p>
+<p><strong>User user = sqlSession.selectOne(statement,parameter);</strong></p>
+<p><code>//提交事务</code></p>
+<p><code>sqlSession.commit();</code></p>
+<p><code>//释放资源</code></p>
+<p>sqlSession.close();</p>
+<p>自己配置SqlMapConfig.xml 和 mapper.xml</p>
+<p>通过配置文件生成会话工厂（SqlSessionFactory）</p>
+<p>通过会话工厂生成会话（SqlSession） </p>
+<p>通过SqlSession操作数据库</p>
+<p><strong>开发的流程：</strong></p>
+<p>编写写sql的xml，在mybatis全局配置的xml中加载编写sql的xml</p>
+<p><em>编写sql的xml里的namespace对应mapper.java的类的全路径，里面的sql的id对应类中的方法名（原始开发的第一个参数statementid）。mapper.java里面的方法入参和出参对应原始dao开发的第二个参数</em></p>
+<h3 id="mapper代理开发"><a href="#mapper代理开发" class="headerlink" title="mapper代理开发"></a>mapper代理开发</h3><h4 id="开发规范-1"><a href="#开发规范-1" class="headerlink" title="开发规范"></a>开发规范</h4><p>1.在mapper.xml中namespace等于mapper接口的地址</p>
+<p>2.mapper.java接口中的方法名，和mapper.xml中的statement的id一致</p>
+<p>3.mapper.java接口中的方法输入参数类型和mapper.xml中statement中的statement的parameterType指定的类型一致</p>
+<p>4.mapper.java中的返回值类型和mapper.xml中的statement中的resultType指定的类型一致</p>
+<p><strong>在原始开发中添加了开发规范，这些开发规范的作用：</strong></p>
+<p><code>//第一个参数：映射文件中的statement的id，等于=namespace+&quot;.&quot;+statement的id</code></p>
+<p><code>//第二个参数：指定和映射文件中所匹配的parameterType类型的参数</code>这里有缺陷，第二个参数是泛型</p>
+<p><strong>User user = sqlSession.selectOne(statement,parameter);</strong></p>
+<p>第一条和第二条开发规范优化了SqlSession的第一个参数，系统可以自动拼接，不需要我们去传入了</p>
+<p>第三条和第四条开发规范优化了SqlSession的第二个参数，可以判断他的parameterType和resultType，而不是原始开发中的泛型</p>
+<h2 id="mybatis的配置文件SqlMapConfig-xml"><a href="#mybatis的配置文件SqlMapConfig-xml" class="headerlink" title="mybatis的配置文件SqlMapConfig.xml"></a>mybatis的配置文件SqlMapConfig.xml</h2><p>mybatis的全局配置文件SqlMapConifig.xml，配置内容如下：</p>
+<p>properties（属性)、setting（全局配置参数）、typeAliases（类型别名）、typeHandlers（类型处理器）、objectFactory（对象工厂）、plugins（插件）、environments（环境集合属性对象）（environment（环境子属性对象（transactionManager（事务管理）、dataSource（数据源））））、mappers（映射器）</p>
+<h3 id="properties"><a href="#properties" class="headerlink" title="properties"></a>properties</h3><p><strong>需求：</strong></p>
+<p>将数据库连接的参数单独配置在db.properties中，只需要在SqlMapConfig.xml中加载db.properties的属性值（添加了一个配置文件），这样做的话，在SqlMapConfig.xml中就不需要对数据库的连接参数进行硬编码。</p>
+<p>将数据库连接参数只配置在db.properties中的原因：方便对参数的统一管理，其他的xml可以引用改db.properties</p>
+<p><code>&lt;!--SqlMapConfig.xml加载属性文件（db.properties）--&gt;</code></p>
+<p><code>&lt;properties resource = &quot;db.properties&quot;&gt;&lt;/properties&gt;</code></p>
+<p><code>&lt;!--配置数据库连接池--&gt;</code></p>
+<p><code>&lt;dataSource&gt;</code></p>
+<p>​            <code>&lt;property name = &quot;driver&quot; value = &quot;${文件中的属性名称}&quot; /&gt;</code></p>
+<p><code>&lt;/dataSource&gt;</code></p>
+<p><strong>properties特性：</strong></p>
+<p>mybatis将按照下面的顺序来加载属性：</p>
+<p>1.在properties元素体内定义属性首先被读取</p>
+<p>2.然后会读取properties元素中resource或url加载的属性，他会覆盖已读取的同名属性</p>
+<p>3.最后读取parameterType传递的属性，他会覆盖已读取的同名属性</p>
+<p>因此，通过parameterType传递的属性具有最高优先级，resource或url加载的属性次之，最低优先级是properties元素体内定义的属性</p>
+<p>建议：不要再properties元素体内添加任何属性值，只将属性值定义在properties文件中，在properties文件中定义属性名要有一定的特殊性，如xxx.xxx</p>
+<h3 id="settings全局参数配置"><a href="#settings全局参数配置" class="headerlink" title="settings全局参数配置"></a>settings全局参数配置</h3><p>mybatis运行时可以调整一些运行参数</p>
+<p>比如：开启二级缓存，开启延迟加载</p>
+<p><img src="C:%5CUsers%5C%E9%83%AD%E6%8C%AF%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1565343104480.png" alt="1565343104480"></p>
+<p>这些参数会影响mybatis的运行行为，如果操作不当，可能会导致运行出现问题</p>
+<h3 id="typeAliases（别名）"><a href="#typeAliases（别名）" class="headerlink" title="typeAliases（别名）"></a>typeAliases（别名）</h3><p><strong>需求：</strong></p>
+<p>在mapper.xml中，定义很多的statement，statement需要parameterType指定输入参数类型、需要resultType指定输出结果的映射类型</p>
+<p>如果在指定类型的时候输入类型全路径，不方便进行开发，可以针对parameterType或ResultType指定的类型定义一些别名，在mapper.xml中通过别名定义，方便开发</p>
+<p>mybatis有一些自己默认的别名，但是对于pojo需要自己定义别名</p>
+<p><code>&lt;typeAliases&gt;</code></p>
+<p>​            <code>//单个别名的定义</code></p>
+<p>​            <code>&lt;typeAlias type = &quot;全路径名（pojo类的路径）&quot; alias = &quot;别名&quot; /&gt;</code></p>
+<p>​            <code>//批量别名的定义</code></p>
+<p>​            <code>指定包名，mybatis自动扫描包中的po类，别名就是类名（首字母大小写都可以）</code></p>
+<p>​            <code>&lt;package name = &quot;包名&quot;/&gt;</code></p>
+<p><code>&lt;/typeAliases&gt;</code></p>
+<h3 id="typeHandlers（类型处理器）"><a href="#typeHandlers（类型处理器）" class="headerlink" title="typeHandlers（类型处理器）"></a>typeHandlers（类型处理器）</h3><p>mybatis中通过typeHandlers完成jdbc类型和java类型的转换</p>
+<p>通常情况下，mybatis提供的处理器满足日常需要，不需要自定义</p>
+<h3 id="mappers（映射配置）"><a href="#mappers（映射配置）" class="headerlink" title="mappers（映射配置）"></a>mappers（映射配置）</h3><p>通过resource加载单个文件</p>
+<p><code>&lt;maper class/resource/url/ /&gt;</code></p>
+<p><code>&lt;!--通过mapper接口加载映射文件，需要将mapper接口的类名和mapper.xml映射文件的名称保持一致，且在一个目录，上边规范的前提是使用mapper代理的方法--&gt;</code></p>
+<p><code>&lt;maper class /&gt;</code>指定的不是映射文件，指定的是class</p>
+<p><code>//批量加载mapper,指定mapper接口的包名，mybatis自动扫描包下的所有接口进行加载。这个遵循上面的规范</code></p>
+<p><code>&lt;package name = &quot;&quot; /&gt;</code></p>
+<h4 id="输入映射"><a href="#输入映射" class="headerlink" title="输入映射"></a>输入映射</h4><p>通过parameterType指定输入参数类型，类型可以实简单类型、hashmap、pojo的包装类型</p>
+<p><strong>传递pojo的包装对象</strong>：</p>
+<p>需求：完成用户信息的综合查询，需要传入查询条件很复杂（可能包含用户信息、其他信息，比如商品、订单的）</p>
+<p>针对上面的需求建议使用自定义的pojo，自定义查询条件</p>
+<h4 id="输出映射"><a href="#输出映射" class="headerlink" title="输出映射"></a>输出映射</h4><p><strong>resultType</strong>:</p>
+<p>使用resultType进行输出映射，只有查询出来的列名和pojo的属性名一致，该列才可以映射成功。如果查询出来的列名和pojo中的属性名全部不一致，没有创建pojo对象。只要查询出来的列名和pojo中的属性有一个一致，就会创建一个pojo对象</p>
+<p><strong>输出简单类型</strong>：用户信息的综合查询的列表总数，通过查询总数和上边用户综合查询列表才可以实现分页</p>
+<p>小节：只有查询出来的只有一行且有一列才可以使用输出简单类型</p>
+<p>输出pojo对象和pojo列表：不管输出的是pojo对象还是列表，在mapper.xml中resultType中指定的类型是一样的，但是在mapper.java中的返回值类型不一样（对象、集合），然后自动生成的mapper代理对象中是根据mapper方法的返回值类型确定是调用selectOne还是selectList</p>
+<p><strong>resultMap</strong>：</p>
+<p>mybatis中使用resultMap完成高级输出结果映射</p>
+<p>使用方法：</p>
+<p>如果查询出来的列名和pojo的属性名不一致，通过定义一个resultMap对列名和pojo属性名之间做一个映射关系</p>
+<p>1.定义resultMap</p>
+<p><code>//id是resultMAp的唯一标识</code></p>
+<p><code>&lt;resultMap type = &quot;&quot; id = &quot;&quot;&gt;</code></p>
+<p>​            <code>//id表示查询结果的唯一标识 ，column sql语句中查询的列名，property：pojo中的属性名</code></p>
+<p>​            <code>&lt;id column = &quot;&quot; property = &quot;&quot;/&gt;</code></p>
+<p><code>&lt;/resultMap&gt;</code></p>
+<p>resultMap：给定义的resultMap的id，如果这个resultMap在其他的mapper文档中，前边需要加namespace    </p>
+<p>2.使用resultMap作为statement的输出映射类型</p>
+<p>将下边的sql用UserCostom完成映射</p>
+<p>userCustom类中的属性和上边的查询列名不一致</p>
+<p><strong>小节</strong>：</p>
+<p>使用resultType进行输出映射，只有查询出来的列名和pojo中的属性名一致，该列才可以映射成功，如果查询出来的列名和pojo的属性名不一致，通过定义一个resultMap对列名和pojo属性名之间作一个映射关系</p>
+<h4 id="动态sql"><a href="#动态sql" class="headerlink" title="动态sql"></a>动态sql</h4><h5 id="什么是动态sql"><a href="#什么是动态sql" class="headerlink" title="什么是动态sql"></a>什么是动态sql</h5><p>mybatis核心：对sql语句进行灵活的操作，通过表达式，对sql进行灵活判断，组装</p>
+<p><strong>需求</strong>：</p>
+<p>用户信息的综合查询列表和用户信息查询列表的总数 这两个statement的定义使用动态sql。对查询条件进行判断，查询条件不为空，我们才会对查询语句进行拼接</p>
+<h5 id="if"><a href="#if" class="headerlink" title="if"></a>if</h5><p><code>//可以去掉查询条件中的第一个and</code></p>
+<p><code>&lt;where&gt;&lt;/where&gt;</code></p>
+<p><code>//判断条件</code></p>
+<p><code>&lt;if test = &quot;条件&quot;&gt;sql</code>语句<code>&lt;/if&gt;</code></p>
+<h5 id="foreach"><a href="#foreach" class="headerlink" title="foreach"></a>foreach</h5><p>向sql传递数组或list，mybatis使用foreach解析</p>
+<p>在用户查询列表和查询总数的statement中添加多个id输入查询</p>
+<p>在输入参数类型中添加list<integer> ids传入多个id</integer></p>
+<p><code>//使用foreach遍历传入的ids</code></p>
+<p><code>//collections：指定输入对象中集合属性，item：每次遍历生成对象中的属性名，open：开始遍历时拼接的串，close：结束遍历时拼接串,separator:遍历的两个对象中间需要拼接的串</code></p>
+<p><code>&lt;foreach collections = &quot;&quot; item = &quot;&quot; open = &quot;AND(&quot; close = &quot;)&quot; separator = &quot;&quot;&gt;id = #{这里填的时item里面填的东西}&lt;/foreach&gt;</code></p>
+<h5 id="sql片段"><a href="#sql片段" class="headerlink" title="sql片段"></a>sql片段</h5><p><strong>需求</strong>:</p>
+<p>将上边实现的sql判断代码抽取出来，组成一个sql片段。其他的statement中就可以来引用这个sql片段</p>
+<p>在mapper.xml中定义的statement的引用sql片段</p>
+<p>1.定义sql</p>
+<p><code>//sql片段的唯一标识,一般我们定义sql片段是基于单表来定义的，这样的话可重用性高。在sql片段中不要包括where</code></p>
+<p><code>&lt;sql id = &quot;&quot;&gt;</code></p>
+<p>​            <code>&lt;if test = &quot;条件&quot;&gt;sql语句&lt;/if&gt;</code></p>
+<p><code>&lt;/sql&gt;</code></p>
+<p>2.引用sql</p>
+<p><code>//引用sql片段的id，如果refid指定的id不再本mapper文件中，需要在前面加namespace</code></p>
+<p><code>&lt;where&gt;</code></p>
+<p>​            <code>&lt;include refid = &quot;&quot;&gt;&lt;/include&gt;</code></p>
+<p>​            <code>//在这里还要引用其他的sql片段，所以sql片段不能加where</code></p>
+<p><code>&lt;/where&gt;</code></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/08/14/mybatis/基础/" data-id="cjzal96bi0006kstbv3oyr4ob" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2019/08/14/mybatis/高级/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/08/14/java/java基础/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title"></div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/08/14/mybatis/高级/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/14/mybatis/基础/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/14/java/java基础/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/14/mysql/transaction/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/14/mysql/select/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
