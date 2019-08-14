@@ -62,7 +62,7 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="语言发展史机器语言、汇编语言、高级语言 计算机高级语言的类型编译型：c++、c（源码被编译完之后直接给系统） 解释型：javascript、Python、Php java是编译型语言和解释型语言的结合（源码文件（.java）被编译为class文件（字节码文件）然后被JRE处理（类加载器、字节码校验器、解释器（虚拟机）））最后JRE给了系统**java–&amp;gt;JVM–&amp;gt;底层操作系统，经过这么">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-08-14T10:00:30.165Z">
+<meta property="og:updated_time" content="2019-08-14T10:18:59.057Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="java start">
 <meta name="twitter:description" content="语言发展史机器语言、汇编语言、高级语言 计算机高级语言的类型编译型：c++、c（源码被编译完之后直接给系统） 解释型：javascript、Python、Php java是编译型语言和解释型语言的结合（源码文件（.java）被编译为class文件（字节码文件）然后被JRE处理（类加载器、字节码校验器、解释器（虚拟机）））最后JRE给了系统**java–&amp;gt;JVM–&amp;gt;底层操作系统，经过这么">
@@ -226,7 +226,7 @@
                 
               
 
-              <time title="Created: 2019-08-14 11:45:32 / Modified: 18:00:30" itemprop="dateCreated datePublished" datetime="2019-08-14T11:45:32+08:00">2019-08-14</time>
+              <time title="Created: 2019-08-14 11:45:32 / Modified: 18:18:59" itemprop="dateCreated datePublished" datetime="2019-08-14T11:45:32+08:00">2019-08-14</time>
             </span>
           
             
@@ -287,6 +287,18 @@
 </ul>
 <h3 id="关键字-保留字"><a href="#关键字-保留字" class="headerlink" title="关键字/保留字"></a>关键字/保留字</h3><p>java关键字是保留供内部使用的，如class用于定义类。关键字也可以称为保留字，他们的意思是一样的，我们不能使用关键字作为变量名或方法名</p>
 <p><a href="http://cyw3.github.io/YalesonChan/2016/Java-key.html" target="_blank" rel="noopener">关键字详解</a></p>
+<h3 id="变量的本质"><a href="#变量的本质" class="headerlink" title="变量的本质"></a>变量的本质</h3><ul>
+<li>变量的本质上就是代表一个“可操作的存储空间”，空间位置是确定的，但是里面放置什么值不确定。我们可以通过变量名来访问”对应的存储空间“，从而操纵这个”存储空间“存储的值。</li>
+<li>java是一种强类型语言，每个变量都必须声明其数据类型。变量的数据类型决定了变量占据存储空间的大小。比如，int a=3;表示变量a变量的空间大小为4个字节。</li>
+<li>变量作为程序中最基本的存储单元，其要素包括变量名、变量类型和作用域。变量在使用前必须对其声明，只有在变量声明以后，才能为其分配相应长度的存储空间。</li>
+<li>不同的数据类型的常量会在内存中分配不同的空间</li>
+</ul>
+<p><strong>注意事项</strong></p>
+<ul>
+<li>每个变量都会有类型，类型可以是基本类型，也可以是引用类型</li>
+<li>变量名必须是合法的标识符</li>
+<li>变量声明是一条完整的语句，因此每一个声明都必须以分号结束</li>
+</ul>
 
     </div>
 
@@ -390,7 +402,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#语言发展史"><span class="nav-number">1.</span> <span class="nav-text">语言发展史</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#计算机高级语言的类型"><span class="nav-number">1.1.</span> <span class="nav-text">计算机高级语言的类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#高级语言"><span class="nav-number">1.2.</span> <span class="nav-text">高级语言</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#java-start"><span class="nav-number">2.</span> <span class="nav-text">java start</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#JVM、JRE、JDK"><span class="nav-number">2.1.</span> <span class="nav-text">JVM、JRE、JDK</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装JDK"><span class="nav-number">2.2.</span> <span class="nav-text">安装JDK</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#目录结构"><span class="nav-number">2.2.1.</span> <span class="nav-text">目录结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#环境变量"><span class="nav-number">2.2.2.</span> <span class="nav-text">环境变量</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#设置Path环境变量"><span class="nav-number">2.2.2.1.</span> <span class="nav-text">设置Path环境变量</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#java基础"><span class="nav-number">2.3.</span> <span class="nav-text">java基础</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#标识符"><span class="nav-number">2.3.1.</span> <span class="nav-text">标识符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#标识符的使用规范"><span class="nav-number">2.3.2.</span> <span class="nav-text">标识符的使用规范</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#关键字-保留字"><span class="nav-number">2.3.3.</span> <span class="nav-text">关键字/保留字</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#语言发展史"><span class="nav-number">1.</span> <span class="nav-text">语言发展史</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#计算机高级语言的类型"><span class="nav-number">1.1.</span> <span class="nav-text">计算机高级语言的类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#高级语言"><span class="nav-number">1.2.</span> <span class="nav-text">高级语言</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#java-start"><span class="nav-number">2.</span> <span class="nav-text">java start</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#JVM、JRE、JDK"><span class="nav-number">2.1.</span> <span class="nav-text">JVM、JRE、JDK</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装JDK"><span class="nav-number">2.2.</span> <span class="nav-text">安装JDK</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#目录结构"><span class="nav-number">2.2.1.</span> <span class="nav-text">目录结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#环境变量"><span class="nav-number">2.2.2.</span> <span class="nav-text">环境变量</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#设置Path环境变量"><span class="nav-number">2.2.2.1.</span> <span class="nav-text">设置Path环境变量</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#java基础"><span class="nav-number">2.3.</span> <span class="nav-text">java基础</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#标识符"><span class="nav-number">2.3.1.</span> <span class="nav-text">标识符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#标识符的使用规范"><span class="nav-number">2.3.2.</span> <span class="nav-text">标识符的使用规范</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#关键字-保留字"><span class="nav-number">2.3.3.</span> <span class="nav-text">关键字/保留字</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#变量的本质"><span class="nav-number">2.3.4.</span> <span class="nav-text">变量的本质</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
