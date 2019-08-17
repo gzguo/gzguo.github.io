@@ -265,112 +265,6 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/16/jdbc-start/jdbc-start/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-      <header class="post-header">
-
-        
-          <h1 class="post-title" itemprop="name headline">
-              
-              <a href="/2019/08/16/jdbc-start/jdbc-start/" class="post-title-link" itemprop="url">jdbc_start</a>
-            
-          </h1>
-        
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              
-                
-              
-
-              <time title="Created: 2019-08-16 20:08:18 / Modified: 21:44:54" itemprop="dateCreated datePublished" datetime="2019-08-16T20:08:18+08:00">2019-08-16</time>
-            </span>
-          
-            
-
-            
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          
-            <h1 id="JDBC简介"><a href="#JDBC简介" class="headerlink" title="JDBC简介"></a>JDBC简介</h1><ul>
-<li>jdbc是Java Database Connectivity的缩写，即java数据库连接思想，使用jdbc可以实现对数据库的访问</li>
-<li>我们都知道，java是跨操作平台的，而通过jdbc可以实现跨数据库平台，jdbc只是一个抽象的编程接口，通过加载不同的数据库驱动，可以实现不同数据库的通信，例如：Mysql、Oracl、SqlServer</li>
-<li>在java中有两个包java.sql和javax.sql包含jdbc编程的所有接口</li>
-<li>在java中常用接口和类如下：DriverManger 驱动管理器获得数据库链接、Connect 数据库连接接口、Statement 语句接口，用来静态操作SQL语句、PreparedStatement 预定义语句，用来动态操作SQL语句、CallableStatement 可以调用存储过程的预定义语句、ResultSet 结果集，保存数据记录的结果集合、ResultMetaData 结果集元数据，如：列名称、列类型 、DatabaseMetaData 数据库元数据，如：数据库名称、版本</li>
-<li>jdbc的编程步骤：1.加载数据库驱动（jar文件） 2.获取数据库连接 3.创建语句 4.执行查询 5.遍历结果集 6.关闭数据库连接</li>
-</ul>
-<h1 id="数据库连接"><a href="#数据库连接" class="headerlink" title="数据库连接"></a>数据库连接</h1><ul>
-<li>获得数据库连接是操作数据库的第一步，是应用程序和数据库的一个“握手”过程</li>
-<li>数据库打开的连接数是有限的，所以连接使用完成需要关闭</li>
-<li>获得数据库连接的步骤：1.加载驱动(Class.forName) 2.获得连接(DriverManager 是获取数据库连接的一个工厂(实例化的作用) DriverManager.getConnection()) </li>
-</ul>
-<p><strong>创建数据库连接的时候，可以通过配置文件来加载固定格式的url、username、password等</strong></p>
-<h1 id="Statement语句"><a href="#Statement语句" class="headerlink" title="Statement语句"></a>Statement语句</h1><ul>
-<li>Statement语句是SQL语句的描述，使用它可以操作各种SQL语句，包括DDL(数据库定义语句，如创建表)、DML(CRUD)和DCL等</li>
-<li>使用Statement创建表</li>
-</ul>
-<h1 id="ResultSet结果集"><a href="#ResultSet结果集" class="headerlink" title="ResultSet结果集"></a>ResultSet结果集</h1><ul>
-<li>用来获得SQL语句查询结果</li>
-<li>结果集包含了SQL语句的查询结果数据</li>
-<li>调用语句的excuteQuery方法返回结果集对象</li>
-<li>ResultSet常用方法 next：返回boolean类型数据，用来判断结果集中是否有数据   getXXX：获得结果集中的数据项(可以根据列名称、可以根据列索引)</li>
-</ul>
-<h1 id="PreparedStatement"><a href="#PreparedStatement" class="headerlink" title="PreparedStatement"></a>PreparedStatement</h1><ul>
-<li>PreparedStatement为预定义语句，继承Statement</li>
-<li>Statement只能静态操作SQL语句，如果要操作动态SQL，这里可以使用PreparedStatement来动态操作SQL语句，PreparedStatement通过使用占位符“？”，来预生成SQL语句，从而达到动态操作的功能</li>
-</ul>
-
-          
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/14/mysql/transaction/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1742,22 +1636,9 @@
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">9</span>
+          <span class="site-state-item-count">8</span>
           <span class="site-state-item-name">posts</span>
         </a>
-      </div>
-    
-      
-      
-      <div class="site-state-item site-state-tags">
-        
-        
-        
-          
-        
-        <span class="site-state-item-count">1</span>
-        <span class="site-state-item-name">tags</span>
-        
       </div>
     
   </nav>
