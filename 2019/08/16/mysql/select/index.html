@@ -55,18 +55,18 @@
   };
 </script>
 
-  <meta name="description" content="select特殊功能：distinct(排重)：select distinct 字段名 from 数据表;between…and：select * from 数据表 where 字段名 between 值 and 值; 相当于select * from 数据表 where 字段名&amp;gt;字段值 and 字段名&amp;lt;字段值;">
+  <meta name="description" content="子查询">
 <meta name="keywords" content="mysql">
 <meta property="og:type" content="article">
-<meta property="og:title" content="mysql select">
+<meta property="og:title" content="mysql_select">
 <meta property="og:url" content="http://yoursite.com/2019/08/16/mysql/select/index.html">
 <meta property="og:site_name" content="gz">
-<meta property="og:description" content="select特殊功能：distinct(排重)：select distinct 字段名 from 数据表;between…and：select * from 数据表 where 字段名 between 值 and 值; 相当于select * from 数据表 where 字段名&amp;gt;字段值 and 字段名&amp;lt;字段值;">
+<meta property="og:description" content="子查询">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-08-19T06:40:37.822Z">
+<meta property="og:updated_time" content="2019-08-19T13:54:45.251Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="mysql select">
-<meta name="twitter:description" content="select特殊功能：distinct(排重)：select distinct 字段名 from 数据表;between…and：select * from 数据表 where 字段名 between 值 and 值; 相当于select * from 数据表 where 字段名&amp;gt;字段值 and 字段名&amp;lt;字段值;">
+<meta name="twitter:title" content="mysql_select">
+<meta name="twitter:description" content="子查询">
   <link rel="canonical" href="http://yoursite.com/2019/08/16/mysql/select/">
 
 
@@ -81,7 +81,7 @@
   };
 </script>
 
-  <title>mysql select | gz</title>
+  <title>mysql_select | gz</title>
   
 
 
@@ -243,7 +243,7 @@
       <header class="post-header">
 
         
-          <h1 class="post-title" itemprop="name headline">mysql select
+          <h1 class="post-title" itemprop="name headline">mysql_select
 
             
           </h1>
@@ -271,9 +271,22 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-08-19 14:40:37" itemprop="dateModified" datetime="2019-08-19T14:40:37+08:00">2019-08-19</time>
+                <time title="修改时间：2019-08-19 21:54:45" itemprop="dateModified" datetime="2019-08-19T21:54:45+08:00">2019-08-19</time>
               </span>
             
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/java/" itemprop="url" rel="index"><span itemprop="name">java</span></a></span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -316,8 +329,10 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h2 id="select特殊功能："><a href="#select特殊功能：" class="headerlink" title="select特殊功能："></a>select特殊功能：</h2><p><strong>distinct(排重)</strong>：select distinct 字段名 from 数据表;</p><p><strong>between…and</strong>：select * from 数据表 where 字段名 between 值 and 值; 相当于select * from 数据表 where 字段名&gt;字段值 and 字段名&lt;字段值;</p><a id="more"></a>
+        <h4 id="子查询"><a href="#子查询" class="headerlink" title="子查询"></a><center>子查询</center></h4><a id="more"></a>
 
+<h2 id="select特殊功能："><a href="#select特殊功能：" class="headerlink" title="select特殊功能："></a>select特殊功能：</h2><p><strong>distinct(排重)</strong>：select distinct 字段名 from 数据表;</p>
+<p><strong>between…and</strong>：select * from 数据表 where 字段名 between 值 and 值; 相当于select * from 数据表 where 字段名&gt;字段值 and 字段名&lt;字段值;</p>
 <p><strong>in</strong>：select * from 数据表 where 字段名 in(85，86，87);</p>
 <p><strong>or</strong>：select * from 数据表 where 字段名1 = ‘值’ or 字段名2 = ‘值’;(升序查询 asc从小到大)select * from 数据表 order by 字段名 asc; order by：系统默认是升序 desc降序（从大到小）</p>
 <p><strong>count(统计)</strong>：select count(*) from 数据表 where 字段名 = 值; (聚合函数)</p>
@@ -496,8 +511,8 @@
           <div class="post-nav">
             <div class="post-nav-next post-nav-item">
               
-                <a href="/2019/08/14/mybatis/mybatis-start/" rel="next" title="mybatis-start">
-                  <i class="fa fa-chevron-left"></i> mybatis-start
+                <a href="/2019/08/14/mybatis/start/" rel="next" title="mybatis_start">
+                  <i class="fa fa-chevron-left"></i> mybatis_start
                 </a>
               
             </div>
@@ -506,8 +521,8 @@
 
             <div class="post-nav-prev post-nav-item">
               
-                <a href="/2019/08/16/mysql/transaction/" rel="prev" title="mysql transaction">
-                  mysql transaction <i class="fa fa-chevron-right"></i>
+                <a href="/2019/08/16/mysql/transaction/" rel="prev" title="mysql_transaction">
+                  mysql_transaction <i class="fa fa-chevron-right"></i>
                 </a>
               
             </div>
@@ -572,6 +587,23 @@
     
       
       
+      <div class="site-state-item site-state-categories">
+        
+          
+            <a href="/categories/">
+          
+        
+        
+        
+          
+        
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">分类</span>
+        </a>
+      </div>
+    
+      
+      
       <div class="site-state-item site-state-tags">
         
           
@@ -609,7 +641,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#select特殊功能："><span class="nav-number">1.</span> <span class="nav-text">select特殊功能：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#多表查询："><span class="nav-number">2.</span> <span class="nav-text">多表查询：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#子查询："><span class="nav-number">3.</span> <span class="nav-text">子查询：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#sql的四种链接查询："><span class="nav-number">4.</span> <span class="nav-text">sql的四种链接查询：</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#子查询"><span class="nav-number">1.</span> <span class="nav-text">子查询</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#select特殊功能："><span class="nav-number"></span> <span class="nav-text">select特殊功能：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#多表查询："><span class="nav-number"></span> <span class="nav-text">多表查询：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#子查询："><span class="nav-number"></span> <span class="nav-text">子查询：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#sql的四种链接查询："><span class="nav-number"></span> <span class="nav-text">sql的四种链接查询：</span></a></div>
             
 
           </div>

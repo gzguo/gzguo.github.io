@@ -55,23 +55,23 @@
   };
 </script>
 
-  <meta name="description" content="对原生态jdbc程序问题的总结（单独使用jdbc开发）数据库用的时候连接，不用的时候释放，频繁操作   通过连接池节约资源sql语句硬编码，不利于系统维护   使用配置文件把他配起来mybatis框架原理特点mybatis是持久层框架，是apache下的项目mybatis让程序主要精力放在sql上，通过mybatis提供的映射方式，简化sql">
+  <meta name="description" content="mybatis使用不同方法进行增删改查">
 <meta name="keywords" content="mybatis">
 <meta property="og:type" content="article">
-<meta property="og:title" content="mybatis-start">
-<meta property="og:url" content="http://yoursite.com/2019/08/14/mybatis/mybatis-start/index.html">
+<meta property="og:title" content="mybatis_start">
+<meta property="og:url" content="http://yoursite.com/2019/08/14/mybatis/start/index.html">
 <meta property="og:site_name" content="gz">
-<meta property="og:description" content="对原生态jdbc程序问题的总结（单独使用jdbc开发）数据库用的时候连接，不用的时候释放，频繁操作   通过连接池节约资源sql语句硬编码，不利于系统维护   使用配置文件把他配起来mybatis框架原理特点mybatis是持久层框架，是apache下的项目mybatis让程序主要精力放在sql上，通过mybatis提供的映射方式，简化sql">
+<meta property="og:description" content="mybatis使用不同方法进行增删改查">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://yoursite.com/2019/08/14/mybatis/mybatis-start/F:%5Cblog%5Cpublic%5Ccss%5Cimages%5C1565315234136.png">
-<meta property="og:image" content="http://yoursite.com/2019/08/14/mybatis/mybatis-start/F:%5Cblog%5Cpublic%5Ccss%5Cimages%5C1565316318487.png">
-<meta property="og:image" content="http://yoursite.com/2019/08/14/mybatis/mybatis-start/F:%5Cblog%5Cpublic%5Ccss%5Cimages%5C1565343104480.png">
-<meta property="og:updated_time" content="2019-08-19T06:39:06.225Z">
+<meta property="og:image" content="http://yoursite.com/2019/08/14/mybatis/start/F:%5Cblog%5Cpublic%5Ccss%5Cimages%5C1565315234136.png">
+<meta property="og:image" content="http://yoursite.com/2019/08/14/mybatis/start/F:%5Cblog%5Cpublic%5Ccss%5Cimages%5C1565316318487.png">
+<meta property="og:image" content="http://yoursite.com/2019/08/14/mybatis/start/F:%5Cblog%5Cpublic%5Ccss%5Cimages%5C1565343104480.png">
+<meta property="og:updated_time" content="2019-08-19T13:54:17.335Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="mybatis-start">
-<meta name="twitter:description" content="对原生态jdbc程序问题的总结（单独使用jdbc开发）数据库用的时候连接，不用的时候释放，频繁操作   通过连接池节约资源sql语句硬编码，不利于系统维护   使用配置文件把他配起来mybatis框架原理特点mybatis是持久层框架，是apache下的项目mybatis让程序主要精力放在sql上，通过mybatis提供的映射方式，简化sql">
-<meta name="twitter:image" content="http://yoursite.com/2019/08/14/mybatis/mybatis-start/F:%5Cblog%5Cpublic%5Ccss%5Cimages%5C1565315234136.png">
-  <link rel="canonical" href="http://yoursite.com/2019/08/14/mybatis/mybatis-start/">
+<meta name="twitter:title" content="mybatis_start">
+<meta name="twitter:description" content="mybatis使用不同方法进行增删改查">
+<meta name="twitter:image" content="http://yoursite.com/2019/08/14/mybatis/start/F:%5Cblog%5Cpublic%5Ccss%5Cimages%5C1565315234136.png">
+  <link rel="canonical" href="http://yoursite.com/2019/08/14/mybatis/start/">
 
 
 <script id="page-configurations">
@@ -85,7 +85,7 @@
   };
 </script>
 
-  <title>mybatis-start | gz</title>
+  <title>mybatis_start | gz</title>
   
 
 
@@ -233,7 +233,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/14/mybatis/mybatis-start/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/14/mybatis/start/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="gz">
@@ -247,7 +247,7 @@
       <header class="post-header">
 
         
-          <h1 class="post-title" itemprop="name headline">mybatis-start
+          <h1 class="post-title" itemprop="name headline">mybatis_start
 
             
           </h1>
@@ -275,9 +275,22 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-08-19 14:39:06" itemprop="dateModified" datetime="2019-08-19T14:39:06+08:00">2019-08-19</time>
+                <time title="修改时间：2019-08-19 21:54:17" itemprop="dateModified" datetime="2019-08-19T21:54:17+08:00">2019-08-19</time>
               </span>
             
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/java/" itemprop="url" rel="index"><span itemprop="name">java</span></a></span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -320,11 +333,13 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h2 id="对原生态jdbc程序问题的总结"><a href="#对原生态jdbc程序问题的总结" class="headerlink" title="对原生态jdbc程序问题的总结"></a>对原生态jdbc程序问题的总结</h2><p>（单独使用jdbc开发）</p><p>数据库用的时候连接，不用的时候释放，频繁操作   通过连接池节约资源</p><p>sql语句硬编码，不利于系统维护   使用配置文件把他配起来</p><h2 id="mybatis框架原理"><a href="#mybatis框架原理" class="headerlink" title="mybatis框架原理"></a>mybatis框架原理</h2><h3 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h3><p>mybatis是持久层框架，是apache下的项目</p><p>mybatis让程序主要精力放在sql上，通过mybatis提供的映射方式，简化sql</p><a id="more"></a>
+        <h4 id="mybatis使用不同方法进行增删改查"><a href="#mybatis使用不同方法进行增删改查" class="headerlink" title="mybatis使用不同方法进行增删改查"></a><center>mybatis使用不同方法进行增删改查</center></h4><a id="more"></a>
 
-
-
-
+<h2 id="对原生态jdbc程序问题的总结"><a href="#对原生态jdbc程序问题的总结" class="headerlink" title="对原生态jdbc程序问题的总结"></a>对原生态jdbc程序问题的总结</h2><p>（单独使用jdbc开发）</p>
+<p>数据库用的时候连接，不用的时候释放，频繁操作   通过连接池节约资源</p>
+<p>sql语句硬编码，不利于系统维护   使用配置文件把他配起来</p>
+<h2 id="mybatis框架原理"><a href="#mybatis框架原理" class="headerlink" title="mybatis框架原理"></a>mybatis框架原理</h2><h3 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h3><p>mybatis是持久层框架，是apache下的项目</p>
+<p>mybatis让程序主要精力放在sql上，通过mybatis提供的映射方式，简化sql</p>
 <p>mybatis将输入参数自动进行输入映射，将查询结果集映射成java对象</p>
 <h3 id="mybatis框架"><a href="#mybatis框架" class="headerlink" title="mybatis框架"></a>mybatis框架</h3><p>先完成基本配置：</p>
 <p>SqlMapConfig.xml：是mybatis的全局配置文件（名称不固定）。配置了数据源（c3p0）、事务（spring）等mybatis运行环境。配置里有个特别的东西（mapper.xml）这个文件里是映射关系（配置sql语句）通过配置文件生成会话工厂（SqlSessionFactory）</p>
@@ -384,13 +399,13 @@
 <p>需要向dao实现类中注入SqlSessionFactory，在方法体中通过SqlSessionFactory常见SqlSession</p>
 <h4 id="dao接口"><a href="#dao接口" class="headerlink" title="dao接口"></a>dao接口</h4><h4 id="dao接口实现类"><a href="#dao接口实现类" class="headerlink" title="dao接口实现类"></a>dao接口实现类</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//需要向dao实现类中注入SqlSessionFactory</span></span><br><span class="line"></span><br><span class="line">这里通过构造方法注入</span><br><span class="line"></span><br><span class="line"><span class="keyword">private</span> SqlSessionFactory sqlSessionFactory;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> 类名 (SqlSessionFactory sqlSessionFactory)&#123;</span><br><span class="line"></span><br><span class="line"><span class="keyword">this</span>.sqlSessionFactory = sqlSessionFactory;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p><img src="/2019/08/14/mybatis/mybatis-start/F:%5Cblog%5Cpublic%5Ccss%5Cimages%5C1565315234136.png" alt="1565315234136"></p>
+<p><img src="/2019/08/14/mybatis/start/F:%5Cblog%5Cpublic%5Ccss%5Cimages%5C1565315234136.png" alt="1565315234136"></p>
 <p>@Befor是在测试类之前执行的类：需要创建会话工厂，供测试类通过构造器注入</p>
 <p>@Text是测试类：创建UserDao这个实现类的时候，UserDaoImpl构造器需要一个sqlSessionFactory，有@Befor提供；创建成功后可以开始调用UserDao里面的方法</p>
 <h4 id="总结原始dao开发的问题"><a href="#总结原始dao开发的问题" class="headerlink" title="总结原始dao开发的问题"></a>总结原始dao开发的问题</h4><p>1.dao接口的实现类的方法中存在大量的模板方法，设想能否将这些代码提取出来，大大减轻程序员的工作量</p>
 <p>2.第一个参数：看这个蓝色的地方：是个硬编码（statement的id硬编码）</p>
 <p>3.第二个参数的类型是泛型，即使传入参数错误，在编译阶段也不报错，不利于程序员开发</p>
-<p><img src="/2019/08/14/mybatis/mybatis-start/F:%5Cblog%5Cpublic%5Ccss%5Cimages%5C1565316318487.png" alt="1565316318487"></p>
+<p><img src="/2019/08/14/mybatis/start/F:%5Cblog%5Cpublic%5Ccss%5Cimages%5C1565316318487.png" alt="1565316318487"></p>
 <h3 id="mybatis的mapper代理的开发方法"><a href="#mybatis的mapper代理的开发方法" class="headerlink" title="mybatis的mapper代理的开发方法"></a>mybatis的mapper代理的开发方法</h3><p>程序员编写mapper.xml映射文件</p>
 <p>程序员编写mapper接口（相当于dao接口）需要遵循一些开发规范，mybatis可以自动生成mapper接口实现类代理对象。</p>
 <p>mybatis可以自动生成mapper接口实现类的代理对象</p>
@@ -447,7 +462,7 @@
 <p>建议：不要再properties元素体内添加任何属性值，只将属性值定义在properties文件中，在properties文件中定义属性名要有一定的特殊性，如xxx.xxx</p>
 <h3 id="settings全局参数配置"><a href="#settings全局参数配置" class="headerlink" title="settings全局参数配置"></a>settings全局参数配置</h3><p>mybatis运行时可以调整一些运行参数</p>
 <p>比如：开启二级缓存，开启延迟加载</p>
-<p><img src="/2019/08/14/mybatis/mybatis-start/F:%5Cblog%5Cpublic%5Ccss%5Cimages%5C1565343104480.png" alt="1565343104480"></p>
+<p><img src="/2019/08/14/mybatis/start/F:%5Cblog%5Cpublic%5Ccss%5Cimages%5C1565343104480.png" alt="1565343104480"></p>
 <p>这些参数会影响mybatis的运行行为，如果操作不当，可能会导致运行出现问题</p>
 <h3 id="typeAliases（别名）"><a href="#typeAliases（别名）" class="headerlink" title="typeAliases（别名）"></a>typeAliases（别名）</h3><p><strong>需求：</strong></p>
 <p>在mapper.xml中，定义很多的statement，statement需要parameterType指定输入参数类型、需要resultType指定输出结果的映射类型</p>
@@ -526,8 +541,8 @@
           <div class="post-nav">
             <div class="post-nav-next post-nav-item">
               
-                <a href="/2019/08/14/mybatis/mybatis-high/" rel="next" title="mybatis high">
-                  <i class="fa fa-chevron-left"></i> mybatis high
+                <a href="/2019/08/14/mybatis/high/" rel="next" title="mybatis_high">
+                  <i class="fa fa-chevron-left"></i> mybatis_high
                 </a>
               
             </div>
@@ -536,8 +551,8 @@
 
             <div class="post-nav-prev post-nav-item">
               
-                <a href="/2019/08/16/mysql/select/" rel="prev" title="mysql select">
-                  mysql select <i class="fa fa-chevron-right"></i>
+                <a href="/2019/08/16/mysql/select/" rel="prev" title="mysql_select">
+                  mysql_select <i class="fa fa-chevron-right"></i>
                 </a>
               
             </div>
@@ -602,6 +617,23 @@
     
       
       
+      <div class="site-state-item site-state-categories">
+        
+          
+            <a href="/categories/">
+          
+        
+        
+        
+          
+        
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">分类</span>
+        </a>
+      </div>
+    
+      
+      
       <div class="site-state-item site-state-tags">
         
           
@@ -639,7 +671,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#对原生态jdbc程序问题的总结"><span class="nav-number">1.</span> <span class="nav-text">对原生态jdbc程序问题的总结</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#mybatis框架原理"><span class="nav-number">2.</span> <span class="nav-text">mybatis框架原理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#特点"><span class="nav-number">2.1.</span> <span class="nav-text">特点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#mybatis框架"><span class="nav-number">2.2.</span> <span class="nav-text">mybatis框架</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#mybatis入门程序"><span class="nav-number">3.</span> <span class="nav-text">mybatis入门程序</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#增删改查"><span class="nav-number">3.1.</span> <span class="nav-text">增删改查</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#查询用户信息"><span class="nav-number">3.1.1.</span> <span class="nav-text">查询用户信息</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#sql语句的格式"><span class="nav-number">3.1.1.1.</span> <span class="nav-text">sql语句的格式</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#添加用户"><span class="nav-number">3.1.2.</span> <span class="nav-text">添加用户</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#删除用户"><span class="nav-number">3.1.3.</span> <span class="nav-text">删除用户</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#更新用户"><span class="nav-number">3.1.4.</span> <span class="nav-text">更新用户</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#入门程序的总结"><span class="nav-number">3.2.</span> <span class="nav-text">入门程序的总结</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#mybatis和hibernate本质区别和应用场景"><span class="nav-number">3.2.1.</span> <span class="nav-text">mybatis和hibernate本质区别和应用场景</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#mybatis开发dao的两种方法"><span class="nav-number">4.</span> <span class="nav-text">mybatis开发dao的两种方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#SqlSession使用范围（单例）"><span class="nav-number">4.1.</span> <span class="nav-text">SqlSession使用范围（单例）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#原始dao开发方法"><span class="nav-number">4.2.</span> <span class="nav-text">原始dao开发方法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#思路"><span class="nav-number">4.2.1.</span> <span class="nav-text">思路</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#dao接口"><span class="nav-number">4.2.2.</span> <span class="nav-text">dao接口</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#dao接口实现类"><span class="nav-number">4.2.3.</span> <span class="nav-text">dao接口实现类</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#总结原始dao开发的问题"><span class="nav-number">4.2.4.</span> <span class="nav-text">总结原始dao开发的问题</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#mybatis的mapper代理的开发方法"><span class="nav-number">4.3.</span> <span class="nav-text">mybatis的mapper代理的开发方法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#开发规范"><span class="nav-number">4.3.1.</span> <span class="nav-text">开发规范</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#总结"><span class="nav-number">4.3.2.</span> <span class="nav-text">总结</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#问题总结"><span class="nav-number">4.3.3.</span> <span class="nav-text">问题总结</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#代理对象内部调用selectOne或selectList"><span class="nav-number">4.3.3.1.</span> <span class="nav-text">代理对象内部调用selectOne或selectList</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#mapper接口方法的参数个数"><span class="nav-number">4.3.3.2.</span> <span class="nav-text">mapper接口方法的参数个数</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Mapper代理开发和dao原始开发总结"><span class="nav-number">5.</span> <span class="nav-text">***Mapper代理开发和dao原始开发总结</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#原始开发："><span class="nav-number">5.1.</span> <span class="nav-text">原始开发：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#mapper代理开发"><span class="nav-number">5.2.</span> <span class="nav-text">mapper代理开发</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#开发规范-1"><span class="nav-number">5.2.1.</span> <span class="nav-text">开发规范</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#mybatis的配置文件SqlMapConfig-xml"><span class="nav-number">6.</span> <span class="nav-text">mybatis的配置文件SqlMapConfig.xml</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#properties"><span class="nav-number">6.1.</span> <span class="nav-text">properties</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#settings全局参数配置"><span class="nav-number">6.2.</span> <span class="nav-text">settings全局参数配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#typeAliases（别名）"><span class="nav-number">6.3.</span> <span class="nav-text">typeAliases（别名）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#typeHandlers（类型处理器）"><span class="nav-number">6.4.</span> <span class="nav-text">typeHandlers（类型处理器）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#mappers（映射配置）"><span class="nav-number">6.5.</span> <span class="nav-text">mappers（映射配置）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#输入映射"><span class="nav-number">6.5.1.</span> <span class="nav-text">输入映射</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#输出映射"><span class="nav-number">6.5.2.</span> <span class="nav-text">输出映射</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#动态sql"><span class="nav-number">6.5.3.</span> <span class="nav-text">动态sql</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#什么是动态sql"><span class="nav-number">6.5.3.1.</span> <span class="nav-text">什么是动态sql</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#if"><span class="nav-number">6.5.3.2.</span> <span class="nav-text">if</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#foreach"><span class="nav-number">6.5.3.3.</span> <span class="nav-text">foreach</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#sql片段"><span class="nav-number">6.5.3.4.</span> <span class="nav-text">sql片段</span></a></li></ol></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#mybatis使用不同方法进行增删改查"><span class="nav-number">1.</span> <span class="nav-text">mybatis使用不同方法进行增删改查</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#对原生态jdbc程序问题的总结"><span class="nav-number"></span> <span class="nav-text">对原生态jdbc程序问题的总结</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#mybatis框架原理"><span class="nav-number"></span> <span class="nav-text">mybatis框架原理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#特点"><span class="nav-number"></span> <span class="nav-text">特点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#mybatis框架"><span class="nav-number"></span> <span class="nav-text">mybatis框架</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#mybatis入门程序"><span class="nav-number"></span> <span class="nav-text">mybatis入门程序</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#增删改查"><span class="nav-number"></span> <span class="nav-text">增删改查</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#查询用户信息"><span class="nav-number">1.</span> <span class="nav-text">查询用户信息</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#sql语句的格式"><span class="nav-number">1.1.</span> <span class="nav-text">sql语句的格式</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#添加用户"><span class="nav-number">2.</span> <span class="nav-text">添加用户</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#删除用户"><span class="nav-number">3.</span> <span class="nav-text">删除用户</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#更新用户"><span class="nav-number">4.</span> <span class="nav-text">更新用户</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#入门程序的总结"><span class="nav-number"></span> <span class="nav-text">入门程序的总结</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#mybatis和hibernate本质区别和应用场景"><span class="nav-number">1.</span> <span class="nav-text">mybatis和hibernate本质区别和应用场景</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#mybatis开发dao的两种方法"><span class="nav-number"></span> <span class="nav-text">mybatis开发dao的两种方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#SqlSession使用范围（单例）"><span class="nav-number"></span> <span class="nav-text">SqlSession使用范围（单例）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#原始dao开发方法"><span class="nav-number"></span> <span class="nav-text">原始dao开发方法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#思路"><span class="nav-number">1.</span> <span class="nav-text">思路</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#dao接口"><span class="nav-number">2.</span> <span class="nav-text">dao接口</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#dao接口实现类"><span class="nav-number">3.</span> <span class="nav-text">dao接口实现类</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#总结原始dao开发的问题"><span class="nav-number">4.</span> <span class="nav-text">总结原始dao开发的问题</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#mybatis的mapper代理的开发方法"><span class="nav-number"></span> <span class="nav-text">mybatis的mapper代理的开发方法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#开发规范"><span class="nav-number">1.</span> <span class="nav-text">开发规范</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#总结"><span class="nav-number">2.</span> <span class="nav-text">总结</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#问题总结"><span class="nav-number">3.</span> <span class="nav-text">问题总结</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#代理对象内部调用selectOne或selectList"><span class="nav-number">3.1.</span> <span class="nav-text">代理对象内部调用selectOne或selectList</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#mapper接口方法的参数个数"><span class="nav-number">3.2.</span> <span class="nav-text">mapper接口方法的参数个数</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Mapper代理开发和dao原始开发总结"><span class="nav-number"></span> <span class="nav-text">***Mapper代理开发和dao原始开发总结</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#原始开发："><span class="nav-number"></span> <span class="nav-text">原始开发：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#mapper代理开发"><span class="nav-number"></span> <span class="nav-text">mapper代理开发</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#开发规范-1"><span class="nav-number">1.</span> <span class="nav-text">开发规范</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#mybatis的配置文件SqlMapConfig-xml"><span class="nav-number"></span> <span class="nav-text">mybatis的配置文件SqlMapConfig.xml</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#properties"><span class="nav-number"></span> <span class="nav-text">properties</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#settings全局参数配置"><span class="nav-number"></span> <span class="nav-text">settings全局参数配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#typeAliases（别名）"><span class="nav-number"></span> <span class="nav-text">typeAliases（别名）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#typeHandlers（类型处理器）"><span class="nav-number"></span> <span class="nav-text">typeHandlers（类型处理器）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#mappers（映射配置）"><span class="nav-number"></span> <span class="nav-text">mappers（映射配置）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#输入映射"><span class="nav-number">1.</span> <span class="nav-text">输入映射</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#输出映射"><span class="nav-number">2.</span> <span class="nav-text">输出映射</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#动态sql"><span class="nav-number">3.</span> <span class="nav-text">动态sql</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#什么是动态sql"><span class="nav-number">3.1.</span> <span class="nav-text">什么是动态sql</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#if"><span class="nav-number">3.2.</span> <span class="nav-text">if</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#foreach"><span class="nav-number">3.3.</span> <span class="nav-text">foreach</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#sql片段"><span class="nav-number">3.4.</span> <span class="nav-text">sql片段</span></a></li></ol></li></ol></div>
             
 
           </div>
