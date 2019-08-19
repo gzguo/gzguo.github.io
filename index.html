@@ -226,6 +226,155 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/16/mysql/mysql/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="gz">
+      <meta itemprop="description" content="gzcjy">
+      <meta itemprop="image" content="/uploads/qq.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="gz">
+    </span>
+      <header class="post-header">
+
+        
+          <h1 class="post-title" itemprop="name headline">
+              
+              <a href="/2019/08/16/mysql/mysql/" class="post-title-link" itemprop="url">mysql start</a>
+            
+          </h1>
+        
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-08-16 20:08:18" itemprop="dateCreated datePublished" datetime="2019-08-16T20:08:18+08:00">2019-08-16</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-08-19 14:40:00" itemprop="dateModified" datetime="2019-08-19T14:40:00+08:00">2019-08-19</time>
+              </span>
+            
+          
+
+          
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">本文字数：</span>
+              
+              <span>1.5k</span>
+            </span>
+          
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              
+              <span>1 分钟</span>
+            </span>
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          
+            <h2 id="mysql操作数据库和数据表"><a href="#mysql操作数据库和数据表" class="headerlink" title="mysql操作数据库和数据表"></a>mysql操作数据库和数据表</h2><p>create table 表名(字段名 类型 主键 非空);   建表</p>
+<p>create database 数据库名;   建库 </p>
+<p>use 数据库名;   使用某个数据库</p>
+<p>show databases：查看数据库</p>
+<p>show tables：查看数据表</p>
+<p>describe/desc 表名：查看表结构</p>
+<p>select * from 表名：查看表内数据</p>
+<h2 id="mysql增删改查"><a href="#mysql增删改查" class="headerlink" title="mysql增删改查"></a>mysql增删改查</h2><p>select * from 表名;   //get</p>
+<p>insert into 表名(字段名) values(字段值);   //post</p>
+<p>update 表名 set 字段名 = ‘字段值’;   //put</p>
+<p>delete from 表名 where id = ‘字段值’;   //delete</p>
+<h2 id="mysql的约束"><a href="#mysql的约束" class="headerlink" title="mysql的约束"></a>mysql的约束</h2><p><strong>primary key主键约束</strong>：是每条信息的唯一信息，主键不能重复，主键禁止为空，主键一般标志到无意义的字段上</p>
+<p><strong>auto_increment自动递增</strong>：从一开始自增</p>
+<p><strong>唯一约束</strong>：约束修饰的字段的不能重复</p>
+<p><strong>非空约束</strong>：<strong>not null</strong>不能为null</p>
+<p><strong>默认约束</strong>：<strong>default</strong>当我们插入字段的时候，如果没有传值，就会使用默认值</p>
+<p><strong>外键约束</strong>：<strong>foreign key</strong> <strong>references</strong></p>
+<p>结论：<em>1.主表中没有的数据，在副表中是不可以使用的</em></p>
+<p>​            <em>2.主表中的记录被副表引用，那么主表中的这条记录是不可以被删除的</em></p>
+<p>涉及到两个表：父表、子表（主表、副表）</p>
+<p><em>主表不能随意删，副表不能随便加</em></p>
+<p>小例子：foreigen key(子表字段名) references 父表(父表中的字段名);</p>
+<h2 id="mysql对时区和密码的操作"><a href="#mysql对时区和密码的操作" class="headerlink" title="mysql对时区和密码的操作"></a>mysql对时区和密码的操作</h2><p>SELECT @@global.time_zone;  // global.time_zone<br>SELECT @@global.system_time_zone;  // globle.system_time<br>show variables like “%time_zone%”;  // Variable_name,Value<br>select now();  // now()</p>
+<p>ALTER USER ‘root’@’localhost’ IDENTIFIED WITH mysql_native_password BY ‘root’;   修改数据库密码</p>
+<p>select @@autocommit;  mysql的事务开启状态：是否自动提交 1 自动提交 2 非自动提交</p>
+<h2 id="mysql修改表结构："><a href="#mysql修改表结构：" class="headerlink" title="mysql修改表结构："></a>mysql修改表结构：</h2><p><strong>给某个字段添加主键约束</strong>：</p>
+<p>alter table 表名 add primary key(字段名);   //直接增加</p>
+<p>alter table 表名 modify 字段名 类型 primary key; //修改字段间接增加</p>
+<p><strong>删除主键约束</strong>：alter table 表名 <u>drop</u> primary key;</p>
+<p><strong>添加唯一约束</strong>：</p>
+<p>alter table 表名 add unique(字段名);</p>
+<p>alter table 表名 modify 字段名 类型 unique;</p>
+<p><strong>删除唯一约束</strong>：alter table 表名 drop index 字段名;</p>
+<h2 id="设计数据库的格式："><a href="#设计数据库的格式：" class="headerlink" title="设计数据库的格式："></a>设计数据库的格式：</h2><h3 id="第一范式："><a href="#第一范式：" class="headerlink" title="第一范式："></a>第一范式：</h3><p><strong>数据表中的所有字段都是不可分割的原子值</strong></p>
+<p>根据字段值还可以继续拆分的，不满主第一范式</p>
+<p>范式，设计的越详细，对于某些实际操作可能更好，但不一定都是好处</p>
+<h3 id="第二范式"><a href="#第二范式" class="headerlink" title="第二范式"></a>第二范式</h3><p>满足第一范式的前提下，第二范式要求，<strong>除主键外的每一列都必须完全依赖于主键</strong></p>
+<p>如果要出现不完全依赖，只可能发生在联合主键的情况下</p>
+<p>除主键之外的其他列，只依赖与主键的部分字段：<strong>拆表</strong></p>
+<h3 id="第三范式"><a href="#第三范式" class="headerlink" title="第三范式"></a>第三范式</h3><p>必须满足第二范式</p>
+<p><strong>除主键列的其他列之间不能用传递依赖关系</strong></p>
+
+          
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+      
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/16/JDBC/jdbc-start/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -529,155 +678,6 @@
 <ul>
 <li>局部变量：方法或语句</li>
 </ul>
-
-          
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/16/mysql/mysql/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="gz">
-      <meta itemprop="description" content="gzcjy">
-      <meta itemprop="image" content="/uploads/qq.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="gz">
-    </span>
-      <header class="post-header">
-
-        
-          <h1 class="post-title" itemprop="name headline">
-              
-              <a href="/2019/08/16/mysql/mysql/" class="post-title-link" itemprop="url">mysql start</a>
-            
-          </h1>
-        
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2019-08-16 20:08:18" itemprop="dateCreated datePublished" datetime="2019-08-16T20:08:18+08:00">2019-08-16</time>
-            </span>
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-08-19 14:40:00" itemprop="dateModified" datetime="2019-08-19T14:40:00+08:00">2019-08-19</time>
-              </span>
-            
-          
-
-          
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">本文字数：</span>
-              
-              <span>1.5k</span>
-            </span>
-          
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-clock-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              
-              <span>1 分钟</span>
-            </span>
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          
-            <h2 id="mysql操作数据库和数据表"><a href="#mysql操作数据库和数据表" class="headerlink" title="mysql操作数据库和数据表"></a>mysql操作数据库和数据表</h2><p>create table 表名(字段名 类型 主键 非空);   建表</p>
-<p>create database 数据库名;   建库 </p>
-<p>use 数据库名;   使用某个数据库</p>
-<p>show databases：查看数据库</p>
-<p>show tables：查看数据表</p>
-<p>describe/desc 表名：查看表结构</p>
-<p>select * from 表名：查看表内数据</p>
-<h2 id="mysql增删改查"><a href="#mysql增删改查" class="headerlink" title="mysql增删改查"></a>mysql增删改查</h2><p>select * from 表名;   //get</p>
-<p>insert into 表名(字段名) values(字段值);   //post</p>
-<p>update 表名 set 字段名 = ‘字段值’;   //put</p>
-<p>delete from 表名 where id = ‘字段值’;   //delete</p>
-<h2 id="mysql的约束"><a href="#mysql的约束" class="headerlink" title="mysql的约束"></a>mysql的约束</h2><p><strong>primary key主键约束</strong>：是每条信息的唯一信息，主键不能重复，主键禁止为空，主键一般标志到无意义的字段上</p>
-<p><strong>auto_increment自动递增</strong>：从一开始自增</p>
-<p><strong>唯一约束</strong>：约束修饰的字段的不能重复</p>
-<p><strong>非空约束</strong>：<strong>not null</strong>不能为null</p>
-<p><strong>默认约束</strong>：<strong>default</strong>当我们插入字段的时候，如果没有传值，就会使用默认值</p>
-<p><strong>外键约束</strong>：<strong>foreign key</strong> <strong>references</strong></p>
-<p>结论：<em>1.主表中没有的数据，在副表中是不可以使用的</em></p>
-<p>​            <em>2.主表中的记录被副表引用，那么主表中的这条记录是不可以被删除的</em></p>
-<p>涉及到两个表：父表、子表（主表、副表）</p>
-<p><em>主表不能随意删，副表不能随便加</em></p>
-<p>小例子：foreigen key(子表字段名) references 父表(父表中的字段名);</p>
-<h2 id="mysql对时区和密码的操作"><a href="#mysql对时区和密码的操作" class="headerlink" title="mysql对时区和密码的操作"></a>mysql对时区和密码的操作</h2><p>SELECT @@global.time_zone;  // global.time_zone<br>SELECT @@global.system_time_zone;  // globle.system_time<br>show variables like “%time_zone%”;  // Variable_name,Value<br>select now();  // now()</p>
-<p>ALTER USER ‘root’@’localhost’ IDENTIFIED WITH mysql_native_password BY ‘root’;   修改数据库密码</p>
-<p>select @@autocommit;  mysql的事务开启状态：是否自动提交 1 自动提交 2 非自动提交</p>
-<h2 id="mysql修改表结构："><a href="#mysql修改表结构：" class="headerlink" title="mysql修改表结构："></a>mysql修改表结构：</h2><p><strong>给某个字段添加主键约束</strong>：</p>
-<p>alter table 表名 add primary key(字段名);   //直接增加</p>
-<p>alter table 表名 modify 字段名 类型 primary key; //修改字段间接增加</p>
-<p><strong>删除主键约束</strong>：alter table 表名 <u>drop</u> primary key;</p>
-<p><strong>添加唯一约束</strong>：</p>
-<p>alter table 表名 add unique(字段名);</p>
-<p>alter table 表名 modify 字段名 类型 unique;</p>
-<p><strong>删除唯一约束</strong>：alter table 表名 drop index 字段名;</p>
-<h2 id="设计数据库的格式："><a href="#设计数据库的格式：" class="headerlink" title="设计数据库的格式："></a>设计数据库的格式：</h2><h3 id="第一范式："><a href="#第一范式：" class="headerlink" title="第一范式："></a>第一范式：</h3><p><strong>数据表中的所有字段都是不可分割的原子值</strong></p>
-<p>根据字段值还可以继续拆分的，不满主第一范式</p>
-<p>范式，设计的越详细，对于某些实际操作可能更好，但不一定都是好处</p>
-<h3 id="第二范式"><a href="#第二范式" class="headerlink" title="第二范式"></a>第二范式</h3><p>满足第一范式的前提下，第二范式要求，<strong>除主键外的每一列都必须完全依赖于主键</strong></p>
-<p>如果要出现不完全依赖，只可能发生在联合主键的情况下</p>
-<p>除主键之外的其他列，只依赖与主键的部分字段：<strong>拆表</strong></p>
-<h3 id="第三范式"><a href="#第三范式" class="headerlink" title="第三范式"></a>第三范式</h3><p>必须满足第二范式</p>
-<p><strong>除主键列的其他列之间不能用传递依赖关系</strong></p>
 
           
         
