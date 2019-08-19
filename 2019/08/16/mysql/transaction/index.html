@@ -55,18 +55,18 @@
   };
 </script>
 
-  <meta name="description" content="mysql事务mysql中，事务其实是一个最小的不可分割的单元，事务能保证一个业务的完整性 比如我们的银行转账 a –&amp;gt;-100 update user set money = money - 10 where name = ‘a’; b –&amp;gt;+100 update user set money = money + 10 where name = ‘b’; 实际的程序中：如果只有一条语">
+  <meta name="description" content="mysql事务mysql中，事务其实是一个最小的不可分割的单元，事务能保证一个业务的完整性比如我们的银行转账a –&amp;gt;-100update user set money = money - 10 where name = ‘a’;b –&amp;gt;+100update user set money = money + 10 where name = ‘b’;">
 <meta name="keywords" content="mysql">
 <meta property="og:type" content="article">
 <meta property="og:title" content="mysql transaction">
 <meta property="og:url" content="http://yoursite.com/2019/08/16/mysql/transaction/index.html">
 <meta property="og:site_name" content="gz">
-<meta property="og:description" content="mysql事务mysql中，事务其实是一个最小的不可分割的单元，事务能保证一个业务的完整性 比如我们的银行转账 a –&amp;gt;-100 update user set money = money - 10 where name = ‘a’; b –&amp;gt;+100 update user set money = money + 10 where name = ‘b’; 实际的程序中：如果只有一条语">
+<meta property="og:description" content="mysql事务mysql中，事务其实是一个最小的不可分割的单元，事务能保证一个业务的完整性比如我们的银行转账a –&amp;gt;-100update user set money = money - 10 where name = ‘a’;b –&amp;gt;+100update user set money = money + 10 where name = ‘b’;">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2019-08-19T06:40:54.370Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="mysql transaction">
-<meta name="twitter:description" content="mysql事务mysql中，事务其实是一个最小的不可分割的单元，事务能保证一个业务的完整性 比如我们的银行转账 a –&amp;gt;-100 update user set money = money - 10 where name = ‘a’; b –&amp;gt;+100 update user set money = money + 10 where name = ‘b’; 实际的程序中：如果只有一条语">
+<meta name="twitter:description" content="mysql事务mysql中，事务其实是一个最小的不可分割的单元，事务能保证一个业务的完整性比如我们的银行转账a –&amp;gt;-100update user set money = money - 10 where name = ‘a’;b –&amp;gt;+100update user set money = money + 10 where name = ‘b’;">
   <link rel="canonical" href="http://yoursite.com/2019/08/16/mysql/transaction/">
 
 
@@ -316,12 +316,12 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h2 id="mysql事务"><a href="#mysql事务" class="headerlink" title="mysql事务"></a>mysql事务</h2><p>mysql中，事务其实是一个最小的不可分割的单元，事务能保证一个业务的完整性</p>
-<p>比如我们的银行转账</p>
-<p>a –&gt;-100</p>
-<p>update user set money = money - 10 where name = ‘a’;</p>
-<p>b –&gt;+100</p>
-<p>update user set money = money + 10 where name = ‘b’;</p>
+        <h2 id="mysql事务"><a href="#mysql事务" class="headerlink" title="mysql事务"></a>mysql事务</h2><p>mysql中，事务其实是一个最小的不可分割的单元，事务能保证一个业务的完整性</p><p>比如我们的银行转账</p><p>a –&gt;-100</p><p>update user set money = money - 10 where name = ‘a’;</p><p>b –&gt;+100</p><p>update user set money = money + 10 where name = ‘b’;</p><a id="more"></a>
+
+
+
+
+
 <p>实际的程序中：如果只有一条语句执行成功，而另外一条没有执行成功出现数据前后不一致</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">update</span> <span class="keyword">user</span> <span class="keyword">set</span> money = money - <span class="number">10</span> <span class="keyword">where</span> <span class="keyword">name</span> = <span class="string">'a'</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">update</span> <span class="keyword">user</span> <span class="keyword">set</span> money = money + <span class="number">10</span> <span class="keyword">where</span> <span class="keyword">name</span> = <span class="string">'b'</span>;</span><br></pre></td></tr></table></figure>
 
