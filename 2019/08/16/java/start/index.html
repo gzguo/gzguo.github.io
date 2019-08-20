@@ -63,7 +63,7 @@
 <meta property="og:site_name" content="gz">
 <meta property="og:description" content="标识符、变量">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-08-19T13:53:25.884Z">
+<meta property="og:updated_time" content="2019-08-20T03:57:49.214Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="java_start">
 <meta name="twitter:description" content="标识符、变量">
@@ -273,7 +273,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-08-19 21:53:25" itemprop="dateModified" datetime="2019-08-19T21:53:25+08:00">2019-08-19</time>
+                <time title="修改时间：2019-08-20 11:57:49" itemprop="dateModified" datetime="2019-08-20T11:57:49+08:00">2019-08-20</time>
               </span>
             
           
@@ -308,7 +308,7 @@
               
                 <span class="post-meta-item-text">本文字数：</span>
               
-              <span>2.1k</span>
+              <span>4.8k</span>
             </span>
           
             <span class="post-meta-item" title="阅读时长">
@@ -318,7 +318,7 @@
               
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
               
-              <span>2 分钟</span>
+              <span>4 分钟</span>
             </span>
           
 
@@ -349,7 +349,7 @@
 <p><strong>c语言</strong>、<strong>c++</strong>、<strong>c#</strong>都很优秀，所有的语言都是c发展而来的</p>
 <p><strong>php</strong>是世界上最好的语言，用于大型web开发</p>
 <p><strong>javascript</strong>：用于前端页面渲染</p>
-<h1 id="java-start"><a href="#java-start" class="headerlink" title="java start"></a>java start</h1><h2 id="JVM、JRE、JDK"><a href="#JVM、JRE、JDK" class="headerlink" title="JVM、JRE、JDK"></a>JVM、JRE、JDK</h2><p>JVM（Java Virtual Machine）：源码经过编译器编程字节码，字节码被JVM解释执行。JVM与操作系统打交道</p>
+<h1 id="java的运行环境"><a href="#java的运行环境" class="headerlink" title="java的运行环境"></a>java的运行环境</h1><h2 id="JVM、JRE、JDK"><a href="#JVM、JRE、JDK" class="headerlink" title="JVM、JRE、JDK"></a>JVM、JRE、JDK</h2><p>JVM（Java Virtual Machine）：源码经过编译器编程字节码，字节码被JVM解释执行。JVM与操作系统打交道</p>
 <p>JRE（Java Runtime Environment）：包含Java虚拟机、库函数、运行Java应用程序所必须的文件</p>
 <p>JDK（Java Delelopment Kit）：Java开发工具包，包含了JRE，以及增加了<strong>编译器</strong>和<strong>调试器</strong>等用于程序开发的文件</p>
 <p>如果运行Java只需要有JRE就行，开发Java要有JDK</p>
@@ -360,8 +360,8 @@
 <p>lib目录：库Java的jar包（jar包：字节码文件打包）</p>
 <p>src.zip：java源码的目录</p>
 <h3 id="环境变量"><a href="#环境变量" class="headerlink" title="环境变量"></a>环境变量</h3><p>环境变量是在操作系统中一个具有特定名字的对象，它包含了一个或者多个应用程序所将使用到的信息</p>
-<h4 id="设置Path环境变量"><a href="#设置Path环境变量" class="headerlink" title="设置Path环境变量"></a>设置Path环境变量</h4><p>运行某个程序的时候，系统会去Path指定的目录中去找这个程序对应的文件</p>
-<h2 id="java基础"><a href="#java基础" class="headerlink" title="java基础"></a>java基础</h2><h3 id="标识符"><a href="#标识符" class="headerlink" title="标识符"></a>标识符</h3><p>标识符是用来给变量、类、方法以及包进行命名的，如Welcome、main、System、age、name、gender等。标识符需要遵守一定的规则：</p>
+<h3 id="设置Path环境变量"><a href="#设置Path环境变量" class="headerlink" title="设置Path环境变量"></a>设置Path环境变量</h3><p>运行某个程序的时候，系统会去Path指定的目录中去找这个程序对应的文件</p>
+<h1 id="java标识符、关键字、变常量"><a href="#java标识符、关键字、变常量" class="headerlink" title="java标识符、关键字、变常量"></a>java标识符、关键字、变常量</h1><h2 id="标识符"><a href="#标识符" class="headerlink" title="标识符"></a>标识符</h2><p>标识符是用来给变量、类、方法以及包进行命名的，如Welcome、main、System、age、name、gender等。标识符需要遵守一定的规则：</p>
 <ul>
 <li>标识符必须以字母、下划线_、美元符号$开头</li>
 <li>标识符其他部分可以是字母、下划线、美元符和数字的任意组合</li>
@@ -370,28 +370,147 @@
 </ul>
 <h3 id="标识符的使用规范"><a href="#标识符的使用规范" class="headerlink" title="标识符的使用规范"></a>标识符的使用规范</h3><ul>
 <li>表示类名的标识符：每个单词的首字母大写，如Man，GoodMan</li>
-<li>表示方法和变量的标识符：第一个单词小写，从第二个单词开始首字母大写，我们称之为”驼峰原则”，如eat()，eatFood()</li>
+<li>表示<strong>方法</strong>和<strong>变量</strong>的标识符：第一个单词小写，从第二个单词开始首字母大写，我们称之为”驼峰原则”，如eat()，eatFood()</li>
 <li>注意：java不采用通常语言使用的ASCII字符集，而是使用Unicode这样标准的国际字符集。因此，这里字母的含义不仅仅是英文，还包括汉字等等。但是不建议大家使用汉字来定义标识符</li>
 </ul>
-<h3 id="关键字-保留字"><a href="#关键字-保留字" class="headerlink" title="关键字/保留字"></a>关键字/保留字</h3><p>java关键字是保留供内部使用的，如class用于定义类。关键字也可以称为保留字，他们的意思是一样的，我们不能使用关键字作为变量名或方法名</p>
+<h2 id="关键字-保留字"><a href="#关键字-保留字" class="headerlink" title="关键字/保留字"></a>关键字/保留字</h2><p>java关键字是保留供内部使用的，如class用于定义类。关键字也可以称为保留字，他们的意思是一样的，我们不能使用关键字作为变量名或方法名</p>
 <p><a href="http://cyw3.github.io/YalesonChan/2016/Java-key.html" target="_blank" rel="noopener">关键字详解</a></p>
-<h3 id="变量的本质"><a href="#变量的本质" class="headerlink" title="变量的本质"></a>变量的本质</h3><ul>
+<h2 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h2><h3 id="变量的本质"><a href="#变量的本质" class="headerlink" title="变量的本质"></a>变量的本质</h3><ul>
 <li>变量的本质上就是代表一个“可操作的存储空间”，空间位置是确定的，但是里面放置什么值不确定。我们可以通过变量名来访问”对应的存储空间“，从而操纵这个”存储空间“存储的值。</li>
 <li>java是一种强类型语言，每个变量都必须声明其数据类型。变量的数据类型决定了变量占据存储空间的大小。比如，int a=3;表示变量a变量的空间大小为4个字节。</li>
 <li>变量作为程序中最基本的存储单元，其要素包括变量名、变量类型和作用域。变量在使用前必须对其声明，只有在变量声明以后，才能为其分配相应长度的存储空间。</li>
 <li>不同的数据类型的常量会在内存中分配不同的空间</li>
 </ul>
-<p><strong>注意事项</strong></p>
-<ul>
+<h3 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h3><ul>
 <li>每个变量都会有类型，类型可以是基本类型，也可以是引用类型</li>
 <li>变量名必须是合法的标识符</li>
 <li>变量声明是一条完整的语句，因此每一个声明都必须以分号结束</li>
 <li>方法中的变量必须声明、赋值之后才可以使用</li>
 </ul>
-<p><strong>变量的分类</strong></p>
-<ul>
-<li>局部变量：方法或语句</li>
+<h3 id="变量的分类"><a href="#变量的分类" class="headerlink" title="变量的分类"></a>变量的分类</h3><ul>
+<li><p><strong>局部变量</strong>：方法或语句块内定义的变量。生命周期从声明位置开始到方法语句块执行完毕为止。局部变量在使用前必须先声明、初始化(赋初值)再使用</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//语句块</span></span><br><span class="line">&#123;</span><br><span class="line"> 	<span class="keyword">int</span> age;   </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>成员变量</strong>：(实例变量)方法外部、类的内部定义的变量。从属于对象，生命周期伴随着对象始终。如果不自行初始化，他会自动初始化成该类型的默认初始值</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">double</span> b = <span class="number">0.0</span>;</span><br><span class="line"><span class="keyword">char</span> c = <span class="string">'\u0000'</span>;</span><br><span class="line">boolen = <span class="keyword">false</span>;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>静态变量</strong>：(类变量)方法外部、类的内部定义的变量。使用static定义，从属于类，生命周期伴随类始终，从类加载到卸载(通常系统启动时会把相应的类进行加载，系统结束的时候卸载这些类)，如果不自行初始化，与成员变量相同会自动初始化成该类型的默认初始化值</p>
+</li>
 </ul>
+<h2 id="常量-Constant"><a href="#常量-Constant" class="headerlink" title="常量(Constant)"></a>常量(Constant)</h2><p>常量一旦被赋值就不能被改变</p>
+<p>通过添加关键字final可以将一个变量转变成符号常量</p>
+<p>通常1，2，3，’a’这些称之为字面常量</p>
+<h2 id="变量和常量命名规范"><a href="#变量和常量命名规范" class="headerlink" title="变量和常量命名规范"></a>变量和常量命名规范</h2><ol>
+<li>所有的变量、方法名、类名：见名知义</li>
+<li>类成员变量：首字母小写和驼峰原则：monthSalary</li>
+<li>局部变量：首字母小写和驼峰原则</li>
+<li>常量：大写字母和下划线：MAX_VALUE</li>
+<li>类名：首字母大写和驼峰原则</li>
+<li>方法名首字母小写和驼峰原则</li>
+</ol>
+<h1 id="java数据类型"><a href="#java数据类型" class="headerlink" title="java数据类型"></a>java数据类型</h1><h2 id="数据类型的分类"><a href="#数据类型的分类" class="headerlink" title="数据类型的分类"></a>数据类型的分类</h2><p>基本数据类型：(primitive data type)：</p>
+<ul>
+<li>数值型：byte(1 byte)、short(2 byte)、int(4 byte)、long(8 byte)、float(4 byte)、double(8 byte)</li>
+<li>字符型：char(2 byte)</li>
+<li>布尔型：boolean(1 bit)</li>
+</ul>
+<p>1 byte(字节) = 8 bit(位)</p>
+<p>引用数据类型：(引用对象和变量，4byte)</p>
+<ul>
+<li>类(class)</li>
+<li>接口(interface)</li>
+<li>数组</li>
+</ul>
+<h2 id="整形变量-常量"><a href="#整形变量-常量" class="headerlink" title="整形变量/常量"></a>整形变量/常量</h2><ul>
+<li>byte(1 byte)</li>
+<li>short(2 byte)</li>
+<li>int(4 byte)</li>
+<li>long(8 byte)</li>
+</ul>
+<h3 id="整型常量的四中表示形式："><a href="#整型常量的四中表示形式：" class="headerlink" title="整型常量的四中表示形式："></a>整型常量的四中表示形式：</h3><ul>
+<li>十进制整数：99</li>
+<li>八进制整数，要求以0开头：015</li>
+<li>十六进制数，要求以0x或0X开头，0x15</li>
+<li>二进制数，要求0b或0B开头，0b01110011</li>
+</ul>
+<p>整型常量默认为int类型，整型常量后面要加L/l才表示这是一个long类型的常量。这里涉及到了类型转换的问题</p>
+<h2 id="浮点变量-常量"><a href="#浮点变量-常量" class="headerlink" title="浮点变量/常量"></a>浮点变量/常量</h2><ul>
+<li>十进制数形式：3.14</li>
+<li>科学计数法形式：314e2(31400)、314E2(31400)、314E-2(3.14)</li>
+</ul>
+<p>浮点常量的默认类型是double，浮点常量后面加F/f表示这是一个float类型的常量</p>
+<p>浮点数是不精确的，一定不要用于比较。如果非要比较，可以引用java.math包下的两个有用类BigInteger、BigDecimal，这两个类可以处理任意长度的数值。BigInteger实现了任意精度的整数运算。BigDecimal实现了任意精度的浮点运算。</p>
+<h2 id="字符型变量-常量"><a href="#字符型变量-常量" class="headerlink" title="字符型变量/常量"></a>字符型变量/常量</h2><p>2 byte</p>
+<p>注意一下转义字符</p>
+<p>看一下String</p>
+<h2 id="布尔类型变量-常量"><a href="#布尔类型变量-常量" class="headerlink" title="布尔类型变量/常量"></a>布尔类型变量/常量</h2><p>占 1 bit</p>
+<p>布尔类型有两个常量值：true和false，不可以使用0或非0整数替代true和false，这点和c语言不同。boolean类型用来判断逻辑条件，一般用于程序流程控制</p>
+<h1 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h1><h2 id="运算符分类-operator"><a href="#运算符分类-operator" class="headerlink" title="运算符分类(operator)"></a>运算符分类(operator)</h2><ul>
+<li>算术运算符</li>
+<li>赋值运算符</li>
+<li>关系运算符</li>
+<li>逻辑运算符</li>
+<li>位运算符</li>
+<li>条件运算符</li>
+<li>字符串连接符</li>
+</ul>
+<h2 id="算术运算符"><a href="#算术运算符" class="headerlink" title="算术运算符"></a>算术运算符</h2><h3 id="二元运算符"><a href="#二元运算符" class="headerlink" title="二元运算符"></a>二元运算符</h3><p>算术运算符中+、-、*、/、%属于二元运算符，二元运算符指的是需要两个操作数才能完成运算的运算符。</p>
+<h4 id="二元运算符的运算规则"><a href="#二元运算符的运算规则" class="headerlink" title="二元运算符的运算规则"></a>二元运算符的运算规则</h4><h5 id="整数运算"><a href="#整数运算" class="headerlink" title="整数运算"></a>整数运算</h5><ol>
+<li>如果两个操作数有一个为Long，则运算结果也为Long</li>
+<li>没有Long时，结果为int。即使操作数全为short、byte，结果也是int</li>
+</ol>
+<h5 id="浮点运算"><a href="#浮点运算" class="headerlink" title="浮点运算"></a>浮点运算</h5><ol>
+<li>如果有一个数为浮点，则结果为浮点</li>
+<li>如果两个操作数有一个是double，则结果为double</li>
+<li>只有两个操作数都为float，则结果才为float</li>
+</ol>
+<h5 id="取模运算"><a href="#取模运算" class="headerlink" title="取模运算"></a>取模运算</h5><ol>
+<li>其操作数可以为浮点数，一般使用整数，结果是余数，余数符号和左边操作数相同，如7%3=1，-7%3=-1，7%-3=1</li>
+</ol>
+<h2 id="一元运算符"><a href="#一元运算符" class="headerlink" title="一元运算符"></a>一元运算符</h2><p>自增、自减</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a = <span class="number">3</span>;</span><br><span class="line"><span class="keyword">int</span> b = a++; <span class="comment">//执行完后b=3，先给b赋值，再自增</span></span><br><span class="line">a = <span class="number">3</span>;</span><br><span class="line">b = ++a; <span class="comment">//执行完后b=4，a先自增，再给b赋值</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="赋值运算符及扩展赋值运算符"><a href="#赋值运算符及扩展赋值运算符" class="headerlink" title="赋值运算符及扩展赋值运算符"></a>赋值运算符及扩展赋值运算符</h2><p>赋值运算符：=</p>
+<p>扩展赋值运算符：+=、-=、*=、/=、%=</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a *= b + <span class="number">3</span>; <span class="comment">//相当于a = a * (b + 3)，始终先算后面的结果</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="关系运算符"><a href="#关系运算符" class="headerlink" title="关系运算符"></a>关系运算符</h2><p>==、!=、&gt;、&lt;、&gt;=、&lt;=</p>
+<h3 id="注意事项-1"><a href="#注意事项-1" class="headerlink" title="注意事项"></a>注意事项</h3><ul>
+<li>=是赋值运算符，而真正的判断两个操作数是否相等的运算符是==</li>
+<li>==、!=是所有(基本类型、引用类型)数据类型都可以使用</li>
+<li>&lt;、&lt;=、&gt;、&gt;= 仅针对数值类型(byte、short、int、long，float、double，以及char)</li>
+</ul>
+<h2 id="逻辑运算符"><a href="#逻辑运算符" class="headerlink" title="逻辑运算符"></a>逻辑运算符</h2><ul>
+<li>逻辑与：&amp; 操作两个布尔值，两个都是true才是true</li>
+<li>逻辑或：| 操作两个布尔值，有一个是true就是true</li>
+<li>短路与：&amp;&amp; 操作两个布尔值，只要有一个false，就直接返回false</li>
+<li>短路或：|| 操作两个布尔值，只要有一个true，就直接返回true</li>
+<li>逻辑非：! 操作一个布尔值，true就是false</li>
+<li>逻辑异或：^ 操作两个布尔值，两个值相同就是false</li>
+</ul>
+<h2 id="位运算符"><a href="#位运算符" class="headerlink" title="位运算符"></a>位运算符</h2><ul>
+<li><p>~：取反</p>
+</li>
+<li><p>&amp;：按位与 3&amp;4 (0011&amp;0100：0000)</p>
+</li>
+<li><p>|：按位或</p>
+</li>
+<li><p>^：按位异或</p>
+</li>
+<li><p>&lt;&lt;：左移运算符，左移一位相当于乘2</p>
+</li>
+<li><p>(&gt;&gt;)：右移运算符，右移一位相当于除2取商</p>
+</li>
+<li><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a = <span class="number">3</span> &lt;&lt; <span class="number">2</span>;</span><br><span class="line"><span class="comment">//a的值是12</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h2 id="字符串连接符"><a href="#字符串连接符" class="headerlink" title="字符串连接符"></a>字符串连接符</h2><p>+：如果左右两边有一个是字符串，那么+就是字符串连接符</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">String a = <span class="string">"3"</span>;</span><br><span class="line"><span class="keyword">int</span> b = <span class="number">4</span>;</span><br><span class="line"><span class="keyword">int</span> c = <span class="number">5</span>;</span><br><span class="line"><span class="keyword">char</span> d = <span class="string">'a'</span>;</span><br><span class="line">a + b; <span class="comment">//结果为34</span></span><br><span class="line">a + c; <span class="comment">//结果为35</span></span><br><span class="line">a + b + c; <span class="comment">//345 因为从左到右依次计算</span></span><br><span class="line">b + c + a; <span class="comment">//93</span></span><br><span class="line">d + <span class="number">4</span>; <span class="comment">//101 'a'=97,97+4=101,这里是算术运算符，不是字符串连接符</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="条件运算符"><a href="#条件运算符" class="headerlink" title="条件运算符"></a>条件运算符</h2><p>x:y:z</p>
+<p>其中x为boolean表达式，先计算x的值，若为true，则整个运算结果为表达式y的值。否则整个运算结果为表达式z的值，他是三目运算符</p>
+<h2 id="运算符的优先级"><a href="#运算符的优先级" class="headerlink" title="运算符的优先级"></a>运算符的优先级</h2><p><a href="https://blog.csdn.net/xiaoli_feng/article/details/4567184" target="_blank" rel="noopener">优先级</a></p>
 
     </div>
 
@@ -547,7 +666,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#标识符、变量"><span class="nav-number">1.</span> <span class="nav-text">标识符、变量</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#语言发展史"><span class="nav-number"></span> <span class="nav-text">语言发展史</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#计算机高级语言的类型"><span class="nav-number"></span> <span class="nav-text">计算机高级语言的类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#高级语言"><span class="nav-number"></span> <span class="nav-text">高级语言</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#java-start"><span class="nav-number"></span> <span class="nav-text">java start</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#JVM、JRE、JDK"><span class="nav-number"></span> <span class="nav-text">JVM、JRE、JDK</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装JDK"><span class="nav-number"></span> <span class="nav-text">安装JDK</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#目录结构"><span class="nav-number"></span> <span class="nav-text">目录结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#环境变量"><span class="nav-number"></span> <span class="nav-text">环境变量</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#设置Path环境变量"><span class="nav-number">1.</span> <span class="nav-text">设置Path环境变量</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#java基础"><span class="nav-number"></span> <span class="nav-text">java基础</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#标识符"><span class="nav-number"></span> <span class="nav-text">标识符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#标识符的使用规范"><span class="nav-number"></span> <span class="nav-text">标识符的使用规范</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#关键字-保留字"><span class="nav-number"></span> <span class="nav-text">关键字/保留字</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#变量的本质"><span class="nav-number"></span> <span class="nav-text">变量的本质</span></a></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#标识符、变量"><span class="nav-number">1.</span> <span class="nav-text">标识符、变量</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#语言发展史"><span class="nav-number"></span> <span class="nav-text">语言发展史</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#计算机高级语言的类型"><span class="nav-number"></span> <span class="nav-text">计算机高级语言的类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#高级语言"><span class="nav-number"></span> <span class="nav-text">高级语言</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#java的运行环境"><span class="nav-number"></span> <span class="nav-text">java的运行环境</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#JVM、JRE、JDK"><span class="nav-number"></span> <span class="nav-text">JVM、JRE、JDK</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装JDK"><span class="nav-number"></span> <span class="nav-text">安装JDK</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#目录结构"><span class="nav-number"></span> <span class="nav-text">目录结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#环境变量"><span class="nav-number"></span> <span class="nav-text">环境变量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置Path环境变量"><span class="nav-number"></span> <span class="nav-text">设置Path环境变量</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#java标识符、关键字、变常量"><span class="nav-number"></span> <span class="nav-text">java标识符、关键字、变常量</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#标识符"><span class="nav-number"></span> <span class="nav-text">标识符</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#标识符的使用规范"><span class="nav-number"></span> <span class="nav-text">标识符的使用规范</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#关键字-保留字"><span class="nav-number"></span> <span class="nav-text">关键字/保留字</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#变量"><span class="nav-number"></span> <span class="nav-text">变量</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#变量的本质"><span class="nav-number"></span> <span class="nav-text">变量的本质</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#注意事项"><span class="nav-number"></span> <span class="nav-text">注意事项</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#变量的分类"><span class="nav-number"></span> <span class="nav-text">变量的分类</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常量-Constant"><span class="nav-number"></span> <span class="nav-text">常量(Constant)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#变量和常量命名规范"><span class="nav-number"></span> <span class="nav-text">变量和常量命名规范</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#java数据类型"><span class="nav-number"></span> <span class="nav-text">java数据类型</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#数据类型的分类"><span class="nav-number"></span> <span class="nav-text">数据类型的分类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#整形变量-常量"><span class="nav-number"></span> <span class="nav-text">整形变量/常量</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#整型常量的四中表示形式："><span class="nav-number"></span> <span class="nav-text">整型常量的四中表示形式：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#浮点变量-常量"><span class="nav-number"></span> <span class="nav-text">浮点变量/常量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#字符型变量-常量"><span class="nav-number"></span> <span class="nav-text">字符型变量/常量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#布尔类型变量-常量"><span class="nav-number"></span> <span class="nav-text">布尔类型变量/常量</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#运算符"><span class="nav-number"></span> <span class="nav-text">运算符</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#运算符分类-operator"><span class="nav-number"></span> <span class="nav-text">运算符分类(operator)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#算术运算符"><span class="nav-number"></span> <span class="nav-text">算术运算符</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#二元运算符"><span class="nav-number"></span> <span class="nav-text">二元运算符</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#二元运算符的运算规则"><span class="nav-number">1.</span> <span class="nav-text">二元运算符的运算规则</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#整数运算"><span class="nav-number">1.1.</span> <span class="nav-text">整数运算</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#浮点运算"><span class="nav-number">1.2.</span> <span class="nav-text">浮点运算</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#取模运算"><span class="nav-number">1.3.</span> <span class="nav-text">取模运算</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#一元运算符"><span class="nav-number"></span> <span class="nav-text">一元运算符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#赋值运算符及扩展赋值运算符"><span class="nav-number"></span> <span class="nav-text">赋值运算符及扩展赋值运算符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#关系运算符"><span class="nav-number"></span> <span class="nav-text">关系运算符</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#注意事项-1"><span class="nav-number"></span> <span class="nav-text">注意事项</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#逻辑运算符"><span class="nav-number"></span> <span class="nav-text">逻辑运算符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#位运算符"><span class="nav-number"></span> <span class="nav-text">位运算符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#字符串连接符"><span class="nav-number"></span> <span class="nav-text">字符串连接符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#条件运算符"><span class="nav-number"></span> <span class="nav-text">条件运算符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#运算符的优先级"><span class="nav-number"></span> <span class="nav-text">运算符的优先级</span></a></div>
             
 
           </div>
@@ -574,12 +693,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-area-chart"></i>
     </span>
-    <span title="站点总字数">43k</span>
+    <span title="站点总字数">46k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">39 分钟</span>
+    <span title="站点阅读时长">42 分钟</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0</div>
   <span class="post-meta-divider">|</span>
