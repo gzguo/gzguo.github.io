@@ -8,7 +8,7 @@
       <link href="/2019/08/20/java/next/"/>
       <url>/2019/08/20/java/next/</url>
       
-        <content type="html"><![CDATA[<center>java</center><a id="more"></a>]]></content>
+        <content type="html"><![CDATA[<h4 id="java"><a href="#java" class="headerlink" title="java"></a><center>java</center></h4><a id="more"></a><h1 id="类型转换"><a href="#类型转换" class="headerlink" title="类型转换"></a>类型转换</h1><h2 id="自动类型转换"><a href="#自动类型转换" class="headerlink" title="自动类型转换"></a>自动类型转换</h2><p>自动类型转化指的是容量小的数据类型可以自动转换为容量大的数据类型</p><p>容量不是按字节算的：</p><p>long 8 byte</p><p>float 4 byte</p><p>但long类型的值可以自动转为float，因为float表示的范围要比long类型大，但是转的时候会损失一定的精度</p><p><img src="/images/9N149K56JLMRXDK%8P%INEI.png" alt="红色的可以自动转，蓝色的转的时候会损失精度"></p><p>特例：</p><p>可以将整形常量直接赋值给byte、short、char等类型变量，而不需要进行强制类型转换，只需要不超过其表数范围即可</p><h2 id="强制类型转换"><a href="#强制类型转换" class="headerlink" title="强制类型转换"></a>强制类型转换</h2><p>强制类型转化，又称为造型，用于显式的转换一个数值的类型。在有可能丢失信息的情况下进行的转换是通过造型来完成的，但可能造成精度降低或溢出</p><p>运算符()中的type表示将值var想要转换成的目标数据类型</p><p>注意：</p><ul><li>操作比较大的数时，要留意是否溢出</li><li>不要命名名字为l的变量，小写l容易与1混淆</li><li>举个例子：只要有一个long类型的数，则经过运算之后结果为long类型的数。</li></ul><h1 id="使用Scanner获取键盘输入"><a href="#使用Scanner获取键盘输入" class="headerlink" title="使用Scanner获取键盘输入"></a>使用Scanner获取键盘输入</h1>]]></content>
       
       
       <categories>
