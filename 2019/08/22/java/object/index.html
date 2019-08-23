@@ -63,7 +63,7 @@
 <meta property="og:site_name" content="YaSuo">
 <meta property="og:description" content="面向对象">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-08-22T02:43:27.702Z">
+<meta property="og:updated_time" content="2019-08-22T04:00:03.088Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="java_object">
 <meta name="twitter:description" content="面向对象">
@@ -289,7 +289,7 @@
                 
               
 
-              <time title="创建时间：2019-08-22 10:38:23 / 修改时间：10:43:27" itemprop="dateCreated datePublished" datetime="2019-08-22T10:38:23+08:00">2019-08-22</time>
+              <time title="创建时间：2019-08-22 10:38:23 / 修改时间：12:00:03" itemprop="dateCreated datePublished" datetime="2019-08-22T10:38:23+08:00">2019-08-22</time>
             </span>
           
             
@@ -327,7 +327,7 @@
               
                 <span class="post-meta-item-text">本文字数：</span>
               
-              <span>6</span>
+              <span>1.9k</span>
             </span>
           
             <span class="post-meta-item" title="阅读时长">
@@ -337,7 +337,7 @@
               
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
               
-              <span>1 分钟</span>
+              <span>2 分钟</span>
             </span>
           
 
@@ -351,6 +351,45 @@
 
       
         <h4 id="面向对象"><a href="#面向对象" class="headerlink" title="面向对象"></a><center>面向对象</center></h4><a id="more"></a>
+
+<p>面向过程和面向对象</p>
+<p>面向过程和面向对象都是对软件分析、设计和开发的一种思想，它指导着人们以不同的方式去分析、设计和开发软件</p>
+<p>面向过程思想思考问题时，我们首先思考“怎么按步骤实现？”并将步骤对应成方法，一步一步，最终完成。这个适合简单任务，不需要过多协作的情况下。比如：如何开车</p>
+<p>面向过程适合简单、不需要协作的事务。但是当我们思考比较复杂的问题，比如“如何造车”，就会发现列出1234这样的步骤，是不可能的。那是因为，造车太复杂，需要很多协作才能完成。此时面向对象思想就应运而生了</p>
+<p>面向对象：</p>
+<p>OOA：面向对象分析</p>
+<p>OOD：面向对象设计</p>
+<p>面向对象思想更契合人的思维模式。我们首先思考的是“怎么设计这个事务？”。比如思考造车，我们就会先思考“车怎么设计？”，而不是“怎么按照步骤造车的问题”</p>
+<p>面向对象和面向过程的总结</p>
+<ul>
+<li>都是解决问题的思维方式，都是代码组织的方式</li>
+<li>解决简单问题可以使用面向过程</li>
+<li>解决复杂问题：宏观上使用面向对象把握，微观处理上仍然是面向过程。方法和控制语句就是典型的面向过程的产物</li>
+</ul>
+<p>对象就是一个内存块，包含了很多的数据</p>
+<p>事物的发展总是遵循“量变引起质变”的哲学原则；企业管理和数据管理、甚至社会管理也有很多共通的地方</p>
+<p>对象进化史(数据管理和企业管理共通之处)：</p>
+<ul>
+<li>数据无管理时代：数据量很少，数据不需要进行管理</li>
+<li>数据管理和企业部门制：数据量增加，把同类型的数据放在一起。于是数组诞生了</li>
+<li>对象和企业项目制：项目组就是一个小公司，类似于我们的对象，对象包含了不同类型的数据。</li>
+</ul>
+<h1 id="对象和类"><a href="#对象和类" class="headerlink" title="对象和类"></a>对象和类</h1><p>类可以看作是对象的模板，或者图纸，系统根据类的定义来造出对象</p>
+<p>类：我们叫做class。</p>
+<p>对象：我们叫做Object，instance(实例)。以后我们说某个类的对象，某个类的实例。是一样的意思</p>
+<h2 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h2><p>属性(field，或者叫成员变量)：属性用于定义该类或该对象包含的数据或者说静态特征，属性作用范围是整个类体，在定义成员变量时可以对其初始化，java使用默认的值对其初始化</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> id;</span><br><span class="line">    String name;</span><br><span class="line">    <span class="keyword">int</span> age;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><p>光有属性没有方法在c语言中叫结构体</p>
+<p>方法用来定义该类实例的行为特征。方法是类和对象行为特征的抽象。方法很类似于面向过程中的函数，面向过程中，函数是基本单位，整个程序由一个个的函数调用组成，面向对象中，整个程序的基本单位是类，方法是属于类和对象的。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> id;</span><br><span class="line">    String name;</span><br><span class="line">    <span class="keyword">int</span> age;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">study</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"我在学习"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">play</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"我在玩游戏"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>main方法是程序执行的入口，必须要有滴</p>
+<h2 id="典型的类"><a href="#典型的类" class="headerlink" title="典型的类"></a>典型的类</h2><p>new：代表创建一个对象</p>
+<p>new调用了类的构造方法，通过构造方法创建了这个对象</p>
+<p>构造方法：用来创建这个类的对象。无参的构造方法可以由系统自动创建</p>
+<p>一个java文件可以写多个类，但是每个java文件只能有一个public修饰的类</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">text</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> id;</span><br><span class="line">    String name;</span><br><span class="line">    <span class="keyword">int</span> age;</span><br><span class="line">    Computer computer;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">study</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"我正在使用"</span>+computer.brand+<span class="string">"牌子的电脑学习"</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Computer computer = <span class="keyword">new</span> Computer();</span><br><span class="line">        <span class="comment">//学生要想有电脑，首先得new一个电脑</span></span><br><span class="line">        computer.brand = <span class="string">"战神"</span>;</span><br><span class="line">        text text = <span class="keyword">new</span> text();</span><br><span class="line">        text.computer = computer;</span><br><span class="line">        text.study();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Computer</span></span>&#123;</span><br><span class="line">    String brand = <span class="string">"神州"</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
     </div>
@@ -503,7 +542,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#面向对象"><span class="nav-number">1.</span> <span class="nav-text">面向对象</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#面向对象"><span class="nav-number">1.</span> <span class="nav-text">面向对象</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#对象和类"><span class="nav-number"></span> <span class="nav-text">对象和类</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#属性"><span class="nav-number"></span> <span class="nav-text">属性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#方法"><span class="nav-number"></span> <span class="nav-text">方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#典型的类"><span class="nav-number"></span> <span class="nav-text">典型的类</span></a></div>
             
 
           </div>
@@ -530,12 +569,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-area-chart"></i>
     </span>
-    <span title="站点总字数">51k</span>
+    <span title="站点总字数">53k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">46 分钟</span>
+    <span title="站点阅读时长">48 分钟</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0</div>
   <span class="post-meta-divider">|</span>
