@@ -63,7 +63,7 @@
 <meta property="og:site_name" content="YaSuo">
 <meta property="og:description" content="java_object_more">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-08-26T13:22:56.351Z">
+<meta property="og:updated_time" content="2019-08-26T13:55:55.473Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="java_object_more">
 <meta name="twitter:description" content="java_object_more">
@@ -289,7 +289,7 @@
                 
               
 
-              <time title="创建时间：2019-08-26 19:58:28 / 修改时间：21:22:56" itemprop="dateCreated datePublished" datetime="2019-08-26T19:58:28+08:00">2019-08-26</time>
+              <time title="创建时间：2019-08-26 19:58:28 / 修改时间：21:55:55" itemprop="dateCreated datePublished" datetime="2019-08-26T19:58:28+08:00">2019-08-26</time>
             </span>
           
             
@@ -327,7 +327,7 @@
               
                 <span class="post-meta-item-text">本文字数：</span>
               
-              <span>1.8k</span>
+              <span>2.5k</span>
             </span>
           
             <span class="post-meta-item" title="阅读时长">
@@ -371,7 +371,11 @@
 </ul>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="class"><span class="keyword">class</span> <span class="title">Animal</span></span>&#123;</span><br><span class="line">    <span class="comment">//包含了抽象方法的类一定是抽象类</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span></span>;</span><br><span class="line">    <span class="comment">//能这么调的原因：abstract不能被实例化，调用的run()是子类的</span></span><br><span class="line">    <span class="comment">//抽象类只能用来继承</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">breath</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"呼吸"</span>);</span><br><span class="line">        run();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//继承了Animal抽象类，就必须实现抽象方法</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Cat</span> <span class="keyword">extends</span> <span class="title">Animal</span></span>&#123;</span><br><span class="line">    </span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"猫步"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>把设计和实现分开了</p>
+<p>把设计和实现分开了,将方法的设计和方法的实现分开了</p>
+<h1 id="接口"><a href="#接口" class="headerlink" title="接口"></a>接口</h1><p>interface，更加抽象，抽象类的抽象类。接口是最抽象的，接口里面放的就是基本不变的东西，以不变应万变</p>
+<p>这个的目的就是，<strong>设计和实现分离</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//定义的时候用interface，除了定义的时候没有任何区别</span></span><br><span class="line"><span class="comment">//还是java文件，编译之后还是class文件</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">MyInterface</span></span>&#123;</span><br><span class="line">    <span class="comment">//接口里面只有：常量和抽象方法</span></span><br><span class="line">    <span class="comment">//public static final有没有都一样，系统会自动加上的</span></span><br><span class="line">    <span class="comment">/*public static final*/</span>String MAX_GREAD = <span class="string">"Boss"</span>;</span><br><span class="line">    <span class="keyword">int</span> MAX_SPEED = <span class="number">120</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//方法必须是public，不加的话，系统自动加public</span></span><br><span class="line">    <span class="comment">/*public*/</span> <span class="function"><span class="keyword">void</span> <span class="title">test</span><span class="params">()</span></span>;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">test1</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">int</span> b)</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//怎么实现接口？</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Myclass</span> <span class="keyword">implements</span> <span class="title">MyInterface</span></span>&#123;</span><br><span class="line">    <span class="comment">//implements：实现</span></span><br><span class="line">    <span class="comment">//没有什么可以集成的，只要自己实现就行，不需要extends</span></span><br><span class="line">    MyInterface.MAX_GREAD; <span class="comment">//调用接口中的常量</span></span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">     * 两个抽象方法必须都实现</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"test"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">test1</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">int</span> b)</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"MyClass.test1()"</span>);</span><br><span class="line">        <span class="keyword">return</span> a+b;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 
     </div>
 
@@ -523,7 +527,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#java-object-more"><span class="nav-number">1.</span> <span class="nav-text">java_object_more</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#多态的内存分析"><span class="nav-number"></span> <span class="nav-text">多态的内存分析</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#抽象类-abstract"><span class="nav-number"></span> <span class="nav-text">抽象类(abstract)</span></a></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#java-object-more"><span class="nav-number">1.</span> <span class="nav-text">java_object_more</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#多态的内存分析"><span class="nav-number"></span> <span class="nav-text">多态的内存分析</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#抽象类-abstract"><span class="nav-number"></span> <span class="nav-text">抽象类(abstract)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#接口"><span class="nav-number"></span> <span class="nav-text">接口</span></a></div>
             
 
           </div>
@@ -550,7 +554,7 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-area-chart"></i>
     </span>
-    <span title="站点总字数">69k</span>
+    <span title="站点总字数">70k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
