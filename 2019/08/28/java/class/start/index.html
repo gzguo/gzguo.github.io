@@ -55,31 +55,33 @@
   };
 </script>
 
-  <meta name="description" content="GzWxy">
-<meta property="og:type" content="website">
-<meta property="og:title" content="YaSuo">
-<meta property="og:url" content="https://github.com/gzguo/gzguo.github.io.git/page/2/index.html">
+  <meta name="description" content="包装类、装箱、拆箱、时间类、文件类">
+<meta name="keywords" content="class">
+<meta property="og:type" content="article">
+<meta property="og:title" content="java_class_start">
+<meta property="og:url" content="https://github.com/gzguo/gzguo.github.io.git/2019/08/28/java/class/start/index.html">
 <meta property="og:site_name" content="YaSuo">
-<meta property="og:description" content="GzWxy">
+<meta property="og:description" content="包装类、装箱、拆箱、时间类、文件类">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-08-28T13:42:33.116Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="YaSuo">
-<meta name="twitter:description" content="GzWxy">
-  <link rel="canonical" href="https://github.com/gzguo/gzguo.github.io.git/page/2/">
+<meta name="twitter:title" content="java_class_start">
+<meta name="twitter:description" content="包装类、装箱、拆箱、时间类、文件类">
+  <link rel="canonical" href="https://github.com/gzguo/gzguo.github.io.git/2019/08/28/java/class/start/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome: true,
-    isPost: false,
+    isHome: false,
+    isPost: true,
     isPage: false,
     isArchive: false
   };
 </script>
 
-  <title>YaSuo</title>
+  <title>java_class_start | YaSuo</title>
   
 
 
@@ -245,17 +247,18 @@
         <div class="content-wrap">
             
 
-          <div id="content" class="content page-home">
+          <div id="content" class="content page-post-detail">
             
-  <section id="posts" class="posts-expand">
-      
+
+  <div id="posts" class="posts-expand">
+    
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://github.com/gzguo/gzguo.github.io.git/2019/08/24/java/object/next/">
+    <link itemprop="mainEntityOfPage" href="https://github.com/gzguo/gzguo.github.io.git/2019/08/28/java/class/start/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Gz">
@@ -269,9 +272,8 @@
       <header class="post-header">
 
         
-          <h1 class="post-title" itemprop="name headline">
-              
-              <a href="/2019/08/24/java/object/next/" class="post-title-link" itemprop="url">java_object_next</a>
+          <h1 class="post-title" itemprop="name headline">java_class_start
+
             
           </h1>
         
@@ -287,19 +289,11 @@
                 
               
 
-              <time title="创建时间：2019-08-24 15:15:19" itemprop="dateCreated datePublished" datetime="2019-08-24T15:15:19+08:00">2019-08-24</time>
+              <time title="创建时间：2019-08-28 17:07:38 / 修改时间：21:42:33" itemprop="dateCreated datePublished" datetime="2019-08-28T17:07:38+08:00">2019-08-28</time>
             </span>
           
             
 
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-08-28 21:38:49" itemprop="dateModified" datetime="2019-08-28T21:38:49+08:00">2019-08-28</time>
-              </span>
             
           
             <span class="post-meta-item">
@@ -317,6 +311,14 @@
           
 
           
+            <span class="post-meta-item" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
           <br>
             <span class="post-meta-item" title="本文字数">
               <span class="post-meta-item-icon">
@@ -325,7 +327,7 @@
               
                 <span class="post-meta-item-text">本文字数：</span>
               
-              <span>8.6k</span>
+              <span>2.1k</span>
             </span>
           
             <span class="post-meta-item" title="阅读时长">
@@ -335,7 +337,7 @@
               
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
               
-              <span>8 分钟</span>
+              <span>2 分钟</span>
             </span>
           
 
@@ -348,411 +350,96 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h4 id="对象的三大特征，数组"><a href="#对象的三大特征，数组" class="headerlink" title="对象的三大特征，数组"></a><center>对象的三大特征，数组</center></h4>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2019/08/24/java/object/next/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
+        <h4 id="包装类、装箱、拆箱、时间类、文件类"><a href="#包装类、装箱、拆箱、时间类、文件类" class="headerlink" title="包装类、装箱、拆箱、时间类、文件类"></a><center>包装类、装箱、拆箱、时间类、文件类</center></h4><a id="more"></a>
+
+<h1 id="包装类"><a href="#包装类" class="headerlink" title="包装类"></a>包装类</h1><p>包装类的作用：将基本类型包装成对象</p>
+<p>主要介绍一下Integer</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Integer.MAX_VALUE; <span class="comment">//查看int类型的范围的最大值</span></span><br><span class="line">Integer.toHexString(); <span class="comment">//转化为8进制</span></span><br><span class="line">Integer.parseInt(); <span class="comment">//强转为Integer对象</span></span><br><span class="line"><span class="keyword">new</span> Integer(); <span class="comment">//强转为Integer对象</span></span><br><span class="line">Integer.intValue(); <span class="comment">//强转为真正的数字</span></span><br><span class="line">String str = <span class="number">234</span>+<span class="string">""</span>; <span class="comment">//将数字转为字符串</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="自动装箱、拆箱"><a href="#自动装箱、拆箱" class="headerlink" title="自动装箱、拆箱"></a>自动装箱、拆箱</h1><p>自动装箱：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Integer a = <span class="number">1000</span>; <span class="comment">//jdk5.0以前这样写是错的</span></span><br><span class="line"><span class="comment">//之后有了自动装箱，编译器帮我们改进代码,变成了如下的样子：</span></span><br><span class="line"><span class="comment">//Integer a = new Integer(1000);</span></span><br><span class="line"><span class="comment">//a还是对象</span></span><br></pre></td></tr></table></figure>
+
+<p>自动拆箱：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> c = <span class="keyword">new</span> Integer(<span class="number">1500</span>); <span class="comment">//jdk5.0以前这样写是错的</span></span><br><span class="line"><span class="comment">//编译改进：new Integer(1500).intValue();</span></span><br><span class="line"></span><br><span class="line">Integer b = <span class="number">2000</span>;</span><br><span class="line"><span class="keyword">int</span> c = b; <span class="comment">//编译改进：b.intValue();</span></span><br><span class="line"><span class="comment">//如果 b=null ，编译器会报java.lang.NullPointerException</span></span><br><span class="line"><span class="comment">//表面上没有调用任何方法，实际上调用了b的intValue() b是空，就会报空指针</span></span><br></pre></td></tr></table></figure>
+
+<p>注意：</p>
+<p>装箱的时候：-128到127之间的数依然被认为是基本数据类型</p>
+<p>这样做的目的是提高效率</p>
+<h1 id="时间类"><a href="#时间类" class="headerlink" title="时间类"></a>时间类</h1><p>java.util.Date 是个核心</p>
+<p>java.text.DataFormat 它是个父类 ，看一下它的子类(实现类)：java.text.SimpleDateFormat</p>
+<p>java.text.SimpleDateFormat的作用：把时间对象和字符串做转化</p>
+<p>java.util.Calendar：日期计算</p>
+<p>java.util.GregorianCalendar：是Calendar的子类，公立计算</p>
+<p>开始学习java.util.Date:</p>
+<ul>
+<li>在标准的java类库中包含了一个Date类。他的对象表示特定的瞬间，精确到毫秒</li>
+<li>java中时间表示的说白了也是数字，是从：标准纪元1970.1.1 0点开始到某个时刻的毫秒数，类型是long</li>
+</ul>
+<h2 id="DateFormat"><a href="#DateFormat" class="headerlink" title="DateFormat"></a>DateFormat</h2><p>SimpleDateFormat</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">System.currentTimeMillis(); <span class="comment">//得到当前时间</span></span><br><span class="line">format</span><br><span class="line">parse</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">DateFormat df = <span class="keyword">new</span> SimpleDateFormat(<span class="string">"yyyy年MM月dd日 hh:mm:ss,属于本年的低w周"</span>); </span><br><span class="line"><span class="comment">//这个规定了输出格式</span></span><br><span class="line"></span><br><span class="line">Date d = <span class="keyword">new</span> Date(<span class="number">123213123L</span>);</span><br><span class="line">String str = df.format(d);</span><br><span class="line">System.out.println(str); <span class="comment">//1970年01月02日</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">String str = <span class="string">"1977-7-7"</span>;</span><br><span class="line"><span class="comment">//必须要有格式化，还得和上面的字符串相对应</span></span><br><span class="line">DateFormat df = <span class="keyword">new</span> SimpleDateFormat(<span class="string">"yyyy-MM-dd"</span>);</span><br><span class="line"><span class="keyword">try</span>&#123;</span><br><span class="line">    Date d = df.parse(str);</span><br><span class="line">    System.out.println(d);</span><br><span class="line">&#125; <span class="keyword">catch</span> &#123;</span><br><span class="line">    e.printStackTrace();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="Calendar"><a href="#Calendar" class="headerlink" title="Calendar"></a>Calendar</h2><p>GregorianCalendar</p>
+<p>月份：一月是0，二月是1，以此类推，12月是11</p>
+<p>星期：星期日是一，星期六是七</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">    Calendar c = <span class="keyword">new</span> GregorianCalendar();</span><br><span class="line">    c.set(<span class="number">2001</span>,Calendar.FEBRUARY,<span class="number">10</span>,<span class="number">12</span>,<span class="number">23</span>,<span class="number">34</span>);</span><br><span class="line">    Date d = c.getTime();</span><br><span class="line">    System.out,println(d);</span><br><span class="line">    <span class="comment">//输出结果：Sat Feb 10 12:23:34 CST 2001</span></span><br><span class="line">    <span class="comment">//可以添加天数或者月数</span></span><br><span class="line">    <span class="comment">//前面是类型，后面是数量</span></span><br><span class="line">    c.add(Calendar.YEAR,<span class="number">30</span>);</span><br><span class="line">    <span class="comment">//想减的话就把30换成-30</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="file"><a href="#file" class="headerlink" title="file"></a>file</h1><p>java.io.File：文件和目录路径名的抽象表现形式</p>
+<p>通过File对象可以访问文件的属性</p>
+<p>通过File对象创建空文件或目录(在该对象所指的文件或目录不存在的情况下)</p>
+<p>file里面有很多的方法，可以精确的操作某个文件，可以去网上百度一下</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">File f = <span class="keyword">new</span> File(<span class="string">"d:/src/TestObject.java"</span>);</span><br><span class="line">f.createNewFile(); <span class="comment">//创建文件</span></span><br><span class="line">f.delete(); <span class="comment">//删除文件</span></span><br><span class="line">f.isFile(); <span class="comment">//判断是不是文件</span></span><br><span class="line">f.isDirectory(); <span class="comment">//判断是不是目录</span></span><br><span class="line">f.mkdirs(); <span class="comment">//创建目录</span></span><br></pre></td></tr></table></figure>
+
+
     </div>
 
     
     
     
+        
+      
+
       <footer class="post-footer">
-          <div class="post-eof"></div>
+          
+            
+          
+          <div class="post-tags">
+            
+              <a href="/tags/class/" rel="tag"># class</a>
+            
+          </div>
+        
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+              
+                <a href="/2019/08/27/java/string/start/" rel="next" title="java_string_start">
+                  <i class="fa fa-chevron-left"></i> java_string_start
+                </a>
+              
+            </div>
+
+            <span class="post-nav-divider"></span>
+
+            <div class="post-nav-prev post-nav-item">
+              
+            </div>
+          </div>
         
       </footer>
+    
   </div>
   
   
   
   </article>
 
-    
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://github.com/gzguo/gzguo.github.io.git/2019/08/26/java/object/end/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Gz">
-      <meta itemprop="description" content="GzWxy">
-      <meta itemprop="image" content="/uploads/qqgz.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="YaSuo">
-    </span>
-      <header class="post-header">
-
-        
-          <h1 class="post-title" itemprop="name headline">
-              
-              <a href="/2019/08/26/java/object/end/" class="post-title-link" itemprop="url">java_object_end</a>
-            
-          </h1>
-        
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2019-08-26 19:58:28" itemprop="dateCreated datePublished" datetime="2019-08-26T19:58:28+08:00">2019-08-26</time>
-            </span>
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-08-28 21:38:42" itemprop="dateModified" datetime="2019-08-28T21:38:42+08:00">2019-08-28</time>
-              </span>
-            
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/java/" itemprop="url" rel="index"><span itemprop="name">java</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">本文字数：</span>
-              
-              <span>7.5k</span>
-            </span>
-          
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-clock-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              
-              <span>7 分钟</span>
-            </span>
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h4 id="多态深入、抽象类、接口、回调、内部类"><a href="#多态深入、抽象类、接口、回调、内部类" class="headerlink" title="多态深入、抽象类、接口、回调、内部类"></a><center>多态深入、抽象类、接口、回调、内部类</center></h4>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2019/08/26/java/object/end/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
   </div>
-  
-  
-  
-  </article>
-
-    
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://github.com/gzguo/gzguo.github.io.git/2019/08/13/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Gz">
-      <meta itemprop="description" content="GzWxy">
-      <meta itemprop="image" content="/uploads/qqgz.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="YaSuo">
-    </span>
-      <header class="post-header">
-
-        
-          <h1 class="post-title" itemprop="name headline">
-              
-              <a href="/2019/08/13/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
-            
-          </h1>
-        
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2019-08-13 21:54:43" itemprop="dateCreated datePublished" datetime="2019-08-13T21:54:43+08:00">2019-08-13</time>
-            </span>
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-08-27 08:34:00" itemprop="dateModified" datetime="2019-08-27T08:34:00+08:00">2019-08-27</time>
-              </span>
-            
-          
-
-          
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">本文字数：</span>
-              
-              <span>439</span>
-            </span>
-          
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-clock-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              
-              <span>1 分钟</span>
-            </span>
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h4 id="welcome"><a href="#welcome" class="headerlink" title="welcome"></a><center>welcome</center></h4>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2019/08/13/hello-world/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://github.com/gzguo/gzguo.github.io.git/2019/08/20/java/basis/next/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Gz">
-      <meta itemprop="description" content="GzWxy">
-      <meta itemprop="image" content="/uploads/qqgz.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="YaSuo">
-    </span>
-      <header class="post-header">
-
-        
-          <h1 class="post-title" itemprop="name headline">
-              
-              <a href="/2019/08/20/java/basis/next/" class="post-title-link" itemprop="url">java_next</a>
-            
-          </h1>
-        
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2019-08-20 18:08:18" itemprop="dateCreated datePublished" datetime="2019-08-20T18:08:18+08:00">2019-08-20</time>
-            </span>
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-08-22 10:33:03" itemprop="dateModified" datetime="2019-08-22T10:33:03+08:00">2019-08-22</time>
-              </span>
-            
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/java/" itemprop="url" rel="index"><span itemprop="name">java</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">本文字数：</span>
-              
-              <span>5.2k</span>
-            </span>
-          
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-clock-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              
-              <span>5 分钟</span>
-            </span>
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h4 id="java类型转换、控制语句、语句块、递归"><a href="#java类型转换、控制语句、语句块、递归" class="headerlink" title="java类型转换、控制语句、语句块、递归"></a><center>java类型转换、控制语句、语句块、递归</center></h4>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2019/08/20/java/basis/next/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-  </section>
-
-  
-  <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
-  </nav>
 
 
           </div>
@@ -771,8 +458,17 @@
 
   <aside id="sidebar" class="sidebar">
     <div class="sidebar-inner">
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
 
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -848,6 +544,23 @@
 
         </div>
       </div>
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#包装类、装箱、拆箱、时间类、文件类"><span class="nav-number">1.</span> <span class="nav-text">包装类、装箱、拆箱、时间类、文件类</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#包装类"><span class="nav-number"></span> <span class="nav-text">包装类</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#自动装箱、拆箱"><span class="nav-number"></span> <span class="nav-text">自动装箱、拆箱</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#时间类"><span class="nav-number"></span> <span class="nav-text">时间类</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#DateFormat"><span class="nav-number"></span> <span class="nav-text">DateFormat</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Calendar"><span class="nav-number"></span> <span class="nav-text">Calendar</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#file"><span class="nav-number"></span> <span class="nav-text">file</span></a></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
 
     </div>
   </aside>
@@ -978,5 +691,9 @@
 
 
   
+  <script src="/js/scrollspy.js?v=7.3.0"></script>
+<script src="/js/post-details.js?v=7.3.0"></script>
+
+
 <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/assets/wanko.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"log":false});</script></body>
 </html>
