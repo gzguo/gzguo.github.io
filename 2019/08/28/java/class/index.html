@@ -63,7 +63,7 @@
 <meta property="og:site_name" content="YaSuo">
 <meta property="og:description" content="java_class">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-08-28T09:09:53.517Z">
+<meta property="og:updated_time" content="2019-08-28T12:04:26.732Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="java_class">
 <meta name="twitter:description" content="java_class">
@@ -262,7 +262,7 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Gz">
-      <meta itemprop="description" content="Gz1Cjy2">
+      <meta itemprop="description" content="GzWxy">
       <meta itemprop="image" content="/uploads/qqgz.jpg">
     </span>
 
@@ -289,7 +289,7 @@
                 
               
 
-              <time title="创建时间：2019-08-28 17:07:38 / 修改时间：17:09:53" itemprop="dateCreated datePublished" datetime="2019-08-28T17:07:38+08:00">2019-08-28</time>
+              <time title="创建时间：2019-08-28 17:07:38 / 修改时间：20:04:26" itemprop="dateCreated datePublished" datetime="2019-08-28T17:07:38+08:00">2019-08-28</time>
             </span>
           
             
@@ -327,7 +327,7 @@
               
                 <span class="post-meta-item-text">本文字数：</span>
               
-              <span>10</span>
+              <span>1.8k</span>
             </span>
           
             <span class="post-meta-item" title="阅读时长">
@@ -337,7 +337,7 @@
               
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
               
-              <span>1 分钟</span>
+              <span>2 分钟</span>
             </span>
           
 
@@ -351,6 +351,43 @@
 
       
         <h4 id="java-class"><a href="#java-class" class="headerlink" title="java_class"></a><center>java_class</center></h4><a id="more"></a>
+
+<h1 id="包装类"><a href="#包装类" class="headerlink" title="包装类"></a>包装类</h1><p>包装类的作用：将基本类型包装成对象</p>
+<p>主要介绍一下Integer</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Integer.MAX_VALUE; <span class="comment">//查看int类型的范围的最大值</span></span><br><span class="line">Integer.toHexString(); <span class="comment">//转化为8进制</span></span><br><span class="line">Integer.parseInt(); <span class="comment">//强转为Integer对象</span></span><br><span class="line"><span class="keyword">new</span> Integer(); <span class="comment">//强转为Integer对象</span></span><br><span class="line">Integer.intValue(); <span class="comment">//强转为真正的数字</span></span><br><span class="line">String str = <span class="number">234</span>+<span class="string">""</span>; <span class="comment">//将数字转为字符串</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="自动装箱、拆箱"><a href="#自动装箱、拆箱" class="headerlink" title="自动装箱、拆箱"></a>自动装箱、拆箱</h1><p>自动装箱：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Integer a = <span class="number">1000</span>; <span class="comment">//jdk5.0以前这样写是错的</span></span><br><span class="line"><span class="comment">//之后有了自动装箱，编译器帮我们改进代码,变成了如下的样子：</span></span><br><span class="line"><span class="comment">//Integer a = new Integer(1000);</span></span><br><span class="line"><span class="comment">//a还是对象</span></span><br></pre></td></tr></table></figure>
+
+<p>自动拆箱：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> c = <span class="keyword">new</span> Integer(<span class="number">1500</span>); <span class="comment">//jdk5.0以前这样写是错的</span></span><br><span class="line"><span class="comment">//编译改进：new Integer(1500).intValue();</span></span><br><span class="line"></span><br><span class="line">Integer b = <span class="number">2000</span>;</span><br><span class="line"><span class="keyword">int</span> c = b; <span class="comment">//编译改进：b.intValue();</span></span><br><span class="line"><span class="comment">//如果 b=null ，编译器会报java.lang.NullPointerException</span></span><br><span class="line"><span class="comment">//表面上没有调用任何方法，实际上调用了b的intValue() b是空，就会报空指针</span></span><br></pre></td></tr></table></figure>
+
+<p>注意：</p>
+<p>装箱的时候：-128到127之间的数依然被认为是基本数据类型</p>
+<p>这样做的目的是提高效率</p>
+<h1 id="时间类"><a href="#时间类" class="headerlink" title="时间类"></a>时间类</h1><p>java.util.Date 是个核心</p>
+<p>java.text.DataFormat 它是个父类 ，看一下它的子类(实现类)：java.text.SimpleDateFormat</p>
+<p>java.text.SimpleDateFormat的作用：把时间对象和字符串做转化</p>
+<p>java.util.Calendar：日期计算</p>
+<p>java.util.GregorianCalendar：是Calendar的子类，公立计算</p>
+<p>开始学习java.util.Date:</p>
+<ul>
+<li>在标准的java类库中包含了一个Date类。他的对象表示特定的瞬间，精确到毫秒</li>
+<li>java中时间表示的说白了也是数字，是从：标准纪元1970.1.1 0点开始到某个时刻的毫秒数，类型是long</li>
+</ul>
+<h2 id="DateFormat"><a href="#DateFormat" class="headerlink" title="DateFormat"></a>DateFormat</h2><p>SimpleDateFormat</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">System.currentTimeMillis(); <span class="comment">//得到当前时间</span></span><br><span class="line">format</span><br><span class="line">parse</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">DateFormat df = <span class="keyword">new</span> SimpleDateFormat(<span class="string">"yyyy年MM月dd日 hh:mm:ss,属于本年的低w周"</span>); </span><br><span class="line"><span class="comment">//这个规定了输出格式</span></span><br><span class="line"></span><br><span class="line">Date d = <span class="keyword">new</span> Date(<span class="number">123213123L</span>);</span><br><span class="line">String str = df.format(d);</span><br><span class="line">System.out.println(str); <span class="comment">//1970年01月02日</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">String str = <span class="string">"1977-7-7"</span>;</span><br><span class="line"><span class="comment">//必须要有格式化，还得和上面的字符串相对应</span></span><br><span class="line">DateFormat df = <span class="keyword">new</span> SimpleDateFormat(<span class="string">"yyyy-MM-dd"</span>);</span><br><span class="line"><span class="keyword">try</span>&#123;</span><br><span class="line">    Date d = df.parse(str);</span><br><span class="line">    System.out.println(d);</span><br><span class="line">&#125; <span class="keyword">catch</span> &#123;</span><br><span class="line">    e.printStackTrace();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="Calendar"><a href="#Calendar" class="headerlink" title="Calendar"></a>Calendar</h2><p>GregorianCalendar</p>
+<p>月份：一月是0，二月是1，以此类推，12月是11</p>
+<p>星期：星期日是一，星期六是七</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">    Calendar c = <span class="keyword">new</span> GregorianCalendar();</span><br><span class="line">    c.set(<span class="number">2001</span>,Calendar.FEBRUARY,<span class="number">10</span>,<span class="number">12</span>,<span class="number">23</span>,<span class="number">34</span>);</span><br><span class="line">    Date d = c.getTime();</span><br><span class="line">    System.out,println(d);</span><br><span class="line">    <span class="comment">//输出结果：Sat Feb 10 12:23:34 CST 2001</span></span><br><span class="line">    <span class="comment">//可以添加天数或者月数</span></span><br><span class="line">    <span class="comment">//前面是类型，后面是数量</span></span><br><span class="line">    c.add(Calendar.YEAR,<span class="number">30</span>);</span><br><span class="line">    <span class="comment">//想减的话就把30换成-30</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
     </div>
 
     
@@ -433,7 +470,7 @@
       src="/uploads/qqgz.jpg"
       alt="Gz">
   <p class="site-author-name" itemprop="name">Gz</p>
-  <div class="site-description motion-element" itemprop="description">Gz1Cjy2</div>
+  <div class="site-description motion-element" itemprop="description">GzWxy</div>
 </div>
   <nav class="site-state motion-element">
       <div class="site-state-item site-state-posts">
@@ -501,7 +538,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#java-class"><span class="nav-number">1.</span> <span class="nav-text">java_class</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#java-class"><span class="nav-number">1.</span> <span class="nav-text">java_class</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#包装类"><span class="nav-number"></span> <span class="nav-text">包装类</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#自动装箱、拆箱"><span class="nav-number"></span> <span class="nav-text">自动装箱、拆箱</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#时间类"><span class="nav-number"></span> <span class="nav-text">时间类</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#DateFormat"><span class="nav-number"></span> <span class="nav-text">DateFormat</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Calendar"><span class="nav-number"></span> <span class="nav-text">Calendar</span></a></div>
             
 
           </div>
@@ -528,12 +565,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-area-chart"></i>
     </span>
-    <span title="站点总字数">79k</span>
+    <span title="站点总字数">81k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">1:12</span>
+    <span title="站点阅读时长">1:14</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0</div>
   <span class="post-meta-divider">|</span>
