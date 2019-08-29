@@ -55,19 +55,19 @@
   };
 </script>
 
-  <meta name="description" content="JDBC全面了解&amp;gt;">
-<meta name="keywords" content="jdbc">
+  <meta name="description" content="java_exception_start">
+<meta name="keywords" content="exception">
 <meta property="og:type" content="article">
-<meta property="og:title" content="java_jdbc_start">
-<meta property="og:url" content="https://github.com/gzguo/gzguo.github.io.git/2019/08/16/java/jdbc/start/index.html">
+<meta property="og:title" content="java_exception_start">
+<meta property="og:url" content="https://github.com/gzguo/gzguo.github.io.git/2019/08/30/java/exception/start/index.html">
 <meta property="og:site_name" content="YaSuo">
-<meta property="og:description" content="JDBC全面了解&amp;gt;">
+<meta property="og:description" content="java_exception_start">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-08-28T13:41:49.906Z">
+<meta property="og:updated_time" content="2019-08-29T03:47:18.372Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="java_jdbc_start">
-<meta name="twitter:description" content="JDBC全面了解&amp;gt;">
-  <link rel="canonical" href="https://github.com/gzguo/gzguo.github.io.git/2019/08/16/java/jdbc/start/">
+<meta name="twitter:title" content="java_exception_start">
+<meta name="twitter:description" content="java_exception_start">
+  <link rel="canonical" href="https://github.com/gzguo/gzguo.github.io.git/2019/08/30/java/exception/start/">
 
 
 <script id="page-configurations">
@@ -81,7 +81,7 @@
   };
 </script>
 
-  <title>java_jdbc_start | YaSuo</title>
+  <title>java_exception_start | YaSuo</title>
   
 
 
@@ -258,7 +258,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://github.com/gzguo/gzguo.github.io.git/2019/08/16/java/jdbc/start/">
+    <link itemprop="mainEntityOfPage" href="https://github.com/gzguo/gzguo.github.io.git/2019/08/30/java/exception/start/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Gz">
@@ -272,7 +272,7 @@
       <header class="post-header">
 
         
-          <h1 class="post-title" itemprop="name headline">java_jdbc_start
+          <h1 class="post-title" itemprop="name headline">java_exception_start
 
             
           </h1>
@@ -289,7 +289,7 @@
                 
               
 
-              <time title="创建时间：2019-08-16 20:08:18" itemprop="dateCreated datePublished" datetime="2019-08-16T20:08:18+08:00">2019-08-16</time>
+              <time title="创建时间：2019-08-30 12:00:00" itemprop="dateCreated datePublished" datetime="2019-08-30T12:00:00+08:00">2019-08-30</time>
             </span>
           
             
@@ -300,7 +300,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-08-28 21:41:49" itemprop="dateModified" datetime="2019-08-28T21:41:49+08:00">2019-08-28</time>
+                <time title="修改时间：2019-08-29 11:47:18" itemprop="dateModified" datetime="2019-08-29T11:47:18+08:00">2019-08-29</time>
               </span>
             
           
@@ -335,7 +335,7 @@
               
                 <span class="post-meta-item-text">本文字数：</span>
               
-              <span>3.5k</span>
+              <span>20</span>
             </span>
           
             <span class="post-meta-item" title="阅读时长">
@@ -345,7 +345,7 @@
               
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
               
-              <span>3 分钟</span>
+              <span>1 分钟</span>
             </span>
           
 
@@ -358,64 +358,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h4 id="JDBC全面了解-gt"><a href="#JDBC全面了解-gt" class="headerlink" title="JDBC全面了解&gt;"></a><center>JDBC全面了解</center>&gt;</h4><a id="more"></a>
-
-<h1 id="JDBC简介"><a href="#JDBC简介" class="headerlink" title="JDBC简介"></a>JDBC简介</h1><ul>
-<li>jdbc是Java Database Connectivity的缩写，即java数据库连接思想，使用jdbc可以实现对数据库的访问</li>
-<li>我们都知道，java是跨操作平台的，而通过jdbc可以实现跨数据库平台，jdbc只是一个抽象的编程接口，通过加载不同的数据库驱动，可以实现不同数据库的通信，例如：Mysql、Oracl、SqlServer</li>
-<li>在java中有两个包java.sql和javax.sql包含jdbc编程的所有接口</li>
-<li>在java中常用接口和类如下：DriverManger 驱动管理器获得数据库链接、Connect 数据库连接接口、Statement 语句接口，用来静态操作SQL语句、PreparedStatement 预定义语句，用来动态操作SQL语句、CallableStatement 可以调用存储过程的预定义语句、ResultSet 结果集，保存数据记录的结果集合、ResultMetaData 结果集元数据，如：列名称、列类型 、DatabaseMetaData 数据库元数据，如：数据库名称、版本</li>
-<li>jdbc的编程步骤：1.加载数据库驱动（jar文件） 2.获取数据库连接 3.创建语句 4.执行查询 5.遍历结果集 6.关闭数据库连接</li>
-</ul>
-<h1 id="数据库连接"><a href="#数据库连接" class="headerlink" title="数据库连接"></a>数据库连接</h1><ul>
-<li>获得数据库连接是操作数据库的第一步，是应用程序和数据库的一个“握手”过程</li>
-<li>数据库打开的连接数是有限的，所以连接使用完成需要关闭</li>
-<li>获得数据库连接的步骤：1.加载驱动(Class.forName) 2.获得连接(DriverManager 是获取数据库连接的一个工厂(实例化的作用) DriverManager.getConnection()) </li>
-</ul>
-<p><strong>创建数据库连接的时候，可以通过配置文件来加载固定格式的url、username、password等</strong></p>
-<h1 id="Statement语句"><a href="#Statement语句" class="headerlink" title="Statement语句"></a>Statement语句</h1><ul>
-<li>Statement语句是SQL语句的描述，使用它可以操作各种SQL语句，包括DDL(数据库定义语句，如创建表)、DML(CRUD)和DCL等</li>
-<li>使用Statement创建表</li>
-</ul>
-<h1 id="ResultSet结果集"><a href="#ResultSet结果集" class="headerlink" title="ResultSet结果集"></a>ResultSet结果集</h1><ul>
-<li>用来获得SQL语句查询结果</li>
-<li>结果集包含了SQL语句的查询结果数据</li>
-<li>调用语句的excuteQuery方法返回结果集对象</li>
-<li><strong>ResultSet常用方法 next：返回boolean类型数据，用来判断结果集中是否有数据   getXXX：获得结果集中的数据项(可以根据列名称、可以根据列索引)</strong></li>
-</ul>
-<h1 id="PreparedStatement"><a href="#PreparedStatement" class="headerlink" title="PreparedStatement"></a>PreparedStatement</h1><ul>
-<li><p>PreparedStatement为预定义语句，继承Statement</p>
-</li>
-<li><p>Statement只能静态操作SQL语句，如果要操作动态SQL，这里可以使用PreparedStatement来动态操作SQL语句，PreparedStatement通过使用占位符“？”，来预生成SQL语句，从而达到动态操作的功能</p>
-</li>
-<li><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">insert</span><span class="params">(String name,String email)</span></span>&#123;</span><br><span class="line">    String sql = <span class="string">"insert into CustomrTbl(name,email) values(?,?);"</span>;</span><br><span class="line">    Connection conn = DBUtil.open();</span><br><span class="line">    <span class="keyword">try</span>&#123;</span><br><span class="line">        PreparedStatement pstmt = conn.prepareStatement(sql);</span><br><span class="line">        pstmt.setString(<span class="number">1</span>,name);</span><br><span class="line">        pstmt.setString(<span class="number">2</span>,email);</span><br><span class="line">    &#125; <span class="keyword">catch</span> (SQLException e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125; <span class="keyword">finally</span> &#123;</span><br><span class="line">        DBUtil.close(conn);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-</li>
-</ul>
-<h1 id="CallableStatement"><a href="#CallableStatement" class="headerlink" title="CallableStatement"></a>CallableStatement</h1><p>调用后台写好的存储过程</p>
-<ul>
-<li>CallableStatement继承PreParedStatement，提供了调用存储过程的能力</li>
-<li>CallableStatement用法：1.调用简单的存储过程 2.调用有输入参数的存储过程 3.调用有输入、输出参数的存储过程</li>
-<li>实例：1.命令行创建存储过程：create procedure/pro all_customers() select * from CustomerTbl; 2.命令行调用：call all_customers(); 3.使用CallableStatement调用</li>
-</ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">test</span><span class="params">()</span></span>&#123;</span><br><span class="line">    Connection conn = DBUtil.open();</span><br><span class="line">    <span class="keyword">try</span>&#123;</span><br><span class="line">        CallableStatement cstmt = conn.prepareCall(<span class="string">"&#123;call all_customers()&#125;"</span>);</span><br><span class="line">        ResultSet rs = cstmt.executeQuery();</span><br><span class="line">        <span class="keyword">while</span>(rs.next())&#123;</span><br><span class="line">            <span class="keyword">int</span> id = rs.getInt(<span class="number">1</span>);</span><br><span class="line">            String name = rs.getString(<span class="number">2</span>);</span><br><span class="line">            String email = rs.getString(<span class="number">3</span>);</span><br><span class="line">            System.out.println(<span class="string">"id:"</span>+id+<span class="string">","</span>+<span class="string">"name:"</span>+name+<span class="string">","</span>+<span class="string">"email:"</span>+email);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">//这是创建存储过程，in代表输入参数</span><br><span class="line"><span class="keyword">create</span> <span class="keyword">procedure</span> insert_customer(<span class="keyword">in</span> myname <span class="built_in">varchar</span>(<span class="number">20</span>),<span class="keyword">in</span> myemail <span class="built_in">varchar</span>(<span class="number">20</span>)) <span class="keyword">insert</span> <span class="keyword">into</span> CustomerTbl(<span class="keyword">name</span>,email) <span class="keyword">values</span>(myname,myemail);</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">procedure</span> getnamebyid(<span class="keyword">in</span> cid <span class="built_in">int</span>,<span class="keyword">out</span> return_name <span class="built_in">varchar</span>(<span class="number">20</span>)) <span class="keyword">select</span> <span class="keyword">name</span> <span class="keyword">into</span> return_name <span class="keyword">from</span> CustomerTbl <span class="keyword">where</span> <span class="keyword">id</span> = cid;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">test</span><span class="params">()</span></span>&#123;</span><br><span class="line">    Connection conn = DBUtil.open();</span><br><span class="line">    <span class="keyword">try</span>&#123;</span><br><span class="line">        CallableStatement cstmt = conn.prepareCall(<span class="string">"&#123;call getnamebyid(?,?)&#125;"</span>);</span><br><span class="line">        cstmt.setInt(<span class="number">1</span>,<span class="number">6</span>);</span><br><span class="line">        <span class="comment">//注册输入参数</span></span><br><span class="line">        cstmt.registerOutParameter(<span class="number">2</span>,Types.CHAR);</span><br><span class="line">        cstmt.excute();</span><br><span class="line">        String email = cstmt.getString(<span class="number">2</span>);</span><br><span class="line">        cstmt.executeUpdate();</span><br><span class="line">        System.out.println(email);</span><br><span class="line">    &#125; <span class="keyword">catch</span> (SQLException e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125; <span class="keyword">finally</span>&#123;</span><br><span class="line">        DBUtil.close(conn);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h1 id="DAO设计模式"><a href="#DAO设计模式" class="headerlink" title="DAO设计模式"></a>DAO设计模式</h1><ol>
-<li>DAO简介 DAO的全称是：Data Access Object，数据访问对象，使用DAO设计模式，来封装数据库持久层操作(CRUD)，使低级的数据逻辑和高级的业务逻辑分离，达到解耦合的目的</li>
-<li>一个典型的DAO实现有如下的组件：一个DAO接口、数据传输对象(有时称为值对象)、一个实现DAO接口的具体类、一个DAO工厂类</li>
-<li>以维护一个客户信息为例，具体组件如下：CustomerDao接口、Customer值对象(VO)、CustomerDaoImpl(接口工具实现类)、CustomerFactory(工厂类、实例化用)</li>
-</ol>
-<p>Dao接口：里面写很多方法来进行增删改查</p>
-<p>Dao实现类：实现这些方法</p>
-
+        <h4 id="java-exception-start"><a href="#java-exception-start" class="headerlink" title="java_exception_start"></a><center>java_exception_start</center></h4><a id="more"></a>
     </div>
 
     
@@ -430,7 +373,7 @@
           
           <div class="post-tags">
             
-              <a href="/tags/jdbc/" rel="tag"># jdbc</a>
+              <a href="/tags/exception/" rel="tag"># exception</a>
             
           </div>
         
@@ -440,8 +383,8 @@
           <div class="post-nav">
             <div class="post-nav-next post-nav-item">
               
-                <a href="/2019/08/16/java/mysql/end/" rel="next" title="java_mysql_end">
-                  <i class="fa fa-chevron-left"></i> java_mysql_end
+                <a href="/2019/08/29/java/thread/start/" rel="next" title="java_thread_start">
+                  <i class="fa fa-chevron-left"></i> java_thread_start
                 </a>
               
             </div>
@@ -449,10 +392,6 @@
             <span class="post-nav-divider"></span>
 
             <div class="post-nav-prev post-nav-item">
-              
-                <a href="/2019/08/16/java/basis/start/" rel="prev" title="java_basis_start">
-                  java_basis_start <i class="fa fa-chevron-right"></i>
-                </a>
               
             </div>
           </div>
@@ -584,7 +523,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#JDBC全面了解-gt"><span class="nav-number">1.</span> <span class="nav-text">JDBC全面了解&gt;</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#JDBC简介"><span class="nav-number"></span> <span class="nav-text">JDBC简介</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#数据库连接"><span class="nav-number"></span> <span class="nav-text">数据库连接</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Statement语句"><span class="nav-number"></span> <span class="nav-text">Statement语句</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ResultSet结果集"><span class="nav-number"></span> <span class="nav-text">ResultSet结果集</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#PreparedStatement"><span class="nav-number"></span> <span class="nav-text">PreparedStatement</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#CallableStatement"><span class="nav-number"></span> <span class="nav-text">CallableStatement</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#DAO设计模式"><span class="nav-number"></span> <span class="nav-text">DAO设计模式</span></a></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#java-exception-start"><span class="nav-number">1.</span> <span class="nav-text">java_exception_start</span></a></li></ol></div>
             
 
           </div>
