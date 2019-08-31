@@ -55,18 +55,18 @@
   };
 </script>
 
-  <meta name="description" content="java_exception_start">
+  <meta name="description" content="异常分类、处理、方法重写时的声明原则、自定义异常">
 <meta name="keywords" content="exception">
 <meta property="og:type" content="article">
 <meta property="og:title" content="java_exception_start">
 <meta property="og:url" content="https://github.com/gzguo/gzguo.github.io.git/2019/08/30/java/exception/start/index.html">
 <meta property="og:site_name" content="YaSuo">
-<meta property="og:description" content="java_exception_start">
+<meta property="og:description" content="异常分类、处理、方法重写时的声明原则、自定义异常">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-08-31T09:59:00.194Z">
+<meta property="og:updated_time" content="2019-08-31T10:01:27.175Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="java_exception_start">
-<meta name="twitter:description" content="java_exception_start">
+<meta name="twitter:description" content="异常分类、处理、方法重写时的声明原则、自定义异常">
   <link rel="canonical" href="https://github.com/gzguo/gzguo.github.io.git/2019/08/30/java/exception/start/">
 
 
@@ -300,7 +300,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-08-31 17:59:00" itemprop="dateModified" datetime="2019-08-31T17:59:00+08:00">2019-08-31</time>
+                <time title="修改时间：2019-08-31 18:01:27" itemprop="dateModified" datetime="2019-08-31T18:01:27+08:00">2019-08-31</time>
               </span>
             
           
@@ -358,7 +358,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h4 id="java-exception-start"><a href="#java-exception-start" class="headerlink" title="java_exception_start"></a><center>java_exception_start</center></h4><a id="more"></a>
+        <h4 id="异常分类、处理、方法重写时的声明原则、自定义异常"><a href="#异常分类、处理、方法重写时的声明原则、自定义异常" class="headerlink" title="异常分类、处理、方法重写时的声明原则、自定义异常"></a><center>异常分类、处理、方法重写时的声明原则、自定义异常</center></h4><a id="more"></a>
 
 <p>让大家写一个程序：将d:/a.txt复制到e:/a.txt</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(<span class="string">"d:/a.txt"</span>这个文件存在)&#123;</span><br><span class="line">    <span class="keyword">if</span>(e盘的空间大于a.exe文件长度)&#123;</span><br><span class="line">        <span class="keyword">if</span>(文件复制一半io流断掉)&#123;</span><br><span class="line">            停止copy，输出：io流出现问题！</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            copyFile(<span class="string">"d:/a.txt"</span>,<span class="string">"e:/a.txt"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        输出：e盘的空间不足</span><br><span class="line">    &#125;</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    输出：a.exe不存在</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -501,6 +501,10 @@
 
             <div class="post-nav-prev post-nav-item">
               
+                <a href="/2019/08/31/java/container/start/" rel="prev" title="java_container_start">
+                  java_container_start <i class="fa fa-chevron-right"></i>
+                </a>
+              
             </div>
           </div>
         
@@ -556,7 +560,7 @@
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">16</span>
+          <span class="site-state-item-count">17</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -610,7 +614,9 @@
         
           
         
-        <span class="site-state-item-count">10</span>
+          
+        
+        <span class="site-state-item-count">11</span>
         <span class="site-state-item-name">标签</span>
         </a>
       </div>
@@ -631,7 +637,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#java-exception-start"><span class="nav-number">1.</span> <span class="nav-text">java_exception_start</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#异常的概念"><span class="nav-number"></span> <span class="nav-text">异常的概念</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#异常的分类"><span class="nav-number"></span> <span class="nav-text">异常的分类</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Error"><span class="nav-number"></span> <span class="nav-text">Error</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Exception"><span class="nav-number"></span> <span class="nav-text">Exception</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#异常处理"><span class="nav-number"></span> <span class="nav-text">异常处理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#trycatch"><span class="nav-number"></span> <span class="nav-text">trycatch</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#try"><span class="nav-number"></span> <span class="nav-text">try</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#catch"><span class="nav-number"></span> <span class="nav-text">catch</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#finally"><span class="nav-number"></span> <span class="nav-text">finally</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#try-catch、finally、return的执行顺序"><span class="nav-number">1.</span> <span class="nav-text">try catch、finally、return的执行顺序</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#throw"><span class="nav-number"></span> <span class="nav-text">throw</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#方法重写中声明异常的原则"><span class="nav-number"></span> <span class="nav-text">方法重写中声明异常的原则</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#手动抛出throw"><span class="nav-number"></span> <span class="nav-text">手动抛出throw</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#自定义异常"><span class="nav-number"></span> <span class="nav-text">自定义异常</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#使用异常机制建议"><span class="nav-number"></span> <span class="nav-text">使用异常机制建议</span></a></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#异常分类、处理、方法重写时的声明原则、自定义异常"><span class="nav-number">1.</span> <span class="nav-text">异常分类、处理、方法重写时的声明原则、自定义异常</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#异常的概念"><span class="nav-number"></span> <span class="nav-text">异常的概念</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#异常的分类"><span class="nav-number"></span> <span class="nav-text">异常的分类</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Error"><span class="nav-number"></span> <span class="nav-text">Error</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Exception"><span class="nav-number"></span> <span class="nav-text">Exception</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#异常处理"><span class="nav-number"></span> <span class="nav-text">异常处理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#trycatch"><span class="nav-number"></span> <span class="nav-text">trycatch</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#try"><span class="nav-number"></span> <span class="nav-text">try</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#catch"><span class="nav-number"></span> <span class="nav-text">catch</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#finally"><span class="nav-number"></span> <span class="nav-text">finally</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#try-catch、finally、return的执行顺序"><span class="nav-number">1.</span> <span class="nav-text">try catch、finally、return的执行顺序</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#throw"><span class="nav-number"></span> <span class="nav-text">throw</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#方法重写中声明异常的原则"><span class="nav-number"></span> <span class="nav-text">方法重写中声明异常的原则</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#手动抛出throw"><span class="nav-number"></span> <span class="nav-text">手动抛出throw</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#自定义异常"><span class="nav-number"></span> <span class="nav-text">自定义异常</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#使用异常机制建议"><span class="nav-number"></span> <span class="nav-text">使用异常机制建议</span></a></div>
             
 
           </div>
