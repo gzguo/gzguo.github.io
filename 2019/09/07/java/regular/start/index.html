@@ -63,7 +63,7 @@
 <meta property="og:site_name" content="YaSuo">
 <meta property="og:description" content="java_regular_start">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-08-31T10:12:26.351Z">
+<meta property="og:updated_time" content="2019-08-31T13:38:40.053Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="java_regular_start">
 <meta name="twitter:description" content="java_regular_start">
@@ -300,7 +300,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-08-31 18:12:26" itemprop="dateModified" datetime="2019-08-31T18:12:26+08:00">2019-08-31</time>
+                <time title="修改时间：2019-08-31 21:38:40" itemprop="dateModified" datetime="2019-08-31T21:38:40+08:00">2019-08-31</time>
               </span>
             
           
@@ -335,7 +335,7 @@
               
                 <span class="post-meta-item-text">本文字数：</span>
               
-              <span>18</span>
+              <span>2.5k</span>
             </span>
           
             <span class="post-meta-item" title="阅读时长">
@@ -345,7 +345,7 @@
               
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
               
-              <span>1 分钟</span>
+              <span>2 分钟</span>
             </span>
           
 
@@ -359,6 +359,82 @@
 
       
         <h4 id="java-regular-start"><a href="#java-regular-start" class="headerlink" title="java_regular_start"></a><center>java_regular_start</center></h4><a id="more"></a>
+
+<p><strong>regular Expression</strong></p>
+<h1 id="正则表达式的基本知识"><a href="#正则表达式的基本知识" class="headerlink" title="正则表达式的基本知识"></a>正则表达式的基本知识</h1><h2 id="基本语法"><a href="#基本语法" class="headerlink" title="基本语法"></a>基本语法</h2><p><em>为什么需要正则表达式</em>？文本的复杂处理</p>
+<p><em>正则表达式的优势和用途</em>：1.一种强大的文本处理工具 2.大部分编程语言、数据库、文本编译器、开发环境都支持正则表达式</p>
+<p><em>正则表达式的定义</em>：1.正如他的名字一样描述了一个规则，通过这个规则可以匹配一类字符串 2.学习正则表达式很大程度上就是学习正则表达式的语法规则</p>
+<p>开发中使用正则表达式：</p>
+<ul>
+<li>分析所要匹配的数据，写出测试用的典型数据</li>
+<li>在工具软件中进行匹配测试</li>
+<li>在程；序调用通过测试的正则表达式</li>
+</ul>
+<p>正则表达式语法：</p>
+<p><strong>1.</strong>普通字符：字母、数字、汉字、下划线、以及没有特殊定义的标点符号，都是“普通字符”。表达式中的普通字符，在匹配一个字符串的时候，匹配与之相同的一个字符</p>
+<p><strong>2.</strong>简单的转义字符：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">\n 换行符</span><br><span class="line">\t 制表符</span><br><span class="line">\\ \本身</span><br><span class="line">\^,\$,\.,\(, \),\&#123;, \&#125;,\?,\+,\*,\|,\[, \] 匹配这些字符本身</span><br></pre></td></tr></table></figure>
+
+<p><strong>3.</strong>标准字符集合：</p>
+<p>1&gt;能够与“多种字符”匹配的表达式</p>
+<p>2&gt;注意区分大小写，大写是相反的意思</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">\d 任意一个数字，0-9中任意一个</span><br><span class="line">\w 任意一个字母或数字或下划线，也就是A-Z、a-z、0-9，_ 中任意一个</span><br><span class="line">\s 包括空格、制表符、换行符等空白符的其中任意一个</span><br><span class="line">. 小数点可以匹配任意一个字符(除了换行符)，如果要匹配“\n”在内的所有字符，一般用[\s\S]</span><br></pre></td></tr></table></figure>
+
+<p><strong>4.</strong>自定义字符集合：</p>
+<p>[]方括号匹配方式，能够匹配方括号中任意一个字符</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[ab5@] 匹配“a”或“b”或“<span class="number">5</span>”或“@”</span><br><span class="line">[^abc] 匹配“a”，“b”，“c”之外的任意一个字符</span><br><span class="line">[f-k]  匹配“f”~“k”之间的任意一个字母</span><br><span class="line">[^A-F0-<span class="number">3</span>] 匹配“A~F”，“<span class="number">0</span>~<span class="number">3</span>”之外的任意一个字符</span><br></pre></td></tr></table></figure>
+
+<p>1&gt;正则表达式的特殊符号，被包含到了中括号中，则失去了意义，除了^ - 之外</p>
+<p>2&gt;标准字符集合，除小数点外(小数点在中括号内只表示小数点，没有特殊含义)，如果被包含于中括号，自定义字符集合将包含该集合。比如</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[\d.\-+] 将匹配：数字、小数点、+、-</span><br></pre></td></tr></table></figure>
+
+<h3 id="量词"><a href="#量词" class="headerlink" title="量词"></a>量词</h3><p>量词：修饰匹配次数的特殊符号</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">贪婪模式：</span><br><span class="line">&#123;n&#125; 表达式重复n次</span><br><span class="line">&#123;m,n&#125; 表达式至少重复m次，最多重复n次</span><br><span class="line">&#123;m,&#125; 表达式至少重复m次</span><br><span class="line">? 匹配表达式<span class="number">0</span>次或者<span class="number">1</span>次，相当于&#123;<span class="number">0</span>,<span class="number">1</span>&#125;</span><br><span class="line">+ 表达式至少出现<span class="number">1</span>次，相当于&#123;<span class="number">1</span>,&#125;</span><br><span class="line">* 表达式不出现或出现任意次，相当于&#123;<span class="number">0</span>,&#125;</span><br><span class="line"></span><br><span class="line">非贪婪模式：</span><br><span class="line">&#123;n&#125;? 表达式重复n次</span><br><span class="line">&#123;m,n&#125;? 表达式至少重复m次，最多重复n次</span><br><span class="line">&#123;m,&#125;? 表达式至少重复m次</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>匹配次数中的贪婪模式(匹配字符越多越好，默认！)</li>
+<li>匹配次数中的非贪婪模式(匹配的字符越少越好，修饰匹配次数的特殊符号后再加上一个“？”号)</li>
+</ul>
+<h3 id="字符边界-零宽"><a href="#字符边界-零宽" class="headerlink" title="字符边界(零宽)"></a>字符边界(零宽)</h3><p>本组标记匹配的不是字符而是位置，符合某种条件的位置</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">^ 与字符串开始的地方匹配</span><br><span class="line">$ 与字符串结束的地方匹配</span><br><span class="line">\b 匹配一个单词边界</span><br><span class="line"><span class="comment">// \b匹配这样一个位置：前面的字符和后面的字符不全是\w</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="正则表达式的匹配模式"><a href="#正则表达式的匹配模式" class="headerlink" title="正则表达式的匹配模式"></a>正则表达式的匹配模式</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">IGNORECASE(ignorecase) 忽略大小写模式</span><br><span class="line"> <span class="number">1</span>&gt;匹配时忽略大小写</span><br><span class="line"> <span class="number">2</span>&gt;默认情况下，正则表达式是要区分大小写的</span><br><span class="line">SINGLELINE(singleline) 单行模式</span><br><span class="line"> <span class="number">1</span>&gt;整个文本看作一个字符串，只有一个开头，一个结尾</span><br><span class="line"> <span class="number">2</span>&gt;使小数点“.”可以匹配包含换行符(\n)在内的任意字符</span><br><span class="line">MULTILINE(multiline) 多行模式</span><br><span class="line"> <span class="number">1</span>&gt;每行都是一个字符串，都有开头和结尾</span><br><span class="line"> <span class="number">2</span>&gt;在指定MULTILINE之后，如果需要仅匹配字符串开始和结束位置，可以使用\A和\Z</span><br></pre></td></tr></table></figure>
+
+<h3 id="选择符和分组"><a href="#选择符和分组" class="headerlink" title="选择符和分组"></a>选择符和分组</h3><table>
+<thead>
+<tr>
+<th>表达式</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>| 分支结构</td>
+<td>左右两边表达式之间“或”关系，匹配左边或者右边</td>
+</tr>
+<tr>
+<td>() 捕获组</td>
+<td>1&gt;在被修饰次数的时候，括号内的表达式可以作为整体被修饰   2&gt;取消匹配结果的时候，括号中的表达式匹配到的内容可以被单独得到   3&gt;每一对括号会分配一个编号，使用()的捕捉根据左括号的顺序从1开始自动编号。捕获元素编号为0的第一个捕获是由整个正则表达式模式匹配的文本</td>
+</tr>
+<tr>
+<td>(?:Expression) 非捕获组</td>
+<td>一些表达式中，不得不使用()，但又不需要保存()中的子表达式匹配的内容，这时可以用非捕获来抵消()带来的副作用</td>
+</tr>
+</tbody></table>
+<h5 id="反向引用-nnn"><a href="#反向引用-nnn" class="headerlink" title="反向引用(\nnn)"></a>反向引用(\nnn)</h5><ol>
+<li>每一对()会分配一个编号，使用()的捕捉<strong>根据左括号的顺序</strong>从1开始自动编号</li>
+<li>通过反向引用，可以对分组已捕获的字符串进行引用</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">([a-z]&#123;<span class="number">2</span>&#125;)\<span class="number">1</span> 匹配gogo 、 toto 这类型的前两个字母是小写并且后两个字母和前两个字母相同</span><br><span class="line">(?:[a-z]&#123;<span class="number">2</span>&#125;) 只利用括号的形式，没有存储捕获的内容。后面写\<span class="number">1</span>也失去了意义</span><br></pre></td></tr></table></figure>
+
+<h2 id="高级语法"><a href="#高级语法" class="headerlink" title="高级语法"></a>高级语法</h2><h3 id="预搜索-零宽断言"><a href="#预搜索-零宽断言" class="headerlink" title="预搜索(零宽断言)"></a>预搜索(零宽断言)</h3><p>预搜索(零宽断言)：</p>
+<ul>
+<li>只进行子表达式的匹配，匹配内容不计入最终的匹配结果，是零宽度</li>
+<li>这个位置应该符合某个条件。判断当前位置的前后字符，是否符合指定条件，但不匹配前后字符。是对位置的匹配</li>
+<li>正则表达式匹配的过程中，如果子表达式匹配到的是字符内容，而非位置，并被保存到最终的匹配结果中，那么就认为这个子表达式是占有字符的；如果子表达式匹配的仅仅是位置，或者匹配的内容并不保存到最终的匹配结果中，那么就认为这个子表达式是零宽度的。占有字符还是零宽度，是针对匹配的内容是否保存到最终的匹配结果中而言的</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">(?=exp) 断言自身出现的位置的后面能匹配表达式exp</span><br><span class="line">(?&lt;=exp) 断言自身出现的位置的前面能匹配表达式exp</span><br><span class="line">(?!exp) 断言此位置的后面不能匹配表达式exp</span><br><span class="line">(?&lt;!exp) 断言此位置的前面不能匹配表达式exp</span><br></pre></td></tr></table></figure>
+
+<h2 id="练习"><a href="#练习" class="headerlink" title="练习"></a>练习</h2><h2 id="使用正则"><a href="#使用正则" class="headerlink" title="使用正则"></a>使用正则</h2><h1 id="java复杂文本操作"><a href="#java复杂文本操作" class="headerlink" title="java复杂文本操作"></a>java复杂文本操作</h1>
     </div>
 
     
@@ -531,7 +607,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#java-regular-start"><span class="nav-number">1.</span> <span class="nav-text">java_regular_start</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#java-regular-start"><span class="nav-number">1.</span> <span class="nav-text">java_regular_start</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#正则表达式的基本知识"><span class="nav-number"></span> <span class="nav-text">正则表达式的基本知识</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#基本语法"><span class="nav-number"></span> <span class="nav-text">基本语法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#量词"><span class="nav-number"></span> <span class="nav-text">量词</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#字符边界-零宽"><span class="nav-number"></span> <span class="nav-text">字符边界(零宽)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#正则表达式的匹配模式"><span class="nav-number"></span> <span class="nav-text">正则表达式的匹配模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#选择符和分组"><span class="nav-number"></span> <span class="nav-text">选择符和分组</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#反向引用-nnn"><span class="nav-number">0.1.</span> <span class="nav-text">反向引用(\nnn)</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#高级语法"><span class="nav-number"></span> <span class="nav-text">高级语法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#预搜索-零宽断言"><span class="nav-number"></span> <span class="nav-text">预搜索(零宽断言)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#练习"><span class="nav-number"></span> <span class="nav-text">练习</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用正则"><span class="nav-number"></span> <span class="nav-text">使用正则</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#java复杂文本操作"><span class="nav-number"></span> <span class="nav-text">java复杂文本操作</span></a></div>
             
 
           </div>
@@ -558,12 +634,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-area-chart"></i>
     </span>
-    <span title="站点总字数">91k</span>
+    <span title="站点总字数">93k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">1:23</span>
+    <span title="站点阅读时长">1:25</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0</div>
   <span class="post-meta-divider">|</span>
