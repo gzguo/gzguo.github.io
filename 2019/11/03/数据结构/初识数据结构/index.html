@@ -63,7 +63,7 @@
 <meta property="og:site_name" content="YaSuo">
 <meta property="og:description" content="介绍数据结构">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-11-03T02:06:16.875Z">
+<meta property="og:updated_time" content="2019-11-03T13:59:05.156Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="初识数据结构">
 <meta name="twitter:description" content="介绍数据结构">
@@ -289,7 +289,7 @@
                 
               
 
-              <time title="创建时间：2019-11-03 09:03:00 / 修改时间：10:06:16" itemprop="dateCreated datePublished" datetime="2019-11-03T09:03:00+08:00">2019-11-03</time>
+              <time title="创建时间：2019-11-03 09:03:00 / 修改时间：21:59:05" itemprop="dateCreated datePublished" datetime="2019-11-03T09:03:00+08:00">2019-11-03</time>
             </span>
           
             
@@ -327,7 +327,7 @@
               
                 <span class="post-meta-item-text">本文字数：</span>
               
-              <span>292</span>
+              <span>2.7k</span>
             </span>
           
             <span class="post-meta-item" title="阅读时长">
@@ -337,7 +337,7 @@
               
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
               
-              <span>1 分钟</span>
+              <span>2 分钟</span>
             </span>
           
 
@@ -362,7 +362,43 @@
 <h3 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h3><p>算法 = 对存储数据的操作</p>
 <p>广义算法：算法和存储关系没有关系</p>
 <p>狭义算法：存储方式不一样，那么执行的操作就不一样</p>
+<p>我们现在研究的是 狭义算法</p>
+<p>算法：解题的方法和步骤</p>
+<h3 id="衡量算法的标准"><a href="#衡量算法的标准" class="headerlink" title="衡量算法的标准"></a>衡量算法的标准</h3><p>时间复杂度：大概程序要执行的次数，而非执行时间 (执行的机器不一样，会影响时间)</p>
+<p>空间复杂度：算法执行过程中大概所占用的最大内存</p>
+<p>难易程度：尽量容易理解</p>
+<p>健壮性： 一个问题你可能并没有考虑全面<br>                这时你写了一个算法，健壮性强，就说明如果遇到你考虑之外的东西也能处理<br>                健壮性差就说明这个算法刚刚符合你自己考虑的 </p>
+<h3 id="数据结构的地位"><a href="#数据结构的地位" class="headerlink" title="数据结构的地位"></a>数据结构的地位</h3><p>数据结构是软件中<u>最核心</u>的课程</p>
+<p>程序 = 数据的存储 + 数据的操作 + 可以被计算机执行的语言</p>
+<h2 id="预备知识"><a href="#预备知识" class="headerlink" title="预备知识"></a>预备知识</h2><h3 id="指针"><a href="#指针" class="headerlink" title="指针"></a>指针</h3><p>指针的重要性：指针是c语言的灵魂</p>
+<h4 id="定义-1"><a href="#定义-1" class="headerlink" title="定义"></a>定义</h4><p><strong>地址</strong>：内存单元的编号。(32位)从0开始的非负整数，范围0-FFFFFFFF(0-4G-1)(这里的G和硬盘的G意义相同)</p>
+<p><strong>指针</strong>：指针就是地址，地址就是指针。</p>
+<p>指针变量是存放内存单元地址的变量。</p>
+<p>指针的本质：是一个操作受限的非负整数(不能加减乘除、只能在某些特殊情况下才能减)</p>
+<p>指针的分类：1.基本类型的指针 2.指针和数组的关系</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/*</span></span><br><span class="line"><span class="comment">		p是个指针变量名字，</span></span><br><span class="line"><span class="comment">		int * 表示该p变量只能存储int类型变量的地址</span></span><br><span class="line"><span class="comment">	*/</span></span><br><span class="line">	<span class="keyword">int</span>* p; </span><br><span class="line">	<span class="keyword">int</span> i = <span class="number">10</span>;</span><br><span class="line">	<span class="keyword">int</span> j;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/*</span></span><br><span class="line"><span class="comment">		修改p的值不会改变i的值</span></span><br><span class="line"><span class="comment">		修改i的值不会改变p的值</span></span><br><span class="line"><span class="comment">		*p就是i变量</span></span><br><span class="line"><span class="comment">	*/</span></span><br><span class="line">	p = &amp;i;</span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">		*p没有指向任何东西的时候，</span></span><br><span class="line"><span class="comment">		p里面很有可能会指向一个垃圾值</span></span><br><span class="line"><span class="comment">		这个垃圾值很可能是某个变量的地址</span></span><br><span class="line"><span class="comment">	*/</span></span><br><span class="line">	j = *p;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"i = %d , j = %d\n"</span>,i, j);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
+<p>整个硬件是由操作系统控制。</p>
+<p>程序向操作系统申请内存，所谓<strong>分配</strong>是指系统把内存分配给程序，操作系统吧这块内存的状态修改为已占用</p>
+<p><strong>交还</strong>就是程序告诉操作系统不再需要这个内存空间了，操作系统吧这个内存空间的状态改为空闲</p>
+<p>整个过程中没有对内存中的数据进行删除操作，所以所有的内存在使用之前大概率都会保存着垃圾数字。</p>
+<p>操作系统不会清空内存中遗留下来的数字，只是修改了使用权限</p>
+<p>如果在内存状态为已占用的情况下，这块内存又被访问的话，这个访问的东西就叫病毒</p>
+<p>cpu只能直接访问内存，不能直接访问硬盘</p>
+<p>逻辑上来讲，cpu和内存之间进行交互有三条总线进行调节：地址线（找位置、控制数据单元）、控制线（控制读写）、数据线（数据传输）</p>
+<p>32位的电脑，内存最大为4G，因为地址线只能控制2的32次方个数据单元，内存再大没有任何意义</p>
+<p>因为内存中的空间不会被清除，所以java中的局部变量必须初始化才能使用，Java中的属性不需要初始化就可以使用，因为他默认初始化了。不管怎么样，在使用之前必须初始化。</p>
+<h4 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h4><ol>
+<li>指针变量也是变量，只不过他存放的不能是内存单元的内容，只能存放内存单元的地址</li>
+<li>普通变量前不能加*</li>
+<li>常量和表达式前不能加&amp;</li>
+</ol>
+<p>形参也属于局部变量</p>
+<p>指针变量统一的只占4个字节</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">f</span><span class="params">(<span class="keyword">int</span> **q)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span>* p;</span><br><span class="line">	<span class="keyword">int</span> i = <span class="number">10</span>;</span><br><span class="line">	p = &amp;i;</span><br><span class="line"></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"p = %p\n"</span>, p);</span><br><span class="line"></span><br><span class="line">	<span class="comment">//想要改变指针类型变量 p 的值</span></span><br><span class="line">	<span class="comment">//要把p的地址传给函数</span></span><br><span class="line">	<span class="comment">//然后才能通过函数来修改p变量的值</span></span><br><span class="line">	f(&amp;p);</span><br><span class="line"></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"p = %p\n"</span>, p);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">	一级指针变量：</span></span><br><span class="line"><span class="comment">	可以用一级指针变量 来保存 变量的地址</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">	一级指针变量的地址是 &amp;p</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">	p是一级指针变量的名字</span></span><br><span class="line"><span class="comment">	*p 就是p指向的内存</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">	二级指针变量：</span></span><br><span class="line"><span class="comment">	用一个二级指针变量 来保存 一级指针变量的地址</span></span><br><span class="line"><span class="comment">	相当于int ** q = &amp;p;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">	q 是 二级指针变量的名字</span></span><br><span class="line"><span class="comment">	*q 是 一级指针的地址（*q就是指向的一级指针）</span></span><br><span class="line"><span class="comment">	**q 是 一级指针的地址中存放的地址 （**q就是*p）</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">	一定要记得q是个变量名，是个二级指针类型的变量名</span></span><br><span class="line"><span class="comment">	他本身存放着的是一级指针的地址</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">	总而言之</span></span><br><span class="line"><span class="comment">	变量就是变量，什么时候都可以取地址</span></span><br><span class="line"><span class="comment">	如果是指针类型的变量，加一颗星就是他指向的那个变量，再加星就是他指向的那个变量指向的变量</span></span><br><span class="line"><span class="comment">	知道没有星可以加为止</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">f</span><span class="params">(<span class="keyword">int</span> **q)</span> </span>&#123;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"-----------------------f()开始执行----------------------\n"</span>);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"**q = %d\n"</span>, **q);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"*q = %p\n"</span>, *q);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"q = %p\n"</span>, q);</span><br><span class="line"></span><br><span class="line">	*q = (<span class="keyword">int</span>*)<span class="number">1</span>;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"-----------------------q改变了p的地址----------------------\n"</span>);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"*q = %p\n"</span>,*q);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"-----------------------f()执行完毕----------------------\n"</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">	p = 0133F774</span></span><br><span class="line"><span class="comment">	-----------------------f()开始执行----------------------</span></span><br><span class="line"><span class="comment">	**q = 10</span></span><br><span class="line"><span class="comment">	*q = 0133F774</span></span><br><span class="line"><span class="comment">	q = 0133F780</span></span><br><span class="line"><span class="comment">	-----------------------q改变了p的地址----------------------</span></span><br><span class="line"><span class="comment">	*q = 00000001</span></span><br><span class="line"><span class="comment">	-----------------------f()执行完毕----------------------</span></span><br><span class="line"><span class="comment">	p = 00000001</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="结构体"><a href="#结构体" class="headerlink" title="结构体"></a>结构体</h3><h4 id="为什么会出现结构体"><a href="#为什么会出现结构体" class="headerlink" title="为什么会出现结构体"></a>为什么会出现结构体</h4><h4 id="什么叫结构体"><a href="#什么叫结构体" class="headerlink" title="什么叫结构体"></a>什么叫结构体</h4><h4 id="如何使用结构体"><a href="#如何使用结构体" class="headerlink" title="如何使用结构体"></a>如何使用结构体</h4><h4 id="注意事项-1"><a href="#注意事项-1" class="headerlink" title="注意事项"></a>注意事项</h4><p>p8</p>
+<h3 id="动态内存的分配和释放"><a href="#动态内存的分配和释放" class="headerlink" title="动态内存的分配和释放"></a>动态内存的分配和释放</h3>
     </div>
 
     
@@ -547,7 +583,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#介绍数据结构"><span class="nav-number">1.</span> <span class="nav-text">介绍数据结构</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据结构概述"><span class="nav-number"></span> <span class="nav-text">数据结构概述</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#定义"><span class="nav-number"></span> <span class="nav-text">定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#算法"><span class="nav-number"></span> <span class="nav-text">算法</span></a></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#介绍数据结构"><span class="nav-number">1.</span> <span class="nav-text">介绍数据结构</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据结构概述"><span class="nav-number"></span> <span class="nav-text">数据结构概述</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#定义"><span class="nav-number"></span> <span class="nav-text">定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#算法"><span class="nav-number"></span> <span class="nav-text">算法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#衡量算法的标准"><span class="nav-number"></span> <span class="nav-text">衡量算法的标准</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数据结构的地位"><span class="nav-number"></span> <span class="nav-text">数据结构的地位</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#预备知识"><span class="nav-number"></span> <span class="nav-text">预备知识</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#指针"><span class="nav-number"></span> <span class="nav-text">指针</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#定义-1"><span class="nav-number">1.</span> <span class="nav-text">定义</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#注意事项"><span class="nav-number">2.</span> <span class="nav-text">注意事项</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#结构体"><span class="nav-number"></span> <span class="nav-text">结构体</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#为什么会出现结构体"><span class="nav-number">1.</span> <span class="nav-text">为什么会出现结构体</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#什么叫结构体"><span class="nav-number">2.</span> <span class="nav-text">什么叫结构体</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#如何使用结构体"><span class="nav-number">3.</span> <span class="nav-text">如何使用结构体</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#注意事项-1"><span class="nav-number">4.</span> <span class="nav-text">注意事项</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#动态内存的分配和释放"><span class="nav-number"></span> <span class="nav-text">动态内存的分配和释放</span></a></div>
             
 
           </div>
@@ -574,12 +610,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-area-chart"></i>
     </span>
-    <span title="站点总字数">115k</span>
+    <span title="站点总字数">118k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">1:45</span>
+    <span title="站点阅读时长">1:47</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0</div>
   <span class="post-meta-divider">|</span>
