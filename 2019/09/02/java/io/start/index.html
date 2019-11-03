@@ -63,7 +63,7 @@
 <meta property="og:site_name" content="YaSuo">
 <meta property="og:description" content="java_io_start">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-08-31T10:09:59.869Z">
+<meta property="og:updated_time" content="2019-09-04T00:57:11.482Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="java_io_start">
 <meta name="twitter:description" content="java_io_start">
@@ -300,7 +300,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-08-31 18:09:59" itemprop="dateModified" datetime="2019-08-31T18:09:59+08:00">2019-08-31</time>
+                <time title="修改时间：2019-09-04 08:57:11" itemprop="dateModified" datetime="2019-09-04T08:57:11+08:00">2019-09-04</time>
               </span>
             
           
@@ -335,7 +335,7 @@
               
                 <span class="post-meta-item-text">本文字数：</span>
               
-              <span>13</span>
+              <span>1.2k</span>
             </span>
           
             <span class="post-meta-item" title="阅读时长">
@@ -359,6 +359,14 @@
 
       
         <h4 id="java-io-start"><a href="#java-io-start" class="headerlink" title="java_io_start"></a><center>java_io_start</center></h4><a id="more"></a>
+
+<p>我们的程序和硬盘中的文件需要建立联系，建立联系的东西就是File。注意File并不是文件本身。我们需要操作io流来操作文件的内容</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        System.out.println(File.pathSeparator);</span><br><span class="line">        System.out.println(File.separator);</span><br><span class="line">        <span class="comment">//路径的表示形式</span></span><br><span class="line">        String path = <span class="string">"E:\\xp\\test\\2.jpg"</span>;</span><br><span class="line">        <span class="comment">//这个可以做到跨平台，如果不是动态生成，那么不建议使用</span></span><br><span class="line">        path = <span class="string">"E:"</span>+File.separator+<span class="string">"xp"</span>+File.separator+<span class="string">"test"</span>+File.separator+<span class="number">2</span>.jpg;</span><br><span class="line">        path = <span class="string">"E:/xp/test/2.jpg"</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>相对路径和绝对路径：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        String parentPath = <span class="string">"E:/xp/test"</span>;</span><br><span class="line">        String name = <span class="string">"2.jpg"</span>;</span><br><span class="line">        <span class="comment">//相对路径</span></span><br><span class="line">        File src = <span class="keyword">new</span> File(parentPath,name);</span><br><span class="line">        src = <span class="keyword">new</span> File(<span class="keyword">new</span> File(parentPath),name);</span><br><span class="line">        <span class="comment">//输出</span></span><br><span class="line">        System.out.println(src.getName());</span><br><span class="line">        System.out,println(src.getPath());</span><br><span class="line">        <span class="comment">//绝对路径</span></span><br><span class="line">        src = <span class="keyword">new</span> File(<span class="string">"E:/xp/test/2.jpg"</span>);</span><br><span class="line">        System.out.println(src.getName());</span><br><span class="line">        System.out.println(src.getPath());</span><br><span class="line">        <span class="comment">//没有盘符，在项目的工作空间构建</span></span><br><span class="line">        src = <span class="keyword">new</span> File(<span class="string">"test.txt"</span>);</span><br><span class="line">        System.out.println(src.getName());</span><br><span class="line">        System.out.println(src.getPath());</span><br><span class="line">        System.out.println(src.getAbsolutePath());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
     </div>
 
     
@@ -452,7 +460,7 @@
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">24</span>
+          <span class="site-state-item-count">25</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -473,7 +481,9 @@
         
           
         
-        <span class="site-state-item-count">3</span>
+          
+        
+        <span class="site-state-item-count">4</span>
         <span class="site-state-item-name">分类</span>
         </a>
       </div>
@@ -524,7 +534,9 @@
         
           
         
-        <span class="site-state-item-count">17</span>
+          
+        
+        <span class="site-state-item-count">18</span>
         <span class="site-state-item-name">标签</span>
         </a>
       </div>
@@ -572,12 +584,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-area-chart"></i>
     </span>
-    <span title="站点总字数">113k</span>
+    <span title="站点总字数">115k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">1:43</span>
+    <span title="站点阅读时长">1:44</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0</div>
   <span class="post-meta-divider">|</span>
