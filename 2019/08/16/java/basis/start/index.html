@@ -64,8 +64,8 @@
 <meta property="og:description" content="标识符、变量、常量、数据类型、运算符">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://github.com/images/20180731134336249.png">
-<meta property="og:image" content="https://github.com/image/201807311347398.png">
-<meta property="og:updated_time" content="2019-11-06T01:23:04.349Z">
+<meta property="og:image" content="https://github.com/image/944365-0adcc90ec5514c9f.webp">
+<meta property="og:updated_time" content="2019-11-06T01:50:48.322Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="java_basis_start">
 <meta name="twitter:description" content="标识符、变量、常量、数据类型、运算符">
@@ -303,7 +303,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-11-06 09:23:04" itemprop="dateModified" datetime="2019-11-06T09:23:04+08:00">2019-11-06</time>
+                <time title="修改时间：2019-11-06 09:50:48" itemprop="dateModified" datetime="2019-11-06T09:50:48+08:00">2019-11-06</time>
               </span>
             
           
@@ -338,7 +338,7 @@
               
                 <span class="post-meta-item-text">本文字数：</span>
               
-              <span>6.3k</span>
+              <span>7.2k</span>
             </span>
           
             <span class="post-meta-item" title="阅读时长">
@@ -348,7 +348,7 @@
               
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
               
-              <span>6 分钟</span>
+              <span>7 分钟</span>
             </span>
           
 
@@ -386,7 +386,7 @@
 <p>javac程序是Java编译器，它可以将文件编译成.class文件，并发送到java虚拟机，让虚拟机来执行编译器放在class文件中的字节码。</p>
 <p><img src="/images/20180731134336249.png" alt="JVM加载class文件的原理机制"></p>
 <p>类加载器把类的.class文件中的数据读入到内存中，通常是创建一个字节数组读入.class文件。然后产生与所加载类对应的Class对象。加载完成后，Class对象还不完整，所以此时的类还不可以用。当类被加载后就进入连接阶段，这一阶段包括验证、准备和解系三个步骤。最后是JVM对类进行初始化（ 如果类存在直接的父类并且这个类还没有被初始化，那么就先初始化父类; 2)如果类中存在初始化语句，就依次执行这些初始化语句。 ） 类加载器包括:根加载器(BootStrap)、扩展加载器(Extension)、 系统加载器(System)和用户自定义类加载器(java.lang.ClassLoader 的子类) 。类加载器在JVM中。</p>
-<p><a href="944365-0adcc90ec5514c9f.webp">类加载器</a></p>
+<p><a href="https://www.jianshu.com/p/8743d8062bb6" target="_blank" rel="noopener">类加载器的介绍</a></p>
 <p>JVM的一些基础知识：</p>
 <p>JVM运行的是字节码文件，只要是这种格式的文件就行，所以，时间上JVM并不像我之前想象的那样与java语言紧紧的捆绑在一起</p>
 <p>字节码文件简单强大，他存放了这个类的各种信息：字段、方法、父类、实现的接口等各种信息</p>
@@ -394,9 +394,14 @@
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">虚拟机中的区域：</span></span><br><span class="line"><span class="comment">    1、程序计数器：可以看作是当前线程所执行的字节码的行号指示器（指示当前线程，所以是线程私有的），字节码解释器工作时需要通过改变这个程序计数器的值来选取下一条所需要执行的字节码指令，循环、跳转、异常处理、线程恢复等基础功能都要依赖它来完成。</span></span><br><span class="line"><span class="comment">    2、JVM栈：描述的是Java方法执行的内存模型：每个方法在执行时都会创建一个栈帧，用于存储局部变量表，操作数栈，动态链接和方法出口等信息。每一个方法从调用直到执行完成的过程，就对应一个栈帧从虚拟机栈中入栈到出栈的过程。</span></span><br><span class="line"><span class="comment">    3、本地方法栈：虚拟机栈执行的是Java方法（也就是字节码）服务，而本地方法栈则为虚拟机所使用到的Native方法服务。</span></span><br><span class="line"><span class="comment">    4、堆：是被所有线程共享的一块区域，在虚拟机创建是创建，此内存的唯一目的是存放对象实例，它也是垃圾收集器管理的主要区域。</span></span><br><span class="line"><span class="comment">    5、方法区：也是所有线程共享的一块区域，用于存储已被虚拟机加载的类信息、常量、静态变量、即时编译器编译后的代码等数据。</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
 
 <p>JVM的功能模块主要包括类加载器、执行引擎和垃圾回收系统。 </p>
-<p><img src="/image/201807311347398.png" alt="java的一次编译到处运行原理"></p>
+<p><img src="/image/944365-0adcc90ec5514c9f.webp" alt="java的Write Once，Run Anywhere"></p>
 <p>java是编译型语言和解释型语言的结合（源码文件（.java）被编译为class文件（字节码文件）然后被JRE处理（类加载器、字节码校验器、解释器（虚拟机）））最后JRE给了系统<strong>*java–&gt;JVM–&gt;底层操作系统，经过这么一个中介我们java避免了与操作系统直接打交道，这样实现跨平台的核心机制（JRE是java运行时环境，包括了虚拟机JVM）</strong>。</p>
-<p>这里我们注意一下，上面是网上的言论，我们的java是编译型语言，纯粹的编译型语言，只不过他把代码交给了JVM，由JVM来进行解释</p>
+<p>这里我们注意一下，上面是网上的言论，如果是纯粹的java(不谈虚拟机)，那么java是编译型语言，纯粹的编译型语言，只不过他把代码经过编译之后生成字节码文件交给了JVM，由JVM进行解释</p>
+<p>谈到JVM，不得不谈JRE和JDK：</p>
+<p>JVM 是java虚拟机。JVM的主要工作是解释自己的指令集（即字节码）到 CPU 的指令集或 OS 的系统调用，保护用户免被恶意程序骚扰。 JVM 对上层的 Java 源文件是不关心的，它关注的只是由源文件生成的类文件（ class file ）。类文件的 组成包括 JVM 指令集，符号表以及一些补助信息。<br>JRE是指java运行环境。光有JVM还不能成class的 执行，因为在解释class的时候JVM需要调用解释所需要的类库lib。 在JDK的安装目 录里你可以找到jre目录，里面有两个文件夹bin和lib,在 这里可以认为bin里的就是jvm，lib中则是jvm工 作所需要的类库，而jvm和 lib和起来就称为jre。所以，在你写完java程序编译成.class之后，你可以把这个.class文件 和jre一起打包发给朋友，这样你的朋友就 可以运行你写程序了。（jre里有运行.class的java.exe）</p>
+<p>JDK是java开发工具包。一个src类库源码压缩包、和其他几个声明文件。其中，真正在运行java时起作用的 是以下四个文件夹：bin、include、lib、 jre。现在我们可以看出这样一个关系，JDK包含JRE，而JRE包 含JVM。</p>
+<p> 1.bin:最主要的是编译器(javac.exe)<br> 2.include:java和JVM交互用的头文件<br> 3.lib:类库<br> 4.jre:java运行环境<br>注意：这里的bin、lib文件夹和jre里的bin、lib是 不同的，总的来说JDK是用于java程序的开发,而jre则 是只能运行class而没有编译的功能。eclipse、idea等 其他IDE有自己的编译器而不是用JDK bin目录中自带的，所以在安装时你会发现他们只要求你 选中jre路径就ok了。</p>
+<p><a href="https://blog.csdn.net/axi295309066/article/details/60469630" target="_blank" rel="noopener">JDK、JRE、JVM</a></p>
 <h2 id="高级语言"><a href="#高级语言" class="headerlink" title="高级语言"></a>高级语言</h2><p>安卓开发：<strong>Kotlin</strong></p>
 <p>苹果（IOs）开发：<strong>Objective-C</strong>、<strong>Swift</strong></p>
 <p> <strong>Fortran</strong>世界上第一种高级语言IBM公司提出的</p>
@@ -788,7 +793,7 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-area-chart"></i>
     </span>
-    <span title="站点总字数">123k</span>
+    <span title="站点总字数">124k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
