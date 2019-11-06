@@ -64,8 +64,8 @@
 <meta property="og:description" content="标识符、变量、常量、数据类型、运算符">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://github.com/images/20180731134336249.png">
-<meta property="og:image" content="https://github.com/image/QQ%E5%9B%BE%E7%89%8720191106162305.png">
-<meta property="og:updated_time" content="2019-11-06T08:24:27.532Z">
+<meta property="og:image" content="https://github.com/images/QQ%E5%9B%BE%E7%89%8720191106162305.png">
+<meta property="og:updated_time" content="2019-11-06T08:27:38.527Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="java_basis_start">
 <meta name="twitter:description" content="标识符、变量、常量、数据类型、运算符">
@@ -303,7 +303,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-11-06 16:24:27" itemprop="dateModified" datetime="2019-11-06T16:24:27+08:00">2019-11-06</time>
+                <time title="修改时间：2019-11-06 16:27:38" itemprop="dateModified" datetime="2019-11-06T16:27:38+08:00">2019-11-06</time>
               </span>
             
           
@@ -394,7 +394,7 @@
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">虚拟机中的区域：</span></span><br><span class="line"><span class="comment">    1、程序计数器：可以看作是当前线程所执行的字节码的行号指示器（指示当前线程，所以是线程私有的），字节码解释器工作时需要通过改变这个程序计数器的值来选取下一条所需要执行的字节码指令，循环、跳转、异常处理、线程恢复等基础功能都要依赖它来完成。</span></span><br><span class="line"><span class="comment">    2、JVM栈：描述的是Java方法执行的内存模型：每个方法在执行时都会创建一个栈帧，用于存储局部变量表，操作数栈，动态链接和方法出口等信息。每一个方法从调用直到执行完成的过程，就对应一个栈帧从虚拟机栈中入栈到出栈的过程。</span></span><br><span class="line"><span class="comment">    3、本地方法栈：虚拟机栈执行的是Java方法（也就是字节码）服务，而本地方法栈则为虚拟机所使用到的Native方法服务。</span></span><br><span class="line"><span class="comment">    4、堆：是被所有线程共享的一块区域，在虚拟机创建是创建，此内存的唯一目的是存放对象实例，它也是垃圾收集器管理的主要区域。</span></span><br><span class="line"><span class="comment">    5、方法区：也是所有线程共享的一块区域，用于存储已被虚拟机加载的类信息、常量、静态变量、即时编译器编译后的代码等数据。</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
 
 <p>JVM的功能模块主要包括类加载器、执行引擎和垃圾回收系统。 </p>
-<p><img src="/image/QQ%E5%9B%BE%E7%89%8720191106162305.png" alt="java的Write Once，Run Anywhere"></p>
+<p><img src="/images/QQ%E5%9B%BE%E7%89%8720191106162305.png" alt="java的Write Once，Run Anywhere"></p>
 <p>java是编译型语言和解释型语言的结合（源码文件（.java）被编译为class文件（字节码文件）然后被JRE处理（类加载器、字节码校验器、解释器（虚拟机）））最后JRE给了系统<strong>*java–&gt;JVM–&gt;底层操作系统，经过这么一个中介我们java避免了与操作系统直接打交道，这样实现跨平台的核心机制（JRE是java运行时环境，包括了虚拟机JVM）</strong>。</p>
 <p>这里我们注意一下，上面是网上的言论，如果是纯粹的java(不谈虚拟机)，那么java是编译型语言，纯粹的编译型语言，只不过他把代码经过编译之后生成字节码文件交给了JVM，由JVM进行解释</p>
 <p>谈到JVM，不得不谈JRE和JDK：</p>
