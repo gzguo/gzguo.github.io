@@ -63,10 +63,13 @@
 <meta property="og:site_name" content="YaSuo">
 <meta property="og:description" content="标识符、变量、常量、数据类型、运算符">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-08-28T13:42:58.880Z">
+<meta property="og:image" content="https://github.com/images/20180731134336249.png">
+<meta property="og:image" content="https://github.com/image/201807311347398.png">
+<meta property="og:updated_time" content="2019-11-06T01:23:04.349Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="java_basis_start">
 <meta name="twitter:description" content="标识符、变量、常量、数据类型、运算符">
+<meta name="twitter:image" content="https://github.com/images/20180731134336249.png">
   <link rel="canonical" href="https://github.com/gzguo/gzguo.github.io.git/2019/08/16/java/basis/start/">
 
 
@@ -300,7 +303,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-08-28 21:42:58" itemprop="dateModified" datetime="2019-08-28T21:42:58+08:00">2019-08-28</time>
+                <time title="修改时间：2019-11-06 09:23:04" itemprop="dateModified" datetime="2019-11-06T09:23:04+08:00">2019-11-06</time>
               </span>
             
           
@@ -335,7 +338,7 @@
               
                 <span class="post-meta-item-text">本文字数：</span>
               
-              <span>4.9k</span>
+              <span>6.3k</span>
             </span>
           
             <span class="post-meta-item" title="阅读时长">
@@ -345,7 +348,7 @@
               
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
               
-              <span>4 分钟</span>
+              <span>6 分钟</span>
             </span>
           
 
@@ -361,12 +364,39 @@
         <h4 id="标识符、变量、常量、数据类型、运算符"><a href="#标识符、变量、常量、数据类型、运算符" class="headerlink" title="标识符、变量、常量、数据类型、运算符"></a><center>标识符、变量、常量、数据类型、运算符</center></h4><a id="more"></a>
 
 <h1 id="语言发展史"><a href="#语言发展史" class="headerlink" title="语言发展史"></a>语言发展史</h1><p>机器语言、汇编语言、高级语言</p>
-<h2 id="计算机高级语言的类型"><a href="#计算机高级语言的类型" class="headerlink" title="计算机高级语言的类型"></a>计算机高级语言的类型</h2><p>编译型：c++、c（源码被编译完之后直接给系统）</p>
-<p>解释型：javascript、Python、Php</p>
-<p><em>java是编译型语言和解释型语言的结合（源码文件（.java）被编译为class文件（字节码文件）然后被JRE处理（类加载器、字节码校验器、解释器（虚拟机）））最后JRE给了系统**</em>java–&gt;JVM–&gt;底层操作系统，经过这么一个中介我们java避免了与操作系统直接打交道，这样实现跨平台的核心机制（JRE是java运行时环境，包括了虚拟机JVM）**</p>
+<h2 id="计算机高级语言的类型"><a href="#计算机高级语言的类型" class="headerlink" title="计算机高级语言的类型"></a>计算机高级语言的类型</h2><p>语言类型可以分为编译型和解释型</p>
+<p>定义：<br>编译型语言：把做好的源程序全部编译成二进制代码的可运行程序。然后，可直接运行这个程序。<br>解释型语言：把做好的源程序翻译一句，然后执行一句，直至结束！<br>区别：<br>编译型语言，执行速度快、效率高；依靠编译器、跨平台性差些。<br>解释型语言，执行速度慢、效率低；依靠解释器、跨平台性好。</p>
+<p>特点：</p>
+<p>编译型语言，代码运行之后不能修改，除非重新运行修改后的代码</p>
+<p>解释型语言，每行代码都可以单独运行，可以一边编程一边运行</p>
+<p>代表：</p>
+<p>编译型语言，c++、c（源码被编译完之后直接给系统）</p>
+<p>解释型语言，javascript、Python、Php</p>
 <p>脚本语言：javascript、Python、Php</p>
 <p>编译语言：java</p>
 <p>标记语言：Html、xml</p>
+<p>探究java：</p>
+<p>java程序的执行过程：</p>
+<ol>
+<li>编译源代码xxx.java</li>
+<li>编译xxx.java文件生成字节码文件xxx.class</li>
+<li>JVM中的类加载器加载字节码文件</li>
+<li>JVM中的执行引擎找到入口方法main()，执行其中的方法</li>
+</ol>
+<p>javac程序是Java编译器，它可以将文件编译成.class文件，并发送到java虚拟机，让虚拟机来执行编译器放在class文件中的字节码。</p>
+<p><img src="/images/20180731134336249.png" alt="JVM加载class文件的原理机制"></p>
+<p>类加载器把类的.class文件中的数据读入到内存中，通常是创建一个字节数组读入.class文件。然后产生与所加载类对应的Class对象。加载完成后，Class对象还不完整，所以此时的类还不可以用。当类被加载后就进入连接阶段，这一阶段包括验证、准备和解系三个步骤。最后是JVM对类进行初始化（ 如果类存在直接的父类并且这个类还没有被初始化，那么就先初始化父类; 2)如果类中存在初始化语句，就依次执行这些初始化语句。 ） 类加载器包括:根加载器(BootStrap)、扩展加载器(Extension)、 系统加载器(System)和用户自定义类加载器(java.lang.ClassLoader 的子类) 。类加载器在JVM中。</p>
+<p><a href="944365-0adcc90ec5514c9f.webp">类加载器</a></p>
+<p>JVM的一些基础知识：</p>
+<p>JVM运行的是字节码文件，只要是这种格式的文件就行，所以，时间上JVM并不像我之前想象的那样与java语言紧紧的捆绑在一起</p>
+<p>字节码文件简单强大，他存放了这个类的各种信息：字段、方法、父类、实现的接口等各种信息</p>
+<p>JVM在执行java程序的过程中会把它所管理的内存分为如干个不同的区域，这些区域都有各自的用途</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">虚拟机中的区域：</span></span><br><span class="line"><span class="comment">    1、程序计数器：可以看作是当前线程所执行的字节码的行号指示器（指示当前线程，所以是线程私有的），字节码解释器工作时需要通过改变这个程序计数器的值来选取下一条所需要执行的字节码指令，循环、跳转、异常处理、线程恢复等基础功能都要依赖它来完成。</span></span><br><span class="line"><span class="comment">    2、JVM栈：描述的是Java方法执行的内存模型：每个方法在执行时都会创建一个栈帧，用于存储局部变量表，操作数栈，动态链接和方法出口等信息。每一个方法从调用直到执行完成的过程，就对应一个栈帧从虚拟机栈中入栈到出栈的过程。</span></span><br><span class="line"><span class="comment">    3、本地方法栈：虚拟机栈执行的是Java方法（也就是字节码）服务，而本地方法栈则为虚拟机所使用到的Native方法服务。</span></span><br><span class="line"><span class="comment">    4、堆：是被所有线程共享的一块区域，在虚拟机创建是创建，此内存的唯一目的是存放对象实例，它也是垃圾收集器管理的主要区域。</span></span><br><span class="line"><span class="comment">    5、方法区：也是所有线程共享的一块区域，用于存储已被虚拟机加载的类信息、常量、静态变量、即时编译器编译后的代码等数据。</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+
+<p>JVM的功能模块主要包括类加载器、执行引擎和垃圾回收系统。 </p>
+<p><img src="/image/201807311347398.png" alt="java的一次编译到处运行原理"></p>
+<p>java是编译型语言和解释型语言的结合（源码文件（.java）被编译为class文件（字节码文件）然后被JRE处理（类加载器、字节码校验器、解释器（虚拟机）））最后JRE给了系统<strong>*java–&gt;JVM–&gt;底层操作系统，经过这么一个中介我们java避免了与操作系统直接打交道，这样实现跨平台的核心机制（JRE是java运行时环境，包括了虚拟机JVM）</strong>。</p>
+<p>这里我们注意一下，上面是网上的言论，我们的java是编译型语言，纯粹的编译型语言，只不过他把代码交给了JVM，由JVM来进行解释</p>
 <h2 id="高级语言"><a href="#高级语言" class="headerlink" title="高级语言"></a>高级语言</h2><p>安卓开发：<strong>Kotlin</strong></p>
 <p>苹果（IOs）开发：<strong>Objective-C</strong>、<strong>Swift</strong></p>
 <p> <strong>Fortran</strong>世界上第一种高级语言IBM公司提出的</p>
@@ -758,12 +788,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-area-chart"></i>
     </span>
-    <span title="站点总字数">121k</span>
+    <span title="站点总字数">123k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">1:50</span>
+    <span title="站点阅读时长">1:52</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0</div>
   <span class="post-meta-divider">|</span>
