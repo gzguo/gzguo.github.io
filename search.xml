@@ -29,6 +29,31 @@
     
     
     <entry>
+      <title>9.4文档对象</title>
+      <link href="/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/9javaScript%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/9.4%E6%96%87%E6%A1%A3%E5%AF%B9%E8%B1%A1/"/>
+      <url>/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/9javaScript%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/9.4%E6%96%87%E6%A1%A3%E5%AF%B9%E8%B1%A1/</url>
+      
+        <content type="html"><![CDATA[<h4 id="9-4文档对象"><a href="#9-4文档对象" class="headerlink" title="9.4文档对象"></a><center>9.4文档对象</center></h4><a id="more"></a>]]></content>
+      
+      
+      <categories>
+          
+          <category> html5 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> html </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>9.5表单对象</title>
       <link href="/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/9javaScript%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/9.5%E8%A1%A8%E5%8D%95%E5%AF%B9%E8%B1%A1/"/>
       <url>/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/9javaScript%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/9.5%E8%A1%A8%E5%8D%95%E5%AF%B9%E8%B1%A1/</url>
@@ -79,11 +104,11 @@
     
     
     <entry>
-      <title>9.4文档对象</title>
-      <link href="/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/9javaScript%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/9.4%E6%96%87%E6%A1%A3%E5%AF%B9%E8%B1%A1/"/>
-      <url>/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/9javaScript%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/9.4%E6%96%87%E6%A1%A3%E5%AF%B9%E8%B1%A1/</url>
+      <title>9.2事件机制</title>
+      <link href="/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/9javaScript%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/9.2%E4%BA%8B%E4%BB%B6%E6%9C%BA%E5%88%B6/"/>
+      <url>/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/9javaScript%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/9.2%E4%BA%8B%E4%BB%B6%E6%9C%BA%E5%88%B6/</url>
       
-        <content type="html"><![CDATA[<h4 id="9-4文档对象"><a href="#9-4文档对象" class="headerlink" title="9.4文档对象"></a><center>9.4文档对象</center></h4><a id="more"></a>]]></content>
+        <content type="html"><![CDATA[<h4 id="9-2事件机制"><a href="#9-2事件机制" class="headerlink" title="9.2事件机制"></a><center>9.2事件机制</center></h4><a id="more"></a>]]></content>
       
       
       <categories>
@@ -129,11 +154,11 @@
     
     
     <entry>
-      <title>9.2事件机制</title>
-      <link href="/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/9javaScript%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/9.2%E4%BA%8B%E4%BB%B6%E6%9C%BA%E5%88%B6/"/>
-      <url>/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/9javaScript%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/9.2%E4%BA%8B%E4%BB%B6%E6%9C%BA%E5%88%B6/</url>
+      <title>8.5数组对象</title>
+      <link href="/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/8javaScript%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%E5%8F%8AjavaScript%E5%AF%B9%E8%B1%A1/8.5%E6%95%B0%E7%BB%84%E5%AF%B9%E8%B1%A1/"/>
+      <url>/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/8javaScript%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%E5%8F%8AjavaScript%E5%AF%B9%E8%B1%A1/8.5%E6%95%B0%E7%BB%84%E5%AF%B9%E8%B1%A1/</url>
       
-        <content type="html"><![CDATA[<h4 id="9-2事件机制"><a href="#9-2事件机制" class="headerlink" title="9.2事件机制"></a><center>9.2事件机制</center></h4><a id="more"></a>]]></content>
+        <content type="html"><![CDATA[<h4 id="8-5数组对象"><a href="#8-5数组对象" class="headerlink" title="8.5数组对象"></a><center>8.5数组对象</center></h4><a id="more"></a>]]></content>
       
       
       <categories>
@@ -159,31 +184,6 @@
       <url>/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/8javaScript%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%E5%8F%8AjavaScript%E5%AF%B9%E8%B1%A1/8.4%E6%97%A5%E6%9C%9F%E5%AF%B9%E8%B1%A1/</url>
       
         <content type="html"><![CDATA[<h4 id="8-4日期对象"><a href="#8-4日期对象" class="headerlink" title="8.4日期对象"></a><center>8.4日期对象</center></h4><a id="more"></a>]]></content>
-      
-      
-      <categories>
-          
-          <category> html5 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> html </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>8.5数组对象</title>
-      <link href="/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/8javaScript%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%E5%8F%8AjavaScript%E5%AF%B9%E8%B1%A1/8.5%E6%95%B0%E7%BB%84%E5%AF%B9%E8%B1%A1/"/>
-      <url>/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/8javaScript%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%E5%8F%8AjavaScript%E5%AF%B9%E8%B1%A1/8.5%E6%95%B0%E7%BB%84%E5%AF%B9%E8%B1%A1/</url>
-      
-        <content type="html"><![CDATA[<h4 id="8-5数组对象"><a href="#8-5数组对象" class="headerlink" title="8.5数组对象"></a><center>8.5数组对象</center></h4><a id="more"></a>]]></content>
       
       
       <categories>
@@ -279,11 +279,11 @@
     
     
     <entry>
-      <title>8.1.2JavaScript概念及其语法中</title>
-      <link href="/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/8javaScript%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%E5%8F%8AjavaScript%E5%AF%B9%E8%B1%A1/8.1.2JavaScript%E6%A6%82%E5%BF%B5%E5%8F%8A%E5%85%B6%E8%AF%AD%E6%B3%95%E4%B8%AD/"/>
-      <url>/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/8javaScript%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%E5%8F%8AjavaScript%E5%AF%B9%E8%B1%A1/8.1.2JavaScript%E6%A6%82%E5%BF%B5%E5%8F%8A%E5%85%B6%E8%AF%AD%E6%B3%95%E4%B8%AD/</url>
+      <title>8.1.3JavaScript概念及其语法下</title>
+      <link href="/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/8javaScript%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%E5%8F%8AjavaScript%E5%AF%B9%E8%B1%A1/8.1.3JavaScript%E6%A6%82%E5%BF%B5%E5%8F%8A%E5%85%B6%E8%AF%AD%E6%B3%95%E4%B8%8B/"/>
+      <url>/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/8javaScript%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%E5%8F%8AjavaScript%E5%AF%B9%E8%B1%A1/8.1.3JavaScript%E6%A6%82%E5%BF%B5%E5%8F%8A%E5%85%B6%E8%AF%AD%E6%B3%95%E4%B8%8B/</url>
       
-        <content type="html"><![CDATA[<h4 id="8-1-2JavaScript概念及其语法中"><a href="#8-1-2JavaScript概念及其语法中" class="headerlink" title="8.1.2JavaScript概念及其语法中"></a><center>8.1.2JavaScript概念及其语法中</center></h4><a id="more"></a>]]></content>
+        <content type="html"><![CDATA[<h4 id="8-1-3JavaScript概念及其语法下"><a href="#8-1-3JavaScript概念及其语法下" class="headerlink" title="8.1.3JavaScript概念及其语法下"></a><center>8.1.3JavaScript概念及其语法下</center></h4><a id="more"></a>]]></content>
       
       
       <categories>
@@ -304,11 +304,11 @@
     
     
     <entry>
-      <title>8.1.3JavaScript概念及其语法下</title>
-      <link href="/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/8javaScript%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%E5%8F%8AjavaScript%E5%AF%B9%E8%B1%A1/8.1.3JavaScript%E6%A6%82%E5%BF%B5%E5%8F%8A%E5%85%B6%E8%AF%AD%E6%B3%95%E4%B8%8B/"/>
-      <url>/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/8javaScript%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%E5%8F%8AjavaScript%E5%AF%B9%E8%B1%A1/8.1.3JavaScript%E6%A6%82%E5%BF%B5%E5%8F%8A%E5%85%B6%E8%AF%AD%E6%B3%95%E4%B8%8B/</url>
+      <title>8.1.2JavaScript概念及其语法中</title>
+      <link href="/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/8javaScript%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%E5%8F%8AjavaScript%E5%AF%B9%E8%B1%A1/8.1.2JavaScript%E6%A6%82%E5%BF%B5%E5%8F%8A%E5%85%B6%E8%AF%AD%E6%B3%95%E4%B8%AD/"/>
+      <url>/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/8javaScript%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%E5%8F%8AjavaScript%E5%AF%B9%E8%B1%A1/8.1.2JavaScript%E6%A6%82%E5%BF%B5%E5%8F%8A%E5%85%B6%E8%AF%AD%E6%B3%95%E4%B8%AD/</url>
       
-        <content type="html"><![CDATA[<h4 id="8-1-3JavaScript概念及其语法下"><a href="#8-1-3JavaScript概念及其语法下" class="headerlink" title="8.1.3JavaScript概念及其语法下"></a><center>8.1.3JavaScript概念及其语法下</center></h4><a id="more"></a>]]></content>
+        <content type="html"><![CDATA[<h4 id="8-1-2JavaScript概念及其语法中"><a href="#8-1-2JavaScript概念及其语法中" class="headerlink" title="8.1.2JavaScript概念及其语法中"></a><center>8.1.2JavaScript概念及其语法中</center></h4><a id="more"></a>]]></content>
       
       
       <categories>
@@ -354,31 +354,6 @@
     
     
     <entry>
-      <title>7.4多列布局及CSS3弹性盒布局</title>
-      <link href="/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/7CSS3%E9%A1%B5%E9%9D%A2%E5%B8%83%E5%B1%80/7.4%E5%A4%9A%E5%88%97%E5%B8%83%E5%B1%80%E5%8F%8ACSS3%E5%BC%B9%E6%80%A7%E7%9B%92%E5%B8%83%E5%B1%80/"/>
-      <url>/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/7CSS3%E9%A1%B5%E9%9D%A2%E5%B8%83%E5%B1%80/7.4%E5%A4%9A%E5%88%97%E5%B8%83%E5%B1%80%E5%8F%8ACSS3%E5%BC%B9%E6%80%A7%E7%9B%92%E5%B8%83%E5%B1%80/</url>
-      
-        <content type="html"><![CDATA[<h4 id="7-4多列布局及CSS3弹性盒布局"><a href="#7-4多列布局及CSS3弹性盒布局" class="headerlink" title="7.4多列布局及CSS3弹性盒布局"></a><center>7.4多列布局及CSS3弹性盒布局</center></h4><a id="more"></a>]]></content>
-      
-      
-      <categories>
-          
-          <category> html5 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> html、7.4 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>7.5CSS3高级应用</title>
       <link href="/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/7CSS3%E9%A1%B5%E9%9D%A2%E5%B8%83%E5%B1%80/7.5CSS3%E9%AB%98%E7%BA%A7%E5%BA%94%E7%94%A8/"/>
       <url>/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/7CSS3%E9%A1%B5%E9%9D%A2%E5%B8%83%E5%B1%80/7.5CSS3%E9%AB%98%E7%BA%A7%E5%BA%94%E7%94%A8/</url>
@@ -396,6 +371,31 @@
         <tags>
             
             <tag> html </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>7.4多列布局及CSS3弹性盒布局</title>
+      <link href="/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/7CSS3%E9%A1%B5%E9%9D%A2%E5%B8%83%E5%B1%80/7.4%E5%A4%9A%E5%88%97%E5%B8%83%E5%B1%80%E5%8F%8ACSS3%E5%BC%B9%E6%80%A7%E7%9B%92%E5%B8%83%E5%B1%80/"/>
+      <url>/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/7CSS3%E9%A1%B5%E9%9D%A2%E5%B8%83%E5%B1%80/7.4%E5%A4%9A%E5%88%97%E5%B8%83%E5%B1%80%E5%8F%8ACSS3%E5%BC%B9%E6%80%A7%E7%9B%92%E5%B8%83%E5%B1%80/</url>
+      
+        <content type="html"><![CDATA[<h4 id="7-4多列布局及CSS3弹性盒布局"><a href="#7-4多列布局及CSS3弹性盒布局" class="headerlink" title="7.4多列布局及CSS3弹性盒布局"></a><center>7.4多列布局及CSS3弹性盒布局</center></h4><a id="more"></a>]]></content>
+      
+      
+      <categories>
+          
+          <category> html5 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> -html -7.4 </tag>
             
         </tags>
       
@@ -504,31 +504,6 @@
     
     
     <entry>
-      <title>7.2网页元素的定位</title>
-      <link href="/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/7CSS3%E9%A1%B5%E9%9D%A2%E5%B8%83%E5%B1%80/7.2%E7%BD%91%E9%A1%B5%E5%85%83%E7%B4%A0%E7%9A%84%E5%AE%9A%E4%BD%8D/"/>
-      <url>/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/7CSS3%E9%A1%B5%E9%9D%A2%E5%B8%83%E5%B1%80/7.2%E7%BD%91%E9%A1%B5%E5%85%83%E7%B4%A0%E7%9A%84%E5%AE%9A%E4%BD%8D/</url>
-      
-        <content type="html"><![CDATA[<h4 id="7-2网页元素的定位"><a href="#7-2网页元素的定位" class="headerlink" title="7.2网页元素的定位"></a><center>7.2网页元素的定位</center></h4><a id="more"></a>]]></content>
-      
-      
-      <categories>
-          
-          <category> html5 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> html </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>7.4.2CSS3-弹性盒布局</title>
       <link href="/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/7CSS3%E9%A1%B5%E9%9D%A2%E5%B8%83%E5%B1%80/7.4.2CSS3-%E5%BC%B9%E6%80%A7%E7%9B%92%E5%B8%83%E5%B1%80/"/>
       <url>/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/7CSS3%E9%A1%B5%E9%9D%A2%E5%B8%83%E5%B1%80/7.4.2CSS3-%E5%BC%B9%E6%80%A7%E7%9B%92%E5%B8%83%E5%B1%80/</url>
@@ -554,11 +529,11 @@
     
     
     <entry>
-      <title>7.4.1CSS3-多列布局</title>
-      <link href="/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/7CSS3%E9%A1%B5%E9%9D%A2%E5%B8%83%E5%B1%80/7.4.1CSS3-%E5%A4%9A%E5%88%97%E5%B8%83%E5%B1%80/"/>
-      <url>/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/7CSS3%E9%A1%B5%E9%9D%A2%E5%B8%83%E5%B1%80/7.4.1CSS3-%E5%A4%9A%E5%88%97%E5%B8%83%E5%B1%80/</url>
+      <title>7.2网页元素的定位</title>
+      <link href="/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/7CSS3%E9%A1%B5%E9%9D%A2%E5%B8%83%E5%B1%80/7.2%E7%BD%91%E9%A1%B5%E5%85%83%E7%B4%A0%E7%9A%84%E5%AE%9A%E4%BD%8D/"/>
+      <url>/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/7CSS3%E9%A1%B5%E9%9D%A2%E5%B8%83%E5%B1%80/7.2%E7%BD%91%E9%A1%B5%E5%85%83%E7%B4%A0%E7%9A%84%E5%AE%9A%E4%BD%8D/</url>
       
-        <content type="html"><![CDATA[<h4 id="7-4-1CSS3-多列布局"><a href="#7-4-1CSS3-多列布局" class="headerlink" title="7.4.1CSS3-多列布局"></a><center>7.4.1CSS3-多列布局</center></h4><a id="more"></a>]]></content>
+        <content type="html"><![CDATA[<h4 id="7-2网页元素的定位"><a href="#7-2网页元素的定位" class="headerlink" title="7.2网页元素的定位"></a><center>7.2网页元素的定位</center></h4><a id="more"></a>]]></content>
       
       
       <categories>
@@ -604,36 +579,11 @@
     
     
     <entry>
-      <title>4.2表单的控件</title>
-      <link href="/2020/11/03/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/4%E6%9E%84%E5%BB%BAWeb%E8%A1%A8%E5%8D%95/4.2%E8%A1%A8%E5%8D%95%E7%9A%84%E6%8E%A7%E4%BB%B6/"/>
-      <url>/2020/11/03/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/4%E6%9E%84%E5%BB%BAWeb%E8%A1%A8%E5%8D%95/4.2%E8%A1%A8%E5%8D%95%E7%9A%84%E6%8E%A7%E4%BB%B6/</url>
+      <title>7.4.1CSS3-多列布局</title>
+      <link href="/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/7CSS3%E9%A1%B5%E9%9D%A2%E5%B8%83%E5%B1%80/7.4.1CSS3-%E5%A4%9A%E5%88%97%E5%B8%83%E5%B1%80/"/>
+      <url>/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/7CSS3%E9%A1%B5%E9%9D%A2%E5%B8%83%E5%B1%80/7.4.1CSS3-%E5%A4%9A%E5%88%97%E5%B8%83%E5%B1%80/</url>
       
-        <content type="html"><![CDATA[<h4 id="4-2表单的控件"><a href="#4-2表单的控件" class="headerlink" title="4.2表单的控件"></a><center>4.2表单的控件</center></h4><a id="more"></a><h2 id="input控件"><a href="#input控件" class="headerlink" title="input控件"></a>input控件</h2><p>定义单行文本输入框、单选按钮、复选框、提交按钮、重置按钮等，要使用input控件</p><h3 id="常见的属性"><a href="#常见的属性" class="headerlink" title="常见的属性"></a>常见的属性</h3><ol><li><p>type：控件类型</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">取值：text、password、radio、checkbox、button、submit、reset、file image、hidden</span><br></pre></td></tr></table></figure></li><li><p>name：控件名称</p></li><li><p>value：控件中的默认文本</p></li><li><p>size：控件名称在页面中显示宽度</p></li><li><p>readonly：控件内容为只读</p></li><li><p>disabled：首次加载的页面时是否禁用该控件（显示为灰色）</p></li><li><p>checked：定义选择控件默认值被选中</p></li><li><p>maxlength：控件允许输入最多的字符数</p></li></ol><h2 id="textarea控件"><a href="#textarea控件" class="headerlink" title="textarea控件"></a>textarea控件</h2><p>可以创建多行文本输入框</p><h3 id="testarea基本语法"><a href="#testarea基本语法" class="headerlink" title="testarea基本语法"></a>testarea基本语法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;textarea cols=&quot;每行中的字符数&quot; rows=&quot;显示的行数&quot; wrap=&quot;   &quot;&gt;文本内容&lt;/testarea&gt;</span><br></pre></td></tr></table></figure><p>wrap是html5中的新属性：属性取值：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">soft：当在表单提交时，textarea中的文本不换行。默认值</span><br><span class="line">hard：当在表单提交时，textarea中的文本换行</span><br></pre></td></tr></table></figure><h2 id="select控件"><a href="#select控件" class="headerlink" title="select控件"></a>select控件</h2><p>创建一个选择框</p><h3 id="select基本语法"><a href="#select基本语法" class="headerlink" title="select基本语法"></a>select基本语法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;select name=&quot;控件名称&quot; size=&quot;表示可见选项的数目&quot; multiple(设定为多选)&gt;</span><br><span class="line">&lt;option value=&quot;选项值&quot; selected(默认该选项被选中)&gt;  (表示指定区域中的一个选项)</span><br><span class="line"></span><br><span class="line">&lt;/option&gt;</span><br><span class="line">&lt;/select&gt;</span><br></pre></td></tr></table></figure><table><thead><tr><th>标签</th><th>标签功能</th><th>用到的属性</th><th>效果说明</th></tr></thead><tbody><tr><td>marquee</td><td>使标签中的内容滚动</td><td>bgcolor，direction，behavior</td><td>bgcolor代表滚动范围背景颜色；direction代表滚动方向；behavior代表滚动的方式</td></tr><tr><td>table</td><td>形成一个表格</td><td>tr,th,td</td><td>tr定义行；td定义每行的单元格；th用来定义标题栏</td></tr></tbody></table>]]></content>
-      
-      
-      <categories>
-          
-          <category> html5 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> html </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>4.1表单结构及表单控件</title>
-      <link href="/2020/11/03/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/4%E6%9E%84%E5%BB%BAWeb%E8%A1%A8%E5%8D%95/4.1%E8%A1%A8%E5%8D%95%E7%BB%93%E6%9E%84%E5%8F%8A%E8%A1%A8%E5%8D%95%E6%8E%A7%E4%BB%B6/"/>
-      <url>/2020/11/03/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/4%E6%9E%84%E5%BB%BAWeb%E8%A1%A8%E5%8D%95/4.1%E8%A1%A8%E5%8D%95%E7%BB%93%E6%9E%84%E5%8F%8A%E8%A1%A8%E5%8D%95%E6%8E%A7%E4%BB%B6/</url>
-      
-        <content type="html"><![CDATA[<h4 id="表单结构及表单控件"><a href="#表单结构及表单控件" class="headerlink" title="表单结构及表单控件"></a><center>表单结构及表单控件</center></h4><a id="more"></a><h2 id="什么是表单"><a href="#什么是表单" class="headerlink" title="什么是表单"></a>什么是表单</h2><h3 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h3><p>登陆、电商注册、快递查询</p><h2 id="表单的主要功能"><a href="#表单的主要功能" class="headerlink" title="表单的主要功能"></a>表单的主要功能</h2><h3 id="提示信息"><a href="#提示信息" class="headerlink" title="提示信息"></a>提示信息</h3><p>一个表单通常需要包含一些说明性的文字，提示用户进行填写和操作</p><h3 id="表单控件"><a href="#表单控件" class="headerlink" title="表单控件"></a>表单控件</h3><p>具体表单的功能项，如单行文本输入框，密码输入框、复选框、提交按钮、重置按钮等</p><h3 id="表单域"><a href="#表单域" class="headerlink" title="表单域"></a>表单域</h3><p>相当于一个容器，用来容纳所有的表单控件和提示信息</p><h2 id="表单的结构"><a href="#表单的结构" class="headerlink" title="表单的结构"></a>表单的结构</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;from action=&quot;url地址&quot; method=&quot;提交方式&quot; name=&quot;表单名称&quot;&gt;</span><br><span class="line">各种表单控件</span><br><span class="line">&lt;/from&gt;</span><br></pre></td></tr></table></figure><h3 id="name"><a href="#name" class="headerlink" title="name"></a>name</h3><p>用来区别一个页面内的不同表单</p><h3 id="action"><a href="#action" class="headerlink" title="action"></a>action</h3><p>用于指定接收并处理表单数据的服务器程序的url地址</p><h3 id="method"><a href="#method" class="headerlink" title="method"></a>method</h3><p>用于设置表单数据的提交方式，其取值为get或者post</p><h2 id="表单控件-1"><a href="#表单控件-1" class="headerlink" title="表单控件"></a>表单控件</h2><p>表单控件是表单的核心内容，不同的表单控件具有不同的功能，如密码输入框、文本域、下拉列表、复选框等，只有掌握了这些控件的使用方法才能正确的创建表单</p>]]></content>
+        <content type="html"><![CDATA[<h4 id="7-4-1CSS3-多列布局"><a href="#7-4-1CSS3-多列布局" class="headerlink" title="7.4.1CSS3-多列布局"></a><center>7.4.1CSS3-多列布局</center></h4><a id="more"></a>]]></content>
       
       
       <categories>
@@ -679,61 +629,61 @@
     
     
     <entry>
+      <title>4.1表单结构及表单控件</title>
+      <link href="/2020/11/03/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/4%E6%9E%84%E5%BB%BAWeb%E8%A1%A8%E5%8D%95/4.1%E8%A1%A8%E5%8D%95%E7%BB%93%E6%9E%84%E5%8F%8A%E8%A1%A8%E5%8D%95%E6%8E%A7%E4%BB%B6/"/>
+      <url>/2020/11/03/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/4%E6%9E%84%E5%BB%BAWeb%E8%A1%A8%E5%8D%95/4.1%E8%A1%A8%E5%8D%95%E7%BB%93%E6%9E%84%E5%8F%8A%E8%A1%A8%E5%8D%95%E6%8E%A7%E4%BB%B6/</url>
+      
+        <content type="html"><![CDATA[<h4 id="表单结构及表单控件"><a href="#表单结构及表单控件" class="headerlink" title="表单结构及表单控件"></a><center>表单结构及表单控件</center></h4><a id="more"></a><h2 id="什么是表单"><a href="#什么是表单" class="headerlink" title="什么是表单"></a>什么是表单</h2><h3 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h3><p>登陆、电商注册、快递查询</p><h2 id="表单的主要功能"><a href="#表单的主要功能" class="headerlink" title="表单的主要功能"></a>表单的主要功能</h2><h3 id="提示信息"><a href="#提示信息" class="headerlink" title="提示信息"></a>提示信息</h3><p>一个表单通常需要包含一些说明性的文字，提示用户进行填写和操作</p><h3 id="表单控件"><a href="#表单控件" class="headerlink" title="表单控件"></a>表单控件</h3><p>具体表单的功能项，如单行文本输入框，密码输入框、复选框、提交按钮、重置按钮等</p><h3 id="表单域"><a href="#表单域" class="headerlink" title="表单域"></a>表单域</h3><p>相当于一个容器，用来容纳所有的表单控件和提示信息</p><h2 id="表单的结构"><a href="#表单的结构" class="headerlink" title="表单的结构"></a>表单的结构</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;from action=&quot;url地址&quot; method=&quot;提交方式&quot; name=&quot;表单名称&quot;&gt;</span><br><span class="line">各种表单控件</span><br><span class="line">&lt;/from&gt;</span><br></pre></td></tr></table></figure><h3 id="name"><a href="#name" class="headerlink" title="name"></a>name</h3><p>用来区别一个页面内的不同表单</p><h3 id="action"><a href="#action" class="headerlink" title="action"></a>action</h3><p>用于指定接收并处理表单数据的服务器程序的url地址</p><h3 id="method"><a href="#method" class="headerlink" title="method"></a>method</h3><p>用于设置表单数据的提交方式，其取值为get或者post</p><h2 id="表单控件-1"><a href="#表单控件-1" class="headerlink" title="表单控件"></a>表单控件</h2><p>表单控件是表单的核心内容，不同的表单控件具有不同的功能，如密码输入框、文本域、下拉列表、复选框等，只有掌握了这些控件的使用方法才能正确的创建表单</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> html5 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> html </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>4.2表单的控件</title>
+      <link href="/2020/11/03/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/4%E6%9E%84%E5%BB%BAWeb%E8%A1%A8%E5%8D%95/4.2%E8%A1%A8%E5%8D%95%E7%9A%84%E6%8E%A7%E4%BB%B6/"/>
+      <url>/2020/11/03/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/4%E6%9E%84%E5%BB%BAWeb%E8%A1%A8%E5%8D%95/4.2%E8%A1%A8%E5%8D%95%E7%9A%84%E6%8E%A7%E4%BB%B6/</url>
+      
+        <content type="html"><![CDATA[<h4 id="4-2表单的控件"><a href="#4-2表单的控件" class="headerlink" title="4.2表单的控件"></a><center>4.2表单的控件</center></h4><a id="more"></a><h2 id="input控件"><a href="#input控件" class="headerlink" title="input控件"></a>input控件</h2><p>定义单行文本输入框、单选按钮、复选框、提交按钮、重置按钮等，要使用input控件</p><h3 id="常见的属性"><a href="#常见的属性" class="headerlink" title="常见的属性"></a>常见的属性</h3><ol><li><p>type：控件类型</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">取值：text、password、radio、checkbox、button、submit、reset、file image、hidden</span><br></pre></td></tr></table></figure></li><li><p>name：控件名称</p></li><li><p>value：控件中的默认文本</p></li><li><p>size：控件名称在页面中显示宽度</p></li><li><p>readonly：控件内容为只读</p></li><li><p>disabled：首次加载的页面时是否禁用该控件（显示为灰色）</p></li><li><p>checked：定义选择控件默认值被选中</p></li><li><p>maxlength：控件允许输入最多的字符数</p></li></ol><h2 id="textarea控件"><a href="#textarea控件" class="headerlink" title="textarea控件"></a>textarea控件</h2><p>可以创建多行文本输入框</p><h3 id="testarea基本语法"><a href="#testarea基本语法" class="headerlink" title="testarea基本语法"></a>testarea基本语法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;textarea cols=&quot;每行中的字符数&quot; rows=&quot;显示的行数&quot; wrap=&quot;   &quot;&gt;文本内容&lt;/testarea&gt;</span><br></pre></td></tr></table></figure><p>wrap是html5中的新属性：属性取值：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">soft：当在表单提交时，textarea中的文本不换行。默认值</span><br><span class="line">hard：当在表单提交时，textarea中的文本换行</span><br></pre></td></tr></table></figure><h2 id="select控件"><a href="#select控件" class="headerlink" title="select控件"></a>select控件</h2><p>创建一个选择框</p><h3 id="select基本语法"><a href="#select基本语法" class="headerlink" title="select基本语法"></a>select基本语法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;select name=&quot;控件名称&quot; size=&quot;表示可见选项的数目&quot; multiple(设定为多选)&gt;</span><br><span class="line">&lt;option value=&quot;选项值&quot; selected(默认该选项被选中)&gt;  (表示指定区域中的一个选项)</span><br><span class="line"></span><br><span class="line">&lt;/option&gt;</span><br><span class="line">&lt;/select&gt;</span><br></pre></td></tr></table></figure><table><thead><tr><th>标签</th><th>标签功能</th><th>用到的属性</th><th>效果说明</th></tr></thead><tbody><tr><td>marquee</td><td>使标签中的内容滚动</td><td>bgcolor，direction，behavior</td><td>bgcolor代表滚动范围背景颜色；direction代表滚动方向；behavior代表滚动的方式</td></tr><tr><td>table</td><td>形成一个表格</td><td>tr,th,td</td><td>tr定义行；td定义每行的单元格；th用来定义标题栏</td></tr></tbody></table>]]></content>
+      
+      
+      <categories>
+          
+          <category> html5 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> html </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>5.1HTML5中的音频与视频</title>
       <link href="/2020/11/03/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/5%E9%9F%B3%E9%A2%91%E4%B8%8E%E8%A7%86%E9%A2%91/5.1HTML5%E4%B8%AD%E7%9A%84%E9%9F%B3%E9%A2%91%E4%B8%8E%E8%A7%86%E9%A2%91/"/>
       <url>/2020/11/03/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/5%E9%9F%B3%E9%A2%91%E4%B8%8E%E8%A7%86%E9%A2%91/5.1HTML5%E4%B8%AD%E7%9A%84%E9%9F%B3%E9%A2%91%E4%B8%8E%E8%A7%86%E9%A2%91/</url>
       
         <content type="html"><![CDATA[<h4 id="5-1HTML5中的音频与视频"><a href="#5-1HTML5中的音频与视频" class="headerlink" title="5.1HTML5中的音频与视频"></a><center>5.1HTML5中的音频与视频</center></h4><a id="more"></a><h2 id="音频和视频编解码器"><a href="#音频和视频编解码器" class="headerlink" title="音频和视频编解码器"></a>音频和视频编解码器</h2><h3 id="音频编解码器"><a href="#音频编解码器" class="headerlink" title="音频编解码器"></a>音频编解码器</h3><p>定义了音频数据流编码和解码的算法。其中编码器主要是对数据流进行编码操作，用于存储和传输。音频播放器主要是对音频文件进行解码，然后进行播放操作。</p><p>主要使用的音频<strong>解码器</strong>使Vorbis和ACC</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ACC是基于MPEG-2的音频编码技术</span><br><span class="line">Ogg Vorbis是一种新的音频压缩格式，类似于MP3等的音乐格式。开源，支持多声道</span><br></pre></td></tr></table></figure><h3 id="视频编解码器"><a href="#视频编解码器" class="headerlink" title="视频编解码器"></a>视频编解码器</h3><p>定义了视频数据流编码和解码的算法。其中编码器主要是对数据流进行编码操作，用于存储和传输。视频播放器主要是对音频文件进行解码，然后进行播放操作。</p><p>目前使用较多的视频<strong>解码器</strong>是Theora、H.264和VP8</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Theora是一种一款由Xiph.org基金会发布的免费且开放的视频压缩编码技术</span><br><span class="line">H.264是一种国际电信联盟和国际标准化组织联合推出的高性能视频编码解码技术</span><br><span class="line">VP8由On2 Technologiesis开发，随后由Google发布的视频压缩格式</span><br></pre></td></tr></table></figure><h2 id="HTML5播放音频"><a href="#HTML5播放音频" class="headerlink" title="HTML5播放音频"></a>HTML5播放音频</h2><p>使用audio标签，用于音乐文件和其他视频流的播放</p><h3 id="audio基本语法"><a href="#audio基本语法" class="headerlink" title="audio基本语法"></a>audio基本语法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;audio src=&quot;&quot; controls=&quot;&quot;&gt;&lt;/audio&gt;</span><br></pre></td></tr></table></figure><p>src:规定要播放的音频的地址</p><p>controls:供添加播放、暂停和音量控件</p><p>audio目前支持三种音频格式Ogg Vorbis</p><h3 id="audio的属性"><a href="#audio的属性" class="headerlink" title="audio的属性"></a>audio的属性</h3><table><thead><tr><th>属性</th><th>值</th><th>描述</th></tr></thead><tbody><tr><td>autoplay</td><td>autoplay</td><td>如果出现该属性，则音频在就绪后马上播放</td></tr><tr><td>controls</td><td>controls</td><td>如果出现该属性，则向用户显示控件，比如播放按钮</td></tr><tr><td>loop</td><td>loop</td><td>如果出现该属性，则每当音频结束之后重新开始播放</td></tr><tr><td>preload</td><td>preload</td><td>如果出现该属性，则音频在页面页面加载时进行加载，并预备播放；如果使用“autoplay”，则忽略该属性</td></tr><tr><td>src</td><td>url</td><td>要播放的音频的url</td></tr></tbody></table><h2 id="HTML5播放视频"><a href="#HTML5播放视频" class="headerlink" title="HTML5播放视频"></a>HTML5播放视频</h2><p>使用video元素用于视频文件的播放</p><h3 id="video基本语法"><a href="#video基本语法" class="headerlink" title="video基本语法"></a>video基本语法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;video src=&quot;&quot; width=&quot;&quot; height=&quot;&quot; controls=&quot;controls&quot;&gt;</span><br><span class="line">&lt;/video&gt;</span><br></pre></td></tr></table></figure><p>video元素目前支持三种音频格式：Ogg、MPEG4、WebM</p><h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>在HTML5问世之前，在线的音频和视频都是借助Flash或者第三方工具实现的，现在HTML5也支持了这方面的功能。在一个支持HTML5的浏览器中不需要安装任何插件就可以播放音频和视频。</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> html5 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> html </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>3.3文本层次语义元素及分组元素</title>
-      <link href="/2020/10/05/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/3%E9%A1%B5%E9%9D%A2%E5%85%83%E7%B4%A0%E5%92%8C%E5%B1%9E%E6%80%A7/3.3%E6%96%87%E6%9C%AC%E5%B1%82%E6%AC%A1%E8%AF%AD%E4%B9%89%E5%85%83%E7%B4%A0%E5%8F%8A%E5%88%86%E7%BB%84%E5%85%83%E7%B4%A0/"/>
-      <url>/2020/10/05/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/3%E9%A1%B5%E9%9D%A2%E5%85%83%E7%B4%A0%E5%92%8C%E5%B1%9E%E6%80%A7/3.3%E6%96%87%E6%9C%AC%E5%B1%82%E6%AC%A1%E8%AF%AD%E4%B9%89%E5%85%83%E7%B4%A0%E5%8F%8A%E5%88%86%E7%BB%84%E5%85%83%E7%B4%A0/</url>
-      
-        <content type="html"><![CDATA[<h4 id="3-3文本层次语义元素及分组元素"><a href="#3-3文本层次语义元素及分组元素" class="headerlink" title="3.3文本层次语义元素及分组元素"></a><center>3.3文本层次语义元素及分组元素</center></h4><a id="more"></a><h2 id="文本层次语义元素"><a href="#文本层次语义元素" class="headerlink" title="文本层次语义元素"></a>文本层次语义元素</h2><table><thead><tr><th>名称</th><th>说明</th></tr></thead><tbody><tr><td>em</td><td>把文本定义为强调内容</td></tr><tr><td>strong</td><td>把文本定义为语气更强的强调内容</td></tr><tr><td>dfn</td><td>定义一个定义项目</td></tr><tr><td>code</td><td>定义计算机代码文本</td></tr><tr><td>samp</td><td>定义样本文本</td></tr><tr><td>kbd</td><td>定义键盘文本</td></tr><tr><td>var</td><td>定义变量</td></tr><tr><td>cite</td><td>定义引用</td></tr></tbody></table><h3 id="cite元素"><a href="#cite元素" class="headerlink" title="cite元素"></a>cite元素</h3><p>创建一个引用标记，用来指明某内容的引用或参考源</p><h3 id="mark元素"><a href="#mark元素" class="headerlink" title="mark元素"></a>mark元素</h3><p> 定义带有记号的文本，可以高亮显示文档中的文字以达到醒目的效果</p><h3 id="time元素"><a href="#time元素" class="headerlink" title="time元素"></a>time元素</h3><p>定义日期或者时间，可以使用机器能够读懂的方式对日期和时间进行编码</p><h2 id="分组元素"><a href="#分组元素" class="headerlink" title="分组元素"></a>分组元素</h2><table><thead><tr><th>元素名称</th><th>说明</th></tr></thead><tbody><tr><td>div</td><td>没有任何语义的通用元素，与span对应</td></tr><tr><td>blockquote</td><td>表示摘自另一个源的大段内容</td></tr><tr><td>pre</td><td>表示其格式应被保留的内容</td></tr><tr><td>ul、ol</td><td>表示无序列表，有序列表</td></tr><tr><td>li</td><td>用于ul，ol元素中的列表项</td></tr><tr><td>dl、dt、dd</td><td>表示含有一系列术语和定义说明的列表</td></tr><tr><td>figure</td><td>表示图片</td></tr><tr><td>figcaption</td><td>表示figure大元素的标题</td></tr></tbody></table><h3 id="ul元素"><a href="#ul元素" class="headerlink" title="ul元素"></a>ul元素</h3><p>表示不排序的项目列表，相当于word中的项目符号。无序列表使用一对标记ul标识，每一个列表项使用li</p><h3 id="ol元素"><a href="#ol元素" class="headerlink" title="ol元素"></a>ol元素</h3><p>排序的项目列表，相当于word中的自动编号功能，适用语法和ul基本相同，列表项使用li</p><h3 id="dl元素"><a href="#dl元素" class="headerlink" title="dl元素"></a>dl元素</h3><p>dl用于自定义列表，一般与dt和dd一起使用，dt定义列表名称，dd定义内容</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> html5 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> html </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>3.4全局属性</title>
-      <link href="/2020/10/05/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/3%E9%A1%B5%E9%9D%A2%E5%85%83%E7%B4%A0%E5%92%8C%E5%B1%9E%E6%80%A7/3.4%E5%85%A8%E5%B1%80%E5%B1%9E%E6%80%A7/"/>
-      <url>/2020/10/05/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/3%E9%A1%B5%E9%9D%A2%E5%85%83%E7%B4%A0%E5%92%8C%E5%B1%9E%E6%80%A7/3.4%E5%85%A8%E5%B1%80%E5%B1%9E%E6%80%A7/</url>
-      
-        <content type="html"><![CDATA[<h4 id="3-4全局属性"><a href="#3-4全局属性" class="headerlink" title="3.4全局属性"></a><center>3.4全局属性</center></h4><a id="more"></a><h2 id="全局属性定义"><a href="#全局属性定义" class="headerlink" title="全局属性定义"></a>全局属性定义</h2><p>全局属性是对于任何一个标签都可以使用的属性。在HTML5中新增了一些全局属性，这些全局属性可以表达非常丰富的语义，也会额外提供很多的使用功能</p><h2 id="全局属性有哪些"><a href="#全局属性有哪些" class="headerlink" title="全局属性有哪些"></a>全局属性有哪些</h2><table><thead><tr><th>属性</th><th>描述</th></tr></thead><tbody><tr><td>accesskey</td><td>规定激活元素的快捷键</td></tr><tr><td>class</td><td>规定一个元素的一个或多个类名</td></tr><tr><td>contenteditable</td><td>规定元素内容是否可以编辑</td></tr><tr><td>contextmenu</td><td>规定元素的上下文菜单</td></tr><tr><td>data</td><td>用于存储页面或者应用程序的私有定制数据</td></tr><tr><td>dir</td><td>规定元素中内容的文本方向</td></tr><tr><td>draggable</td><td>规定元素是否可被拖动</td></tr><tr><td>dropzone</td><td>规定在拖动数据时是否进行复制、移动或链接</td></tr><tr><td>hidden</td><td>规定元素是否显现</td></tr><tr><td>id</td><td>规定元素的唯一id</td></tr><tr><td>lang</td><td>规定元素内容的语言</td></tr><tr><td>spellcheck</td><td>规定是否对元素进行拼写和语法检查</td></tr><tr><td>style</td><td>规定元素的行内CSS样式</td></tr><tr><td>tabindex</td><td>规定元素的tab键次序</td></tr><tr><td>title</td><td>规定有关元素的额外信息</td></tr><tr><td>translate</td><td>规定是否应该翻译元素内容</td></tr></tbody></table><h2 id="如何设置全局属性"><a href="#如何设置全局属性" class="headerlink" title="如何设置全局属性"></a>如何设置全局属性</h2><h3 id="hidden属性"><a href="#hidden属性" class="headerlink" title="hidden属性"></a>hidden属性</h3><p>设置了hidden属性的段落将不再显示</p><h3 id="spellcheck属性"><a href="#spellcheck属性" class="headerlink" title="spellcheck属性"></a>spellcheck属性</h3><p>拼写和语法检查的属性，可对拼写和语法进行检查并在下面画红线。只有元素可以编辑spellcheck属性才有意义，主要争对文本输入或者多行文本输入</p><h3 id="contenteditable属性"><a href="#contenteditable属性" class="headerlink" title="contenteditable属性"></a>contenteditable属性</h3><p>规定是否允许用户编辑内容，通常在input标签中使用</p><h3 id="contextmenu属性"><a href="#contextmenu属性" class="headerlink" title="contextmenu属性"></a>contextmenu属性</h3><p>规定元素上下文菜单，当用户右键点击元素时，会出现上下文菜单</p>]]></content>
       
       
       <categories>
@@ -779,11 +729,86 @@
     
     
     <entry>
+      <title>3.4全局属性</title>
+      <link href="/2020/10/05/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/3%E9%A1%B5%E9%9D%A2%E5%85%83%E7%B4%A0%E5%92%8C%E5%B1%9E%E6%80%A7/3.4%E5%85%A8%E5%B1%80%E5%B1%9E%E6%80%A7/"/>
+      <url>/2020/10/05/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/3%E9%A1%B5%E9%9D%A2%E5%85%83%E7%B4%A0%E5%92%8C%E5%B1%9E%E6%80%A7/3.4%E5%85%A8%E5%B1%80%E5%B1%9E%E6%80%A7/</url>
+      
+        <content type="html"><![CDATA[<h4 id="3-4全局属性"><a href="#3-4全局属性" class="headerlink" title="3.4全局属性"></a><center>3.4全局属性</center></h4><a id="more"></a><h2 id="全局属性定义"><a href="#全局属性定义" class="headerlink" title="全局属性定义"></a>全局属性定义</h2><p>全局属性是对于任何一个标签都可以使用的属性。在HTML5中新增了一些全局属性，这些全局属性可以表达非常丰富的语义，也会额外提供很多的使用功能</p><h2 id="全局属性有哪些"><a href="#全局属性有哪些" class="headerlink" title="全局属性有哪些"></a>全局属性有哪些</h2><table><thead><tr><th>属性</th><th>描述</th></tr></thead><tbody><tr><td>accesskey</td><td>规定激活元素的快捷键</td></tr><tr><td>class</td><td>规定一个元素的一个或多个类名</td></tr><tr><td>contenteditable</td><td>规定元素内容是否可以编辑</td></tr><tr><td>contextmenu</td><td>规定元素的上下文菜单</td></tr><tr><td>data</td><td>用于存储页面或者应用程序的私有定制数据</td></tr><tr><td>dir</td><td>规定元素中内容的文本方向</td></tr><tr><td>draggable</td><td>规定元素是否可被拖动</td></tr><tr><td>dropzone</td><td>规定在拖动数据时是否进行复制、移动或链接</td></tr><tr><td>hidden</td><td>规定元素是否显现</td></tr><tr><td>id</td><td>规定元素的唯一id</td></tr><tr><td>lang</td><td>规定元素内容的语言</td></tr><tr><td>spellcheck</td><td>规定是否对元素进行拼写和语法检查</td></tr><tr><td>style</td><td>规定元素的行内CSS样式</td></tr><tr><td>tabindex</td><td>规定元素的tab键次序</td></tr><tr><td>title</td><td>规定有关元素的额外信息</td></tr><tr><td>translate</td><td>规定是否应该翻译元素内容</td></tr></tbody></table><h2 id="如何设置全局属性"><a href="#如何设置全局属性" class="headerlink" title="如何设置全局属性"></a>如何设置全局属性</h2><h3 id="hidden属性"><a href="#hidden属性" class="headerlink" title="hidden属性"></a>hidden属性</h3><p>设置了hidden属性的段落将不再显示</p><h3 id="spellcheck属性"><a href="#spellcheck属性" class="headerlink" title="spellcheck属性"></a>spellcheck属性</h3><p>拼写和语法检查的属性，可对拼写和语法进行检查并在下面画红线。只有元素可以编辑spellcheck属性才有意义，主要争对文本输入或者多行文本输入</p><h3 id="contenteditable属性"><a href="#contenteditable属性" class="headerlink" title="contenteditable属性"></a>contenteditable属性</h3><p>规定是否允许用户编辑内容，通常在input标签中使用</p><h3 id="contextmenu属性"><a href="#contextmenu属性" class="headerlink" title="contextmenu属性"></a>contextmenu属性</h3><p>规定元素上下文菜单，当用户右键点击元素时，会出现上下文菜单</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> html5 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> html </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>3.3文本层次语义元素及分组元素</title>
+      <link href="/2020/10/05/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/3%E9%A1%B5%E9%9D%A2%E5%85%83%E7%B4%A0%E5%92%8C%E5%B1%9E%E6%80%A7/3.3%E6%96%87%E6%9C%AC%E5%B1%82%E6%AC%A1%E8%AF%AD%E4%B9%89%E5%85%83%E7%B4%A0%E5%8F%8A%E5%88%86%E7%BB%84%E5%85%83%E7%B4%A0/"/>
+      <url>/2020/10/05/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/3%E9%A1%B5%E9%9D%A2%E5%85%83%E7%B4%A0%E5%92%8C%E5%B1%9E%E6%80%A7/3.3%E6%96%87%E6%9C%AC%E5%B1%82%E6%AC%A1%E8%AF%AD%E4%B9%89%E5%85%83%E7%B4%A0%E5%8F%8A%E5%88%86%E7%BB%84%E5%85%83%E7%B4%A0/</url>
+      
+        <content type="html"><![CDATA[<h4 id="3-3文本层次语义元素及分组元素"><a href="#3-3文本层次语义元素及分组元素" class="headerlink" title="3.3文本层次语义元素及分组元素"></a><center>3.3文本层次语义元素及分组元素</center></h4><a id="more"></a><h2 id="文本层次语义元素"><a href="#文本层次语义元素" class="headerlink" title="文本层次语义元素"></a>文本层次语义元素</h2><table><thead><tr><th>名称</th><th>说明</th></tr></thead><tbody><tr><td>em</td><td>把文本定义为强调内容</td></tr><tr><td>strong</td><td>把文本定义为语气更强的强调内容</td></tr><tr><td>dfn</td><td>定义一个定义项目</td></tr><tr><td>code</td><td>定义计算机代码文本</td></tr><tr><td>samp</td><td>定义样本文本</td></tr><tr><td>kbd</td><td>定义键盘文本</td></tr><tr><td>var</td><td>定义变量</td></tr><tr><td>cite</td><td>定义引用</td></tr></tbody></table><h3 id="cite元素"><a href="#cite元素" class="headerlink" title="cite元素"></a>cite元素</h3><p>创建一个引用标记，用来指明某内容的引用或参考源</p><h3 id="mark元素"><a href="#mark元素" class="headerlink" title="mark元素"></a>mark元素</h3><p> 定义带有记号的文本，可以高亮显示文档中的文字以达到醒目的效果</p><h3 id="time元素"><a href="#time元素" class="headerlink" title="time元素"></a>time元素</h3><p>定义日期或者时间，可以使用机器能够读懂的方式对日期和时间进行编码</p><h2 id="分组元素"><a href="#分组元素" class="headerlink" title="分组元素"></a>分组元素</h2><table><thead><tr><th>元素名称</th><th>说明</th></tr></thead><tbody><tr><td>div</td><td>没有任何语义的通用元素，与span对应</td></tr><tr><td>blockquote</td><td>表示摘自另一个源的大段内容</td></tr><tr><td>pre</td><td>表示其格式应被保留的内容</td></tr><tr><td>ul、ol</td><td>表示无序列表，有序列表</td></tr><tr><td>li</td><td>用于ul，ol元素中的列表项</td></tr><tr><td>dl、dt、dd</td><td>表示含有一系列术语和定义说明的列表</td></tr><tr><td>figure</td><td>表示图片</td></tr><tr><td>figcaption</td><td>表示figure大元素的标题</td></tr></tbody></table><h3 id="ul元素"><a href="#ul元素" class="headerlink" title="ul元素"></a>ul元素</h3><p>表示不排序的项目列表，相当于word中的项目符号。无序列表使用一对标记ul标识，每一个列表项使用li</p><h3 id="ol元素"><a href="#ol元素" class="headerlink" title="ol元素"></a>ol元素</h3><p>排序的项目列表，相当于word中的自动编号功能，适用语法和ul基本相同，列表项使用li</p><h3 id="dl元素"><a href="#dl元素" class="headerlink" title="dl元素"></a>dl元素</h3><p>dl用于自定义列表，一般与dt和dd一起使用，dt定义列表名称，dd定义内容</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> html5 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> html </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>3.1页面元素和页面节点</title>
       <link href="/2020/10/05/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/3%E9%A1%B5%E9%9D%A2%E5%85%83%E7%B4%A0%E5%92%8C%E5%B1%9E%E6%80%A7/3.1%E9%A1%B5%E9%9D%A2%E5%85%83%E7%B4%A0%E5%92%8C%E9%A1%B5%E9%9D%A2%E8%8A%82%E7%82%B9/"/>
       <url>/2020/10/05/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/3%E9%A1%B5%E9%9D%A2%E5%85%83%E7%B4%A0%E5%92%8C%E5%B1%9E%E6%80%A7/3.1%E9%A1%B5%E9%9D%A2%E5%85%83%E7%B4%A0%E5%92%8C%E9%A1%B5%E9%9D%A2%E8%8A%82%E7%82%B9/</url>
       
         <content type="html"><![CDATA[<h4 id="3-1页面元素和页面节点"><a href="#3-1页面元素和页面节点" class="headerlink" title="3.1页面元素和页面节点"></a><center>3.1页面元素和页面节点</center></h4><a id="more"></a><p>HTML5的目标：通过一些新标签、新功能、为开发更加简单、独立、标准的通用Web应用提供了标准</p><p>解决了三大问题：浏览器兼容问题、文档结构不明确问题、Web应用程序功能受限问题</p><h2 id="页面结构对比"><a href="#页面结构对比" class="headerlink" title="页面结构对比"></a>页面结构对比</h2><p>HTML5之前通常直接使用div进行网页整体布局，常见的布局包括页眉、页脚、导航菜单和正文部分。为了区别文档结构中不同的div一般会为其配上不同的id名称</p><h2 id="结构元素"><a href="#结构元素" class="headerlink" title="结构元素"></a>结构元素</h2><h3 id="header标签"><a href="#header标签" class="headerlink" title="header标签"></a>header标签</h3><p>用于定义文章的页眉，其中包含多个标题、导航或普通内容</p><h3 id="article标签"><a href="#article标签" class="headerlink" title="article标签"></a>article标签</h3><p>用于表示文档、页面或者应用程序中独立的、完整的、可以肚子被外部引用的内容</p><h3 id="aside标签"><a href="#aside标签" class="headerlink" title="aside标签"></a>aside标签</h3><p>定义当前文章的附属信息，文章引用、广告等</p><h3 id="footer标签"><a href="#footer标签" class="headerlink" title="footer标签"></a>footer标签</h3><p>定义脚注等</p><h3 id="figure标签"><a href="#figure标签" class="headerlink" title="figure标签"></a>figure标签</h3><p>网站制作页面上一块独立的内容，将其移除后不会对网页上其他内容产生影响</p><h3 id="figcaption标签"><a href="#figcaption标签" class="headerlink" title="figcaption标签"></a>figcaption标签</h3><p>定义figure元素的标题；位于figure元素的第一个或者最后一个子元素的位置</p><h2 id="页面节点"><a href="#页面节点" class="headerlink" title="页面节点"></a>页面节点</h2><h3 id="section标签"><a href="#section标签" class="headerlink" title="section标签"></a>section标签</h3><p>定义文章的节，一般用于成节的内容，会在文档流中开始一个新的节。用来表现普通的文档内容或应用区块，通常由内容及其标题组成</p><h3 id="nav标签"><a href="#nav标签" class="headerlink" title="nav标签"></a>nav标签</h3><p>代表页面的一个部分，是一个可以作为页面导航的链接组，导航元素链接到其他页面或者当前页面的其他部分，使html代码在语义化方面更加精确，同时对于屏幕阅读器等设备的支持更好</p><h3 id="address标签"><a href="#address标签" class="headerlink" title="address标签"></a>address标签</h3><p>用于被作者提供该文档的联系人信息，一般放在开头或者结尾，最常用的是和其他内容包含在footer元素内。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> html5 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> html </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>2.6表格标签</title>
+      <link href="/2020/09/29/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/2HTML5/2.6%E8%A1%A8%E6%A0%BC%E6%A0%87%E7%AD%BE/"/>
+      <url>/2020/09/29/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/2HTML5/2.6%E8%A1%A8%E6%A0%BC%E6%A0%87%E7%AD%BE/</url>
+      
+        <content type="html"><![CDATA[<h4 id="2-6表格标签"><a href="#2-6表格标签" class="headerlink" title="2.6表格标签"></a><center>2.6表格标签</center></h4><a id="more"></a><h2 id="怎样创建表格标签"><a href="#怎样创建表格标签" class="headerlink" title="怎样创建表格标签"></a>怎样创建表格标签</h2><p>表格不仅可以清晰的显示数据，而且还可以用来进行页面布局，在早期的网页设计中具有重要的作用</p><p>在基本的表格结构中，基本构造三要素：</p><ol><li>表格标题</li><li>项目表头</li><li>数据资料</li></ol><h3 id="基本语法"><a href="#基本语法" class="headerlink" title="基本语法"></a>基本语法</h3><ul><li>table标签：定义表格</li><li>caption标签：定义表格标题，嵌套在table中</li><li>tr标签：定义表格中的一行，嵌套在table中</li><li>th标签：定义表格中的表头单元格，嵌套在tr中</li><li>td标签：定义表格中的数据单元格，嵌套在tr中</li></ul><h2 id="怎么设置表格属性"><a href="#怎么设置表格属性" class="headerlink" title="怎么设置表格属性"></a>怎么设置表格属性</h2><h3 id="设置表格标记的属性"><a href="#设置表格标记的属性" class="headerlink" title="设置表格标记的属性"></a>设置表格标记的属性</h3><table><thead><tr><th>属性名</th><th>含义</th><th>常用属性值</th></tr></thead><tbody><tr><td>border</td><td>设置表格的边框(默认0无边框)</td><td>像素值</td></tr><tr><td>cellspacing</td><td>设置单元格与单元格边框之间的空白间距</td><td>像素值默认为2</td></tr><tr><td>cellpadding</td><td>设置单元格内容与单元格边框之间的空白间距</td><td>像素值默认为1</td></tr><tr><td>width</td><td>设置表格的宽度</td><td>像素值</td></tr><tr><td>height</td><td>设置表格的高度</td><td>像素值</td></tr><tr><td>align</td><td>设置表格在网页中的水平对齐方式</td><td>left center right</td></tr><tr><td>valign</td><td>设置一行内容垂直对齐方式</td><td>top middle bottom</td></tr><tr><td>bgcolor</td><td>设置表格的背景颜色</td><td>于定义的颜色值RGB</td></tr><tr><td>background</td><td>设置表格的背景图片</td><td>url地址</td></tr></tbody></table>]]></content>
       
       
       <categories>
@@ -879,31 +904,6 @@
     
     
     <entry>
-      <title>2.6表格标签</title>
-      <link href="/2020/09/29/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/2HTML5/2.6%E8%A1%A8%E6%A0%BC%E6%A0%87%E7%AD%BE/"/>
-      <url>/2020/09/29/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/2HTML5/2.6%E8%A1%A8%E6%A0%BC%E6%A0%87%E7%AD%BE/</url>
-      
-        <content type="html"><![CDATA[<h4 id="2-6表格标签"><a href="#2-6表格标签" class="headerlink" title="2.6表格标签"></a><center>2.6表格标签</center></h4><a id="more"></a><h2 id="怎样创建表格标签"><a href="#怎样创建表格标签" class="headerlink" title="怎样创建表格标签"></a>怎样创建表格标签</h2><p>表格不仅可以清晰的显示数据，而且还可以用来进行页面布局，在早期的网页设计中具有重要的作用</p><p>在基本的表格结构中，基本构造三要素：</p><ol><li>表格标题</li><li>项目表头</li><li>数据资料</li></ol><h3 id="基本语法"><a href="#基本语法" class="headerlink" title="基本语法"></a>基本语法</h3><ul><li>table标签：定义表格</li><li>caption标签：定义表格标题，嵌套在table中</li><li>tr标签：定义表格中的一行，嵌套在table中</li><li>th标签：定义表格中的表头单元格，嵌套在tr中</li><li>td标签：定义表格中的数据单元格，嵌套在tr中</li></ul><h2 id="怎么设置表格属性"><a href="#怎么设置表格属性" class="headerlink" title="怎么设置表格属性"></a>怎么设置表格属性</h2><h3 id="设置表格标记的属性"><a href="#设置表格标记的属性" class="headerlink" title="设置表格标记的属性"></a>设置表格标记的属性</h3><table><thead><tr><th>属性名</th><th>含义</th><th>常用属性值</th></tr></thead><tbody><tr><td>border</td><td>设置表格的边框(默认0无边框)</td><td>像素值</td></tr><tr><td>cellspacing</td><td>设置单元格与单元格边框之间的空白间距</td><td>像素值默认为2</td></tr><tr><td>cellpadding</td><td>设置单元格内容与单元格边框之间的空白间距</td><td>像素值默认为1</td></tr><tr><td>width</td><td>设置表格的宽度</td><td>像素值</td></tr><tr><td>height</td><td>设置表格的高度</td><td>像素值</td></tr><tr><td>align</td><td>设置表格在网页中的水平对齐方式</td><td>left center right</td></tr><tr><td>valign</td><td>设置一行内容垂直对齐方式</td><td>top middle bottom</td></tr><tr><td>bgcolor</td><td>设置表格的背景颜色</td><td>于定义的颜色值RGB</td></tr><tr><td>background</td><td>设置表格的背景图片</td><td>url地址</td></tr></tbody></table>]]></content>
-      
-      
-      <categories>
-          
-          <category> html5 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> html </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Welcome</title>
       <link href="/2020/09/29/hello-world/"/>
       <url>/2020/09/29/hello-world/</url>
@@ -948,11 +948,11 @@
     
     
     <entry>
-      <title>1.1Web前端开发概述</title>
-      <link href="/2020/09/28/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/1Web%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E6%A6%82%E8%BF%B0/1.1Web%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E6%A6%82%E8%BF%B0/"/>
-      <url>/2020/09/28/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/1Web%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E6%A6%82%E8%BF%B0/1.1Web%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E6%A6%82%E8%BF%B0/</url>
+      <title>2.1HTML5语法基础</title>
+      <link href="/2020/09/28/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/2HTML5/2.1HTML5%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80/"/>
+      <url>/2020/09/28/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/2HTML5/2.1HTML5%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80/</url>
       
-        <content type="html"><![CDATA[<h4 id="1-1Web前端开发概述"><a href="#1-1Web前端开发概述" class="headerlink" title="1.1Web前端开发概述"></a><center>1.1Web前端开发概述</center></h4><a id="more"></a><h2 id="学习内容"><a href="#学习内容" class="headerlink" title="学习内容"></a>学习内容</h2><h3 id="Html标记"><a href="#Html标记" class="headerlink" title="Html标记"></a>Html标记</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Hyper Text Markup   超文本标记语言。主要是通过HTML标记对网页中的文本、图片、声音等内容进行描述。最新版本是HTML5</span><br></pre></td></tr></table></figure><h3 id="css样式"><a href="#css样式" class="headerlink" title="css样式"></a>css样式</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Cascading Style Sheets   层叠样式表。是一种用来表现HTML或者XML文件样式的计算机语言</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CSS提供了丰富的样式，控制格式的、控制布局的、控制动态效果的等。最新版是2010年推出的CSS3</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CSS3通过模块化结构使设计者可以及时的调整模块的内容，方便版本的更新与发布，同时也增添了很多的新功能</span><br></pre></td></tr></table></figure><h3 id="JavaScript的内置函数"><a href="#JavaScript的内置函数" class="headerlink" title="JavaScript的内置函数"></a>JavaScript的内置函数</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1995年最初由Netscape（网景公司）的BrendanEich（瑞登·艾克）设计，后来Netscape为了营销考虑，与Sun微系统达成协议，将其改名为javascript</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">javascript是一种基于对象和事件驱动并具有相对安全性的客户端脚本语言。运用这个脚本语言可以给HEML网页添加动态功能，响应用户的各种操作</span><br></pre></td></tr></table></figure><h2 id="Web前端开发概述"><a href="#Web前端开发概述" class="headerlink" title="Web前端开发概述"></a>Web前端开发概述</h2><h3 id="什么是Web？"><a href="#什么是Web？" class="headerlink" title="什么是Web？"></a>什么是Web？</h3><p>Web是Internet上最受欢迎的一种多媒体服务系统</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">整个系统由Web服务器、浏览器和通信协议组成</span><br></pre></td></tr></table></figure><h3 id="什么是Web开发？"><a href="#什么是Web开发？" class="headerlink" title="什么是Web开发？"></a>什么是Web开发？</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">包括：浏览器端页面的制作、服务器端程序的编写</span><br></pre></td></tr></table></figure><h3 id="Web前端开发"><a href="#Web前端开发" class="headerlink" title="Web前端开发"></a>Web前端开发</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Web前端开发的主要工作是把UI(User Interface用户界面)的设计图按照W3C标准做成html页面，用CSS进行布局，并且用javascript脚本语言实现页面上的前端互动</span><br></pre></td></tr></table></figure><h3 id="浏览器"><a href="#浏览器" class="headerlink" title="浏览器"></a>浏览器</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">浏览器是指可以显示网页服务器或者文件系统HTML文件内容，并让用户与这些文件交互的一种软件</span><br></pre></td></tr></table></figure><h3 id="Html5"><a href="#Html5" class="headerlink" title="Html5"></a>Html5</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Html5是W3C组织2014年建议的标准，因此不是所有的浏览器都支持Html5，同一浏览器对Html5的支持情况也不同</span><br></pre></td></tr></table></figure><h3 id="Web标准"><a href="#Web标准" class="headerlink" title="Web标准"></a>Web标准</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Web标准是由W3C和其他标准化组织指定的一系列标准的集合，该标准用来创建和解释基于Web的内容</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">网页部分的标准通过三部分来描述：结构标准、表现标准、行为标准</span><br></pre></td></tr></table></figure><h4 id="结构标准"><a href="#结构标准" class="headerlink" title="结构标准"></a>结构标准</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">用于对于网页元素进行整理和分类</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">相当于搭建房子的框架</span><br></pre></td></tr></table></figure><h4 id="表现标准"><a href="#表现标准" class="headerlink" title="表现标准"></a>表现标准</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">用于设置网页元素的版式、颜色、大小等外观样式</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">相当于房子的装修，但是房子没有任何功能</span><br></pre></td></tr></table></figure><h4 id="行为标准"><a href="#行为标准" class="headerlink" title="行为标准"></a>行为标准</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">是对网页模型的定义以及交互的编写</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">相当于给房子增加了功能，让房子具有功能性，使用户和房子有更好的交互</span><br></pre></td></tr></table></figure><h4 id="标准的实现方式"><a href="#标准的实现方式" class="headerlink" title="标准的实现方式"></a>标准的实现方式</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">上面三个标准分别对应HTML、CSS、JavaScript（Web前端开发的基本应用技术）</span><br></pre></td></tr></table></figure>]]></content>
+        <content type="html"><![CDATA[<h4 id="2-1HTML5语法基础"><a href="#2-1HTML5语法基础" class="headerlink" title="2.1HTML5语法基础"></a><center>2.1HTML5语法基础</center></h4><a id="more"></a><h2 id="HTML文档结构"><a href="#HTML文档结构" class="headerlink" title="HTML文档结构"></a>HTML文档结构</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">完整的HTML文件包括头部和主体两大部分</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">文档结构由&lt;html&gt;&lt;head&gt;&lt;body&gt;这三大元素组成</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;   是文档类型声名：HTML5中用这一行代码进行说明，位于所有的文档标签之前，告知浏览器应按照什么方式对页面文档进行解析</span><br></pre></td></tr></table></figure><h3 id="html"><a href="#html" class="headerlink" title="html"></a>html</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">所有的文档都是以html标签开始和结束，所有的内容都需要放在html标签之中</span><br></pre></td></tr></table></figure><h3 id="head"><a href="#head" class="headerlink" title="head"></a>head</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">head主要存放：标题、元信息、CSS样式、JavaScript脚本</span><br></pre></td></tr></table></figure><h3 id="body"><a href="#body" class="headerlink" title="body"></a>body</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">网页的正文，包括图片、表格、段落、音频、视屏等</span><br></pre></td></tr></table></figure><h2 id="HTML标签"><a href="#HTML标签" class="headerlink" title="HTML标签"></a>HTML标签</h2><h3 id="h1"><a href="#h1" class="headerlink" title="h1"></a>h1</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">标题标签一共有六种，是网页html中对中文标题进行着重强调的标签。</span><br><span class="line">h1-h6依次显示重要性的递减</span><br></pre></td></tr></table></figure><h3 id="单标签"><a href="#单标签" class="headerlink" title="单标签"></a>单标签</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;br&gt;   换行</span><br><span class="line">&lt;hr&gt;   横线</span><br></pre></td></tr></table></figure><h3 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--********--&gt;</span><br><span class="line">&lt;comment&gt;&lt;/comment&gt;</span><br></pre></td></tr></table></figure><h3 id="meta"><a href="#meta" class="headerlink" title="meta"></a>meta</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">meta标签主要分为两大类，一类对页面进行设置，另一类对搜索引擎进行设置。</span><br><span class="line"></span><br><span class="line">对页面进行设置的格式：&lt;meta http-equiv=&quot;名称&quot; content=&quot;值&quot;/&gt;</span><br><span class="line">对搜索引擎进行设置的格式：&lt;meta name=&quot;名称&quot; content=&quot;值&quot;/&gt;</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">http-equiv用法示例：</span><br><span class="line"></span><br><span class="line">页面使用国标汉字码gb2312</span><br><span class="line">&lt;Meta http-equiv=&quot;Content-Type&quot; Content=&quot;text/html&quot;;Charset=&quot;gb2312&quot;/&gt;</span><br><span class="line"></span><br><span class="line">页面停留20秒后跳转到www.educoder.net</span><br><span class="line">&lt;Meta http-equiv=&quot;Refresh&quot;  Content=&quot;20;Url=www.educoder.net&quot;/&gt; </span><br><span class="line"></span><br><span class="line">网页于2020年7月26号8点过期</span><br><span class="line">&lt;Meta http-equiv =“Expires”  Content=“Thur,26 Jul 2020 08:00:00 GMT”/&gt; </span><br><span class="line"></span><br><span class="line">设置cookie并进行页面缓存</span><br><span class="line">&lt;Meta http-equiv =“Set-Cookie” Content=“cookievalue = xxx; expires= Thur,26 Jul 2020 08:00:00 GMT; path=/”&gt;</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">name用法示例：</span><br><span class="line"></span><br><span class="line">用于标注网页的作者和Email</span><br><span class="line">&lt;Meta name = “Author”  Content = “刘明，Liuming@sina.com” /&gt; </span><br><span class="line"></span><br><span class="line">为搜索引擎提供网站简介</span><br><span class="line">&lt;Meta name =“Description”  Content =“网站简介”/&gt; </span><br><span class="line"></span><br><span class="line">为搜索引擎提供关键字</span><br><span class="line">&lt;meta name=&quot;keywords&quot; content=&quot;漫步时尚广场,时尚,购物,影视,餐饮&quot;/&gt; </span><br><span class="line"></span><br><span class="line">为搜索引擎提供编辑器类型</span><br><span class="line">&lt;meta name=&quot;generator&quot; content=&quot;Dreamweaver CS6&quot;/&gt; </span><br><span class="line"></span><br><span class="line">为搜索引擎提供提供最新版本信息</span><br><span class="line">&lt;meta name=“revised&quot; content=“David,2020/8/8“/&gt;</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">charset</span><br><span class="line">charset是HTML5新增的字符编码属性。属性取值必须是标准字符集的名称，常用的字符编码如下：</span><br><span class="line"></span><br><span class="line">ISO-8859-1：国际标准化组织针对不同的字母表/语言定义的标准字符集（ 拉丁字母表的字符编码），是浏览器默认的字符集</span><br><span class="line">utf-8：Unicode 联盟开发的标准，utf-8 是网页和电子邮件的首选编码。</span><br><span class="line">gb2312：信息交换用汉字编码字符集，中国国家标准总局1980年发布。适用于汉字处理、汉字通信等系统之间的信息交换。</span><br><span class="line">用法示例：</span><br><span class="line"></span><br><span class="line">设置utf-8字符编码标准</span><br><span class="line">&lt;meta charset=utf-8/&gt;</span><br></pre></td></tr></table></figure><h2 id="HTML文档的编写规范"><a href="#HTML文档的编写规范" class="headerlink" title="HTML文档的编写规范"></a>HTML文档的编写规范</h2><ol><li>所有的标签均以&lt;开始、以&gt;结束</li><li>根据标签的类型，正确输入标签，单个标签最好在右尖括号前面加一个/，如换行标签是单标签<br>，成对的标签最好同时输入起始标签和结束标签，以免忘记</li><li>标签可以嵌套使用名单时不能交叉使用</li><li>在HTML代码中不区分大小写</li><li>标签中可以设置各种属性，属性值建议用双引号标注起来</li><li>书写开始与结束标签时，在左尖括号与标签名或斜杠/之间不能留有多余的空格，否则浏览器对标签不能识别，导致错误标签直接显示在页面上，影响页面的美观效果</li></ol>]]></content>
       
       
       <categories>
@@ -973,11 +973,11 @@
     
     
     <entry>
-      <title>2.1HTML5语法基础</title>
-      <link href="/2020/09/28/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/2HTML5/2.1HTML5%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80/"/>
-      <url>/2020/09/28/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/2HTML5/2.1HTML5%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80/</url>
+      <title>1.1Web前端开发概述</title>
+      <link href="/2020/09/28/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/1Web%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E6%A6%82%E8%BF%B0/1.1Web%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E6%A6%82%E8%BF%B0/"/>
+      <url>/2020/09/28/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/1Web%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E6%A6%82%E8%BF%B0/1.1Web%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E6%A6%82%E8%BF%B0/</url>
       
-        <content type="html"><![CDATA[<h4 id="2-1HTML5语法基础"><a href="#2-1HTML5语法基础" class="headerlink" title="2.1HTML5语法基础"></a><center>2.1HTML5语法基础</center></h4><a id="more"></a><h2 id="HTML文档结构"><a href="#HTML文档结构" class="headerlink" title="HTML文档结构"></a>HTML文档结构</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">完整的HTML文件包括头部和主体两大部分</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">文档结构由&lt;html&gt;&lt;head&gt;&lt;body&gt;这三大元素组成</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;   是文档类型声名：HTML5中用这一行代码进行说明，位于所有的文档标签之前，告知浏览器应按照什么方式对页面文档进行解析</span><br></pre></td></tr></table></figure><h3 id="html"><a href="#html" class="headerlink" title="html"></a>html</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">所有的文档都是以html标签开始和结束，所有的内容都需要放在html标签之中</span><br></pre></td></tr></table></figure><h3 id="head"><a href="#head" class="headerlink" title="head"></a>head</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">head主要存放：标题、元信息、CSS样式、JavaScript脚本</span><br></pre></td></tr></table></figure><h3 id="body"><a href="#body" class="headerlink" title="body"></a>body</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">网页的正文，包括图片、表格、段落、音频、视屏等</span><br></pre></td></tr></table></figure><h2 id="HTML标签"><a href="#HTML标签" class="headerlink" title="HTML标签"></a>HTML标签</h2><h3 id="h1"><a href="#h1" class="headerlink" title="h1"></a>h1</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">标题标签一共有六种，是网页html中对中文标题进行着重强调的标签。</span><br><span class="line">h1-h6依次显示重要性的递减</span><br></pre></td></tr></table></figure><h3 id="单标签"><a href="#单标签" class="headerlink" title="单标签"></a>单标签</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;br&gt;   换行</span><br><span class="line">&lt;hr&gt;   横线</span><br></pre></td></tr></table></figure><h3 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--********--&gt;</span><br><span class="line">&lt;comment&gt;&lt;/comment&gt;</span><br></pre></td></tr></table></figure><h3 id="meta"><a href="#meta" class="headerlink" title="meta"></a>meta</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">meta标签主要分为两大类，一类对页面进行设置，另一类对搜索引擎进行设置。</span><br><span class="line"></span><br><span class="line">对页面进行设置的格式：&lt;meta http-equiv=&quot;名称&quot; content=&quot;值&quot;/&gt;</span><br><span class="line">对搜索引擎进行设置的格式：&lt;meta name=&quot;名称&quot; content=&quot;值&quot;/&gt;</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">http-equiv用法示例：</span><br><span class="line"></span><br><span class="line">页面使用国标汉字码gb2312</span><br><span class="line">&lt;Meta http-equiv=&quot;Content-Type&quot; Content=&quot;text/html&quot;;Charset=&quot;gb2312&quot;/&gt;</span><br><span class="line"></span><br><span class="line">页面停留20秒后跳转到www.educoder.net</span><br><span class="line">&lt;Meta http-equiv=&quot;Refresh&quot;  Content=&quot;20;Url=www.educoder.net&quot;/&gt; </span><br><span class="line"></span><br><span class="line">网页于2020年7月26号8点过期</span><br><span class="line">&lt;Meta http-equiv =“Expires”  Content=“Thur,26 Jul 2020 08:00:00 GMT”/&gt; </span><br><span class="line"></span><br><span class="line">设置cookie并进行页面缓存</span><br><span class="line">&lt;Meta http-equiv =“Set-Cookie” Content=“cookievalue = xxx; expires= Thur,26 Jul 2020 08:00:00 GMT; path=/”&gt;</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">name用法示例：</span><br><span class="line"></span><br><span class="line">用于标注网页的作者和Email</span><br><span class="line">&lt;Meta name = “Author”  Content = “刘明，Liuming@sina.com” /&gt; </span><br><span class="line"></span><br><span class="line">为搜索引擎提供网站简介</span><br><span class="line">&lt;Meta name =“Description”  Content =“网站简介”/&gt; </span><br><span class="line"></span><br><span class="line">为搜索引擎提供关键字</span><br><span class="line">&lt;meta name=&quot;keywords&quot; content=&quot;漫步时尚广场,时尚,购物,影视,餐饮&quot;/&gt; </span><br><span class="line"></span><br><span class="line">为搜索引擎提供编辑器类型</span><br><span class="line">&lt;meta name=&quot;generator&quot; content=&quot;Dreamweaver CS6&quot;/&gt; </span><br><span class="line"></span><br><span class="line">为搜索引擎提供提供最新版本信息</span><br><span class="line">&lt;meta name=“revised&quot; content=“David,2020/8/8“/&gt;</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">charset</span><br><span class="line">charset是HTML5新增的字符编码属性。属性取值必须是标准字符集的名称，常用的字符编码如下：</span><br><span class="line"></span><br><span class="line">ISO-8859-1：国际标准化组织针对不同的字母表/语言定义的标准字符集（ 拉丁字母表的字符编码），是浏览器默认的字符集</span><br><span class="line">utf-8：Unicode 联盟开发的标准，utf-8 是网页和电子邮件的首选编码。</span><br><span class="line">gb2312：信息交换用汉字编码字符集，中国国家标准总局1980年发布。适用于汉字处理、汉字通信等系统之间的信息交换。</span><br><span class="line">用法示例：</span><br><span class="line"></span><br><span class="line">设置utf-8字符编码标准</span><br><span class="line">&lt;meta charset=utf-8/&gt;</span><br></pre></td></tr></table></figure><h2 id="HTML文档的编写规范"><a href="#HTML文档的编写规范" class="headerlink" title="HTML文档的编写规范"></a>HTML文档的编写规范</h2><ol><li>所有的标签均以&lt;开始、以&gt;结束</li><li>根据标签的类型，正确输入标签，单个标签最好在右尖括号前面加一个/，如换行标签是单标签<br>，成对的标签最好同时输入起始标签和结束标签，以免忘记</li><li>标签可以嵌套使用名单时不能交叉使用</li><li>在HTML代码中不区分大小写</li><li>标签中可以设置各种属性，属性值建议用双引号标注起来</li><li>书写开始与结束标签时，在左尖括号与标签名或斜杠/之间不能留有多余的空格，否则浏览器对标签不能识别，导致错误标签直接显示在页面上，影响页面的美观效果</li></ol>]]></content>
+        <content type="html"><![CDATA[<h4 id="1-1Web前端开发概述"><a href="#1-1Web前端开发概述" class="headerlink" title="1.1Web前端开发概述"></a><center>1.1Web前端开发概述</center></h4><a id="more"></a><h2 id="学习内容"><a href="#学习内容" class="headerlink" title="学习内容"></a>学习内容</h2><h3 id="Html标记"><a href="#Html标记" class="headerlink" title="Html标记"></a>Html标记</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Hyper Text Markup   超文本标记语言。主要是通过HTML标记对网页中的文本、图片、声音等内容进行描述。最新版本是HTML5</span><br></pre></td></tr></table></figure><h3 id="css样式"><a href="#css样式" class="headerlink" title="css样式"></a>css样式</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Cascading Style Sheets   层叠样式表。是一种用来表现HTML或者XML文件样式的计算机语言</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CSS提供了丰富的样式，控制格式的、控制布局的、控制动态效果的等。最新版是2010年推出的CSS3</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CSS3通过模块化结构使设计者可以及时的调整模块的内容，方便版本的更新与发布，同时也增添了很多的新功能</span><br></pre></td></tr></table></figure><h3 id="JavaScript的内置函数"><a href="#JavaScript的内置函数" class="headerlink" title="JavaScript的内置函数"></a>JavaScript的内置函数</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1995年最初由Netscape（网景公司）的BrendanEich（瑞登·艾克）设计，后来Netscape为了营销考虑，与Sun微系统达成协议，将其改名为javascript</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">javascript是一种基于对象和事件驱动并具有相对安全性的客户端脚本语言。运用这个脚本语言可以给HEML网页添加动态功能，响应用户的各种操作</span><br></pre></td></tr></table></figure><h2 id="Web前端开发概述"><a href="#Web前端开发概述" class="headerlink" title="Web前端开发概述"></a>Web前端开发概述</h2><h3 id="什么是Web？"><a href="#什么是Web？" class="headerlink" title="什么是Web？"></a>什么是Web？</h3><p>Web是Internet上最受欢迎的一种多媒体服务系统</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">整个系统由Web服务器、浏览器和通信协议组成</span><br></pre></td></tr></table></figure><h3 id="什么是Web开发？"><a href="#什么是Web开发？" class="headerlink" title="什么是Web开发？"></a>什么是Web开发？</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">包括：浏览器端页面的制作、服务器端程序的编写</span><br></pre></td></tr></table></figure><h3 id="Web前端开发"><a href="#Web前端开发" class="headerlink" title="Web前端开发"></a>Web前端开发</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Web前端开发的主要工作是把UI(User Interface用户界面)的设计图按照W3C标准做成html页面，用CSS进行布局，并且用javascript脚本语言实现页面上的前端互动</span><br></pre></td></tr></table></figure><h3 id="浏览器"><a href="#浏览器" class="headerlink" title="浏览器"></a>浏览器</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">浏览器是指可以显示网页服务器或者文件系统HTML文件内容，并让用户与这些文件交互的一种软件</span><br></pre></td></tr></table></figure><h3 id="Html5"><a href="#Html5" class="headerlink" title="Html5"></a>Html5</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Html5是W3C组织2014年建议的标准，因此不是所有的浏览器都支持Html5，同一浏览器对Html5的支持情况也不同</span><br></pre></td></tr></table></figure><h3 id="Web标准"><a href="#Web标准" class="headerlink" title="Web标准"></a>Web标准</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Web标准是由W3C和其他标准化组织指定的一系列标准的集合，该标准用来创建和解释基于Web的内容</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">网页部分的标准通过三部分来描述：结构标准、表现标准、行为标准</span><br></pre></td></tr></table></figure><h4 id="结构标准"><a href="#结构标准" class="headerlink" title="结构标准"></a>结构标准</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">用于对于网页元素进行整理和分类</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">相当于搭建房子的框架</span><br></pre></td></tr></table></figure><h4 id="表现标准"><a href="#表现标准" class="headerlink" title="表现标准"></a>表现标准</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">用于设置网页元素的版式、颜色、大小等外观样式</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">相当于房子的装修，但是房子没有任何功能</span><br></pre></td></tr></table></figure><h4 id="行为标准"><a href="#行为标准" class="headerlink" title="行为标准"></a>行为标准</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">是对网页模型的定义以及交互的编写</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">相当于给房子增加了功能，让房子具有功能性，使用户和房子有更好的交互</span><br></pre></td></tr></table></figure><h4 id="标准的实现方式"><a href="#标准的实现方式" class="headerlink" title="标准的实现方式"></a>标准的实现方式</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">上面三个标准分别对应HTML、CSS、JavaScript（Web前端开发的基本应用技术）</span><br></pre></td></tr></table></figure>]]></content>
       
       
       <categories>
