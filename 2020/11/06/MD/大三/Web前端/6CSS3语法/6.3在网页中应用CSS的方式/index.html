@@ -63,7 +63,7 @@
 <meta property="og:site_name" content="YaSuo">
 <meta property="og:description" content="6.3在网页中应用CSS的方式">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-11-05T13:50:56.681Z">
+<meta property="og:updated_time" content="2020-11-06T08:36:39.537Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="6.3在网页中应用CSS的方式">
 <meta name="twitter:description" content="6.3在网页中应用CSS的方式">
@@ -289,19 +289,11 @@
                 
               
 
-              <time title="创建时间：2020-11-06 21:17:18" itemprop="dateCreated datePublished" datetime="2020-11-06T21:17:18+08:00">2020-11-06</time>
+              <time title="创建时间：2020-11-06 21:17:18 / 修改时间：16:36:39" itemprop="dateCreated datePublished" datetime="2020-11-06T21:17:18+08:00">2020-11-06</time>
             </span>
           
             
 
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-11-05 21:50:56" itemprop="dateModified" datetime="2020-11-05T21:50:56+08:00">2020-11-05</time>
-              </span>
             
           
             <span class="post-meta-item">
@@ -335,7 +327,7 @@
               
                 <span class="post-meta-item-text">本文字数：</span>
               
-              <span>15</span>
+              <span>1k</span>
             </span>
           
             <span class="post-meta-item" title="阅读时长">
@@ -359,6 +351,57 @@
 
       
         <h4 id="6-3在网页中应用CSS的方式"><a href="#6-3在网页中应用CSS的方式" class="headerlink" title="6.3在网页中应用CSS的方式"></a><center>6.3在网页中应用CSS的方式</center></h4><a id="more"></a>
+
+<h2 id="CSS3应用方法"><a href="#CSS3应用方法" class="headerlink" title="CSS3应用方法"></a>CSS3应用方法</h2><p>CSS样式能够以分离网页内容和样式的形式很好的控制网页的显示。在网页中应用CSS样式有4种方法：</p>
+<ol>
+<li><p>内联式</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">通过标记style属性直接把CSS样式添加到HTML标签中</span><br></pre></td></tr></table></figure>
+
+<p>语法格式：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;标记名 style=&quot;&quot;&gt;&lt;/标记名&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ol>
+<ol start="2">
+<li><p>内嵌式</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">将CSS样式代码添加到HTML文档的&lt;head&gt;头部中，并用&lt;style&gt;标记定义</span><br></pre></td></tr></table></figure>
+
+<p>语法格式：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;head&gt;</span><br><span class="line">	&lt;style type=&quot;text/css&quot;&gt;</span><br><span class="line">		选择器&#123;属性&#125;</span><br><span class="line">	&lt;/style&gt;</span><br><span class="line">&lt;/head&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ol>
+<ol start="3">
+<li><p>链入式</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">将所有的样式放在一个或者多个以.css为扩展名的外部样式表文件中，通过&lt;link /&gt;标记将外部样式表文件链接到HTML文档中</span><br></pre></td></tr></table></figure>
+
+<p>语法格式：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;head&gt;</span><br><span class="line">	&lt;link href=&quot;CSS文件路径&quot; type=&quot;text/css&quot; rel=&quot;stylesheet&quot;/&gt;</span><br><span class="line">&lt;/head&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ol>
+<ol start="4">
+<li><p>导入式</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">与链入外部CSS基本相同，都是要创建一个单独的外部CSS文件，再引入到HTML文档中。只不过语法和运作方式略有差别。</span><br></pre></td></tr></table></figure>
+
+<p>语法格式：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;head&gt;</span><br><span class="line">	&lt;style type=&quot;text/css&quot;&gt;</span><br><span class="line">		@import url(&quot;外部样式表相对路径&quot;);</span><br><span class="line">	&lt;/style&gt;</span><br><span class="line">&lt;/head&gt;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<h3 id="链入式和导入式的区别："><a href="#链入式和导入式的区别：" class="headerlink" title="链入式和导入式的区别："></a>链入式和导入式的区别：</h3><ol>
+<li>隶属关系不同：link属于HTML标签，@import是CSS提供的载入方式</li>
+<li>加载时间及顺序不同：link先将外部的CSS文件加载到网页中，然后再进行编译显示。而@import是浏览器先将HTML结构呈现出来，再把外部的CSS文件加载到网页中，当网速较慢的时候会先显示没有CSS的效果，加载完毕再渲染画面</li>
+<li>兼容性不同@import只有IE5以上的版本才能识别，而link标签没有这个问题</li>
+<li>DOM模型控制样式：使用JavaScript控制DOM改变样式时，只能使用link标签，而@import不受DOM模型的影响</li>
+</ol>
+
     </div>
 
     
@@ -383,8 +426,8 @@
           <div class="post-nav">
             <div class="post-nav-next post-nav-item">
               
-                <a href="/2020/11/06/MD/大三/Web前端/6CSS3语法/6.4CSS3样式特性和常用样式属性/" rel="next" title="6.4CSS3样式特性和常用样式属性">
-                  <i class="fa fa-chevron-left"></i> 6.4CSS3样式特性和常用样式属性
+                <a href="/2020/11/06/MD/大三/Web前端/9javaScript对象编程/9.5表单对象/" rel="next" title="9.5表单对象">
+                  <i class="fa fa-chevron-left"></i> 9.5表单对象
                 </a>
               
             </div>
@@ -393,8 +436,8 @@
 
             <div class="post-nav-prev post-nav-item">
               
-                <a href="/2020/11/06/MD/大三/Web前端/6CSS3语法/6.1CSS概述/" rel="prev" title="6.1CSS概述">
-                  6.1CSS概述 <i class="fa fa-chevron-right"></i>
+                <a href="/2020/11/06/MD/大三/Web前端/6CSS3语法/6.2CSS3的基本语法/" rel="prev" title="6.2CSS3的基本语法">
+                  6.2CSS3的基本语法 <i class="fa fa-chevron-right"></i>
                 </a>
               
             </div>
@@ -488,9 +531,7 @@
         
           
         
-          
-        
-        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-count">2</span>
         <span class="site-state-item-name">标签</span>
         </a>
       </div>
@@ -511,7 +552,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#6-3在网页中应用CSS的方式"><span class="nav-number">1.</span> <span class="nav-text">6.3在网页中应用CSS的方式</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#6-3在网页中应用CSS的方式"><span class="nav-number">1.</span> <span class="nav-text">6.3在网页中应用CSS的方式</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CSS3应用方法"><span class="nav-number"></span> <span class="nav-text">CSS3应用方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#链入式和导入式的区别："><span class="nav-number"></span> <span class="nav-text">链入式和导入式的区别：</span></a></div>
             
 
           </div>
@@ -538,12 +579,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-area-chart"></i>
     </span>
-    <span title="站点总字数">12k</span>
+    <span title="站点总字数">17k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">11 分钟</span>
+    <span title="站点阅读时长">16 分钟</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0</div>
   <span class="post-meta-divider">|</span>
