@@ -1733,7 +1733,7 @@ img:hover {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #71ffff;
+  background: #77bd2e;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
