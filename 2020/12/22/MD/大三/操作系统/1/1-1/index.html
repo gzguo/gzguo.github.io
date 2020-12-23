@@ -55,18 +55,18 @@
   };
 </script>
 
-  <meta name="description" content="章节导学">
+  <meta name="description" content="大题">
 <meta name="keywords" content="OS">
 <meta property="og:type" content="article">
-<meta property="og:title" content="章节导学">
+<meta property="og:title" content="大题">
 <meta property="og:url" content="http://github.com/gzguo/gzguo.github.io.git/2020/12/22/MD/大三/操作系统/1/1-1/index.html">
 <meta property="og:site_name" content="YaSuo">
-<meta property="og:description" content="章节导学">
+<meta property="og:description" content="大题">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-12-22T11:55:19.203Z">
+<meta property="og:updated_time" content="2020-12-23T13:53:47.409Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="章节导学">
-<meta name="twitter:description" content="章节导学">
+<meta name="twitter:title" content="大题">
+<meta name="twitter:description" content="大题">
   <link rel="canonical" href="http://github.com/gzguo/gzguo.github.io.git/2020/12/22/MD/大三/操作系统/1/1-1/">
 
 
@@ -81,7 +81,7 @@
   };
 </script>
 
-  <title>章节导学 | YaSuo</title>
+  <title>大题 | YaSuo</title>
   
 
 
@@ -272,7 +272,7 @@
       <header class="post-header">
 
         
-          <h1 class="post-title" itemprop="name headline">章节导学
+          <h1 class="post-title" itemprop="name headline">大题
 
             
           </h1>
@@ -289,11 +289,19 @@
                 
               
 
-              <time title="创建时间：2020-12-22 21:17:18 / 修改时间：19:55:19" itemprop="dateCreated datePublished" datetime="2020-12-22T21:17:18+08:00">2020-12-22</time>
+              <time title="创建时间：2020-12-22 21:17:18" itemprop="dateCreated datePublished" datetime="2020-12-22T21:17:18+08:00">2020-12-22</time>
             </span>
           
             
 
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-12-23 21:53:47" itemprop="dateModified" datetime="2020-12-23T21:53:47+08:00">2020-12-23</time>
+              </span>
             
           
             <span class="post-meta-item">
@@ -327,7 +335,7 @@
               
                 <span class="post-meta-item-text">本文字数：</span>
               
-              <span>4</span>
+              <span>1.5k</span>
             </span>
           
             <span class="post-meta-item" title="阅读时长">
@@ -350,7 +358,48 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h4 id="章节导学"><a href="#章节导学" class="headerlink" title="章节导学"></a><center>章节导学</center></h4><a id="more"></a>
+        <h4 id="大题"><a href="#大题" class="headerlink" title="大题"></a><center>大题</center></h4><a id="more"></a>
+
+<h2 id="缺页"><a href="#缺页" class="headerlink" title="缺页"></a>缺页</h2><h3 id="先进先出FIFO"><a href="#先进先出FIFO" class="headerlink" title="先进先出FIFO"></a>先进先出FIFO</h3><p>在CPU中呆的时间最长的先出去（看下面）</p>
+<h3 id="最佳置换算法OPT"><a href="#最佳置换算法OPT" class="headerlink" title="最佳置换算法OPT"></a>最佳置换算法OPT</h3><p>淘汰<strong>未来</strong>最长时间内不再被访问的页面（作业的页面走向右面）</p>
+<h3 id="最近最少使用LRU"><a href="#最近最少使用LRU" class="headerlink" title="最近最少使用LRU"></a>最近最少使用LRU</h3><p>最久未被使用（作业的页面走向左面）</p>
+<h2 id="物理地址计算"><a href="#物理地址计算" class="headerlink" title="物理地址计算"></a>物理地址计算</h2><p>前提：找出 一页多少字节/<u>块长</u>、页表、逻辑地址</p>
+<h3 id="求出页号"><a href="#求出页号" class="headerlink" title="求出页号"></a>求出页号</h3><p>页号=逻辑地址 % 块长</p>
+<p>求出来的<strong>商</strong>就是<u>页号</u>，<strong>余数</strong>就是<u>页内地址</u></p>
+<h3 id="对照页表"><a href="#对照页表" class="headerlink" title="对照页表"></a>对照页表</h3><p>根据页号对照页表，找到页号对应的<u>块号</u></p>
+<h3 id="计算地址"><a href="#计算地址" class="headerlink" title="计算地址"></a>计算地址</h3><p>绝对地址/物理地址 = 块号*块长+块内地址</p>
+<h2 id="银行家算法"><a href="#银行家算法" class="headerlink" title="银行家算法"></a>银行家算法</h2><h3 id="判断系统是否“死锁”"><a href="#判断系统是否“死锁”" class="headerlink" title="判断系统是否“死锁”"></a>判断系统是否“死锁”</h3><p>max（最多需要） allocation（系统已经分配）need（需要的）available（可获得的）</p>
+<p>work（目前的CPU）need（需要分配的CPU）allocation（已经分配的）work+allocation（下一个的work）finish（T/F）</p>
+<h3 id="提供安全序列"><a href="#提供安全序列" class="headerlink" title="提供安全序列"></a>提供安全序列</h3><p>通过计算求i出安全序列</p>
+<p>最后判断系统资源和题目中的是否一致</p>
+<h2 id="磁盘调度"><a href="#磁盘调度" class="headerlink" title="磁盘调度"></a>磁盘调度</h2><p>通过四种方式来求总的寻道长度和平均寻道长度</p>
+<p>关键字：磁盘驱动器（disk drive）柱面（cylinders）磁盘队列（disk queue）读写磁头（disk head）最初（initially）</p>
+<p>按照时间顺序到达</p>
+<h3 id="先来先服务FCFS"><a href="#先来先服务FCFS" class="headerlink" title="先来先服务FCFS"></a>先来先服务FCFS</h3><p>从最初拿到一个值 和 题目中给的作业队列 排成一个队列，然后<strong>相邻互减</strong>，求出的就是总的寻道长度，总的寻道长度除以移动次数就是平均训导长度</p>
+<h3 id="最短寻道时间优先SSTF"><a href="#最短寻道时间优先SSTF" class="headerlink" title="最短寻道时间优先SSTF"></a>最短寻道时间优先SSTF</h3><p>先把题目中的队列按大小排序，然后标明磁头的位置，然后判断向左还是向右，原则是路径最短。直到最后都访问到了。相邻互减，得到总的寻道长度，除以寻道次数，得到平均寻道长度</p>
+<h3 id="扫描算法SCAN"><a href="#扫描算法SCAN" class="headerlink" title="扫描算法SCAN"></a>扫描算法SCAN</h3><p>向左走到头然后向右走到头 或者 向右走到头然后向左走到头 依次访问路径上没有被访问到的磁头</p>
+<p>因为是两种所以考试一般不考</p>
+<h3 id="循环扫描算法C-SCAN"><a href="#循环扫描算法C-SCAN" class="headerlink" title="循环扫描算法C-SCAN"></a>循环扫描算法C-SCAN</h3><p>向左走到头之后，直接到最右边，然后往左边找。另一种和这个相反。多了一个走到最右的步骤。</p>
+<h2 id="进程调度"><a href="#进程调度" class="headerlink" title="进程调度"></a>进程调度</h2><p>到达时间（提交时间）：The Arriving Time就是进程告诉操作系统你要开始处理我了的时间点，之后进入队列等待被处理</p>
+<p>开始时间：Start time/Began就是操作系统真正开始处理进程的时间点</p>
+<p>执行时间（CPU突发时间）：The Running Time/CPU brust time：就是把操作系统处理完这个程序需要多久</p>
+<p>一般要求的东西：</p>
+<p>平均等待时间：开始时间-到达时间</p>
+<p>平均周转时间：结束时间-到达时间（根据开始时间和执行时间可以得到结束时间）</p>
+<p>平均带权周转时间：周转时间除以运行时间</p>
+<p>平均的意思就是每个进程的等待时间加起来再除以总的进程数</p>
+<p>有一种做题的方法推荐：画Gantt图，不会百度</p>
+<h3 id="先来先服务FCFS-1"><a href="#先来先服务FCFS-1" class="headerlink" title="先来先服务FCFS"></a>先来先服务FCFS</h3><p>特点：按照进程到达的先后次序，依次处理</p>
+<h3 id="短作业优先SJF"><a href="#短作业优先SJF" class="headerlink" title="短作业优先SJF"></a>短作业优先SJF</h3><p>进程越短越优先，执行时间越小越优先，有个条件是 在CPU队列中的进程的执行时间的排序</p>
+<h4 id="非抢占"><a href="#非抢占" class="headerlink" title="非抢占"></a>非抢占</h4><p>进程一旦开始执行就直接执行结束，不会被强制停止</p>
+<h4 id="抢占"><a href="#抢占" class="headerlink" title="抢占"></a>抢占</h4><p>如果进程队列里面进来了一个执行时间更短的进程，那么就会抢占正在执行进程的CPU，优先执行执行时间短的进程</p>
+<h3 id="高响应比优先HRRN"><a href="#高响应比优先HRRN" class="headerlink" title="高响应比优先HRRN"></a>高响应比优先HRRN</h3><p>这个属于非抢占，应该不会考，是一个扩展的</p>
+<p>按照优先权=（等待时间+执行时间）/执行时间，接下来执行的是权重大的</p>
+<p>算法的意义在于执行等待时间相对较长，但是执行时间较短的</p>
+<h2 id="有效访问时间EAT"><a href="#有效访问时间EAT" class="headerlink" title="有效访问时间EAT"></a>有效访问时间EAT</h2><p>EAT=（1-p）<em>内存访问时间+p</em>平均页面错误服务时间</p>
+<p>p：页面错误率Page Fault Rate  1000次中一次出错错误率就是0.1%</p>
+<p>hit ratio：命中率 与页面错误率相反</p>
+
     </div>
 
     
@@ -505,7 +554,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#章节导学"><span class="nav-number">1.</span> <span class="nav-text">章节导学</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#大题"><span class="nav-number">1.</span> <span class="nav-text">大题</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#缺页"><span class="nav-number"></span> <span class="nav-text">缺页</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#先进先出FIFO"><span class="nav-number"></span> <span class="nav-text">先进先出FIFO</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#最佳置换算法OPT"><span class="nav-number"></span> <span class="nav-text">最佳置换算法OPT</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#最近最少使用LRU"><span class="nav-number"></span> <span class="nav-text">最近最少使用LRU</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#物理地址计算"><span class="nav-number"></span> <span class="nav-text">物理地址计算</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#求出页号"><span class="nav-number"></span> <span class="nav-text">求出页号</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#对照页表"><span class="nav-number"></span> <span class="nav-text">对照页表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#计算地址"><span class="nav-number"></span> <span class="nav-text">计算地址</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#银行家算法"><span class="nav-number"></span> <span class="nav-text">银行家算法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#判断系统是否“死锁”"><span class="nav-number"></span> <span class="nav-text">判断系统是否“死锁”</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#提供安全序列"><span class="nav-number"></span> <span class="nav-text">提供安全序列</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#磁盘调度"><span class="nav-number"></span> <span class="nav-text">磁盘调度</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#先来先服务FCFS"><span class="nav-number"></span> <span class="nav-text">先来先服务FCFS</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#最短寻道时间优先SSTF"><span class="nav-number"></span> <span class="nav-text">最短寻道时间优先SSTF</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#扫描算法SCAN"><span class="nav-number"></span> <span class="nav-text">扫描算法SCAN</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#循环扫描算法C-SCAN"><span class="nav-number"></span> <span class="nav-text">循环扫描算法C-SCAN</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#进程调度"><span class="nav-number"></span> <span class="nav-text">进程调度</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#先来先服务FCFS-1"><span class="nav-number"></span> <span class="nav-text">先来先服务FCFS</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#短作业优先SJF"><span class="nav-number"></span> <span class="nav-text">短作业优先SJF</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#非抢占"><span class="nav-number">1.</span> <span class="nav-text">非抢占</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#抢占"><span class="nav-number">2.</span> <span class="nav-text">抢占</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#高响应比优先HRRN"><span class="nav-number"></span> <span class="nav-text">高响应比优先HRRN</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#有效访问时间EAT"><span class="nav-number"></span> <span class="nav-text">有效访问时间EAT</span></a></div>
             
 
           </div>
@@ -532,12 +581,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-area-chart"></i>
     </span>
-    <span title="站点总字数">24k</span>
+    <span title="站点总字数">26k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">22 分钟</span>
+    <span title="站点阅读时长">23 分钟</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0</div>
   <span class="post-meta-divider">|</span>
