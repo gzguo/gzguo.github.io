@@ -167,36 +167,11 @@
     
     
     <entry>
-      <title>9.1BOM和DOM概述</title>
-      <link href="/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/9javaScript%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/9.1BOM%E5%92%8CDOM%E6%A6%82%E8%BF%B0/"/>
-      <url>/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/9javaScript%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/9.1BOM%E5%92%8CDOM%E6%A6%82%E8%BF%B0/</url>
+      <title>9.2事件机制</title>
+      <link href="/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/9javaScript%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/9.2%E4%BA%8B%E4%BB%B6%E6%9C%BA%E5%88%B6/"/>
+      <url>/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/9javaScript%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/9.2%E4%BA%8B%E4%BB%B6%E6%9C%BA%E5%88%B6/</url>
       
-        <content type="html"><![CDATA[<h4 id="9-1BOM和DOM概述"><a href="#9-1BOM和DOM概述" class="headerlink" title="9.1BOM和DOM概述"></a><center>9.1BOM和DOM概述</center></h4><a id="more"></a>]]></content>
-      
-      
-      <categories>
-          
-          <category> html5 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> html </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>8.5数组对象</title>
-      <link href="/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/8javaScript%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%E5%8F%8AjavaScript%E5%AF%B9%E8%B1%A1/8.5%E6%95%B0%E7%BB%84%E5%AF%B9%E8%B1%A1/"/>
-      <url>/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/8javaScript%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%E5%8F%8AjavaScript%E5%AF%B9%E8%B1%A1/8.5%E6%95%B0%E7%BB%84%E5%AF%B9%E8%B1%A1/</url>
-      
-        <content type="html"><![CDATA[<h4 id="8-5数组对象"><a href="#8-5数组对象" class="headerlink" title="8.5数组对象"></a><center>8.5数组对象</center></h4><a id="more"></a>]]></content>
+        <content type="html"><![CDATA[<h4 id="9-2事件机制"><a href="#9-2事件机制" class="headerlink" title="9.2事件机制"></a><center>9.2事件机制</center></h4><a id="more"></a>]]></content>
       
       
       <categories>
@@ -242,56 +217,6 @@
     
     
     <entry>
-      <title>8.3数学对象</title>
-      <link href="/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/8javaScript%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%E5%8F%8AjavaScript%E5%AF%B9%E8%B1%A1/8.3%E6%95%B0%E5%AD%A6%E5%AF%B9%E8%B1%A1/"/>
-      <url>/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/8javaScript%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%E5%8F%8AjavaScript%E5%AF%B9%E8%B1%A1/8.3%E6%95%B0%E5%AD%A6%E5%AF%B9%E8%B1%A1/</url>
-      
-        <content type="html"><![CDATA[<h4 id="8-3数学对象"><a href="#8-3数学对象" class="headerlink" title="8.3数学对象"></a><center>8.3数学对象</center></h4><a id="more"></a>]]></content>
-      
-      
-      <categories>
-          
-          <category> html5 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> html </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>9.2事件机制</title>
-      <link href="/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/9javaScript%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/9.2%E4%BA%8B%E4%BB%B6%E6%9C%BA%E5%88%B6/"/>
-      <url>/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/9javaScript%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/9.2%E4%BA%8B%E4%BB%B6%E6%9C%BA%E5%88%B6/</url>
-      
-        <content type="html"><![CDATA[<h4 id="9-2事件机制"><a href="#9-2事件机制" class="headerlink" title="9.2事件机制"></a><center>9.2事件机制</center></h4><a id="more"></a>]]></content>
-      
-      
-      <categories>
-          
-          <category> html5 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> html </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>8.4日期对象</title>
       <link href="/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/8javaScript%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%E5%8F%8AjavaScript%E5%AF%B9%E8%B1%A1/8.4%E6%97%A5%E6%9C%9F%E5%AF%B9%E8%B1%A1/"/>
       <url>/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/8javaScript%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%E5%8F%8AjavaScript%E5%AF%B9%E8%B1%A1/8.4%E6%97%A5%E6%9C%9F%E5%AF%B9%E8%B1%A1/</url>
@@ -317,11 +242,11 @@
     
     
     <entry>
-      <title>8.2字符串对象</title>
-      <link href="/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/8javaScript%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%E5%8F%8AjavaScript%E5%AF%B9%E8%B1%A1/8.2%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%AF%B9%E8%B1%A1/"/>
-      <url>/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/8javaScript%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%E5%8F%8AjavaScript%E5%AF%B9%E8%B1%A1/8.2%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%AF%B9%E8%B1%A1/</url>
+      <title>8.5数组对象</title>
+      <link href="/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/8javaScript%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%E5%8F%8AjavaScript%E5%AF%B9%E8%B1%A1/8.5%E6%95%B0%E7%BB%84%E5%AF%B9%E8%B1%A1/"/>
+      <url>/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/8javaScript%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%E5%8F%8AjavaScript%E5%AF%B9%E8%B1%A1/8.5%E6%95%B0%E7%BB%84%E5%AF%B9%E8%B1%A1/</url>
       
-        <content type="html"><![CDATA[<h4 id="8-2字符串对象"><a href="#8-2字符串对象" class="headerlink" title="8.2字符串对象"></a><center>8.2字符串对象</center></h4><a id="more"></a>]]></content>
+        <content type="html"><![CDATA[<h4 id="8-5数组对象"><a href="#8-5数组对象" class="headerlink" title="8.5数组对象"></a><center>8.5数组对象</center></h4><a id="more"></a>]]></content>
       
       
       <categories>
@@ -342,11 +267,36 @@
     
     
     <entry>
-      <title>8.1.3JavaScript概念及其语法下</title>
-      <link href="/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/8javaScript%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%E5%8F%8AjavaScript%E5%AF%B9%E8%B1%A1/8.1.3JavaScript%E6%A6%82%E5%BF%B5%E5%8F%8A%E5%85%B6%E8%AF%AD%E6%B3%95%E4%B8%8B/"/>
-      <url>/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/8javaScript%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%E5%8F%8AjavaScript%E5%AF%B9%E8%B1%A1/8.1.3JavaScript%E6%A6%82%E5%BF%B5%E5%8F%8A%E5%85%B6%E8%AF%AD%E6%B3%95%E4%B8%8B/</url>
+      <title>9.1BOM和DOM概述</title>
+      <link href="/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/9javaScript%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/9.1BOM%E5%92%8CDOM%E6%A6%82%E8%BF%B0/"/>
+      <url>/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/9javaScript%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/9.1BOM%E5%92%8CDOM%E6%A6%82%E8%BF%B0/</url>
       
-        <content type="html"><![CDATA[<h4 id="8-1-3JavaScript概念及其语法下"><a href="#8-1-3JavaScript概念及其语法下" class="headerlink" title="8.1.3JavaScript概念及其语法下"></a><center>8.1.3JavaScript概念及其语法下</center></h4><a id="more"></a><h2 id="流程控制语句"><a href="#流程控制语句" class="headerlink" title="流程控制语句"></a>流程控制语句</h2><h3 id="顺序结构"><a href="#顺序结构" class="headerlink" title="顺序结构"></a>顺序结构</h3><h3 id="选择结构"><a href="#选择结构" class="headerlink" title="选择结构"></a>选择结构</h3><p>if switch</p><h3 id="循环结构"><a href="#循环结构" class="headerlink" title="循环结构"></a>循环结构</h3><p>while、do-while、for</p><h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2>]]></content>
+        <content type="html"><![CDATA[<h4 id="9-1BOM和DOM概述"><a href="#9-1BOM和DOM概述" class="headerlink" title="9.1BOM和DOM概述"></a><center>9.1BOM和DOM概述</center></h4><a id="more"></a>]]></content>
+      
+      
+      <categories>
+          
+          <category> html5 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> html </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>8.3数学对象</title>
+      <link href="/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/8javaScript%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%E5%8F%8AjavaScript%E5%AF%B9%E8%B1%A1/8.3%E6%95%B0%E5%AD%A6%E5%AF%B9%E8%B1%A1/"/>
+      <url>/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/8javaScript%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%E5%8F%8AjavaScript%E5%AF%B9%E8%B1%A1/8.3%E6%95%B0%E5%AD%A6%E5%AF%B9%E8%B1%A1/</url>
+      
+        <content type="html"><![CDATA[<h4 id="8-3数学对象"><a href="#8-3数学对象" class="headerlink" title="8.3数学对象"></a><center>8.3数学对象</center></h4><a id="more"></a>]]></content>
       
       
       <categories>
@@ -392,6 +342,56 @@
     
     
     <entry>
+      <title>8.1.3JavaScript概念及其语法下</title>
+      <link href="/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/8javaScript%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%E5%8F%8AjavaScript%E5%AF%B9%E8%B1%A1/8.1.3JavaScript%E6%A6%82%E5%BF%B5%E5%8F%8A%E5%85%B6%E8%AF%AD%E6%B3%95%E4%B8%8B/"/>
+      <url>/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/8javaScript%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%E5%8F%8AjavaScript%E5%AF%B9%E8%B1%A1/8.1.3JavaScript%E6%A6%82%E5%BF%B5%E5%8F%8A%E5%85%B6%E8%AF%AD%E6%B3%95%E4%B8%8B/</url>
+      
+        <content type="html"><![CDATA[<h4 id="8-1-3JavaScript概念及其语法下"><a href="#8-1-3JavaScript概念及其语法下" class="headerlink" title="8.1.3JavaScript概念及其语法下"></a><center>8.1.3JavaScript概念及其语法下</center></h4><a id="more"></a><h2 id="流程控制语句"><a href="#流程控制语句" class="headerlink" title="流程控制语句"></a>流程控制语句</h2><h3 id="顺序结构"><a href="#顺序结构" class="headerlink" title="顺序结构"></a>顺序结构</h3><h3 id="选择结构"><a href="#选择结构" class="headerlink" title="选择结构"></a>选择结构</h3><p>if switch</p><h3 id="循环结构"><a href="#循环结构" class="headerlink" title="循环结构"></a>循环结构</h3><p>while、do-while、for</p><h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2>]]></content>
+      
+      
+      <categories>
+          
+          <category> html5 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> html </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>8.2字符串对象</title>
+      <link href="/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/8javaScript%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%E5%8F%8AjavaScript%E5%AF%B9%E8%B1%A1/8.2%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%AF%B9%E8%B1%A1/"/>
+      <url>/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/8javaScript%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%E5%8F%8AjavaScript%E5%AF%B9%E8%B1%A1/8.2%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%AF%B9%E8%B1%A1/</url>
+      
+        <content type="html"><![CDATA[<h4 id="8-2字符串对象"><a href="#8-2字符串对象" class="headerlink" title="8.2字符串对象"></a><center>8.2字符串对象</center></h4><a id="more"></a>]]></content>
+      
+      
+      <categories>
+          
+          <category> html5 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> html </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>6.1CSS概述</title>
       <link href="/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/6CSS3%E8%AF%AD%E6%B3%95/6.1CSS%E6%A6%82%E8%BF%B0/"/>
       <url>/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/6CSS3%E8%AF%AD%E6%B3%95/6.1CSS%E6%A6%82%E8%BF%B0/</url>
@@ -417,11 +417,11 @@
     
     
     <entry>
-      <title>8.1.1JavaScript概念及其语法上</title>
-      <link href="/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/8javaScript%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%E5%8F%8AjavaScript%E5%AF%B9%E8%B1%A1/8.1.1JavaScript%E6%A6%82%E5%BF%B5%E5%8F%8A%E5%85%B6%E8%AF%AD%E6%B3%95%E4%B8%8A/"/>
-      <url>/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/8javaScript%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%E5%8F%8AjavaScript%E5%AF%B9%E8%B1%A1/8.1.1JavaScript%E6%A6%82%E5%BF%B5%E5%8F%8A%E5%85%B6%E8%AF%AD%E6%B3%95%E4%B8%8A/</url>
+      <title>7.4.2CSS3-弹性盒布局</title>
+      <link href="/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/7CSS3%E9%A1%B5%E9%9D%A2%E5%B8%83%E5%B1%80/7.4.2CSS3-%E5%BC%B9%E6%80%A7%E7%9B%92%E5%B8%83%E5%B1%80/"/>
+      <url>/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/7CSS3%E9%A1%B5%E9%9D%A2%E5%B8%83%E5%B1%80/7.4.2CSS3-%E5%BC%B9%E6%80%A7%E7%9B%92%E5%B8%83%E5%B1%80/</url>
       
-        <content type="html"><![CDATA[<h4 id="8-1-1JavaScript概念及其语法上"><a href="#8-1-1JavaScript概念及其语法上" class="headerlink" title="8.1.1JavaScript概念及其语法上"></a><center>8.1.1JavaScript概念及其语法上</center></h4><a id="more"></a><h2 id="JavaScript简介"><a href="#JavaScript简介" class="headerlink" title="JavaScript简介"></a>JavaScript简介</h2><p>是一种脚本语言，是动态的、弱类型、基于原型的语言</p><p>特点：</p><ol><li>语法简单，易学易用</li><li>解释性语言</li><li>跨平台</li><li>基于对象和时间驱动</li><li>可用于客户端</li></ol><p>作用：</p><ol><li>动态改变网页内容</li><li>动态改变网页外观</li><li>验证表单数据</li><li>响应事件</li></ol><p>和java的区别：</p><ol><li>java是传统编程语言，javascript是脚本语言</li><li>java语言多用于服务器端，javascript主要用于客户端</li><li>java不能直接嵌入网页运行，javascript程序可以直接嵌入网页运行</li><li>java和javascript语法结构存在差异</li></ol><p>javascript开发和运行环境：</p><p>是一种脚本语言，不需要编译成二进制文件，以文本形式存在，任何编译器都可以作为他的开发环境，通常的开发环境有：记事本、UltraEdit、Dreamwaver</p><h2 id="在HTML5中使用JavaScript"><a href="#在HTML5中使用JavaScript" class="headerlink" title="在HTML5中使用JavaScript"></a>在HTML5中使用JavaScript</h2><p>有两种方法：内嵌式，外链式</p><h3 id="内嵌式"><a href="#内嵌式" class="headerlink" title="内嵌式"></a>内嵌式</h3><p>script标签，放在head标签中</p><h3 id="外链式"><a href="#外链式" class="headerlink" title="外链式"></a>外链式</h3><p>同一段代码需要被多个网页文件所使用的时候，使用外链式</p><h2 id="数据类型与变量"><a href="#数据类型与变量" class="headerlink" title="数据类型与变量"></a>数据类型与变量</h2><h2 id="运算符与表达式"><a href="#运算符与表达式" class="headerlink" title="运算符与表达式"></a>运算符与表达式</h2><h2 id="流程控制语句"><a href="#流程控制语句" class="headerlink" title="流程控制语句"></a>流程控制语句</h2><h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2>]]></content>
+        <content type="html"><![CDATA[<h4 id="7-4-2CSS3-弹性盒布局"><a href="#7-4-2CSS3-弹性盒布局" class="headerlink" title="7.4.2CSS3-弹性盒布局"></a><center>7.4.2CSS3-弹性盒布局</center></h4><a id="more"></a><h2 id="弹性盒布局"><a href="#弹性盒布局" class="headerlink" title="弹性盒布局"></a>弹性盒布局</h2><p>弹性盒是CSS3的一种新布局模式。它是一种当页面需要适应不同的屏幕大小及设备类型时确保元素拥有桥当排列的布局方式</p><ol><li>弹性盒组成<br>弹性容器的定义：选择器{display: flex;}</li><li>弹性容器的布局<br>按照子元素排列的方向不同，有横向和纵向排列两种方式，子元素的方向属性：选择器{flex-flow: 方向值 换行设置;}</li><li>子元素的布局<br>子元素在空间宽度上的分配，由flex属性设置</li></ol>]]></content>
       
       
       <categories>
@@ -467,61 +467,11 @@
     
     
     <entry>
-      <title>7.1网页布局类型及CSS盒模型</title>
-      <link href="/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/7CSS3%E9%A1%B5%E9%9D%A2%E5%B8%83%E5%B1%80/7.1%E7%BD%91%E9%A1%B5%E5%B8%83%E5%B1%80%E7%B1%BB%E5%9E%8B%E5%8F%8ACSS%E7%9B%92%E6%A8%A1%E5%9E%8B/"/>
-      <url>/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/7CSS3%E9%A1%B5%E9%9D%A2%E5%B8%83%E5%B1%80/7.1%E7%BD%91%E9%A1%B5%E5%B8%83%E5%B1%80%E7%B1%BB%E5%9E%8B%E5%8F%8ACSS%E7%9B%92%E6%A8%A1%E5%9E%8B/</url>
-      
-        <content type="html"><![CDATA[<h4 id="7-1网页布局类型及CSS盒模型"><a href="#7-1网页布局类型及CSS盒模型" class="headerlink" title="7.1网页布局类型及CSS盒模型"></a><center>7.1网页布局类型及CSS盒模型</center></h4><a id="more"></a><h2 id="网页布局方式"><a href="#网页布局方式" class="headerlink" title="网页布局方式"></a>网页布局方式</h2><p>网页布局主要是指在页面中如何对标题、导航栏、主要内容、脚注、表单等各种主要构成元素进行一个合理的排版</p><h3 id="网页布局的类型"><a href="#网页布局的类型" class="headerlink" title="网页布局的类型"></a>网页布局的类型</h3><ol><li><p>固定式<br>用固定的宽度设计网页布局尺寸，这种布局有一个设置了固定宽度的外包裹，里面的各个模块也是固定宽度。<br>优点：</p><ol><li>设计师所设计的就是最终用户所看到的</li><li>设计简单，并且容易定制</li><li>在所有的浏览器中的宽度一样，不会收到图片、表单、视频和其他固定宽度的内容影响</li></ol><p>缺点：</p><ol><li>高分辨率式，回留下很大的空白</li><li>屏幕分辨率过小时会出现横向滚动条</li><li>在应该确保至少居中外包裹DIV（margin:0 auto）以保持一种显示平衡，否则对于使用大分辨率的用户，整个页面会被藏到一边去</li></ol></li></ol><ol start="2"><li><p>流式<br>通常被称为液态布局。通常采用相对于分辨率大小的百分比的方式自适应不同的分辨率，可以根据浏览器的宽度和屏幕的大小自动调整效果，灵活多变<br>优点：</p><ol><li>对用户来说更加友好，能部分自适应用户设置</li><li>页面周围的空白区域在所有分辨率和浏览器下都是相同的，在视觉上更美观</li><li>如果设计良好，流动布局可以避免在小分辨率下出现水平滚动条</li></ol><p>缺点：</p><ol><li>设计者需要在不同的分辨率下进行测试才能看到最终的设计效果</li><li>在不同的分辨率下图片或者视频需要不同的素材</li><li>在屏幕分辨率跨度太大时，内容会过大或者过小，变得难以阅读</li></ol></li></ol><ol start="3"><li><p>响应式<br>这是一种糅合了流式布局，再搭配查询技术使用的网页布局方式<br>根据不同的设备平台对内容、媒体文件和布局结构进行相应的调整与优化，从而使为用户提供一种最优且相对统一的体验模式<br>优点：</p><ol><li>面对不同分辨率设备灵活性强</li><li>能够快捷的解决多设备显示适应问题</li></ol><p>缺点：</p><ol><li>兼容各种设备工作量大，效率低下</li><li>代码累赘，会出现隐藏无用的元素，加载时间加长</li><li>一定程度上改变了网站原有的布局结构，会出现用户混淆的情况</li></ol></li></ol><h2 id="DIV-CSS布局技术"><a href="#DIV-CSS布局技术" class="headerlink" title="DIV+CSS布局技术"></a>DIV+CSS布局技术</h2><p>把页面中所有的元素都看成是一个盒子，通过盒子进行CSS样式定义，并借助DIV变迁及其CSS定位实现网页布局</p><h3 id="DIV-CSS布局的方法步骤"><a href="#DIV-CSS布局的方法步骤" class="headerlink" title="DIV+CSS布局的方法步骤"></a>DIV+CSS布局的方法步骤</h3><ol><li>整体上对页面进行分块</li><li>按照分块设计使用DIV标记并定义其样式属性</li><li>对DIV盒子进行定位实现页面布局</li></ol><h3 id="创建DIV"><a href="#创建DIV" class="headerlink" title="创建DIV"></a>创建DIV</h3><p>DIV标签是一个块标签，他将页面内容划分为独立的部分，以实现网页的规划和布局。</p><p>DIV标签可以加入很多的属性，如：id、class、align、style等，在CSS布局设计中，为了设计网页内容和表现的分离，应尽量的减少align、style等属性的编写次数。因此，常用的属性也只有id和class两种了</p><h3 id="CSS盒模型"><a href="#CSS盒模型" class="headerlink" title="CSS盒模型"></a>CSS盒模型</h3><p>是指在页面布局中，为了将页面元素合理有效的组织在一起，形成一套完整的、行之有效的原则和规范</p><p>CSS盒是由margin（外边距）、border（边框）、padding（内边距）、content（内容）四个部分组成，此外，还有高度和宽度两个辅助属性</p><h4 id="content内容区"><a href="#content内容区" class="headerlink" title="content内容区"></a>content内容区</h4><p>是盒子模型的中心，包含了盒子的主要重要信息。包含width、height、overflow三个属性。</p><h5 id="overflower"><a href="#overflower" class="headerlink" title="overflower"></a>overflower</h5><p>overflow主要是指定溢出内容的处理方式</p><table><thead><tr><th>overflow取值</th><th>描述</th></tr></thead><tbody><tr><td>visible</td><td>默认值，溢出的内容不会被修建，会呈现在元素框之外</td></tr><tr><td>hidden</td><td>溢出的内容不可见</td></tr><tr><td>scroll</td><td>溢出的内容会被修建，但是可以通过滚动条来查看隐藏的部分</td></tr><tr><td>auto</td><td>由浏览器决定如何处理溢出部分</td></tr></tbody></table><h5 id="border"><a href="#border" class="headerlink" title="border"></a>border</h5><p>border是指围绕元素内容和内边距的一条或多条线</p><p>border-width：边框宽度</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;border-top-width: 10px&#125;</span><br><span class="line">&#123;border-width: 10px 20px 30px 40px&#125; (上右下左的顺序设置)</span><br><span class="line">如果是三个参数将按上(左右)下的顺序作用到边框上</span><br><span class="line">如果是两个参数的话，按照(上下)(左右)的顺序作用到边框上</span><br><span class="line">如果只有一个参数的时候，四个方向的取值相同</span><br></pre></td></tr></table></figure><p>border-style：边框样式</p><p>border-radius：可以设置四个角的圆角样式</p><p>border-image：对图像边框进行设置</p><h2 id="多列布局方法"><a href="#多列布局方法" class="headerlink" title="多列布局方法"></a>多列布局方法</h2><h2 id="CSS3弹性盒布局"><a href="#CSS3弹性盒布局" class="headerlink" title="CSS3弹性盒布局"></a>CSS3弹性盒布局</h2><h2 id="HTML5的语义化标签及DIV-CSS网页布局技术设计网页"><a href="#HTML5的语义化标签及DIV-CSS网页布局技术设计网页" class="headerlink" title="HTML5的语义化标签及DIV+CSS网页布局技术设计网页"></a>HTML5的语义化标签及DIV+CSS网页布局技术设计网页</h2>]]></content>
-      
-      
-      <categories>
-          
-          <category> html5 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> html </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>6.3在网页中应用CSS的方式</title>
       <link href="/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/6CSS3%E8%AF%AD%E6%B3%95/6.3%E5%9C%A8%E7%BD%91%E9%A1%B5%E4%B8%AD%E5%BA%94%E7%94%A8CSS%E7%9A%84%E6%96%B9%E5%BC%8F/"/>
       <url>/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/6CSS3%E8%AF%AD%E6%B3%95/6.3%E5%9C%A8%E7%BD%91%E9%A1%B5%E4%B8%AD%E5%BA%94%E7%94%A8CSS%E7%9A%84%E6%96%B9%E5%BC%8F/</url>
       
         <content type="html"><![CDATA[<h4 id="6-3在网页中应用CSS的方式"><a href="#6-3在网页中应用CSS的方式" class="headerlink" title="6.3在网页中应用CSS的方式"></a><center>6.3在网页中应用CSS的方式</center></h4><a id="more"></a><h2 id="CSS3应用方法"><a href="#CSS3应用方法" class="headerlink" title="CSS3应用方法"></a>CSS3应用方法</h2><p>CSS样式能够以分离网页内容和样式的形式很好的控制网页的显示。在网页中应用CSS样式有4种方法：</p><ol><li><p>内联式</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">通过标记style属性直接把CSS样式添加到HTML标签中</span><br></pre></td></tr></table></figure><p>语法格式：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;标记名 style=&quot;&quot;&gt;&lt;/标记名&gt;</span><br></pre></td></tr></table></figure></li></ol><ol start="2"><li><p>内嵌式</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">将CSS样式代码添加到HTML文档的&lt;head&gt;头部中，并用&lt;style&gt;标记定义</span><br></pre></td></tr></table></figure><p>语法格式：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;head&gt;</span><br><span class="line">&lt;style type=&quot;text/css&quot;&gt;</span><br><span class="line">选择器&#123;属性&#125;</span><br><span class="line">&lt;/style&gt;</span><br><span class="line">&lt;/head&gt;</span><br></pre></td></tr></table></figure></li></ol><ol start="3"><li><p>链入式</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">将所有的样式放在一个或者多个以.css为扩展名的外部样式表文件中，通过&lt;link /&gt;标记将外部样式表文件链接到HTML文档中</span><br></pre></td></tr></table></figure><p>语法格式：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;head&gt;</span><br><span class="line">&lt;link href=&quot;CSS文件路径&quot; type=&quot;text/css&quot; rel=&quot;stylesheet&quot;/&gt;</span><br><span class="line">&lt;/head&gt;</span><br></pre></td></tr></table></figure></li></ol><ol start="4"><li><p>导入式</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">与链入外部CSS基本相同，都是要创建一个单独的外部CSS文件，再引入到HTML文档中。只不过语法和运作方式略有差别。</span><br></pre></td></tr></table></figure><p>语法格式：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;head&gt;</span><br><span class="line">&lt;style type=&quot;text/css&quot;&gt;</span><br><span class="line">@import url(&quot;外部样式表相对路径&quot;);</span><br><span class="line">&lt;/style&gt;</span><br><span class="line">&lt;/head&gt;</span><br></pre></td></tr></table></figure></li></ol><h3 id="链入式和导入式的区别："><a href="#链入式和导入式的区别：" class="headerlink" title="链入式和导入式的区别："></a>链入式和导入式的区别：</h3><ol><li>隶属关系不同：link属于HTML标签，@import是CSS提供的载入方式</li><li>加载时间及顺序不同：link先将外部的CSS文件加载到网页中，然后再进行编译显示。而@import是浏览器先将HTML结构呈现出来，再把外部的CSS文件加载到网页中，当网速较慢的时候会先显示没有CSS的效果，加载完毕再渲染画面</li><li>兼容性不同@import只有IE5以上的版本才能识别，而link标签没有这个问题</li><li>DOM模型控制样式：使用JavaScript控制DOM改变样式时，只能使用link标签，而@import不受DOM模型的影响</li></ol>]]></content>
-      
-      
-      <categories>
-          
-          <category> html5 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> html </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>7.2网页元素的定位</title>
-      <link href="/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/7CSS3%E9%A1%B5%E9%9D%A2%E5%B8%83%E5%B1%80/7.2%E7%BD%91%E9%A1%B5%E5%85%83%E7%B4%A0%E7%9A%84%E5%AE%9A%E4%BD%8D/"/>
-      <url>/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/7CSS3%E9%A1%B5%E9%9D%A2%E5%B8%83%E5%B1%80/7.2%E7%BD%91%E9%A1%B5%E5%85%83%E7%B4%A0%E7%9A%84%E5%AE%9A%E4%BD%8D/</url>
-      
-        <content type="html"><![CDATA[<h4 id="7-2网页元素的定位"><a href="#7-2网页元素的定位" class="headerlink" title="7.2网页元素的定位"></a><center>7.2网页元素的定位</center></h4><a id="more"></a><h2 id="网页元素的定位"><a href="#网页元素的定位" class="headerlink" title="网页元素的定位"></a>网页元素的定位</h2><p>CSS有三种基本的定位机制：普通流、浮动和绝对定位</p><ol><li>普通流：相当于默认</li><li>浮动：float属性定位</li><li>绝对定位：position属性定位</li></ol><h3 id="浮动"><a href="#浮动" class="headerlink" title="浮动"></a>浮动</h3><p>基本语法格式：选择器{float: 属性值;}</p><p>属性值：</p><table><thead><tr><th>属性值</th><th>描述</th></tr></thead><tbody><tr><td>left</td><td>元素向左浮动</td></tr><tr><td>right</td><td>元素向右浮动</td></tr><tr><td>none</td><td>元素不浮动（默认）</td></tr></tbody></table><p>浮动元素不再占用原文档流中的位置，所以会对其他元素排版产生影响，我们需要对元素清除浮动，基本语法格式：选择器{clear: 属性值};。它的属性值：</p><table><thead><tr><th>属性值</th><th>描述</th></tr></thead><tbody><tr><td>left</td><td>不允许左侧有浮动的元素</td></tr><tr><td>right</td><td>不允许右侧有浮动的元素</td></tr><tr><td>both</td><td>清除两侧的浮动元素影响</td></tr></tbody></table><h3 id="绝对定位"><a href="#绝对定位" class="headerlink" title="绝对定位"></a>绝对定位</h3><p>通过CSS定位设置可以实现网页元素的精确定位，定位属性包括定位模式和边偏移两部分，语法格式：选择器{position: 属性值};。属性值：</p><table><thead><tr><th>属性值</th><th>描述</th></tr></thead><tbody><tr><td>static</td><td>自动定位 默认</td></tr><tr><td>relative</td><td>相对定位，相对于其他原文档流位置进行定位</td></tr><tr><td>absolute</td><td>绝对定位，相对于上一个已经确定的父元素进行定位</td></tr><tr><td>fixed</td><td>固定定位，相对于浏览器窗口进行定位</td></tr></tbody></table><h2 id="设计导航栏"><a href="#设计导航栏" class="headerlink" title="设计导航栏"></a>设计导航栏</h2><p>用ul和li制作导航栏</p><ol><li>去掉项目符号可以使用text-decoration:none或者list-style-type:none</li><li>将列表项改为行排列，即内联行显示，可添加属性display:inline或者display:inline-block;</li></ol>]]></content>
       
       
       <categories>
@@ -567,11 +517,11 @@
     
     
     <entry>
-      <title>7.3DIV+CSS网页布局</title>
-      <link href="/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/7CSS3%E9%A1%B5%E9%9D%A2%E5%B8%83%E5%B1%80/7.3DIV+CSS%E7%BD%91%E9%A1%B5%E5%B8%83%E5%B1%80/"/>
-      <url>/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/7CSS3%E9%A1%B5%E9%9D%A2%E5%B8%83%E5%B1%80/7.3DIV+CSS%E7%BD%91%E9%A1%B5%E5%B8%83%E5%B1%80/</url>
+      <title>7.2网页元素的定位</title>
+      <link href="/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/7CSS3%E9%A1%B5%E9%9D%A2%E5%B8%83%E5%B1%80/7.2%E7%BD%91%E9%A1%B5%E5%85%83%E7%B4%A0%E7%9A%84%E5%AE%9A%E4%BD%8D/"/>
+      <url>/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/7CSS3%E9%A1%B5%E9%9D%A2%E5%B8%83%E5%B1%80/7.2%E7%BD%91%E9%A1%B5%E5%85%83%E7%B4%A0%E7%9A%84%E5%AE%9A%E4%BD%8D/</url>
       
-        <content type="html"><![CDATA[<h4 id="7-3DIV-CSS网页布局"><a href="#7-3DIV-CSS网页布局" class="headerlink" title="7.3DIV+CSS网页布局"></a><center>7.3DIV+CSS网页布局</center></h4><a id="more"></a><h2 id="DIV-CSS网页布局名词解释"><a href="#DIV-CSS网页布局名词解释" class="headerlink" title="DIV+CSS网页布局名词解释"></a>DIV+CSS网页布局名词解释</h2><p>核心是盒子模型，通过对盒子进行CSS样式定义，借助CSS对盒子定位，这样就称为DIV+CSS布局</p><h3 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h3><p>header、nav、aside、article</p><h2 id="为什么使用DIV-CSS"><a href="#为什么使用DIV-CSS" class="headerlink" title="为什么使用DIV+CSS"></a>为什么使用DIV+CSS</h2><h3 id="这样布局的优点"><a href="#这样布局的优点" class="headerlink" title="这样布局的优点"></a>这样布局的优点</h3><ol><li>利于搜索引擎的检索和排名</li><li>代码精简，网页加载更快</li><li>定位更准确</li><li>更容易被其他设备访问</li></ol><h2 id="如何进行DIV-CSS布局"><a href="#如何进行DIV-CSS布局" class="headerlink" title="如何进行DIV+CSS布局"></a>如何进行DIV+CSS布局</h2><p>四个步骤：</p><ol><li>整体上对页面进行分块</li><li>按照分块的设计使用DIV标记，包裹区块元素，设计HTML的主体内容</li><li>编辑CSS，设计盒子的定位及在盒中的元素样式</li><li>连编</li></ol><h2 id="DIV-CSS实例"><a href="#DIV-CSS实例" class="headerlink" title="DIV+CSS实例"></a>DIV+CSS实例</h2><h3 id="常见的布局形式"><a href="#常见的布局形式" class="headerlink" title="常见的布局形式"></a>常见的布局形式</h3><p>单列布局：header、article、footer</p><p>1-2-1布局：header、article、aside、footer</p><p>1-3-1布局：header、article、aside、aside、footer</p>]]></content>
+        <content type="html"><![CDATA[<h4 id="7-2网页元素的定位"><a href="#7-2网页元素的定位" class="headerlink" title="7.2网页元素的定位"></a><center>7.2网页元素的定位</center></h4><a id="more"></a><h2 id="网页元素的定位"><a href="#网页元素的定位" class="headerlink" title="网页元素的定位"></a>网页元素的定位</h2><p>CSS有三种基本的定位机制：普通流、浮动和绝对定位</p><ol><li>普通流：相当于默认</li><li>浮动：float属性定位</li><li>绝对定位：position属性定位</li></ol><h3 id="浮动"><a href="#浮动" class="headerlink" title="浮动"></a>浮动</h3><p>基本语法格式：选择器{float: 属性值;}</p><p>属性值：</p><table><thead><tr><th>属性值</th><th>描述</th></tr></thead><tbody><tr><td>left</td><td>元素向左浮动</td></tr><tr><td>right</td><td>元素向右浮动</td></tr><tr><td>none</td><td>元素不浮动（默认）</td></tr></tbody></table><p>浮动元素不再占用原文档流中的位置，所以会对其他元素排版产生影响，我们需要对元素清除浮动，基本语法格式：选择器{clear: 属性值};。它的属性值：</p><table><thead><tr><th>属性值</th><th>描述</th></tr></thead><tbody><tr><td>left</td><td>不允许左侧有浮动的元素</td></tr><tr><td>right</td><td>不允许右侧有浮动的元素</td></tr><tr><td>both</td><td>清除两侧的浮动元素影响</td></tr></tbody></table><h3 id="绝对定位"><a href="#绝对定位" class="headerlink" title="绝对定位"></a>绝对定位</h3><p>通过CSS定位设置可以实现网页元素的精确定位，定位属性包括定位模式和边偏移两部分，语法格式：选择器{position: 属性值};。属性值：</p><table><thead><tr><th>属性值</th><th>描述</th></tr></thead><tbody><tr><td>static</td><td>自动定位 默认</td></tr><tr><td>relative</td><td>相对定位，相对于其他原文档流位置进行定位</td></tr><tr><td>absolute</td><td>绝对定位，相对于上一个已经确定的父元素进行定位</td></tr><tr><td>fixed</td><td>固定定位，相对于浏览器窗口进行定位</td></tr></tbody></table><h2 id="设计导航栏"><a href="#设计导航栏" class="headerlink" title="设计导航栏"></a>设计导航栏</h2><p>用ul和li制作导航栏</p><ol><li>去掉项目符号可以使用text-decoration:none或者list-style-type:none</li><li>将列表项改为行排列，即内联行显示，可添加属性display:inline或者display:inline-block;</li></ol>]]></content>
       
       
       <categories>
@@ -592,11 +542,36 @@
     
     
     <entry>
-      <title>7.4.1CSS3-多列布局</title>
-      <link href="/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/7CSS3%E9%A1%B5%E9%9D%A2%E5%B8%83%E5%B1%80/7.4.1CSS3-%E5%A4%9A%E5%88%97%E5%B8%83%E5%B1%80/"/>
-      <url>/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/7CSS3%E9%A1%B5%E9%9D%A2%E5%B8%83%E5%B1%80/7.4.1CSS3-%E5%A4%9A%E5%88%97%E5%B8%83%E5%B1%80/</url>
+      <title>7.1网页布局类型及CSS盒模型</title>
+      <link href="/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/7CSS3%E9%A1%B5%E9%9D%A2%E5%B8%83%E5%B1%80/7.1%E7%BD%91%E9%A1%B5%E5%B8%83%E5%B1%80%E7%B1%BB%E5%9E%8B%E5%8F%8ACSS%E7%9B%92%E6%A8%A1%E5%9E%8B/"/>
+      <url>/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/7CSS3%E9%A1%B5%E9%9D%A2%E5%B8%83%E5%B1%80/7.1%E7%BD%91%E9%A1%B5%E5%B8%83%E5%B1%80%E7%B1%BB%E5%9E%8B%E5%8F%8ACSS%E7%9B%92%E6%A8%A1%E5%9E%8B/</url>
       
-        <content type="html"><![CDATA[<h4 id="7-4-1CSS3-多列布局"><a href="#7-4-1CSS3-多列布局" class="headerlink" title="7.4.1CSS3-多列布局"></a><center>7.4.1CSS3-多列布局</center></h4><a id="more"></a><h2 id="多列布局"><a href="#多列布局" class="headerlink" title="多列布局"></a>多列布局</h2><p>像报纸一样</p><p>让Web页面呈现多栏多列叫多列布局</p><ol><li>分栏数<br>CSS3中通过columns属性设置分栏</li><li>列间修饰<br>columns-gap设置列间距<br>columns-rule设置列间宽度、样式和颜色</li><li>横跨多列<br>columns-span默认1，跨多少列</li></ol>]]></content>
+        <content type="html"><![CDATA[<h4 id="7-1网页布局类型及CSS盒模型"><a href="#7-1网页布局类型及CSS盒模型" class="headerlink" title="7.1网页布局类型及CSS盒模型"></a><center>7.1网页布局类型及CSS盒模型</center></h4><a id="more"></a><h2 id="网页布局方式"><a href="#网页布局方式" class="headerlink" title="网页布局方式"></a>网页布局方式</h2><p>网页布局主要是指在页面中如何对标题、导航栏、主要内容、脚注、表单等各种主要构成元素进行一个合理的排版</p><h3 id="网页布局的类型"><a href="#网页布局的类型" class="headerlink" title="网页布局的类型"></a>网页布局的类型</h3><ol><li><p>固定式<br>用固定的宽度设计网页布局尺寸，这种布局有一个设置了固定宽度的外包裹，里面的各个模块也是固定宽度。<br>优点：</p><ol><li>设计师所设计的就是最终用户所看到的</li><li>设计简单，并且容易定制</li><li>在所有的浏览器中的宽度一样，不会收到图片、表单、视频和其他固定宽度的内容影响</li></ol><p>缺点：</p><ol><li>高分辨率式，回留下很大的空白</li><li>屏幕分辨率过小时会出现横向滚动条</li><li>在应该确保至少居中外包裹DIV（margin:0 auto）以保持一种显示平衡，否则对于使用大分辨率的用户，整个页面会被藏到一边去</li></ol></li></ol><ol start="2"><li><p>流式<br>通常被称为液态布局。通常采用相对于分辨率大小的百分比的方式自适应不同的分辨率，可以根据浏览器的宽度和屏幕的大小自动调整效果，灵活多变<br>优点：</p><ol><li>对用户来说更加友好，能部分自适应用户设置</li><li>页面周围的空白区域在所有分辨率和浏览器下都是相同的，在视觉上更美观</li><li>如果设计良好，流动布局可以避免在小分辨率下出现水平滚动条</li></ol><p>缺点：</p><ol><li>设计者需要在不同的分辨率下进行测试才能看到最终的设计效果</li><li>在不同的分辨率下图片或者视频需要不同的素材</li><li>在屏幕分辨率跨度太大时，内容会过大或者过小，变得难以阅读</li></ol></li></ol><ol start="3"><li><p>响应式<br>这是一种糅合了流式布局，再搭配查询技术使用的网页布局方式<br>根据不同的设备平台对内容、媒体文件和布局结构进行相应的调整与优化，从而使为用户提供一种最优且相对统一的体验模式<br>优点：</p><ol><li>面对不同分辨率设备灵活性强</li><li>能够快捷的解决多设备显示适应问题</li></ol><p>缺点：</p><ol><li>兼容各种设备工作量大，效率低下</li><li>代码累赘，会出现隐藏无用的元素，加载时间加长</li><li>一定程度上改变了网站原有的布局结构，会出现用户混淆的情况</li></ol></li></ol><h2 id="DIV-CSS布局技术"><a href="#DIV-CSS布局技术" class="headerlink" title="DIV+CSS布局技术"></a>DIV+CSS布局技术</h2><p>把页面中所有的元素都看成是一个盒子，通过盒子进行CSS样式定义，并借助DIV变迁及其CSS定位实现网页布局</p><h3 id="DIV-CSS布局的方法步骤"><a href="#DIV-CSS布局的方法步骤" class="headerlink" title="DIV+CSS布局的方法步骤"></a>DIV+CSS布局的方法步骤</h3><ol><li>整体上对页面进行分块</li><li>按照分块设计使用DIV标记并定义其样式属性</li><li>对DIV盒子进行定位实现页面布局</li></ol><h3 id="创建DIV"><a href="#创建DIV" class="headerlink" title="创建DIV"></a>创建DIV</h3><p>DIV标签是一个块标签，他将页面内容划分为独立的部分，以实现网页的规划和布局。</p><p>DIV标签可以加入很多的属性，如：id、class、align、style等，在CSS布局设计中，为了设计网页内容和表现的分离，应尽量的减少align、style等属性的编写次数。因此，常用的属性也只有id和class两种了</p><h3 id="CSS盒模型"><a href="#CSS盒模型" class="headerlink" title="CSS盒模型"></a>CSS盒模型</h3><p>是指在页面布局中，为了将页面元素合理有效的组织在一起，形成一套完整的、行之有效的原则和规范</p><p>CSS盒是由margin（外边距）、border（边框）、padding（内边距）、content（内容）四个部分组成，此外，还有高度和宽度两个辅助属性</p><h4 id="content内容区"><a href="#content内容区" class="headerlink" title="content内容区"></a>content内容区</h4><p>是盒子模型的中心，包含了盒子的主要重要信息。包含width、height、overflow三个属性。</p><h5 id="overflower"><a href="#overflower" class="headerlink" title="overflower"></a>overflower</h5><p>overflow主要是指定溢出内容的处理方式</p><table><thead><tr><th>overflow取值</th><th>描述</th></tr></thead><tbody><tr><td>visible</td><td>默认值，溢出的内容不会被修建，会呈现在元素框之外</td></tr><tr><td>hidden</td><td>溢出的内容不可见</td></tr><tr><td>scroll</td><td>溢出的内容会被修建，但是可以通过滚动条来查看隐藏的部分</td></tr><tr><td>auto</td><td>由浏览器决定如何处理溢出部分</td></tr></tbody></table><h5 id="border"><a href="#border" class="headerlink" title="border"></a>border</h5><p>border是指围绕元素内容和内边距的一条或多条线</p><p>border-width：边框宽度</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;border-top-width: 10px&#125;</span><br><span class="line">&#123;border-width: 10px 20px 30px 40px&#125; (上右下左的顺序设置)</span><br><span class="line">如果是三个参数将按上(左右)下的顺序作用到边框上</span><br><span class="line">如果是两个参数的话，按照(上下)(左右)的顺序作用到边框上</span><br><span class="line">如果只有一个参数的时候，四个方向的取值相同</span><br></pre></td></tr></table></figure><p>border-style：边框样式</p><p>border-radius：可以设置四个角的圆角样式</p><p>border-image：对图像边框进行设置</p><h2 id="多列布局方法"><a href="#多列布局方法" class="headerlink" title="多列布局方法"></a>多列布局方法</h2><h2 id="CSS3弹性盒布局"><a href="#CSS3弹性盒布局" class="headerlink" title="CSS3弹性盒布局"></a>CSS3弹性盒布局</h2><h2 id="HTML5的语义化标签及DIV-CSS网页布局技术设计网页"><a href="#HTML5的语义化标签及DIV-CSS网页布局技术设计网页" class="headerlink" title="HTML5的语义化标签及DIV+CSS网页布局技术设计网页"></a>HTML5的语义化标签及DIV+CSS网页布局技术设计网页</h2>]]></content>
+      
+      
+      <categories>
+          
+          <category> html5 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> html </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>7.3DIV+CSS网页布局</title>
+      <link href="/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/7CSS3%E9%A1%B5%E9%9D%A2%E5%B8%83%E5%B1%80/7.3DIV+CSS%E7%BD%91%E9%A1%B5%E5%B8%83%E5%B1%80/"/>
+      <url>/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/7CSS3%E9%A1%B5%E9%9D%A2%E5%B8%83%E5%B1%80/7.3DIV+CSS%E7%BD%91%E9%A1%B5%E5%B8%83%E5%B1%80/</url>
+      
+        <content type="html"><![CDATA[<h4 id="7-3DIV-CSS网页布局"><a href="#7-3DIV-CSS网页布局" class="headerlink" title="7.3DIV+CSS网页布局"></a><center>7.3DIV+CSS网页布局</center></h4><a id="more"></a><h2 id="DIV-CSS网页布局名词解释"><a href="#DIV-CSS网页布局名词解释" class="headerlink" title="DIV+CSS网页布局名词解释"></a>DIV+CSS网页布局名词解释</h2><p>核心是盒子模型，通过对盒子进行CSS样式定义，借助CSS对盒子定位，这样就称为DIV+CSS布局</p><h3 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h3><p>header、nav、aside、article</p><h2 id="为什么使用DIV-CSS"><a href="#为什么使用DIV-CSS" class="headerlink" title="为什么使用DIV+CSS"></a>为什么使用DIV+CSS</h2><h3 id="这样布局的优点"><a href="#这样布局的优点" class="headerlink" title="这样布局的优点"></a>这样布局的优点</h3><ol><li>利于搜索引擎的检索和排名</li><li>代码精简，网页加载更快</li><li>定位更准确</li><li>更容易被其他设备访问</li></ol><h2 id="如何进行DIV-CSS布局"><a href="#如何进行DIV-CSS布局" class="headerlink" title="如何进行DIV+CSS布局"></a>如何进行DIV+CSS布局</h2><p>四个步骤：</p><ol><li>整体上对页面进行分块</li><li>按照分块的设计使用DIV标记，包裹区块元素，设计HTML的主体内容</li><li>编辑CSS，设计盒子的定位及在盒中的元素样式</li><li>连编</li></ol><h2 id="DIV-CSS实例"><a href="#DIV-CSS实例" class="headerlink" title="DIV+CSS实例"></a>DIV+CSS实例</h2><h3 id="常见的布局形式"><a href="#常见的布局形式" class="headerlink" title="常见的布局形式"></a>常见的布局形式</h3><p>单列布局：header、article、footer</p><p>1-2-1布局：header、article、aside、footer</p><p>1-3-1布局：header、article、aside、aside、footer</p>]]></content>
       
       
       <categories>
@@ -642,11 +617,11 @@
     
     
     <entry>
-      <title>7.4.2CSS3-弹性盒布局</title>
-      <link href="/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/7CSS3%E9%A1%B5%E9%9D%A2%E5%B8%83%E5%B1%80/7.4.2CSS3-%E5%BC%B9%E6%80%A7%E7%9B%92%E5%B8%83%E5%B1%80/"/>
-      <url>/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/7CSS3%E9%A1%B5%E9%9D%A2%E5%B8%83%E5%B1%80/7.4.2CSS3-%E5%BC%B9%E6%80%A7%E7%9B%92%E5%B8%83%E5%B1%80/</url>
+      <title>7.4.1CSS3-多列布局</title>
+      <link href="/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/7CSS3%E9%A1%B5%E9%9D%A2%E5%B8%83%E5%B1%80/7.4.1CSS3-%E5%A4%9A%E5%88%97%E5%B8%83%E5%B1%80/"/>
+      <url>/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/7CSS3%E9%A1%B5%E9%9D%A2%E5%B8%83%E5%B1%80/7.4.1CSS3-%E5%A4%9A%E5%88%97%E5%B8%83%E5%B1%80/</url>
       
-        <content type="html"><![CDATA[<h4 id="7-4-2CSS3-弹性盒布局"><a href="#7-4-2CSS3-弹性盒布局" class="headerlink" title="7.4.2CSS3-弹性盒布局"></a><center>7.4.2CSS3-弹性盒布局</center></h4><a id="more"></a><h2 id="弹性盒布局"><a href="#弹性盒布局" class="headerlink" title="弹性盒布局"></a>弹性盒布局</h2><p>弹性盒是CSS3的一种新布局模式。它是一种当页面需要适应不同的屏幕大小及设备类型时确保元素拥有桥当排列的布局方式</p><ol><li>弹性盒组成<br>弹性容器的定义：选择器{display: flex;}</li><li>弹性容器的布局<br>按照子元素排列的方向不同，有横向和纵向排列两种方式，子元素的方向属性：选择器{flex-flow: 方向值 换行设置;}</li><li>子元素的布局<br>子元素在空间宽度上的分配，由flex属性设置</li></ol>]]></content>
+        <content type="html"><![CDATA[<h4 id="7-4-1CSS3-多列布局"><a href="#7-4-1CSS3-多列布局" class="headerlink" title="7.4.1CSS3-多列布局"></a><center>7.4.1CSS3-多列布局</center></h4><a id="more"></a><h2 id="多列布局"><a href="#多列布局" class="headerlink" title="多列布局"></a>多列布局</h2><p>像报纸一样</p><p>让Web页面呈现多栏多列叫多列布局</p><ol><li>分栏数<br>CSS3中通过columns属性设置分栏</li><li>列间修饰<br>columns-gap设置列间距<br>columns-rule设置列间宽度、样式和颜色</li><li>横跨多列<br>columns-span默认1，跨多少列</li></ol>]]></content>
       
       
       <categories>
@@ -717,6 +692,31 @@
     
     
     <entry>
+      <title>8.1.1JavaScript概念及其语法上</title>
+      <link href="/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/8javaScript%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%E5%8F%8AjavaScript%E5%AF%B9%E8%B1%A1/8.1.1JavaScript%E6%A6%82%E5%BF%B5%E5%8F%8A%E5%85%B6%E8%AF%AD%E6%B3%95%E4%B8%8A/"/>
+      <url>/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/8javaScript%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%E5%8F%8AjavaScript%E5%AF%B9%E8%B1%A1/8.1.1JavaScript%E6%A6%82%E5%BF%B5%E5%8F%8A%E5%85%B6%E8%AF%AD%E6%B3%95%E4%B8%8A/</url>
+      
+        <content type="html"><![CDATA[<h4 id="8-1-1JavaScript概念及其语法上"><a href="#8-1-1JavaScript概念及其语法上" class="headerlink" title="8.1.1JavaScript概念及其语法上"></a><center>8.1.1JavaScript概念及其语法上</center></h4><a id="more"></a><h2 id="JavaScript简介"><a href="#JavaScript简介" class="headerlink" title="JavaScript简介"></a>JavaScript简介</h2><p>是一种脚本语言，是动态的、弱类型、基于原型的语言</p><p>特点：</p><ol><li>语法简单，易学易用</li><li>解释性语言</li><li>跨平台</li><li>基于对象和时间驱动</li><li>可用于客户端</li></ol><p>作用：</p><ol><li>动态改变网页内容</li><li>动态改变网页外观</li><li>验证表单数据</li><li>响应事件</li></ol><p>和java的区别：</p><ol><li>java是传统编程语言，javascript是脚本语言</li><li>java语言多用于服务器端，javascript主要用于客户端</li><li>java不能直接嵌入网页运行，javascript程序可以直接嵌入网页运行</li><li>java和javascript语法结构存在差异</li></ol><p>javascript开发和运行环境：</p><p>是一种脚本语言，不需要编译成二进制文件，以文本形式存在，任何编译器都可以作为他的开发环境，通常的开发环境有：记事本、UltraEdit、Dreamwaver</p><h2 id="在HTML5中使用JavaScript"><a href="#在HTML5中使用JavaScript" class="headerlink" title="在HTML5中使用JavaScript"></a>在HTML5中使用JavaScript</h2><p>有两种方法：内嵌式，外链式</p><h3 id="内嵌式"><a href="#内嵌式" class="headerlink" title="内嵌式"></a>内嵌式</h3><p>script标签，放在head标签中</p><h3 id="外链式"><a href="#外链式" class="headerlink" title="外链式"></a>外链式</h3><p>同一段代码需要被多个网页文件所使用的时候，使用外链式</p><h2 id="数据类型与变量"><a href="#数据类型与变量" class="headerlink" title="数据类型与变量"></a>数据类型与变量</h2><h2 id="运算符与表达式"><a href="#运算符与表达式" class="headerlink" title="运算符与表达式"></a>运算符与表达式</h2><h2 id="流程控制语句"><a href="#流程控制语句" class="headerlink" title="流程控制语句"></a>流程控制语句</h2><h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2>]]></content>
+      
+      
+      <categories>
+          
+          <category> html5 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> html </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>5.1HTML5中的音频与视频</title>
       <link href="/2020/11/03/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/5%E9%9F%B3%E9%A2%91%E4%B8%8E%E8%A7%86%E9%A2%91/5.1HTML5%E4%B8%AD%E7%9A%84%E9%9F%B3%E9%A2%91%E4%B8%8E%E8%A7%86%E9%A2%91/"/>
       <url>/2020/11/03/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/5%E9%9F%B3%E9%A2%91%E4%B8%8E%E8%A7%86%E9%A2%91/5.1HTML5%E4%B8%AD%E7%9A%84%E9%9F%B3%E9%A2%91%E4%B8%8E%E8%A7%86%E9%A2%91/</url>
@@ -742,11 +742,11 @@
     
     
     <entry>
-      <title>4.2表单的控件</title>
-      <link href="/2020/11/03/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/4%E6%9E%84%E5%BB%BAWeb%E8%A1%A8%E5%8D%95/4.2%E8%A1%A8%E5%8D%95%E7%9A%84%E6%8E%A7%E4%BB%B6/"/>
-      <url>/2020/11/03/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/4%E6%9E%84%E5%BB%BAWeb%E8%A1%A8%E5%8D%95/4.2%E8%A1%A8%E5%8D%95%E7%9A%84%E6%8E%A7%E4%BB%B6/</url>
+      <title>4.1表单结构及表单控件</title>
+      <link href="/2020/11/03/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/4%E6%9E%84%E5%BB%BAWeb%E8%A1%A8%E5%8D%95/4.1%E8%A1%A8%E5%8D%95%E7%BB%93%E6%9E%84%E5%8F%8A%E8%A1%A8%E5%8D%95%E6%8E%A7%E4%BB%B6/"/>
+      <url>/2020/11/03/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/4%E6%9E%84%E5%BB%BAWeb%E8%A1%A8%E5%8D%95/4.1%E8%A1%A8%E5%8D%95%E7%BB%93%E6%9E%84%E5%8F%8A%E8%A1%A8%E5%8D%95%E6%8E%A7%E4%BB%B6/</url>
       
-        <content type="html"><![CDATA[<h4 id="4-2表单的控件"><a href="#4-2表单的控件" class="headerlink" title="4.2表单的控件"></a><center>4.2表单的控件</center></h4><a id="more"></a><h2 id="input控件"><a href="#input控件" class="headerlink" title="input控件"></a>input控件</h2><p>定义单行文本输入框、单选按钮、复选框、提交按钮、重置按钮等，要使用input控件</p><h3 id="常见的属性"><a href="#常见的属性" class="headerlink" title="常见的属性"></a>常见的属性</h3><ol><li><p>type：控件类型</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">取值：text、password、radio、checkbox、button、submit、reset、file image、hidden</span><br></pre></td></tr></table></figure></li><li><p>name：控件名称</p></li><li><p>value：控件中的默认文本</p></li><li><p>size：控件名称在页面中显示宽度</p></li><li><p>readonly：控件内容为只读</p></li><li><p>disabled：首次加载的页面时是否禁用该控件（显示为灰色）</p></li><li><p>checked：定义选择控件默认值被选中</p></li><li><p>maxlength：控件允许输入最多的字符数</p></li></ol><h2 id="textarea控件"><a href="#textarea控件" class="headerlink" title="textarea控件"></a>textarea控件</h2><p>可以创建多行文本输入框</p><h3 id="testarea基本语法"><a href="#testarea基本语法" class="headerlink" title="testarea基本语法"></a>testarea基本语法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;textarea cols=&quot;每行中的字符数&quot; rows=&quot;显示的行数&quot; wrap=&quot;   &quot;&gt;文本内容&lt;/testarea&gt;</span><br></pre></td></tr></table></figure><p>wrap是html5中的新属性：属性取值：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">soft：当在表单提交时，textarea中的文本不换行。默认值</span><br><span class="line">hard：当在表单提交时，textarea中的文本换行</span><br></pre></td></tr></table></figure><h2 id="select控件"><a href="#select控件" class="headerlink" title="select控件"></a>select控件</h2><p>创建一个选择框</p><h3 id="select基本语法"><a href="#select基本语法" class="headerlink" title="select基本语法"></a>select基本语法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;select name=&quot;控件名称&quot; size=&quot;表示可见选项的数目&quot; multiple(设定为多选)&gt;</span><br><span class="line">&lt;option value=&quot;选项值&quot; selected(默认该选项被选中)&gt;  (表示指定区域中的一个选项)</span><br><span class="line"></span><br><span class="line">&lt;/option&gt;</span><br><span class="line">&lt;/select&gt;</span><br></pre></td></tr></table></figure><table><thead><tr><th>标签</th><th>标签功能</th><th>用到的属性</th><th>效果说明</th></tr></thead><tbody><tr><td>marquee</td><td>使标签中的内容滚动</td><td>bgcolor，direction，behavior</td><td>bgcolor代表滚动范围背景颜色；direction代表滚动方向；behavior代表滚动的方式</td></tr><tr><td>table</td><td>形成一个表格</td><td>tr,th,td</td><td>tr定义行；td定义每行的单元格；th用来定义标题栏</td></tr></tbody></table>]]></content>
+        <content type="html"><![CDATA[<h4 id="表单结构及表单控件"><a href="#表单结构及表单控件" class="headerlink" title="表单结构及表单控件"></a><center>表单结构及表单控件</center></h4><a id="more"></a><h2 id="什么是表单"><a href="#什么是表单" class="headerlink" title="什么是表单"></a>什么是表单</h2><h3 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h3><p>登陆、电商注册、快递查询</p><h2 id="表单的主要功能"><a href="#表单的主要功能" class="headerlink" title="表单的主要功能"></a>表单的主要功能</h2><h3 id="提示信息"><a href="#提示信息" class="headerlink" title="提示信息"></a>提示信息</h3><p>一个表单通常需要包含一些说明性的文字，提示用户进行填写和操作</p><h3 id="表单控件"><a href="#表单控件" class="headerlink" title="表单控件"></a>表单控件</h3><p>具体表单的功能项，如单行文本输入框，密码输入框、复选框、提交按钮、重置按钮等</p><h3 id="表单域"><a href="#表单域" class="headerlink" title="表单域"></a>表单域</h3><p>相当于一个容器，用来容纳所有的表单控件和提示信息</p><h2 id="表单的结构"><a href="#表单的结构" class="headerlink" title="表单的结构"></a>表单的结构</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;from action=&quot;url地址&quot; method=&quot;提交方式&quot; name=&quot;表单名称&quot;&gt;</span><br><span class="line">各种表单控件</span><br><span class="line">&lt;/from&gt;</span><br></pre></td></tr></table></figure><h3 id="name"><a href="#name" class="headerlink" title="name"></a>name</h3><p>用来区别一个页面内的不同表单</p><h3 id="action"><a href="#action" class="headerlink" title="action"></a>action</h3><p>用于指定接收并处理表单数据的服务器程序的url地址</p><h3 id="method"><a href="#method" class="headerlink" title="method"></a>method</h3><p>用于设置表单数据的提交方式，其取值为get或者post</p><h2 id="表单控件-1"><a href="#表单控件-1" class="headerlink" title="表单控件"></a>表单控件</h2><p>表单控件是表单的核心内容，不同的表单控件具有不同的功能，如密码输入框、文本域、下拉列表、复选框等，只有掌握了这些控件的使用方法才能正确的创建表单</p>]]></content>
       
       
       <categories>
@@ -767,11 +767,11 @@
     
     
     <entry>
-      <title>4.1表单结构及表单控件</title>
-      <link href="/2020/11/03/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/4%E6%9E%84%E5%BB%BAWeb%E8%A1%A8%E5%8D%95/4.1%E8%A1%A8%E5%8D%95%E7%BB%93%E6%9E%84%E5%8F%8A%E8%A1%A8%E5%8D%95%E6%8E%A7%E4%BB%B6/"/>
-      <url>/2020/11/03/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/4%E6%9E%84%E5%BB%BAWeb%E8%A1%A8%E5%8D%95/4.1%E8%A1%A8%E5%8D%95%E7%BB%93%E6%9E%84%E5%8F%8A%E8%A1%A8%E5%8D%95%E6%8E%A7%E4%BB%B6/</url>
+      <title>4.2表单的控件</title>
+      <link href="/2020/11/03/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/4%E6%9E%84%E5%BB%BAWeb%E8%A1%A8%E5%8D%95/4.2%E8%A1%A8%E5%8D%95%E7%9A%84%E6%8E%A7%E4%BB%B6/"/>
+      <url>/2020/11/03/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/4%E6%9E%84%E5%BB%BAWeb%E8%A1%A8%E5%8D%95/4.2%E8%A1%A8%E5%8D%95%E7%9A%84%E6%8E%A7%E4%BB%B6/</url>
       
-        <content type="html"><![CDATA[<h4 id="表单结构及表单控件"><a href="#表单结构及表单控件" class="headerlink" title="表单结构及表单控件"></a><center>表单结构及表单控件</center></h4><a id="more"></a><h2 id="什么是表单"><a href="#什么是表单" class="headerlink" title="什么是表单"></a>什么是表单</h2><h3 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h3><p>登陆、电商注册、快递查询</p><h2 id="表单的主要功能"><a href="#表单的主要功能" class="headerlink" title="表单的主要功能"></a>表单的主要功能</h2><h3 id="提示信息"><a href="#提示信息" class="headerlink" title="提示信息"></a>提示信息</h3><p>一个表单通常需要包含一些说明性的文字，提示用户进行填写和操作</p><h3 id="表单控件"><a href="#表单控件" class="headerlink" title="表单控件"></a>表单控件</h3><p>具体表单的功能项，如单行文本输入框，密码输入框、复选框、提交按钮、重置按钮等</p><h3 id="表单域"><a href="#表单域" class="headerlink" title="表单域"></a>表单域</h3><p>相当于一个容器，用来容纳所有的表单控件和提示信息</p><h2 id="表单的结构"><a href="#表单的结构" class="headerlink" title="表单的结构"></a>表单的结构</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;from action=&quot;url地址&quot; method=&quot;提交方式&quot; name=&quot;表单名称&quot;&gt;</span><br><span class="line">各种表单控件</span><br><span class="line">&lt;/from&gt;</span><br></pre></td></tr></table></figure><h3 id="name"><a href="#name" class="headerlink" title="name"></a>name</h3><p>用来区别一个页面内的不同表单</p><h3 id="action"><a href="#action" class="headerlink" title="action"></a>action</h3><p>用于指定接收并处理表单数据的服务器程序的url地址</p><h3 id="method"><a href="#method" class="headerlink" title="method"></a>method</h3><p>用于设置表单数据的提交方式，其取值为get或者post</p><h2 id="表单控件-1"><a href="#表单控件-1" class="headerlink" title="表单控件"></a>表单控件</h2><p>表单控件是表单的核心内容，不同的表单控件具有不同的功能，如密码输入框、文本域、下拉列表、复选框等，只有掌握了这些控件的使用方法才能正确的创建表单</p>]]></content>
+        <content type="html"><![CDATA[<h4 id="4-2表单的控件"><a href="#4-2表单的控件" class="headerlink" title="4.2表单的控件"></a><center>4.2表单的控件</center></h4><a id="more"></a><h2 id="input控件"><a href="#input控件" class="headerlink" title="input控件"></a>input控件</h2><p>定义单行文本输入框、单选按钮、复选框、提交按钮、重置按钮等，要使用input控件</p><h3 id="常见的属性"><a href="#常见的属性" class="headerlink" title="常见的属性"></a>常见的属性</h3><ol><li><p>type：控件类型</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">取值：text、password、radio、checkbox、button、submit、reset、file image、hidden</span><br></pre></td></tr></table></figure></li><li><p>name：控件名称</p></li><li><p>value：控件中的默认文本</p></li><li><p>size：控件名称在页面中显示宽度</p></li><li><p>readonly：控件内容为只读</p></li><li><p>disabled：首次加载的页面时是否禁用该控件（显示为灰色）</p></li><li><p>checked：定义选择控件默认值被选中</p></li><li><p>maxlength：控件允许输入最多的字符数</p></li></ol><h2 id="textarea控件"><a href="#textarea控件" class="headerlink" title="textarea控件"></a>textarea控件</h2><p>可以创建多行文本输入框</p><h3 id="testarea基本语法"><a href="#testarea基本语法" class="headerlink" title="testarea基本语法"></a>testarea基本语法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;textarea cols=&quot;每行中的字符数&quot; rows=&quot;显示的行数&quot; wrap=&quot;   &quot;&gt;文本内容&lt;/testarea&gt;</span><br></pre></td></tr></table></figure><p>wrap是html5中的新属性：属性取值：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">soft：当在表单提交时，textarea中的文本不换行。默认值</span><br><span class="line">hard：当在表单提交时，textarea中的文本换行</span><br></pre></td></tr></table></figure><h2 id="select控件"><a href="#select控件" class="headerlink" title="select控件"></a>select控件</h2><p>创建一个选择框</p><h3 id="select基本语法"><a href="#select基本语法" class="headerlink" title="select基本语法"></a>select基本语法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;select name=&quot;控件名称&quot; size=&quot;表示可见选项的数目&quot; multiple(设定为多选)&gt;</span><br><span class="line">&lt;option value=&quot;选项值&quot; selected(默认该选项被选中)&gt;  (表示指定区域中的一个选项)</span><br><span class="line"></span><br><span class="line">&lt;/option&gt;</span><br><span class="line">&lt;/select&gt;</span><br></pre></td></tr></table></figure><table><thead><tr><th>标签</th><th>标签功能</th><th>用到的属性</th><th>效果说明</th></tr></thead><tbody><tr><td>marquee</td><td>使标签中的内容滚动</td><td>bgcolor，direction，behavior</td><td>bgcolor代表滚动范围背景颜色；direction代表滚动方向；behavior代表滚动的方式</td></tr><tr><td>table</td><td>形成一个表格</td><td>tr,th,td</td><td>tr定义行；td定义每行的单元格；th用来定义标题栏</td></tr></tbody></table>]]></content>
       
       
       <categories>
@@ -967,11 +967,11 @@
     
     
     <entry>
-      <title>2.4图片标签</title>
-      <link href="/2020/09/29/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/2HTML5/2.4%E5%9B%BE%E7%89%87%E6%A0%87%E7%AD%BE/"/>
-      <url>/2020/09/29/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/2HTML5/2.4%E5%9B%BE%E7%89%87%E6%A0%87%E7%AD%BE/</url>
+      <title>2.3文本控制标签</title>
+      <link href="/2020/09/29/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/2HTML5/2.3%E6%96%87%E6%9C%AC%E6%8E%A7%E5%88%B6%E6%A0%87%E7%AD%BE/"/>
+      <url>/2020/09/29/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/2HTML5/2.3%E6%96%87%E6%9C%AC%E6%8E%A7%E5%88%B6%E6%A0%87%E7%AD%BE/</url>
       
-        <content type="html"><![CDATA[<h4 id="2-4图片标签"><a href="#2-4图片标签" class="headerlink" title="2.4图片标签"></a><center>2.4图片标签</center></h4><a id="more"></a><h2 id="gif"><a href="#gif" class="headerlink" title="gif"></a>gif</h2><p>支持动画、无损图像格式、支持透明</p><p>常用于小图标、LOFO及其他色彩相对单一的图像</p><h2 id="png"><a href="#png" class="headerlink" title="png"></a>png</h2><p>相对于gif体积更小，支持alpha透明（全透明、半透明、全不透明）颜色过度更平滑、不支持动画、无损压缩</p><h2 id="jpg"><a href="#jpg" class="headerlink" title="jpg"></a>jpg</h2><p>显色比上面两个多得多、有损压缩</p><h2 id="网页插入图像"><a href="#网页插入图像" class="headerlink" title="网页插入图像"></a>网页插入图像</h2><h3 id="body-background"><a href="#body-background" class="headerlink" title="body background"></a>body background</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;body background=&quot;&quot;&gt;&lt;/body&gt;</span><br></pre></td></tr></table></figure><h3 id="img"><a href="#img" class="headerlink" title="img"></a>img</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;img src=&quot;&quot;&gt;</span><br></pre></td></tr></table></figure><ul><li>alt：规定图像的代替文本</li><li>src：规定图像的URL</li><li>height：规定图像的高度</li><li>ismap：把图象设置为服务器端图像映射</li><li>usemap：把图象设置为客户端图像映射</li><li>width：规定图像宽度</li></ul><h3 id="路径"><a href="#路径" class="headerlink" title="路径"></a>路径</h3><p>相对路径、绝对路径</p>]]></content>
+        <content type="html"><![CDATA[<h4 id="2-3文本控制标签"><a href="#2-3文本控制标签" class="headerlink" title="2.3文本控制标签"></a><center>2.3文本控制标签</center></h4><a id="more"></a><h2 id="标题段落标签"><a href="#标题段落标签" class="headerlink" title="标题段落标签"></a>标题段落标签</h2><h3 id="hi（双）"><a href="#hi（双）" class="headerlink" title="hi（双）"></a>hi（双）</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">设定HTML页面中段落的级数</span><br></pre></td></tr></table></figure><h3 id="p（双）"><a href="#p（双）" class="headerlink" title="p（双）"></a>p（双）</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">划分段落，控制文本位置</span><br></pre></td></tr></table></figure><h2 id="文本格式标签"><a href="#文本格式标签" class="headerlink" title="文本格式标签"></a>文本格式标签</h2><h3 id="br（单）"><a href="#br（单）" class="headerlink" title="br（单）"></a>br（单）</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">定义换行</span><br></pre></td></tr></table></figure><h3 id="hr（单）"><a href="#hr（单）" class="headerlink" title="hr（单）"></a>hr（单）</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">定义水平线</span><br></pre></td></tr></table></figure><ol><li>Size：宽</li><li>Width：长</li><li>Align：对齐方式</li><li>Noshade：无阴影属性</li><li>Color：颜色</li></ol><h3 id="div（双）"><a href="#div（双）" class="headerlink" title="div（双）"></a>div（双）</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">定义大块显示区</span><br></pre></td></tr></table></figure><h3 id="文本修饰标签（双）"><a href="#文本修饰标签（双）" class="headerlink" title="文本修饰标签（双）"></a>文本修饰标签（双）</h3><ol><li><p>font：字体样式</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">里面的size属性值为1-7，默认为3</span><br></pre></td></tr></table></figure></li><li><p>b：相当于strong</p></li><li><p>i：斜体</p></li><li><p>big：比周围文本大一个字体尺寸</p></li><li><p>small</p></li><li><p>s：删除线</p></li><li><p>u：下划线</p></li><li><p>sup：上标形式</p></li><li><p>sub：下标形式</p></li><li><p>strong</p></li><li><p>mark：带有记号的方式显示</p></li></ol><h3 id="span（双）"><a href="#span（双）" class="headerlink" title="span（双）"></a>span（双）</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">行内标签，用来组合文档中的行内元素</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">span和div的主要区别</span><br><span class="line">    span不换行，div换行</span><br><span class="line">    span不能包含div，div可以包含span</span><br></pre></td></tr></table></figure><h2 id="特殊字符标签"><a href="#特殊字符标签" class="headerlink" title="特殊字符标签"></a>特殊字符标签</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">可用于设定数学公式、版权信息中的特殊字符。通常以“&amp;”开始，以“;”结束</span><br><span class="line">如&amp;gt;代表&gt;</span><br></pre></td></tr></table></figure>]]></content>
       
       
       <categories>
@@ -992,11 +992,11 @@
     
     
     <entry>
-      <title>2.3文本控制标签</title>
-      <link href="/2020/09/29/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/2HTML5/2.3%E6%96%87%E6%9C%AC%E6%8E%A7%E5%88%B6%E6%A0%87%E7%AD%BE/"/>
-      <url>/2020/09/29/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/2HTML5/2.3%E6%96%87%E6%9C%AC%E6%8E%A7%E5%88%B6%E6%A0%87%E7%AD%BE/</url>
+      <title>2.4图片标签</title>
+      <link href="/2020/09/29/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/2HTML5/2.4%E5%9B%BE%E7%89%87%E6%A0%87%E7%AD%BE/"/>
+      <url>/2020/09/29/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/2HTML5/2.4%E5%9B%BE%E7%89%87%E6%A0%87%E7%AD%BE/</url>
       
-        <content type="html"><![CDATA[<h4 id="2-3文本控制标签"><a href="#2-3文本控制标签" class="headerlink" title="2.3文本控制标签"></a><center>2.3文本控制标签</center></h4><a id="more"></a><h2 id="标题段落标签"><a href="#标题段落标签" class="headerlink" title="标题段落标签"></a>标题段落标签</h2><h3 id="hi（双）"><a href="#hi（双）" class="headerlink" title="hi（双）"></a>hi（双）</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">设定HTML页面中段落的级数</span><br></pre></td></tr></table></figure><h3 id="p（双）"><a href="#p（双）" class="headerlink" title="p（双）"></a>p（双）</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">划分段落，控制文本位置</span><br></pre></td></tr></table></figure><h2 id="文本格式标签"><a href="#文本格式标签" class="headerlink" title="文本格式标签"></a>文本格式标签</h2><h3 id="br（单）"><a href="#br（单）" class="headerlink" title="br（单）"></a>br（单）</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">定义换行</span><br></pre></td></tr></table></figure><h3 id="hr（单）"><a href="#hr（单）" class="headerlink" title="hr（单）"></a>hr（单）</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">定义水平线</span><br></pre></td></tr></table></figure><ol><li>Size：宽</li><li>Width：长</li><li>Align：对齐方式</li><li>Noshade：无阴影属性</li><li>Color：颜色</li></ol><h3 id="div（双）"><a href="#div（双）" class="headerlink" title="div（双）"></a>div（双）</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">定义大块显示区</span><br></pre></td></tr></table></figure><h3 id="文本修饰标签（双）"><a href="#文本修饰标签（双）" class="headerlink" title="文本修饰标签（双）"></a>文本修饰标签（双）</h3><ol><li><p>font：字体样式</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">里面的size属性值为1-7，默认为3</span><br></pre></td></tr></table></figure></li><li><p>b：相当于strong</p></li><li><p>i：斜体</p></li><li><p>big：比周围文本大一个字体尺寸</p></li><li><p>small</p></li><li><p>s：删除线</p></li><li><p>u：下划线</p></li><li><p>sup：上标形式</p></li><li><p>sub：下标形式</p></li><li><p>strong</p></li><li><p>mark：带有记号的方式显示</p></li></ol><h3 id="span（双）"><a href="#span（双）" class="headerlink" title="span（双）"></a>span（双）</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">行内标签，用来组合文档中的行内元素</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">span和div的主要区别</span><br><span class="line">    span不换行，div换行</span><br><span class="line">    span不能包含div，div可以包含span</span><br></pre></td></tr></table></figure><h2 id="特殊字符标签"><a href="#特殊字符标签" class="headerlink" title="特殊字符标签"></a>特殊字符标签</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">可用于设定数学公式、版权信息中的特殊字符。通常以“&amp;”开始，以“;”结束</span><br><span class="line">如&amp;gt;代表&gt;</span><br></pre></td></tr></table></figure>]]></content>
+        <content type="html"><![CDATA[<h4 id="2-4图片标签"><a href="#2-4图片标签" class="headerlink" title="2.4图片标签"></a><center>2.4图片标签</center></h4><a id="more"></a><h2 id="gif"><a href="#gif" class="headerlink" title="gif"></a>gif</h2><p>支持动画、无损图像格式、支持透明</p><p>常用于小图标、LOFO及其他色彩相对单一的图像</p><h2 id="png"><a href="#png" class="headerlink" title="png"></a>png</h2><p>相对于gif体积更小，支持alpha透明（全透明、半透明、全不透明）颜色过度更平滑、不支持动画、无损压缩</p><h2 id="jpg"><a href="#jpg" class="headerlink" title="jpg"></a>jpg</h2><p>显色比上面两个多得多、有损压缩</p><h2 id="网页插入图像"><a href="#网页插入图像" class="headerlink" title="网页插入图像"></a>网页插入图像</h2><h3 id="body-background"><a href="#body-background" class="headerlink" title="body background"></a>body background</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;body background=&quot;&quot;&gt;&lt;/body&gt;</span><br></pre></td></tr></table></figure><h3 id="img"><a href="#img" class="headerlink" title="img"></a>img</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;img src=&quot;&quot;&gt;</span><br></pre></td></tr></table></figure><ul><li>alt：规定图像的代替文本</li><li>src：规定图像的URL</li><li>height：规定图像的高度</li><li>ismap：把图象设置为服务器端图像映射</li><li>usemap：把图象设置为客户端图像映射</li><li>width：规定图像宽度</li></ul><h3 id="路径"><a href="#路径" class="headerlink" title="路径"></a>路径</h3><p>相对路径、绝对路径</p>]]></content>
       
       
       <categories>
@@ -1036,31 +1036,6 @@
     
     
     <entry>
-      <title>2.2HTML文档头部的标签</title>
-      <link href="/2020/09/28/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/2HTML5/2.2HTML%E6%96%87%E6%A1%A3%E5%A4%B4%E9%83%A8%E7%9B%B8%E5%85%B3%E7%9A%84%E6%A0%87%E7%AD%BE/"/>
-      <url>/2020/09/28/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/2HTML5/2.2HTML%E6%96%87%E6%A1%A3%E5%A4%B4%E9%83%A8%E7%9B%B8%E5%85%B3%E7%9A%84%E6%A0%87%E7%AD%BE/</url>
-      
-        <content type="html"><![CDATA[<h4 id="2-2HTML文档头部的标签"><a href="#2-2HTML文档头部的标签" class="headerlink" title="2.2HTML文档头部的标签"></a><center>2.2HTML文档头部的标签</center></h4><a id="more"></a><h2 id="title"><a href="#title" class="headerlink" title="title"></a>title</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">主要用于定义HTML页面的标题，即给网页取一个名字，必须位于&lt;head&gt;之内</span><br></pre></td></tr></table></figure><h3 id="title的作用："><a href="#title的作用：" class="headerlink" title="title的作用："></a>title的作用：</h3><ul><li>在浏览器的标题栏中显示</li><li>可以用作默认的快捷方式或者收藏夹的名称</li><li>可以作为搜索引擎结果中的页面标题</li></ul><h3 id="应用时应注意"><a href="#应用时应注意" class="headerlink" title="应用时应注意"></a>应用时应注意</h3><ul><li>一个网页只能有一个标题</li><li>标题的长度不超过64个字符数</li><li>标题标记对之间不允许有其他的标签存在</li></ul><h2 id="meta"><a href="#meta" class="headerlink" title="meta"></a>meta</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">用于定义页面的元信息，可重复出现在&lt;head&gt;头部标记中</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">详细信息在   HTML5语法标准中</span><br></pre></td></tr></table></figure><h2 id="link"><a href="#link" class="headerlink" title="link"></a>link</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">用link来引用外部的文件，一个页面允许使用多个link标记引用多个外部文件</span><br></pre></td></tr></table></figure><h2 id="style"><a href="#style" class="headerlink" title="style"></a>style</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">用于为HTML文档定义样式信息，位于&lt;head&gt;之中</span><br></pre></td></tr></table></figure><h2 id="script"><a href="#script" class="headerlink" title="script"></a>script</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">用于在HTML页面中加载脚本文件：如javascript</span><br></pre></td></tr></table></figure><h2 id="base"><a href="#base" class="headerlink" title="base"></a>base</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">描述了基本的链接地址/链接目标，该标签作为HTML文档中所有的链接标签的默认链接</span><br></pre></td></tr></table></figure>]]></content>
-      
-      
-      <categories>
-          
-          <category> html5 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> html </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>2.1HTML5语法基础</title>
       <link href="/2020/09/28/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/2HTML5/2.1HTML5%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80/"/>
       <url>/2020/09/28/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/2HTML5/2.1HTML5%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80/</url>
@@ -1091,6 +1066,31 @@
       <url>/2020/09/28/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/1Web%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E6%A6%82%E8%BF%B0/1.1Web%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E6%A6%82%E8%BF%B0/</url>
       
         <content type="html"><![CDATA[<h4 id="1-1Web前端开发概述"><a href="#1-1Web前端开发概述" class="headerlink" title="1.1Web前端开发概述"></a><center>1.1Web前端开发概述</center></h4><a id="more"></a><h2 id="学习内容"><a href="#学习内容" class="headerlink" title="学习内容"></a>学习内容</h2><h3 id="Html标记"><a href="#Html标记" class="headerlink" title="Html标记"></a>Html标记</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Hyper Text Markup   超文本标记语言。主要是通过HTML标记对网页中的文本、图片、声音等内容进行描述。最新版本是HTML5</span><br></pre></td></tr></table></figure><h3 id="css样式"><a href="#css样式" class="headerlink" title="css样式"></a>css样式</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Cascading Style Sheets   层叠样式表。是一种用来表现HTML或者XML文件样式的计算机语言</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CSS提供了丰富的样式，控制格式的、控制布局的、控制动态效果的等。最新版是2010年推出的CSS3</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CSS3通过模块化结构使设计者可以及时的调整模块的内容，方便版本的更新与发布，同时也增添了很多的新功能</span><br></pre></td></tr></table></figure><h3 id="JavaScript的内置函数"><a href="#JavaScript的内置函数" class="headerlink" title="JavaScript的内置函数"></a>JavaScript的内置函数</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1995年最初由Netscape（网景公司）的BrendanEich（瑞登·艾克）设计，后来Netscape为了营销考虑，与Sun微系统达成协议，将其改名为javascript</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">javascript是一种基于对象和事件驱动并具有相对安全性的客户端脚本语言。运用这个脚本语言可以给HEML网页添加动态功能，响应用户的各种操作</span><br></pre></td></tr></table></figure><h2 id="Web前端开发概述"><a href="#Web前端开发概述" class="headerlink" title="Web前端开发概述"></a>Web前端开发概述</h2><h3 id="什么是Web？"><a href="#什么是Web？" class="headerlink" title="什么是Web？"></a>什么是Web？</h3><p>Web是Internet上最受欢迎的一种多媒体服务系统</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">整个系统由Web服务器、浏览器和通信协议组成</span><br></pre></td></tr></table></figure><h3 id="什么是Web开发？"><a href="#什么是Web开发？" class="headerlink" title="什么是Web开发？"></a>什么是Web开发？</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">包括：浏览器端页面的制作、服务器端程序的编写</span><br></pre></td></tr></table></figure><h3 id="Web前端开发"><a href="#Web前端开发" class="headerlink" title="Web前端开发"></a>Web前端开发</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Web前端开发的主要工作是把UI(User Interface用户界面)的设计图按照W3C标准做成html页面，用CSS进行布局，并且用javascript脚本语言实现页面上的前端互动</span><br></pre></td></tr></table></figure><h3 id="浏览器"><a href="#浏览器" class="headerlink" title="浏览器"></a>浏览器</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">浏览器是指可以显示网页服务器或者文件系统HTML文件内容，并让用户与这些文件交互的一种软件</span><br></pre></td></tr></table></figure><h3 id="Html5"><a href="#Html5" class="headerlink" title="Html5"></a>Html5</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Html5是W3C组织2014年建议的标准，因此不是所有的浏览器都支持Html5，同一浏览器对Html5的支持情况也不同</span><br></pre></td></tr></table></figure><h3 id="Web标准"><a href="#Web标准" class="headerlink" title="Web标准"></a>Web标准</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Web标准是由W3C和其他标准化组织指定的一系列标准的集合，该标准用来创建和解释基于Web的内容</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">网页部分的标准通过三部分来描述：结构标准、表现标准、行为标准</span><br></pre></td></tr></table></figure><h4 id="结构标准"><a href="#结构标准" class="headerlink" title="结构标准"></a>结构标准</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">用于对于网页元素进行整理和分类</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">相当于搭建房子的框架</span><br></pre></td></tr></table></figure><h4 id="表现标准"><a href="#表现标准" class="headerlink" title="表现标准"></a>表现标准</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">用于设置网页元素的版式、颜色、大小等外观样式</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">相当于房子的装修，但是房子没有任何功能</span><br></pre></td></tr></table></figure><h4 id="行为标准"><a href="#行为标准" class="headerlink" title="行为标准"></a>行为标准</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">是对网页模型的定义以及交互的编写</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">相当于给房子增加了功能，让房子具有功能性，使用户和房子有更好的交互</span><br></pre></td></tr></table></figure><h4 id="标准的实现方式"><a href="#标准的实现方式" class="headerlink" title="标准的实现方式"></a>标准的实现方式</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">上面三个标准分别对应HTML、CSS、JavaScript（Web前端开发的基本应用技术）</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> html5 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> html </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>2.2HTML文档头部的标签</title>
+      <link href="/2020/09/28/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/2HTML5/2.2HTML%E6%96%87%E6%A1%A3%E5%A4%B4%E9%83%A8%E7%9B%B8%E5%85%B3%E7%9A%84%E6%A0%87%E7%AD%BE/"/>
+      <url>/2020/09/28/MD/%E5%A4%A7%E4%B8%89/Web%E5%89%8D%E7%AB%AF/2HTML5/2.2HTML%E6%96%87%E6%A1%A3%E5%A4%B4%E9%83%A8%E7%9B%B8%E5%85%B3%E7%9A%84%E6%A0%87%E7%AD%BE/</url>
+      
+        <content type="html"><![CDATA[<h4 id="2-2HTML文档头部的标签"><a href="#2-2HTML文档头部的标签" class="headerlink" title="2.2HTML文档头部的标签"></a><center>2.2HTML文档头部的标签</center></h4><a id="more"></a><h2 id="title"><a href="#title" class="headerlink" title="title"></a>title</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">主要用于定义HTML页面的标题，即给网页取一个名字，必须位于&lt;head&gt;之内</span><br></pre></td></tr></table></figure><h3 id="title的作用："><a href="#title的作用：" class="headerlink" title="title的作用："></a>title的作用：</h3><ul><li>在浏览器的标题栏中显示</li><li>可以用作默认的快捷方式或者收藏夹的名称</li><li>可以作为搜索引擎结果中的页面标题</li></ul><h3 id="应用时应注意"><a href="#应用时应注意" class="headerlink" title="应用时应注意"></a>应用时应注意</h3><ul><li>一个网页只能有一个标题</li><li>标题的长度不超过64个字符数</li><li>标题标记对之间不允许有其他的标签存在</li></ul><h2 id="meta"><a href="#meta" class="headerlink" title="meta"></a>meta</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">用于定义页面的元信息，可重复出现在&lt;head&gt;头部标记中</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">详细信息在   HTML5语法标准中</span><br></pre></td></tr></table></figure><h2 id="link"><a href="#link" class="headerlink" title="link"></a>link</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">用link来引用外部的文件，一个页面允许使用多个link标记引用多个外部文件</span><br></pre></td></tr></table></figure><h2 id="style"><a href="#style" class="headerlink" title="style"></a>style</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">用于为HTML文档定义样式信息，位于&lt;head&gt;之中</span><br></pre></td></tr></table></figure><h2 id="script"><a href="#script" class="headerlink" title="script"></a>script</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">用于在HTML页面中加载脚本文件：如javascript</span><br></pre></td></tr></table></figure><h2 id="base"><a href="#base" class="headerlink" title="base"></a>base</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">描述了基本的链接地址/链接目标，该标签作为HTML文档中所有的链接标签的默认链接</span><br></pre></td></tr></table></figure>]]></content>
       
       
       <categories>
