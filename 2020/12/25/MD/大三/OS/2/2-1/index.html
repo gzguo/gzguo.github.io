@@ -55,19 +55,19 @@
   };
 </script>
 
-  <meta name="description" content="1-5中断和异常">
+  <meta name="description" content="2-1进程">
 <meta name="keywords" content="OS">
 <meta property="og:type" content="article">
-<meta property="og:title" content="1-5中断和异常">
-<meta property="og:url" content="http://github.com/gzguo/gzguo.github.io.git/2020/12/24/MD/大三/OS/1/1-5/index.html">
+<meta property="og:title" content="2-1进程">
+<meta property="og:url" content="http://github.com/gzguo/gzguo.github.io.git/2020/12/25/MD/大三/OS/2/2-1/index.html">
 <meta property="og:site_name" content="Jarvis-back">
-<meta property="og:description" content="1-5中断和异常">
+<meta property="og:description" content="2-1进程">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-12-24T13:28:25.291Z">
+<meta property="og:updated_time" content="2020-12-26T03:29:25.749Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="1-5中断和异常">
-<meta name="twitter:description" content="1-5中断和异常">
-  <link rel="canonical" href="http://github.com/gzguo/gzguo.github.io.git/2020/12/24/MD/大三/OS/1/1-5/">
+<meta name="twitter:title" content="2-1进程">
+<meta name="twitter:description" content="2-1进程">
+  <link rel="canonical" href="http://github.com/gzguo/gzguo.github.io.git/2020/12/25/MD/大三/OS/2/2-1/">
 
 
 <script id="page-configurations">
@@ -81,7 +81,7 @@
   };
 </script>
 
-  <title>1-5中断和异常 | Jarvis-back</title>
+  <title>2-1进程 | Jarvis-back</title>
   
 
 
@@ -258,7 +258,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://github.com/gzguo/gzguo.github.io.git/2020/12/24/MD/大三/OS/1/1-5/">
+    <link itemprop="mainEntityOfPage" href="http://github.com/gzguo/gzguo.github.io.git/2020/12/25/MD/大三/OS/2/2-1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="jarvis">
@@ -272,7 +272,7 @@
       <header class="post-header">
 
         
-          <h1 class="post-title" itemprop="name headline">1-5中断和异常
+          <h1 class="post-title" itemprop="name headline">2-1进程
 
             
           </h1>
@@ -289,11 +289,19 @@
                 
               
 
-              <time title="创建时间：2020-12-24 21:17:18 / 修改时间：21:28:25" itemprop="dateCreated datePublished" datetime="2020-12-24T21:17:18+08:00">2020-12-24</time>
+              <time title="创建时间：2020-12-25 21:17:18" itemprop="dateCreated datePublished" datetime="2020-12-25T21:17:18+08:00">2020-12-25</time>
             </span>
           
             
 
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-12-26 11:29:25" itemprop="dateModified" datetime="2020-12-26T11:29:25+08:00">2020-12-26</time>
+              </span>
             
           
             <span class="post-meta-item">
@@ -327,7 +335,7 @@
               
                 <span class="post-meta-item-text">本文字数：</span>
               
-              <span>599</span>
+              <span>989</span>
             </span>
           
             <span class="post-meta-item" title="阅读时长">
@@ -350,32 +358,56 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h4 id="1-5中断和异常"><a href="#1-5中断和异常" class="headerlink" title="1-5中断和异常"></a><center>1-5中断和异常</center></h4><a id="more"></a>
+        <h4 id="2-1进程"><a href="#2-1进程" class="headerlink" title="2-1进程"></a><center>2-1进程</center></h4><a id="more"></a>
 
-<h2 id="中断机制的诞生"><a href="#中断机制的诞生" class="headerlink" title="中断机制的诞生"></a>中断机制的诞生</h2><p>串行的计算机资源利用率太低，所以人们发明了操作系统，引入<strong>中断机制</strong>，实现了多道程序并发执行</p>
-<p>只要发生中断就需要操作系统介入，开展管理工作</p>
-<h2 id="中断的概念和作用"><a href="#中断的概念和作用" class="headerlink" title="中断的概念和作用"></a>中断的概念和作用</h2><ol>
-<li>中断发生之后，CPU会立即进入<strong>核心态</strong></li>
-<li>中断发生之后，当前进程暂停运行，由操作系统内核对中断进行处理</li>
-<li>对于不同的中断信号，会进行不同的处理</li>
+<h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>进程是为了解决什么问题而引入的？</p>
+<p>先讲<strong>程序</strong>：就是一个指令序列</p>
+<p>早期还是单道程序执行的时候，所有的资源都是一个程序的，不需要记录程序的存放位置。内存中只有程序段和数据段。</p>
+<p>随着出现了多道程序技术，需要对程序的存放位置等的进行记录。系统会为每个运行的程序配置一个数据结构，这个数据结构称为程序控制块（PCB），用来描述进程的各种信息（存储位置等）。内存中的<strong>程序段、数据段和进程控制块</strong>三部分构成了进程实体（进程映像）</p>
+<p>一般来说，我们可以把进程实体称之为<strong>进程</strong>，所谓的创建进程，实际上就是创建进程实体中的PCB；撤销进程就是撤销进程实体中的PCB。</p>
+<p>严格来说，进程实体和进程还是有区别的，进程实体是静态的，进程则是动态的。</p>
+<p>注意：PCB是进程存在的唯一标志</p>
+<p>从不同的角度，进程有不同的定义：</p>
+<ol>
+<li>进程是程序的一次执行过程</li>
+<li>进程是一个程序及其数据在处理机上顺序执行时所发生的活动</li>
+<li>进程时具有独立功能的程序在数据集合上运行的过程，它是系统进行资源分配和调度的一个独立单位</li>
 </ol>
-<p>操作系统的管理工作需要使用特权指令，需要核心态。中断可以使CPU进入核心态。有了中断，才能实现多道程序的并发执行</p>
-<p>用户态和核心态只能通过中断来实现，中断是唯一条件</p>
-<h2 id="中断的分类"><a href="#中断的分类" class="headerlink" title="中断的分类"></a>中断的分类</h2><h3 id="内中断"><a href="#内中断" class="headerlink" title="内中断"></a>内中断</h3><p>就是异常、例外；陷入</p>
-<p>信号来源：CPU内部，与当前执行的指令有关</p>
-<p>可以分为：自愿中断、强迫中断</p>
-<p>自愿中断—&gt;指令中断：系统调用时使用的访管指令（陷入指令trap指令）（系统有意为止）</p>
-<p>强迫中断—&gt;硬件故障（缺页）/软件故障（整除零）</p>
-<h3 id="外中断"><a href="#外中断" class="headerlink" title="外中断"></a>外中断</h3><p>指的是狭义的中断</p>
-<p>信号来源：CPU外部，与当前执行的指令无关</p>
-<p>可以分为：外设请求、人工干预</p>
-<p>外设请求—&gt;I/O操作完成发出的中断信号</p>
-<p>人工干预—&gt;用户强制终止一个程序</p>
-<h2 id="外中断的处理过程"><a href="#外中断的处理过程" class="headerlink" title="外中断的处理过程"></a>外中断的处理过程</h2><ol>
-<li>每个用户程序的指令执行完之后，CPU都需要检查当前是否有外部中断信号</li>
-<li>如果检测到外部中断信号，则需要保护被中断的进程CPU环境</li>
-<li>根据中断信号类型转入相应的中断处理程序（核心态）</li>
-<li>恢复原来进程的CPU环境并退出中断，返回原程序继续往下运行</li>
+<h2 id="组成"><a href="#组成" class="headerlink" title="组成"></a>组成</h2><p>每个进程由哪些部分组成？</p>
+<p>进程是由程序段、数据段和PCB三部分组成的</p>
+<ol>
+<li>程序段：程序代码</li>
+<li>数据段：程序运行时使用、产生的运算数据</li>
+<li>PCB：操作系统对进程管理所需的各种信息</li>
+</ol>
+<p>PCB中的信息：</p>
+<ol>
+<li>进程描述信息（进程标识符id、用户标识符id）</li>
+<li>进程控制和管理信息（进程当前状态、进程优先级）</li>
+<li>资源分配清单（程序段指针、数据段指针、键盘、鼠标）</li>
+<li>处理机相关信息（各种寄存器值）</li>
+</ol>
+<h2 id="组织方式"><a href="#组织方式" class="headerlink" title="组织方式"></a>组织方式</h2><p>系统间的各个进程使如何被组织起来的？</p>
+<p>进程的组成讨论进程内部，进程组织讨论进程之间</p>
+<h3 id="链接方式"><a href="#链接方式" class="headerlink" title="链接方式"></a>链接方式</h3><p>根据状态将PCB分为多个队列，操作系统持有队列指针</p>
+<ol>
+<li>执行指针：CPU中正在运行的进程</li>
+<li>就绪队列指针：指向当前处于就绪态的进程</li>
+<li>阻塞队列指针：指向处于阻塞状态的进程</li>
+</ol>
+<h3 id="索引方式"><a href="#索引方式" class="headerlink" title="索引方式"></a>索引方式</h3><p>根据状态建立索引表，操作系统持有表的指针</p>
+<ol>
+<li>执行指针</li>
+<li>就绪表指针</li>
+<li>阻塞表指针</li>
+</ol>
+<h2 id="特征"><a href="#特征" class="headerlink" title="特征"></a>特征</h2><p>相比于程序，进程有哪些特征？</p>
+<ol>
+<li>动态性：进程是程序的一次执行过程，是动态产生、变化和消亡的</li>
+<li>并发性：内存中有多个进程实体，各进程可以并发执行</li>
+<li>独立性：进程可以独立运行、独立获得资源、独立接受调度的基本单位</li>
+<li>异步性：不可预知的速度向前推进。操作系统提供“进程同步机制”来解决异步的问题</li>
+<li>结构性：每个进程都会配置一个PCB。结构上看，进程=程序段+数据段+PCB</li>
 </ol>
 
     </div>
@@ -402,8 +434,8 @@
           <div class="post-nav">
             <div class="post-nav-next post-nav-item">
               
-                <a href="/2020/12/24/MD/大三/OS/1/1-3/" rel="next" title="1-3操作系统特征">
-                  <i class="fa fa-chevron-left"></i> 1-3操作系统特征
+                <a href="/2020/12/24/MD/大三/OS/1/1-2/" rel="next" title="1-2操作系统概念">
+                  <i class="fa fa-chevron-left"></i> 1-2操作系统概念
                 </a>
               
             </div>
@@ -411,10 +443,6 @@
             <span class="post-nav-divider"></span>
 
             <div class="post-nav-prev post-nav-item">
-              
-                <a href="/2020/12/24/MD/大三/OS/1/1-6/" rel="prev" title="1-6系统调用">
-                  1-6系统调用 <i class="fa fa-chevron-right"></i>
-                </a>
               
             </div>
           </div>
@@ -536,7 +564,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-5中断和异常"><span class="nav-number">1.</span> <span class="nav-text">1-5中断和异常</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#中断机制的诞生"><span class="nav-number"></span> <span class="nav-text">中断机制的诞生</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#中断的概念和作用"><span class="nav-number"></span> <span class="nav-text">中断的概念和作用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#中断的分类"><span class="nav-number"></span> <span class="nav-text">中断的分类</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#内中断"><span class="nav-number"></span> <span class="nav-text">内中断</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#外中断"><span class="nav-number"></span> <span class="nav-text">外中断</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#外中断的处理过程"><span class="nav-number"></span> <span class="nav-text">外中断的处理过程</span></a></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1进程"><span class="nav-number">1.</span> <span class="nav-text">2-1进程</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#定义"><span class="nav-number"></span> <span class="nav-text">定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#组成"><span class="nav-number"></span> <span class="nav-text">组成</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#组织方式"><span class="nav-number"></span> <span class="nav-text">组织方式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#链接方式"><span class="nav-number"></span> <span class="nav-text">链接方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#索引方式"><span class="nav-number"></span> <span class="nav-text">索引方式</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#特征"><span class="nav-number"></span> <span class="nav-text">特征</span></a></div>
             
 
           </div>
