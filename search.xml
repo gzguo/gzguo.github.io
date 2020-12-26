@@ -4,11 +4,61 @@
   
     
     <entry>
-      <title>2-1进程</title>
+      <title>2-3进程控制</title>
+      <link href="/2020/12/26/MD/%E5%A4%A7%E4%B8%89/OS/2/2-3/"/>
+      <url>/2020/12/26/MD/%E5%A4%A7%E4%B8%89/OS/2/2-3/</url>
+      
+        <content type="html"><![CDATA[<h4 id="2-3进程控制"><a href="#2-3进程控制" class="headerlink" title="2-3进程控制"></a><center>2-3进程控制</center></h4><a id="more"></a>]]></content>
+      
+      
+      <categories>
+          
+          <category> OS </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> OS </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>2-2进程状态</title>
+      <link href="/2020/12/26/MD/%E5%A4%A7%E4%B8%89/OS/2/2-2/"/>
+      <url>/2020/12/26/MD/%E5%A4%A7%E4%B8%89/OS/2/2-2/</url>
+      
+        <content type="html"><![CDATA[<h4 id="2-2进程状态"><a href="#2-2进程状态" class="headerlink" title="2-2进程状态"></a><center>2-2进程状态</center></h4><a id="more"></a><h2 id="状态"><a href="#状态" class="headerlink" title="状态"></a>状态</h2><p>进程在执行的过程中，状态会有各种变化，为了方便进程的管理，操作系统需要将进程合理的划分为几种状态</p><p>其中运行、就绪、阻塞是最基本的三种状态</p><h3 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h3><p>占用CPU，并在CPU上运行</p><h3 id="就绪"><a href="#就绪" class="headerlink" title="就绪"></a>就绪</h3><p>已经具备运行条件，但是由于没有空闲的CPU，暂时不能运行</p><p>拥有了除了处理机之外的所有资源</p><h3 id="阻塞"><a href="#阻塞" class="headerlink" title="阻塞"></a>阻塞</h3><p>因等待某一事件而暂时不能运行</p><h3 id="创建"><a href="#创建" class="headerlink" title="创建"></a>创建</h3><p>程序开始之前需要进行创建，系统为其分配资源、初始化PCB</p><h3 id="终止"><a href="#终止" class="headerlink" title="终止"></a>终止</h3><p>程序执行结束或者出现bug之后需要终止/撤销，系统回收进程拥有的资源、撤销PCB</p><h2 id="状态之间的转换"><a href="#状态之间的转换" class="headerlink" title="状态之间的转换"></a>状态之间的转换</h2><p>创建==&gt;就绪==&gt;运行==&gt;阻塞==&gt;就绪==&gt;运行==&gt;终止</p><p>注意：</p><ol><li>不能由阻塞直接转换为运行状态（进入阻塞是进程主动请求的，需要进程在<strong>运行时</strong>才能发出）</li><li>不能由运行直接转换为阻塞状态</li><li>就绪到运行：进程被调度</li><li>运行到就绪：时间片到/CPU被其他高优先级的进程抢占</li><li>运行到阻塞：等待系统分配资源/等待事件发生（主动行为）</li><li>阻塞到就绪：资源分配到位，等待事件发生（被动行为）</li><li>创建到就绪：系统完成创建今晨改的相关工作</li><li>运行到终止：进程运行结束，或者出现不可修复的错误</li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> OS </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> OS </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>2-1进程定义</title>
       <link href="/2020/12/25/MD/%E5%A4%A7%E4%B8%89/OS/2/2-1/"/>
       <url>/2020/12/25/MD/%E5%A4%A7%E4%B8%89/OS/2/2-1/</url>
       
-        <content type="html"><![CDATA[<h4 id="2-1进程"><a href="#2-1进程" class="headerlink" title="2-1进程"></a><center>2-1进程</center></h4><a id="more"></a><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>进程是为了解决什么问题而引入的？</p><p>先讲<strong>程序</strong>：就是一个指令序列</p><p>早期还是单道程序执行的时候，所有的资源都是一个程序的，不需要记录程序的存放位置。内存中只有程序段和数据段。</p><p>随着出现了多道程序技术，需要对程序的存放位置等的进行记录。系统会为每个运行的程序配置一个数据结构，这个数据结构称为程序控制块（PCB），用来描述进程的各种信息（存储位置等）。内存中的<strong>程序段、数据段和进程控制块</strong>三部分构成了进程实体（进程映像）</p><p>一般来说，我们可以把进程实体称之为<strong>进程</strong>，所谓的创建进程，实际上就是创建进程实体中的PCB；撤销进程就是撤销进程实体中的PCB。</p><p>严格来说，进程实体和进程还是有区别的，进程实体是静态的，进程则是动态的。</p><p>注意：PCB是进程存在的唯一标志</p><p>从不同的角度，进程有不同的定义：</p><ol><li>进程是程序的一次执行过程</li><li>进程是一个程序及其数据在处理机上顺序执行时所发生的活动</li><li>进程时具有独立功能的程序在数据集合上运行的过程，它是系统进行资源分配和调度的一个独立单位</li></ol><h2 id="组成"><a href="#组成" class="headerlink" title="组成"></a>组成</h2><p>每个进程由哪些部分组成？</p><p>进程是由程序段、数据段和PCB三部分组成的</p><ol><li>程序段：程序代码</li><li>数据段：程序运行时使用、产生的运算数据</li><li>PCB：操作系统对进程管理所需的各种信息</li></ol><p>PCB中的信息：</p><ol><li>进程描述信息（进程标识符id、用户标识符id）</li><li>进程控制和管理信息（进程当前状态、进程优先级）</li><li>资源分配清单（程序段指针、数据段指针、键盘、鼠标）</li><li>处理机相关信息（各种寄存器值）</li></ol><h2 id="组织方式"><a href="#组织方式" class="headerlink" title="组织方式"></a>组织方式</h2><p>系统间的各个进程使如何被组织起来的？</p><p>进程的组成讨论进程内部，进程组织讨论进程之间</p><h3 id="链接方式"><a href="#链接方式" class="headerlink" title="链接方式"></a>链接方式</h3><p>根据状态将PCB分为多个队列，操作系统持有队列指针</p><ol><li>执行指针：CPU中正在运行的进程</li><li>就绪队列指针：指向当前处于就绪态的进程</li><li>阻塞队列指针：指向处于阻塞状态的进程</li></ol><h3 id="索引方式"><a href="#索引方式" class="headerlink" title="索引方式"></a>索引方式</h3><p>根据状态建立索引表，操作系统持有表的指针</p><ol><li>执行指针</li><li>就绪表指针</li><li>阻塞表指针</li></ol><h2 id="特征"><a href="#特征" class="headerlink" title="特征"></a>特征</h2><p>相比于程序，进程有哪些特征？</p><ol><li>动态性：进程是程序的一次执行过程，是动态产生、变化和消亡的</li><li>并发性：内存中有多个进程实体，各进程可以并发执行</li><li>独立性：进程可以独立运行、独立获得资源、独立接受调度的基本单位</li><li>异步性：不可预知的速度向前推进。操作系统提供“进程同步机制”来解决异步的问题</li><li>结构性：每个进程都会配置一个PCB。结构上看，进程=程序段+数据段+PCB</li></ol>]]></content>
+        <content type="html"><![CDATA[<h4 id="2-1进程定义"><a href="#2-1进程定义" class="headerlink" title="2-1进程定义"></a><center>2-1进程定义</center></h4><a id="more"></a><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>进程是为了解决什么问题而引入的？</p><p>先讲<strong>程序</strong>：就是一个指令序列</p><p>早期还是单道程序执行的时候，所有的资源都是一个程序的，不需要记录程序的存放位置。内存中只有程序段和数据段。</p><p>随着出现了多道程序技术，需要对程序的存放位置等的进行记录。系统会为每个运行的程序配置一个数据结构，这个数据结构称为程序控制块（PCB），用来描述进程的各种信息（存储位置等）。内存中的<strong>程序段、数据段和进程控制块</strong>三部分构成了进程实体（进程映像）</p><p>一般来说，我们可以把进程实体称之为<strong>进程</strong>，所谓的创建进程，实际上就是创建进程实体中的PCB；撤销进程就是撤销进程实体中的PCB。</p><p>严格来说，进程实体和进程还是有区别的，进程实体是静态的，进程则是动态的。</p><p>注意：PCB是进程存在的唯一标志</p><p>从不同的角度，进程有不同的定义：</p><ol><li>进程是程序的一次执行过程</li><li>进程是一个程序及其数据在处理机上顺序执行时所发生的活动</li><li>进程时具有独立功能的程序在数据集合上运行的过程，它是系统进行资源分配和调度的一个独立单位</li></ol><h2 id="组成"><a href="#组成" class="headerlink" title="组成"></a>组成</h2><p>每个进程由哪些部分组成？</p><p>进程是由程序段、数据段和PCB三部分组成的</p><ol><li>程序段：程序代码</li><li>数据段：程序运行时使用、产生的运算数据</li><li>PCB：操作系统对进程管理所需的各种信息</li></ol><p>PCB中的信息：</p><ol><li>进程描述信息（进程标识符id、用户标识符id）</li><li>进程控制和管理信息（进程当前状态、进程优先级）</li><li>资源分配清单（程序段指针、数据段指针、键盘、鼠标）</li><li>处理机相关信息（各种寄存器值）</li></ol><h2 id="组织方式"><a href="#组织方式" class="headerlink" title="组织方式"></a>组织方式</h2><p>系统间的各个进程使如何被组织起来的？</p><p>进程的组成讨论进程内部，进程组织讨论进程之间</p><h3 id="链接方式"><a href="#链接方式" class="headerlink" title="链接方式"></a>链接方式</h3><p>根据状态将PCB分为多个队列，操作系统持有队列指针</p><ol><li>执行指针：CPU中正在运行的进程</li><li>就绪队列指针：指向当前处于就绪态的进程</li><li>阻塞队列指针：指向处于阻塞状态的进程</li></ol><h3 id="索引方式"><a href="#索引方式" class="headerlink" title="索引方式"></a>索引方式</h3><p>根据状态建立索引表，操作系统持有表的指针</p><ol><li>执行指针</li><li>就绪表指针</li><li>阻塞表指针</li></ol><h2 id="特征"><a href="#特征" class="headerlink" title="特征"></a>特征</h2><p>相比于程序，进程有哪些特征？</p><ol><li>动态性：进程是程序的一次执行过程，是动态产生、变化和消亡的</li><li>并发性：内存中有多个进程实体，各进程可以并发执行</li><li>独立性：进程可以独立运行、独立获得资源、独立接受调度的基本单位</li><li>异步性：不可预知的速度向前推进。操作系统提供“进程同步机制”来解决异步的问题</li><li>结构性：每个进程都会配置一个PCB。结构上看，进程=程序段+数据段+PCB</li></ol>]]></content>
       
       
       <categories>
@@ -54,31 +104,6 @@
     
     
     <entry>
-      <title>1-4操作系统发展与分类</title>
-      <link href="/2020/12/24/MD/%E5%A4%A7%E4%B8%89/OS/1/1-4/"/>
-      <url>/2020/12/24/MD/%E5%A4%A7%E4%B8%89/OS/1/1-4/</url>
-      
-        <content type="html"><![CDATA[<h4 id="1-4操作系统发展与分类"><a href="#1-4操作系统发展与分类" class="headerlink" title="1-4操作系统发展与分类"></a><center>1-4操作系统发展与分类</center></h4><a id="more"></a><h2 id="操作系统的发展过程"><a href="#操作系统的发展过程" class="headerlink" title="操作系统的发展过程"></a>操作系统的发展过程</h2><p>各个阶段的优点就是上一个阶段的缺点</p><h3 id="手工操作阶段"><a href="#手工操作阶段" class="headerlink" title="手工操作阶段"></a>手工操作阶段</h3><p>CPU执行快、输入慢</p><p>人机速度矛盾导致资源利用率低</p><h3 id="批处理阶段"><a href="#批处理阶段" class="headerlink" title="批处理阶段"></a>批处理阶段</h3><h4 id="单道批处理"><a href="#单道批处理" class="headerlink" title="单道批处理"></a>单道批处理</h4><p>引入了<strong>脱机输入/输出技术</strong>，<strong>监督程序</strong>控制作业输入输出</p><p>上面的监督程序就是后期操作系统的雏形</p><p>缓解了一定程度的人机矛盾</p><p>但是内存中同时只能有一个程序运行，只能串行。CPU只能等待很长时间来等待I/O完成，资源利用率低</p><h4 id="多道批处理系统"><a href="#多道批处理系统" class="headerlink" title="多道批处理系统"></a>多道批处理系统</h4><p>操作系统的诞生</p><p>引入了<strong>中断技术</strong>，操作系统负责管理这些程序的运行，各个程序并发执行。使得系统利用率大幅度提升</p><p>但是没有人机交互的能力，出错没法调试，只能等待执行结束</p><h3 id="分时操作系统"><a href="#分时操作系统" class="headerlink" title="分时操作系统"></a>分时操作系统</h3><p>计算机以时间片为单位轮流为各个用户/作业服务，各个用户可以通过终端来与计算机进行交互</p><p>但是分时操作系统对每一个用户/作业是完全公平的，不能优先处理一些紧急的任务</p><h3 id="实时操作系统"><a href="#实时操作系统" class="headerlink" title="实时操作系统"></a>实时操作系统</h3><p>可以优先响应紧急任务，某些紧急任务不需要时间片排队</p><p>主要特点是及时性和可靠性</p><p>实时操作系统可以分为：</p><ol><li>硬实时系统：必须在绝对严格的规定时间内完成处理（导弹、自动驾驶）</li><li>软实时系统：能接受偶尔违反时间规定（12306订票）</li></ol><p>之后的操作系统不考，可以百度了解</p><h3 id="网络操作系统"><a href="#网络操作系统" class="headerlink" title="网络操作系统"></a>网络操作系统</h3><h3 id="分布式操作系统"><a href="#分布式操作系统" class="headerlink" title="分布式操作系统"></a>分布式操作系统</h3><h3 id="个人计算机操作系统"><a href="#个人计算机操作系统" class="headerlink" title="个人计算机操作系统"></a>个人计算机操作系统</h3>]]></content>
-      
-      
-      <categories>
-          
-          <category> OS </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> OS </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>1-6系统调用</title>
       <link href="/2020/12/24/MD/%E5%A4%A7%E4%B8%89/OS/1/1-6/"/>
       <url>/2020/12/24/MD/%E5%A4%A7%E4%B8%89/OS/1/1-6/</url>
@@ -104,11 +129,11 @@
     
     
     <entry>
-      <title>1-5中断和异常</title>
-      <link href="/2020/12/24/MD/%E5%A4%A7%E4%B8%89/OS/1/1-5/"/>
-      <url>/2020/12/24/MD/%E5%A4%A7%E4%B8%89/OS/1/1-5/</url>
+      <title>1-4操作系统发展与分类</title>
+      <link href="/2020/12/24/MD/%E5%A4%A7%E4%B8%89/OS/1/1-4/"/>
+      <url>/2020/12/24/MD/%E5%A4%A7%E4%B8%89/OS/1/1-4/</url>
       
-        <content type="html"><![CDATA[<h4 id="1-5中断和异常"><a href="#1-5中断和异常" class="headerlink" title="1-5中断和异常"></a><center>1-5中断和异常</center></h4><a id="more"></a><h2 id="中断机制的诞生"><a href="#中断机制的诞生" class="headerlink" title="中断机制的诞生"></a>中断机制的诞生</h2><p>串行的计算机资源利用率太低，所以人们发明了操作系统，引入<strong>中断机制</strong>，实现了多道程序并发执行</p><p>只要发生中断就需要操作系统介入，开展管理工作</p><h2 id="中断的概念和作用"><a href="#中断的概念和作用" class="headerlink" title="中断的概念和作用"></a>中断的概念和作用</h2><ol><li>中断发生之后，CPU会立即进入<strong>核心态</strong></li><li>中断发生之后，当前进程暂停运行，由操作系统内核对中断进行处理</li><li>对于不同的中断信号，会进行不同的处理</li></ol><p>操作系统的管理工作需要使用特权指令，需要核心态。中断可以使CPU进入核心态。有了中断，才能实现多道程序的并发执行</p><p>用户态和核心态只能通过中断来实现，中断是唯一条件</p><h2 id="中断的分类"><a href="#中断的分类" class="headerlink" title="中断的分类"></a>中断的分类</h2><h3 id="内中断"><a href="#内中断" class="headerlink" title="内中断"></a>内中断</h3><p>就是异常、例外；陷入</p><p>信号来源：CPU内部，与当前执行的指令有关</p><p>可以分为：自愿中断、强迫中断</p><p>自愿中断—&gt;指令中断：系统调用时使用的访管指令（陷入指令trap指令）（系统有意为止）</p><p>强迫中断—&gt;硬件故障（缺页）/软件故障（整除零）</p><h3 id="外中断"><a href="#外中断" class="headerlink" title="外中断"></a>外中断</h3><p>指的是狭义的中断</p><p>信号来源：CPU外部，与当前执行的指令无关</p><p>可以分为：外设请求、人工干预</p><p>外设请求—&gt;I/O操作完成发出的中断信号</p><p>人工干预—&gt;用户强制终止一个程序</p><h2 id="外中断的处理过程"><a href="#外中断的处理过程" class="headerlink" title="外中断的处理过程"></a>外中断的处理过程</h2><ol><li>每个用户程序的指令执行完之后，CPU都需要检查当前是否有外部中断信号</li><li>如果检测到外部中断信号，则需要保护被中断的进程CPU环境</li><li>根据中断信号类型转入相应的中断处理程序（核心态）</li><li>恢复原来进程的CPU环境并退出中断，返回原程序继续往下运行</li></ol>]]></content>
+        <content type="html"><![CDATA[<h4 id="1-4操作系统发展与分类"><a href="#1-4操作系统发展与分类" class="headerlink" title="1-4操作系统发展与分类"></a><center>1-4操作系统发展与分类</center></h4><a id="more"></a><h2 id="操作系统的发展过程"><a href="#操作系统的发展过程" class="headerlink" title="操作系统的发展过程"></a>操作系统的发展过程</h2><p>各个阶段的优点就是上一个阶段的缺点</p><h3 id="手工操作阶段"><a href="#手工操作阶段" class="headerlink" title="手工操作阶段"></a>手工操作阶段</h3><p>CPU执行快、输入慢</p><p>人机速度矛盾导致资源利用率低</p><h3 id="批处理阶段"><a href="#批处理阶段" class="headerlink" title="批处理阶段"></a>批处理阶段</h3><h4 id="单道批处理"><a href="#单道批处理" class="headerlink" title="单道批处理"></a>单道批处理</h4><p>引入了<strong>脱机输入/输出技术</strong>，<strong>监督程序</strong>控制作业输入输出</p><p>上面的监督程序就是后期操作系统的雏形</p><p>缓解了一定程度的人机矛盾</p><p>但是内存中同时只能有一个程序运行，只能串行。CPU只能等待很长时间来等待I/O完成，资源利用率低</p><h4 id="多道批处理系统"><a href="#多道批处理系统" class="headerlink" title="多道批处理系统"></a>多道批处理系统</h4><p>操作系统的诞生</p><p>引入了<strong>中断技术</strong>，操作系统负责管理这些程序的运行，各个程序并发执行。使得系统利用率大幅度提升</p><p>但是没有人机交互的能力，出错没法调试，只能等待执行结束</p><h3 id="分时操作系统"><a href="#分时操作系统" class="headerlink" title="分时操作系统"></a>分时操作系统</h3><p>计算机以时间片为单位轮流为各个用户/作业服务，各个用户可以通过终端来与计算机进行交互</p><p>但是分时操作系统对每一个用户/作业是完全公平的，不能优先处理一些紧急的任务</p><h3 id="实时操作系统"><a href="#实时操作系统" class="headerlink" title="实时操作系统"></a>实时操作系统</h3><p>可以优先响应紧急任务，某些紧急任务不需要时间片排队</p><p>主要特点是及时性和可靠性</p><p>实时操作系统可以分为：</p><ol><li>硬实时系统：必须在绝对严格的规定时间内完成处理（导弹、自动驾驶）</li><li>软实时系统：能接受偶尔违反时间规定（12306订票）</li></ol><p>之后的操作系统不考，可以百度了解</p><h3 id="网络操作系统"><a href="#网络操作系统" class="headerlink" title="网络操作系统"></a>网络操作系统</h3><h3 id="分布式操作系统"><a href="#分布式操作系统" class="headerlink" title="分布式操作系统"></a>分布式操作系统</h3><h3 id="个人计算机操作系统"><a href="#个人计算机操作系统" class="headerlink" title="个人计算机操作系统"></a>个人计算机操作系统</h3>]]></content>
       
       
       <categories>
@@ -154,11 +179,11 @@
     
     
     <entry>
-      <title>1-1大题</title>
-      <link href="/2020/12/22/MD/%E5%A4%A7%E4%B8%89/OS/1/1-1/"/>
-      <url>/2020/12/22/MD/%E5%A4%A7%E4%B8%89/OS/1/1-1/</url>
+      <title>1-5中断和异常</title>
+      <link href="/2020/12/24/MD/%E5%A4%A7%E4%B8%89/OS/1/1-5/"/>
+      <url>/2020/12/24/MD/%E5%A4%A7%E4%B8%89/OS/1/1-5/</url>
       
-        <content type="html"><![CDATA[<h4 id="1-1大题"><a href="#1-1大题" class="headerlink" title="1-1大题"></a><center>1-1大题</center></h4><a id="more"></a><h2 id="缺页"><a href="#缺页" class="headerlink" title="缺页"></a>缺页</h2><h3 id="先进先出FIFO"><a href="#先进先出FIFO" class="headerlink" title="先进先出FIFO"></a>先进先出FIFO</h3><p>在CPU中呆的时间最长的先出去（看下面）</p><h3 id="最佳置换算法OPT"><a href="#最佳置换算法OPT" class="headerlink" title="最佳置换算法OPT"></a>最佳置换算法OPT</h3><p>淘汰<strong>未来</strong>最长时间内不再被访问的页面（作业的页面走向右面）</p><h3 id="最近最少使用LRU"><a href="#最近最少使用LRU" class="headerlink" title="最近最少使用LRU"></a>最近最少使用LRU</h3><p>最久未被使用（作业的页面走向左面）</p><h2 id="物理地址计算"><a href="#物理地址计算" class="headerlink" title="物理地址计算"></a>物理地址计算</h2><p>前提：找出 一页多少字节/<u>块长</u>、页表、逻辑地址</p><h3 id="求出页号"><a href="#求出页号" class="headerlink" title="求出页号"></a>求出页号</h3><p>页号=逻辑地址 % 块长</p><p>求出来的<strong>商</strong>就是<u>页号</u>，<strong>余数</strong>就是<u>页内地址</u></p><h3 id="对照页表"><a href="#对照页表" class="headerlink" title="对照页表"></a>对照页表</h3><p>根据页号对照页表，找到页号对应的<u>块号</u></p><h3 id="计算地址"><a href="#计算地址" class="headerlink" title="计算地址"></a>计算地址</h3><p>绝对地址/物理地址 = 块号*块长+块内地址</p><h2 id="银行家算法"><a href="#银行家算法" class="headerlink" title="银行家算法"></a>银行家算法</h2><h3 id="判断系统是否“死锁”"><a href="#判断系统是否“死锁”" class="headerlink" title="判断系统是否“死锁”"></a>判断系统是否“死锁”</h3><p>max（最多需要） allocation（系统已经分配）need（需要的）available（可获得的）</p><p>work（目前的CPU）need（需要分配的CPU）allocation（已经分配的）work+allocation（下一个的work）finish（T/F）</p><h3 id="提供安全序列"><a href="#提供安全序列" class="headerlink" title="提供安全序列"></a>提供安全序列</h3><p>通过计算求i出安全序列</p><p>最后判断系统资源和题目中的是否一致</p><h2 id="磁盘调度"><a href="#磁盘调度" class="headerlink" title="磁盘调度"></a>磁盘调度</h2><p>通过四种方式来求总的寻道长度和平均寻道长度</p><p>关键字：磁盘驱动器（disk drive）柱面（cylinders）磁盘队列（disk queue）读写磁头（disk head）最初（initially）</p><p>按照时间顺序到达</p><h3 id="先来先服务FCFS"><a href="#先来先服务FCFS" class="headerlink" title="先来先服务FCFS"></a>先来先服务FCFS</h3><p>从最初拿到一个值 和 题目中给的作业队列 排成一个队列，然后<strong>相邻互减</strong>，求出的就是总的寻道长度，总的寻道长度除以移动次数就是平均训导长度</p><h3 id="最短寻道时间优先SSTF"><a href="#最短寻道时间优先SSTF" class="headerlink" title="最短寻道时间优先SSTF"></a>最短寻道时间优先SSTF</h3><p>先把题目中的队列按大小排序，然后标明磁头的位置，然后判断向左还是向右，原则是路径最短。直到最后都访问到了。相邻互减，得到总的寻道长度，除以寻道次数，得到平均寻道长度</p><h3 id="扫描算法SCAN"><a href="#扫描算法SCAN" class="headerlink" title="扫描算法SCAN"></a>扫描算法SCAN</h3><p>向左走到头然后向右走到头 或者 向右走到头然后向左走到头 依次访问路径上没有被访问到的磁头</p><p>因为是两种所以考试一般不考</p><h3 id="循环扫描算法C-SCAN"><a href="#循环扫描算法C-SCAN" class="headerlink" title="循环扫描算法C-SCAN"></a>循环扫描算法C-SCAN</h3><p>向左走到头之后，直接到最右边，然后往左边找。另一种和这个相反。多了一个走到最右的步骤。</p><h2 id="进程调度"><a href="#进程调度" class="headerlink" title="进程调度"></a>进程调度</h2><p>到达时间（提交时间）：The Arriving Time就是进程告诉操作系统你要开始处理我了的时间点，之后进入队列等待被处理</p><p>开始时间：Start time/Began就是操作系统真正开始处理进程的时间点</p><p>执行时间（CPU突发时间）：The Running Time/CPU brust time：就是把操作系统处理完这个程序需要多久</p><p>一般要求的东西：</p><p>平均等待时间：开始时间-到达时间</p><p>平均周转时间：结束时间-到达时间（根据开始时间和执行时间可以得到结束时间）</p><p>平均带权周转时间：周转时间除以运行时间</p><p>平均的意思就是每个进程的等待时间加起来再除以总的进程数</p><p>有一种做题的方法推荐：画Gantt图，不会百度</p><h3 id="先来先服务FCFS-1"><a href="#先来先服务FCFS-1" class="headerlink" title="先来先服务FCFS"></a>先来先服务FCFS</h3><p>特点：按照进程到达的先后次序，依次处理</p><h3 id="短作业优先SJF"><a href="#短作业优先SJF" class="headerlink" title="短作业优先SJF"></a>短作业优先SJF</h3><p>进程越短越优先，执行时间越小越优先，有个条件是 在CPU队列中的进程的执行时间的排序</p><h4 id="非抢占"><a href="#非抢占" class="headerlink" title="非抢占"></a>非抢占</h4><p>进程一旦开始执行就直接执行结束，不会被强制停止</p><h4 id="抢占"><a href="#抢占" class="headerlink" title="抢占"></a>抢占</h4><p>如果进程队列里面进来了一个执行时间更短的进程，那么就会抢占正在执行进程的CPU，优先执行执行时间短的进程</p><h3 id="高响应比优先HRRN"><a href="#高响应比优先HRRN" class="headerlink" title="高响应比优先HRRN"></a>高响应比优先HRRN</h3><p>这个属于非抢占，应该不会考，是一个扩展的</p><p>按照优先权=（等待时间+执行时间）/执行时间，接下来执行的是权重大的</p><p>算法的意义在于执行等待时间相对较长，但是执行时间较短的</p><h2 id="有效访问时间EAT"><a href="#有效访问时间EAT" class="headerlink" title="有效访问时间EAT"></a>有效访问时间EAT</h2><p>EAT=（1-p）<em>内存访问时间+p</em>平均页面错误服务时间</p><p>p：页面错误率Page Fault Rate  1000次中一次出错错误率就是0.1%</p><p>hit ratio：命中率 与页面错误率相反</p>]]></content>
+        <content type="html"><![CDATA[<h4 id="1-5中断和异常"><a href="#1-5中断和异常" class="headerlink" title="1-5中断和异常"></a><center>1-5中断和异常</center></h4><a id="more"></a><h2 id="中断机制的诞生"><a href="#中断机制的诞生" class="headerlink" title="中断机制的诞生"></a>中断机制的诞生</h2><p>串行的计算机资源利用率太低，所以人们发明了操作系统，引入<strong>中断机制</strong>，实现了多道程序并发执行</p><p>只要发生中断就需要操作系统介入，开展管理工作</p><h2 id="中断的概念和作用"><a href="#中断的概念和作用" class="headerlink" title="中断的概念和作用"></a>中断的概念和作用</h2><ol><li>中断发生之后，CPU会立即进入<strong>核心态</strong></li><li>中断发生之后，当前进程暂停运行，由操作系统内核对中断进行处理</li><li>对于不同的中断信号，会进行不同的处理</li></ol><p>操作系统的管理工作需要使用特权指令，需要核心态。中断可以使CPU进入核心态。有了中断，才能实现多道程序的并发执行</p><p>用户态和核心态只能通过中断来实现，中断是唯一条件</p><h2 id="中断的分类"><a href="#中断的分类" class="headerlink" title="中断的分类"></a>中断的分类</h2><h3 id="内中断"><a href="#内中断" class="headerlink" title="内中断"></a>内中断</h3><p>就是异常、例外；陷入</p><p>信号来源：CPU内部，与当前执行的指令有关</p><p>可以分为：自愿中断、强迫中断</p><p>自愿中断—&gt;指令中断：系统调用时使用的访管指令（陷入指令trap指令）（系统有意为止）</p><p>强迫中断—&gt;硬件故障（缺页）/软件故障（整除零）</p><h3 id="外中断"><a href="#外中断" class="headerlink" title="外中断"></a>外中断</h3><p>指的是狭义的中断</p><p>信号来源：CPU外部，与当前执行的指令无关</p><p>可以分为：外设请求、人工干预</p><p>外设请求—&gt;I/O操作完成发出的中断信号</p><p>人工干预—&gt;用户强制终止一个程序</p><h2 id="外中断的处理过程"><a href="#外中断的处理过程" class="headerlink" title="外中断的处理过程"></a>外中断的处理过程</h2><ol><li>每个用户程序的指令执行完之后，CPU都需要检查当前是否有外部中断信号</li><li>如果检测到外部中断信号，则需要保护被中断的进程CPU环境</li><li>根据中断信号类型转入相应的中断处理程序（核心态）</li><li>恢复原来进程的CPU环境并退出中断，返回原程序继续往下运行</li></ol>]]></content>
       
       
       <categories>
@@ -179,23 +204,23 @@
     
     
     <entry>
-      <title>2.2对象图</title>
-      <link href="/2020/11/09/MD/%E5%A4%A7%E4%B8%89/%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1/2%E7%B3%BB%E7%BB%9F%E9%9D%99%E6%80%81%E5%88%86%E6%9E%90%E5%BB%BA%E6%A8%A1/2.2%E5%AF%B9%E8%B1%A1%E5%9B%BE/"/>
-      <url>/2020/11/09/MD/%E5%A4%A7%E4%B8%89/%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1/2%E7%B3%BB%E7%BB%9F%E9%9D%99%E6%80%81%E5%88%86%E6%9E%90%E5%BB%BA%E6%A8%A1/2.2%E5%AF%B9%E8%B1%A1%E5%9B%BE/</url>
+      <title>1-1大题</title>
+      <link href="/2020/12/22/MD/%E5%A4%A7%E4%B8%89/OS/1/1-1/"/>
+      <url>/2020/12/22/MD/%E5%A4%A7%E4%B8%89/OS/1/1-1/</url>
       
-        <content type="html"><![CDATA[<h4 id="2-2对象图"><a href="#2-2对象图" class="headerlink" title="2.2对象图"></a><center>2.2对象图</center></h4><a id="more"></a><h2 id="对象图的定义"><a href="#对象图的定义" class="headerlink" title="对象图的定义"></a>对象图的定义</h2><p>对象图中通常含有：对象和链接。对象图也可以像其他的图一样，包含注解、约束、包或子系统。</p><p>对象图提供了系统的一个“快照”，显示在给定时间实际存在的对象以及它们之间的链接。</p><p>通常可以为一个系统绘制多个不同的对象图，每个都代表系统在一个给定时刻的状态。</p><h2 id="用例图"><a href="#用例图" class="headerlink" title="用例图"></a>用例图</h2><p>用例图主要由3种元素组成：<br>参与者（actor)<br>用例（use case）<br>关系<br>还可以有：注释和约束，包，系统边界框。</p><h3 id="用例的表示"><a href="#用例的表示" class="headerlink" title="用例的表示"></a>用例的表示</h3><p>用例用一个水平椭圆表示，用例命名应采用简短的动词短语。</p><h3 id="事件流"><a href="#事件流" class="headerlink" title="事件流"></a>事件流</h3><p>事件流是用例所包含的一组动作序列。事件流是从用户角度写成的，是从参与者发起用例直到业务事件结束的步骤描述。</p><h3 id="关系"><a href="#关系" class="headerlink" title="关系"></a>关系</h3><p>1.参与者与用例之间：关联关系<br>2.参与者与参与者之间：继承关系<br>3.用例之间存在的关系分为三种：<br>（1）继承关系<br>（2）包含关系（Include）<br>（3）扩展关系（Extend）</p><h2 id="构建图"><a href="#构建图" class="headerlink" title="构建图"></a>构建图</h2><h2 id="部署图"><a href="#部署图" class="headerlink" title="部署图"></a>部署图</h2>]]></content>
+        <content type="html"><![CDATA[<h4 id="1-1大题"><a href="#1-1大题" class="headerlink" title="1-1大题"></a><center>1-1大题</center></h4><a id="more"></a><h2 id="缺页"><a href="#缺页" class="headerlink" title="缺页"></a>缺页</h2><h3 id="先进先出FIFO"><a href="#先进先出FIFO" class="headerlink" title="先进先出FIFO"></a>先进先出FIFO</h3><p>在CPU中呆的时间最长的先出去（看下面）</p><h3 id="最佳置换算法OPT"><a href="#最佳置换算法OPT" class="headerlink" title="最佳置换算法OPT"></a>最佳置换算法OPT</h3><p>淘汰<strong>未来</strong>最长时间内不再被访问的页面（作业的页面走向右面）</p><h3 id="最近最少使用LRU"><a href="#最近最少使用LRU" class="headerlink" title="最近最少使用LRU"></a>最近最少使用LRU</h3><p>最久未被使用（作业的页面走向左面）</p><h2 id="物理地址计算"><a href="#物理地址计算" class="headerlink" title="物理地址计算"></a>物理地址计算</h2><p>前提：找出 一页多少字节/<u>块长</u>、页表、逻辑地址</p><h3 id="求出页号"><a href="#求出页号" class="headerlink" title="求出页号"></a>求出页号</h3><p>页号=逻辑地址 % 块长</p><p>求出来的<strong>商</strong>就是<u>页号</u>，<strong>余数</strong>就是<u>页内地址</u></p><h3 id="对照页表"><a href="#对照页表" class="headerlink" title="对照页表"></a>对照页表</h3><p>根据页号对照页表，找到页号对应的<u>块号</u></p><h3 id="计算地址"><a href="#计算地址" class="headerlink" title="计算地址"></a>计算地址</h3><p>绝对地址/物理地址 = 块号*块长+块内地址</p><h2 id="银行家算法"><a href="#银行家算法" class="headerlink" title="银行家算法"></a>银行家算法</h2><h3 id="判断系统是否“死锁”"><a href="#判断系统是否“死锁”" class="headerlink" title="判断系统是否“死锁”"></a>判断系统是否“死锁”</h3><p>max（最多需要） allocation（系统已经分配）need（需要的）available（可获得的）</p><p>work（目前的CPU）need（需要分配的CPU）allocation（已经分配的）work+allocation（下一个的work）finish（T/F）</p><h3 id="提供安全序列"><a href="#提供安全序列" class="headerlink" title="提供安全序列"></a>提供安全序列</h3><p>通过计算求i出安全序列</p><p>最后判断系统资源和题目中的是否一致</p><h2 id="磁盘调度"><a href="#磁盘调度" class="headerlink" title="磁盘调度"></a>磁盘调度</h2><p>通过四种方式来求总的寻道长度和平均寻道长度</p><p>关键字：磁盘驱动器（disk drive）柱面（cylinders）磁盘队列（disk queue）读写磁头（disk head）最初（initially）</p><p>按照时间顺序到达</p><h3 id="先来先服务FCFS"><a href="#先来先服务FCFS" class="headerlink" title="先来先服务FCFS"></a>先来先服务FCFS</h3><p>从最初拿到一个值 和 题目中给的作业队列 排成一个队列，然后<strong>相邻互减</strong>，求出的就是总的寻道长度，总的寻道长度除以移动次数就是平均训导长度</p><h3 id="最短寻道时间优先SSTF"><a href="#最短寻道时间优先SSTF" class="headerlink" title="最短寻道时间优先SSTF"></a>最短寻道时间优先SSTF</h3><p>先把题目中的队列按大小排序，然后标明磁头的位置，然后判断向左还是向右，原则是路径最短。直到最后都访问到了。相邻互减，得到总的寻道长度，除以寻道次数，得到平均寻道长度</p><h3 id="扫描算法SCAN"><a href="#扫描算法SCAN" class="headerlink" title="扫描算法SCAN"></a>扫描算法SCAN</h3><p>向左走到头然后向右走到头 或者 向右走到头然后向左走到头 依次访问路径上没有被访问到的磁头</p><p>因为是两种所以考试一般不考</p><h3 id="循环扫描算法C-SCAN"><a href="#循环扫描算法C-SCAN" class="headerlink" title="循环扫描算法C-SCAN"></a>循环扫描算法C-SCAN</h3><p>向左走到头之后，直接到最右边，然后往左边找。另一种和这个相反。多了一个走到最右的步骤。</p><h2 id="进程调度"><a href="#进程调度" class="headerlink" title="进程调度"></a>进程调度</h2><p>到达时间（提交时间）：The Arriving Time就是进程告诉操作系统你要开始处理我了的时间点，之后进入队列等待被处理</p><p>开始时间：Start time/Began就是操作系统真正开始处理进程的时间点</p><p>执行时间（CPU突发时间）：The Running Time/CPU brust time：就是把操作系统处理完这个程序需要多久</p><p>一般要求的东西：</p><p>平均等待时间：开始时间-到达时间</p><p>平均周转时间：结束时间-到达时间（根据开始时间和执行时间可以得到结束时间）</p><p>平均带权周转时间：周转时间除以运行时间</p><p>平均的意思就是每个进程的等待时间加起来再除以总的进程数</p><p>有一种做题的方法推荐：画Gantt图，不会百度</p><h3 id="先来先服务FCFS-1"><a href="#先来先服务FCFS-1" class="headerlink" title="先来先服务FCFS"></a>先来先服务FCFS</h3><p>特点：按照进程到达的先后次序，依次处理</p><h3 id="短作业优先SJF"><a href="#短作业优先SJF" class="headerlink" title="短作业优先SJF"></a>短作业优先SJF</h3><p>进程越短越优先，执行时间越小越优先，有个条件是 在CPU队列中的进程的执行时间的排序</p><h4 id="非抢占"><a href="#非抢占" class="headerlink" title="非抢占"></a>非抢占</h4><p>进程一旦开始执行就直接执行结束，不会被强制停止</p><h4 id="抢占"><a href="#抢占" class="headerlink" title="抢占"></a>抢占</h4><p>如果进程队列里面进来了一个执行时间更短的进程，那么就会抢占正在执行进程的CPU，优先执行执行时间短的进程</p><h3 id="高响应比优先HRRN"><a href="#高响应比优先HRRN" class="headerlink" title="高响应比优先HRRN"></a>高响应比优先HRRN</h3><p>这个属于非抢占，应该不会考，是一个扩展的</p><p>按照优先权=（等待时间+执行时间）/执行时间，接下来执行的是权重大的</p><p>算法的意义在于执行等待时间相对较长，但是执行时间较短的</p><h2 id="有效访问时间EAT"><a href="#有效访问时间EAT" class="headerlink" title="有效访问时间EAT"></a>有效访问时间EAT</h2><p>EAT=（1-p）<em>内存访问时间+p</em>平均页面错误服务时间</p><p>p：页面错误率Page Fault Rate  1000次中一次出错错误率就是0.1%</p><p>hit ratio：命中率 与页面错误率相反</p>]]></content>
       
       
       <categories>
           
-          <category> 系统分析设计 </category>
+          <category> OS </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> 系统分析设计 </tag>
+            <tag> OS </tag>
             
         </tags>
       
@@ -229,11 +254,36 @@
     
     
     <entry>
-      <title>6.3在网页中应用CSS的方式</title>
-      <link href="/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web/6CSS3%E8%AF%AD%E6%B3%95/6.3%E5%9C%A8%E7%BD%91%E9%A1%B5%E4%B8%AD%E5%BA%94%E7%94%A8CSS%E7%9A%84%E6%96%B9%E5%BC%8F/"/>
-      <url>/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web/6CSS3%E8%AF%AD%E6%B3%95/6.3%E5%9C%A8%E7%BD%91%E9%A1%B5%E4%B8%AD%E5%BA%94%E7%94%A8CSS%E7%9A%84%E6%96%B9%E5%BC%8F/</url>
+      <title>2.2对象图</title>
+      <link href="/2020/11/09/MD/%E5%A4%A7%E4%B8%89/%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1/2%E7%B3%BB%E7%BB%9F%E9%9D%99%E6%80%81%E5%88%86%E6%9E%90%E5%BB%BA%E6%A8%A1/2.2%E5%AF%B9%E8%B1%A1%E5%9B%BE/"/>
+      <url>/2020/11/09/MD/%E5%A4%A7%E4%B8%89/%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1/2%E7%B3%BB%E7%BB%9F%E9%9D%99%E6%80%81%E5%88%86%E6%9E%90%E5%BB%BA%E6%A8%A1/2.2%E5%AF%B9%E8%B1%A1%E5%9B%BE/</url>
       
-        <content type="html"><![CDATA[<h4 id="6-3在网页中应用CSS的方式"><a href="#6-3在网页中应用CSS的方式" class="headerlink" title="6.3在网页中应用CSS的方式"></a><center>6.3在网页中应用CSS的方式</center></h4><a id="more"></a><h2 id="CSS3应用方法"><a href="#CSS3应用方法" class="headerlink" title="CSS3应用方法"></a>CSS3应用方法</h2><p>CSS样式能够以分离网页内容和样式的形式很好的控制网页的显示。在网页中应用CSS样式有4种方法：</p><ol><li><p>内联式</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">通过标记style属性直接把CSS样式添加到HTML标签中</span><br></pre></td></tr></table></figure><p>语法格式：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;标记名 style=&quot;&quot;&gt;&lt;/标记名&gt;</span><br></pre></td></tr></table></figure></li></ol><ol start="2"><li><p>内嵌式</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">将CSS样式代码添加到HTML文档的&lt;head&gt;头部中，并用&lt;style&gt;标记定义</span><br></pre></td></tr></table></figure><p>语法格式：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;head&gt;</span><br><span class="line">&lt;style type=&quot;text/css&quot;&gt;</span><br><span class="line">选择器&#123;属性&#125;</span><br><span class="line">&lt;/style&gt;</span><br><span class="line">&lt;/head&gt;</span><br></pre></td></tr></table></figure></li></ol><ol start="3"><li><p>链入式</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">将所有的样式放在一个或者多个以.css为扩展名的外部样式表文件中，通过&lt;link /&gt;标记将外部样式表文件链接到HTML文档中</span><br></pre></td></tr></table></figure><p>语法格式：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;head&gt;</span><br><span class="line">&lt;link href=&quot;CSS文件路径&quot; type=&quot;text/css&quot; rel=&quot;stylesheet&quot;/&gt;</span><br><span class="line">&lt;/head&gt;</span><br></pre></td></tr></table></figure></li></ol><ol start="4"><li><p>导入式</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">与链入外部CSS基本相同，都是要创建一个单独的外部CSS文件，再引入到HTML文档中。只不过语法和运作方式略有差别。</span><br></pre></td></tr></table></figure><p>语法格式：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;head&gt;</span><br><span class="line">&lt;style type=&quot;text/css&quot;&gt;</span><br><span class="line">@import url(&quot;外部样式表相对路径&quot;);</span><br><span class="line">&lt;/style&gt;</span><br><span class="line">&lt;/head&gt;</span><br></pre></td></tr></table></figure></li></ol><h3 id="链入式和导入式的区别："><a href="#链入式和导入式的区别：" class="headerlink" title="链入式和导入式的区别："></a>链入式和导入式的区别：</h3><ol><li>隶属关系不同：link属于HTML标签，@import是CSS提供的载入方式</li><li>加载时间及顺序不同：link先将外部的CSS文件加载到网页中，然后再进行编译显示。而@import是浏览器先将HTML结构呈现出来，再把外部的CSS文件加载到网页中，当网速较慢的时候会先显示没有CSS的效果，加载完毕再渲染画面</li><li>兼容性不同@import只有IE5以上的版本才能识别，而link标签没有这个问题</li><li>DOM模型控制样式：使用JavaScript控制DOM改变样式时，只能使用link标签，而@import不受DOM模型的影响</li></ol>]]></content>
+        <content type="html"><![CDATA[<h4 id="2-2对象图"><a href="#2-2对象图" class="headerlink" title="2.2对象图"></a><center>2.2对象图</center></h4><a id="more"></a><h2 id="对象图的定义"><a href="#对象图的定义" class="headerlink" title="对象图的定义"></a>对象图的定义</h2><p>对象图中通常含有：对象和链接。对象图也可以像其他的图一样，包含注解、约束、包或子系统。</p><p>对象图提供了系统的一个“快照”，显示在给定时间实际存在的对象以及它们之间的链接。</p><p>通常可以为一个系统绘制多个不同的对象图，每个都代表系统在一个给定时刻的状态。</p><h2 id="用例图"><a href="#用例图" class="headerlink" title="用例图"></a>用例图</h2><p>用例图主要由3种元素组成：<br>参与者（actor)<br>用例（use case）<br>关系<br>还可以有：注释和约束，包，系统边界框。</p><h3 id="用例的表示"><a href="#用例的表示" class="headerlink" title="用例的表示"></a>用例的表示</h3><p>用例用一个水平椭圆表示，用例命名应采用简短的动词短语。</p><h3 id="事件流"><a href="#事件流" class="headerlink" title="事件流"></a>事件流</h3><p>事件流是用例所包含的一组动作序列。事件流是从用户角度写成的，是从参与者发起用例直到业务事件结束的步骤描述。</p><h3 id="关系"><a href="#关系" class="headerlink" title="关系"></a>关系</h3><p>1.参与者与用例之间：关联关系<br>2.参与者与参与者之间：继承关系<br>3.用例之间存在的关系分为三种：<br>（1）继承关系<br>（2）包含关系（Include）<br>（3）扩展关系（Extend）</p><h2 id="构建图"><a href="#构建图" class="headerlink" title="构建图"></a>构建图</h2><h2 id="部署图"><a href="#部署图" class="headerlink" title="部署图"></a>部署图</h2>]]></content>
+      
+      
+      <categories>
+          
+          <category> 系统分析设计 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 系统分析设计 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>9.4文档对象</title>
+      <link href="/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web/9javaScript%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/9.4%E6%96%87%E6%A1%A3%E5%AF%B9%E8%B1%A1/"/>
+      <url>/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web/9javaScript%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/9.4%E6%96%87%E6%A1%A3%E5%AF%B9%E8%B1%A1/</url>
+      
+        <content type="html"><![CDATA[<h4 id="9-4文档对象"><a href="#9-4文档对象" class="headerlink" title="9.4文档对象"></a><center>9.4文档对象</center></h4><a id="more"></a>]]></content>
       
       
       <categories>
@@ -254,11 +304,11 @@
     
     
     <entry>
-      <title>9.3窗口对象</title>
-      <link href="/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web/9javaScript%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/9.3%E7%AA%97%E5%8F%A3%E5%AF%B9%E8%B1%A1/"/>
-      <url>/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web/9javaScript%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/9.3%E7%AA%97%E5%8F%A3%E5%AF%B9%E8%B1%A1/</url>
+      <title>9.5表单对象</title>
+      <link href="/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web/9javaScript%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/9.5%E8%A1%A8%E5%8D%95%E5%AF%B9%E8%B1%A1/"/>
+      <url>/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web/9javaScript%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/9.5%E8%A1%A8%E5%8D%95%E5%AF%B9%E8%B1%A1/</url>
       
-        <content type="html"><![CDATA[<h4 id="9-3窗口对象"><a href="#9-3窗口对象" class="headerlink" title="9.3窗口对象"></a><center>9.3窗口对象</center></h4><a id="more"></a>]]></content>
+        <content type="html"><![CDATA[<h4 id="9-5表单对象"><a href="#9-5表单对象" class="headerlink" title="9.5表单对象"></a><center>9.5表单对象</center></h4><a id="more"></a>]]></content>
       
       
       <categories>
@@ -304,11 +354,11 @@
     
     
     <entry>
-      <title>9.4文档对象</title>
-      <link href="/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web/9javaScript%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/9.4%E6%96%87%E6%A1%A3%E5%AF%B9%E8%B1%A1/"/>
-      <url>/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web/9javaScript%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/9.4%E6%96%87%E6%A1%A3%E5%AF%B9%E8%B1%A1/</url>
+      <title>9.3窗口对象</title>
+      <link href="/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web/9javaScript%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/9.3%E7%AA%97%E5%8F%A3%E5%AF%B9%E8%B1%A1/"/>
+      <url>/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web/9javaScript%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/9.3%E7%AA%97%E5%8F%A3%E5%AF%B9%E8%B1%A1/</url>
       
-        <content type="html"><![CDATA[<h4 id="9-4文档对象"><a href="#9-4文档对象" class="headerlink" title="9.4文档对象"></a><center>9.4文档对象</center></h4><a id="more"></a>]]></content>
+        <content type="html"><![CDATA[<h4 id="9-3窗口对象"><a href="#9-3窗口对象" class="headerlink" title="9.3窗口对象"></a><center>9.3窗口对象</center></h4><a id="more"></a>]]></content>
       
       
       <categories>
@@ -334,106 +384,6 @@
       <url>/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web/9javaScript%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/9.1BOM%E5%92%8CDOM%E6%A6%82%E8%BF%B0/</url>
       
         <content type="html"><![CDATA[<h4 id="9-1BOM和DOM概述"><a href="#9-1BOM和DOM概述" class="headerlink" title="9.1BOM和DOM概述"></a><center>9.1BOM和DOM概述</center></h4><a id="more"></a>]]></content>
-      
-      
-      <categories>
-          
-          <category> html5 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> html </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>7.5CSS3高级应用</title>
-      <link href="/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web/7CSS3%E9%A1%B5%E9%9D%A2%E5%B8%83%E5%B1%80/7.5CSS3%E9%AB%98%E7%BA%A7%E5%BA%94%E7%94%A8/"/>
-      <url>/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web/7CSS3%E9%A1%B5%E9%9D%A2%E5%B8%83%E5%B1%80/7.5CSS3%E9%AB%98%E7%BA%A7%E5%BA%94%E7%94%A8/</url>
-      
-        <content type="html"><![CDATA[<h4 id="7-5CSS3高级应用"><a href="#7-5CSS3高级应用" class="headerlink" title="7.5CSS3高级应用"></a><center>7.5CSS3高级应用</center></h4><a id="more"></a><h1 id="特效应用"><a href="#特效应用" class="headerlink" title="特效应用"></a>特效应用</h1><h2 id="滤镜属性filter"><a href="#滤镜属性filter" class="headerlink" title="滤镜属性filter"></a>滤镜属性filter</h2><p>滤镜是CSS的扩展部分。CSS的滤镜技术可以将各种特效添加到标准的HTML页面上，从而设计出多姿多彩的页面</p><p>语法格式：</p><p>选择器{filter:滤镜名称(滤镜参数)}</p><p>filter有十几种取值，每种取值都带有参数</p><h3 id="常用的滤镜的名称"><a href="#常用的滤镜的名称" class="headerlink" title="常用的滤镜的名称"></a>常用的滤镜的名称</h3><p>grayscale() 灰度</p><p>sepia() 老照片</p><p>saturate() 饱和度转换</p><p>hue-ratate() 色调转换</p><p>invert() 反射效果</p><p>opacity() 透明度</p><p>brightness() 亮度效果</p><p>contrast() 对比度</p><p>blur() 模糊</p><p>drop-shadow() 阴影效果</p><h2 id="渐变gradient"><a href="#渐变gradient" class="headerlink" title="渐变gradient"></a>渐变gradient</h2><p>CSS渐变可以显示在两个或多个指定的颜色之间平稳过渡效果</p><h3 id="线性渐变"><a href="#线性渐变" class="headerlink" title="线性渐变"></a>线性渐变</h3><p>linear</p><h3 id="径向渐变"><a href="#径向渐变" class="headerlink" title="径向渐变"></a>径向渐变</h3><p>radio</p><h2 id="2D转换transform"><a href="#2D转换transform" class="headerlink" title="2D转换transform"></a>2D转换transform</h2><p>CSS3转换transform可以实现二维平面内的位移、旋转、缩放、倾斜等变换效果</p><p>变换的函数：</p><p>translate() 平移</p><p>rotate() 旋转</p><p>scale() 缩放</p><p>skew() 倾斜</p><h2 id="过渡transition"><a href="#过渡transition" class="headerlink" title="过渡transition"></a>过渡transition</h2><p>过渡属性transition允许CSS属性值在一定时间和区间内平滑的过渡，这种效果可以在鼠标单击、获得焦点、被点击或对元素任何改变中触发，并圆滑地以动画效果改变CSS地属性值。</p><p>基本语法格式：选择器{transition:属性名称 过渡时间 速度类型 延迟时间;}</p><p>发生过渡的属性名称：属性名称用来规定应用过渡效果的CSS属性名称。他的取值可以是none、all或者某一个属性名</p><p>发生过渡时间用来规定由就属性过渡到新属性所花费的时间</p><p>linear线性效果</p><p>ease缓解效果</p><p>ease-in淡入效果</p><p>ease-out淡出效果</p><p>ease-in-out渐显渐隐效果</p><p>cubic-bezier特殊立方贝塞尔曲线效果</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> html5 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> html </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>7.4.2CSS3-弹性盒布局</title>
-      <link href="/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web/7CSS3%E9%A1%B5%E9%9D%A2%E5%B8%83%E5%B1%80/7.4.2CSS3-%E5%BC%B9%E6%80%A7%E7%9B%92%E5%B8%83%E5%B1%80/"/>
-      <url>/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web/7CSS3%E9%A1%B5%E9%9D%A2%E5%B8%83%E5%B1%80/7.4.2CSS3-%E5%BC%B9%E6%80%A7%E7%9B%92%E5%B8%83%E5%B1%80/</url>
-      
-        <content type="html"><![CDATA[<h4 id="7-4-2CSS3-弹性盒布局"><a href="#7-4-2CSS3-弹性盒布局" class="headerlink" title="7.4.2CSS3-弹性盒布局"></a><center>7.4.2CSS3-弹性盒布局</center></h4><a id="more"></a><h2 id="弹性盒布局"><a href="#弹性盒布局" class="headerlink" title="弹性盒布局"></a>弹性盒布局</h2><p>弹性盒是CSS3的一种新布局模式。它是一种当页面需要适应不同的屏幕大小及设备类型时确保元素拥有桥当排列的布局方式</p><ol><li>弹性盒组成<br>弹性容器的定义：选择器{display: flex;}</li><li>弹性容器的布局<br>按照子元素排列的方向不同，有横向和纵向排列两种方式，子元素的方向属性：选择器{flex-flow: 方向值 换行设置;}</li><li>子元素的布局<br>子元素在空间宽度上的分配，由flex属性设置</li></ol>]]></content>
-      
-      
-      <categories>
-          
-          <category> html5 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> html </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>8.1.2JavaScript概念及其语法中</title>
-      <link href="/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web/8javaScript%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%E5%8F%8AjavaScript%E5%AF%B9%E8%B1%A1/8.1.2JavaScript%E6%A6%82%E5%BF%B5%E5%8F%8A%E5%85%B6%E8%AF%AD%E6%B3%95%E4%B8%AD/"/>
-      <url>/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web/8javaScript%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%E5%8F%8AjavaScript%E5%AF%B9%E8%B1%A1/8.1.2JavaScript%E6%A6%82%E5%BF%B5%E5%8F%8A%E5%85%B6%E8%AF%AD%E6%B3%95%E4%B8%AD/</url>
-      
-        <content type="html"><![CDATA[<h4 id="8-1-2JavaScript概念及其语法中"><a href="#8-1-2JavaScript概念及其语法中" class="headerlink" title="8.1.2JavaScript概念及其语法中"></a><center>8.1.2JavaScript概念及其语法中</center></h4><a id="more"></a><h2 id="javascript语法规则"><a href="#javascript语法规则" class="headerlink" title="javascript语法规则"></a>javascript语法规则</h2><ol><li>javascript由语句、语句块、函数、对象、方法和属性构成，通过顺序、分支、循环三种基本程序控制结构进行编程</li><li>javascript是发送给浏览器的命令，这些命令的作用是告诉浏览器要做的事情</li><li>javascript语句可以分批组合起来形成语句块</li><li>javascript是由若干语句和语句块构成的执行体</li></ol><h2 id="语法概述"><a href="#语法概述" class="headerlink" title="语法概述"></a>语法概述</h2><ol><li>程序按照在HTML文件中出现的顺序逐行执行</li><li>严格区分大小写</li><li>每行结尾分号可有可无</li><li>单行注释//和多行注释/**/</li></ol><h2 id="数据类型和变量"><a href="#数据类型和变量" class="headerlink" title="数据类型和变量"></a>数据类型和变量</h2><h3 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h3><p><strong>数据类型</strong>分为三大类：</p><ol><li>简单数据类型<br>数值数据number<br>文本数据string<br>布尔数boolean</li><li>符合数据类型<br>数组Array<br>函数function<br>对象Objects</li><li>特殊数据类型<br>无定义数据类型undefined<br>空数据null</li></ol><h3 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h3><p><strong>变量</strong>：程序运行期间可能产生一些临时数据，应用程序会将这些数据保存在存储单元中。变量就是指程序中一个已经命名的存储单元，他的主要作用就是为数据操作提供存放信息的容器</p><p><strong>变量的命名规则</strong>：</p><ol><li>必须以字母或下划线开头，中间可以是数字、字母、下划线</li><li>变量名不能包含空格、加、减等符号</li><li>不能使用javascript中的关键字和保留字作为变量名</li><li>javascript的变量名严格区分大小写</li></ol><p>声明变量的语法格式：var 变量名;</p><h2 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h2><h3 id="算术运算符"><a href="#算术运算符" class="headerlink" title="算术运算符"></a>算术运算符</h3><h3 id="赋值运算符"><a href="#赋值运算符" class="headerlink" title="赋值运算符"></a>赋值运算符</h3><h3 id="位运算符"><a href="#位运算符" class="headerlink" title="位运算符"></a>位运算符</h3><h3 id="关系运算符"><a href="#关系运算符" class="headerlink" title="关系运算符"></a>关系运算符</h3><h3 id="逻辑运算符"><a href="#逻辑运算符" class="headerlink" title="逻辑运算符"></a>逻辑运算符</h3><p>条件运算符</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> html5 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> html </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>8.3数学对象</title>
-      <link href="/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web/8javaScript%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%E5%8F%8AjavaScript%E5%AF%B9%E8%B1%A1/8.3%E6%95%B0%E5%AD%A6%E5%AF%B9%E8%B1%A1/"/>
-      <url>/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web/8javaScript%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%E5%8F%8AjavaScript%E5%AF%B9%E8%B1%A1/8.3%E6%95%B0%E5%AD%A6%E5%AF%B9%E8%B1%A1/</url>
-      
-        <content type="html"><![CDATA[<h4 id="8-3数学对象"><a href="#8-3数学对象" class="headerlink" title="8.3数学对象"></a><center>8.3数学对象</center></h4><a id="more"></a>]]></content>
       
       
       <categories>
@@ -529,36 +479,11 @@
     
     
     <entry>
-      <title>6.2CSS3的基本语法</title>
-      <link href="/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web/6CSS3%E8%AF%AD%E6%B3%95/6.2CSS3%E7%9A%84%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/"/>
-      <url>/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web/6CSS3%E8%AF%AD%E6%B3%95/6.2CSS3%E7%9A%84%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/</url>
+      <title>8.3数学对象</title>
+      <link href="/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web/8javaScript%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%E5%8F%8AjavaScript%E5%AF%B9%E8%B1%A1/8.3%E6%95%B0%E5%AD%A6%E5%AF%B9%E8%B1%A1/"/>
+      <url>/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web/8javaScript%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%E5%8F%8AjavaScript%E5%AF%B9%E8%B1%A1/8.3%E6%95%B0%E5%AD%A6%E5%AF%B9%E8%B1%A1/</url>
       
-        <content type="html"><![CDATA[<h4 id="6-2CSS3的基本语法"><a href="#6-2CSS3的基本语法" class="headerlink" title="6.2CSS3的基本语法"></a><center>6.2CSS3的基本语法</center></h4><a id="more"></a><h2 id="CSS3语法格式"><a href="#CSS3语法格式" class="headerlink" title="CSS3语法格式"></a>CSS3语法格式</h2><h3 id="构造CSS的样式规则"><a href="#构造CSS的样式规则" class="headerlink" title="构造CSS的样式规则"></a>构造CSS的样式规则</h3><p>CSS样式设置规则由两部分组成</p><ol><li>选择符：作用于哪里</li><li>声明：作用的样式，由属性和值构成，中间用冒号分割</li></ol><h3 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h3><ol><li><p>如果属性的值是由多个单词组成，并且单词之间有空格，那么必须给值加上引号，如字体的名称经常是几个单词的组合</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">p&#123;</span><br><span class="line">font-family:&quot;Times New Roman&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li><li><p>如果需要对一个选择符指定多个属性时，用分号将属性分开</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">p&#123;</span><br><span class="line">text-align:center;color:red;font-family:宋体</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li><li><p>相同属性组合起来称为选择符组。如果需要给选择符组定义属性和值，只要用逗号将选择符分开即可。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">p,table&#123;</span><br><span class="line">font-size:10pt</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li><li><p>CSS3对空格和大小写一般不敏感</p></li><li><p>为CSS添加注释时，只需要用/**/将注释包裹起来即可</p></li></ol><h2 id="选择器及其应用"><a href="#选择器及其应用" class="headerlink" title="选择器及其应用"></a>选择器及其应用</h2><p>选择器也可以称之为选择符，在HTML中不同的标签是用不同的选择器来控制的</p><h3 id="选择器的类型"><a href="#选择器的类型" class="headerlink" title="选择器的类型"></a>选择器的类型</h3><ol><li><p>通用选择器</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">通用选择器用*表示，他是所有选择器中作用范围最广的，能匹配页面内的所有元素</span><br></pre></td></tr></table></figure></li></ol><ol start="2"><li><p>标签选择器</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">指用HTML标签名称作为选择器，按标签名称分类，为页面中某一类标签指定统一的CSS样式</span><br></pre></td></tr></table></figure></li></ol><ol start="3"><li><p>类选择器</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">用来为一系列的网页元素定义相同的显示样式。类选择器使用.（英文符号）进行标识，后面紧跟类名</span><br></pre></td></tr></table></figure><p>类名定义是区分大小写的</p></li><li><p>id选择器</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">用来为唯一的网页元素定义显示样式。ID选择器使用#进行标识，后面紧跟Id名</span><br></pre></td></tr></table></figure><p>id名定义是区分大小写的</p></li><li><p>伪类选择器</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">伪类是可以向某些选择器添加特殊效果的、一组CSS预定义好的类，不需要进行id和class属性的声明，就能自动的被支持CSS的浏览器所识别</span><br></pre></td></tr></table></figure><table><thead><tr><th>伪类名</th><th>描述</th></tr></thead><tbody><tr><td>:link</td><td>向未被访问的链接添加样式，目前仅适用于超链接</td></tr><tr><td>:visited</td><td>向已被访问的链接添加样式，目前仅适用于超链接</td></tr><tr><td>:active</td><td>向被激活的元素添加样式</td></tr><tr><td>:focus</td><td>向拥有键盘输入焦点的元素添加样式</td></tr><tr><td>:hover</td><td>当鼠标悬浮在元素上方是，向元素添加样式</td></tr><tr><td>:readonly</td><td>向只读元素添加样式</td></tr><tr><td>:checked</td><td>向被选中的元素添加样式</td></tr><tr><td>:disabled</td><td>向被禁用的元素添加样式</td></tr><tr><td>:enabled</td><td>向可用的元素添加样式</td></tr></tbody></table></li></ol><ol start="6"><li><p>群组选择器</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">当几个元素样式属性一样的时候，可以共同调用一个声明，元素之间用逗号分隔</span><br></pre></td></tr></table></figure></li></ol><ol start="7"><li><p>派生选择器</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">也叫后代选择器</span><br><span class="line">派生选择器允许你根据文档上下文关系来确定某个标签的样式。在派生选择器中，每一个选择器对象之间使用空格作为分隔符，除了可以派生一级后代，也可以派生出多级后代</span><br></pre></td></tr></table></figure></li></ol><ol start="8"><li><p>属性选择器</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">用于选择拥有指定属性的HRML元素设置样式</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">属性选择器包含了：属性选择器、属性值选择器、包含选择器、连接字符选择器、子串选择器、后缀选择器</span><br></pre></td></tr></table></figure></li></ol><ol start="9"><li><p>组合选择器</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">又称为子元素选择器</span><br><span class="line">用于选区某个元素的直接子元素（间接子元素不适用）子选择器元素之间使用大于号隔开</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">相邻兄弟选择器</span><br><span class="line">用于选择紧接在某元素之后的兄弟。相邻选择器元素之间使用+隔开</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">普通兄弟选择器</span><br><span class="line">用于选择具有相同父元素的元素。普通兄弟选择器元素之间使用~分开</span><br></pre></td></tr></table></figure></li></ol><p>## </p>]]></content>
-      
-      
-      <categories>
-          
-          <category> html5 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> html </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>8.1.1JavaScript概念及其语法上</title>
-      <link href="/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web/8javaScript%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%E5%8F%8AjavaScript%E5%AF%B9%E8%B1%A1/8.1.1JavaScript%E6%A6%82%E5%BF%B5%E5%8F%8A%E5%85%B6%E8%AF%AD%E6%B3%95%E4%B8%8A/"/>
-      <url>/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web/8javaScript%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%E5%8F%8AjavaScript%E5%AF%B9%E8%B1%A1/8.1.1JavaScript%E6%A6%82%E5%BF%B5%E5%8F%8A%E5%85%B6%E8%AF%AD%E6%B3%95%E4%B8%8A/</url>
-      
-        <content type="html"><![CDATA[<h4 id="8-1-1JavaScript概念及其语法上"><a href="#8-1-1JavaScript概念及其语法上" class="headerlink" title="8.1.1JavaScript概念及其语法上"></a><center>8.1.1JavaScript概念及其语法上</center></h4><a id="more"></a><h2 id="JavaScript简介"><a href="#JavaScript简介" class="headerlink" title="JavaScript简介"></a>JavaScript简介</h2><p>是一种脚本语言，是动态的、弱类型、基于原型的语言</p><p>特点：</p><ol><li>语法简单，易学易用</li><li>解释性语言</li><li>跨平台</li><li>基于对象和时间驱动</li><li>可用于客户端</li></ol><p>作用：</p><ol><li>动态改变网页内容</li><li>动态改变网页外观</li><li>验证表单数据</li><li>响应事件</li></ol><p>和java的区别：</p><ol><li>java是传统编程语言，javascript是脚本语言</li><li>java语言多用于服务器端，javascript主要用于客户端</li><li>java不能直接嵌入网页运行，javascript程序可以直接嵌入网页运行</li><li>java和javascript语法结构存在差异</li></ol><p>javascript开发和运行环境：</p><p>是一种脚本语言，不需要编译成二进制文件，以文本形式存在，任何编译器都可以作为他的开发环境，通常的开发环境有：记事本、UltraEdit、Dreamwaver</p><h2 id="在HTML5中使用JavaScript"><a href="#在HTML5中使用JavaScript" class="headerlink" title="在HTML5中使用JavaScript"></a>在HTML5中使用JavaScript</h2><p>有两种方法：内嵌式，外链式</p><h3 id="内嵌式"><a href="#内嵌式" class="headerlink" title="内嵌式"></a>内嵌式</h3><p>script标签，放在head标签中</p><h3 id="外链式"><a href="#外链式" class="headerlink" title="外链式"></a>外链式</h3><p>同一段代码需要被多个网页文件所使用的时候，使用外链式</p><h2 id="数据类型与变量"><a href="#数据类型与变量" class="headerlink" title="数据类型与变量"></a>数据类型与变量</h2><h2 id="运算符与表达式"><a href="#运算符与表达式" class="headerlink" title="运算符与表达式"></a>运算符与表达式</h2><h2 id="流程控制语句"><a href="#流程控制语句" class="headerlink" title="流程控制语句"></a>流程控制语句</h2><h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2>]]></content>
+        <content type="html"><![CDATA[<h4 id="8-3数学对象"><a href="#8-3数学对象" class="headerlink" title="8.3数学对象"></a><center>8.3数学对象</center></h4><a id="more"></a>]]></content>
       
       
       <categories>
@@ -604,11 +529,161 @@
     
     
     <entry>
-      <title>9.5表单对象</title>
-      <link href="/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web/9javaScript%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/9.5%E8%A1%A8%E5%8D%95%E5%AF%B9%E8%B1%A1/"/>
-      <url>/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web/9javaScript%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/9.5%E8%A1%A8%E5%8D%95%E5%AF%B9%E8%B1%A1/</url>
+      <title>8.1.2JavaScript概念及其语法中</title>
+      <link href="/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web/8javaScript%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%E5%8F%8AjavaScript%E5%AF%B9%E8%B1%A1/8.1.2JavaScript%E6%A6%82%E5%BF%B5%E5%8F%8A%E5%85%B6%E8%AF%AD%E6%B3%95%E4%B8%AD/"/>
+      <url>/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web/8javaScript%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%E5%8F%8AjavaScript%E5%AF%B9%E8%B1%A1/8.1.2JavaScript%E6%A6%82%E5%BF%B5%E5%8F%8A%E5%85%B6%E8%AF%AD%E6%B3%95%E4%B8%AD/</url>
       
-        <content type="html"><![CDATA[<h4 id="9-5表单对象"><a href="#9-5表单对象" class="headerlink" title="9.5表单对象"></a><center>9.5表单对象</center></h4><a id="more"></a>]]></content>
+        <content type="html"><![CDATA[<h4 id="8-1-2JavaScript概念及其语法中"><a href="#8-1-2JavaScript概念及其语法中" class="headerlink" title="8.1.2JavaScript概念及其语法中"></a><center>8.1.2JavaScript概念及其语法中</center></h4><a id="more"></a><h2 id="javascript语法规则"><a href="#javascript语法规则" class="headerlink" title="javascript语法规则"></a>javascript语法规则</h2><ol><li>javascript由语句、语句块、函数、对象、方法和属性构成，通过顺序、分支、循环三种基本程序控制结构进行编程</li><li>javascript是发送给浏览器的命令，这些命令的作用是告诉浏览器要做的事情</li><li>javascript语句可以分批组合起来形成语句块</li><li>javascript是由若干语句和语句块构成的执行体</li></ol><h2 id="语法概述"><a href="#语法概述" class="headerlink" title="语法概述"></a>语法概述</h2><ol><li>程序按照在HTML文件中出现的顺序逐行执行</li><li>严格区分大小写</li><li>每行结尾分号可有可无</li><li>单行注释//和多行注释/**/</li></ol><h2 id="数据类型和变量"><a href="#数据类型和变量" class="headerlink" title="数据类型和变量"></a>数据类型和变量</h2><h3 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h3><p><strong>数据类型</strong>分为三大类：</p><ol><li>简单数据类型<br>数值数据number<br>文本数据string<br>布尔数boolean</li><li>符合数据类型<br>数组Array<br>函数function<br>对象Objects</li><li>特殊数据类型<br>无定义数据类型undefined<br>空数据null</li></ol><h3 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h3><p><strong>变量</strong>：程序运行期间可能产生一些临时数据，应用程序会将这些数据保存在存储单元中。变量就是指程序中一个已经命名的存储单元，他的主要作用就是为数据操作提供存放信息的容器</p><p><strong>变量的命名规则</strong>：</p><ol><li>必须以字母或下划线开头，中间可以是数字、字母、下划线</li><li>变量名不能包含空格、加、减等符号</li><li>不能使用javascript中的关键字和保留字作为变量名</li><li>javascript的变量名严格区分大小写</li></ol><p>声明变量的语法格式：var 变量名;</p><h2 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h2><h3 id="算术运算符"><a href="#算术运算符" class="headerlink" title="算术运算符"></a>算术运算符</h3><h3 id="赋值运算符"><a href="#赋值运算符" class="headerlink" title="赋值运算符"></a>赋值运算符</h3><h3 id="位运算符"><a href="#位运算符" class="headerlink" title="位运算符"></a>位运算符</h3><h3 id="关系运算符"><a href="#关系运算符" class="headerlink" title="关系运算符"></a>关系运算符</h3><h3 id="逻辑运算符"><a href="#逻辑运算符" class="headerlink" title="逻辑运算符"></a>逻辑运算符</h3><p>条件运算符</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> html5 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> html </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>8.1.1JavaScript概念及其语法上</title>
+      <link href="/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web/8javaScript%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%E5%8F%8AjavaScript%E5%AF%B9%E8%B1%A1/8.1.1JavaScript%E6%A6%82%E5%BF%B5%E5%8F%8A%E5%85%B6%E8%AF%AD%E6%B3%95%E4%B8%8A/"/>
+      <url>/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web/8javaScript%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%E5%8F%8AjavaScript%E5%AF%B9%E8%B1%A1/8.1.1JavaScript%E6%A6%82%E5%BF%B5%E5%8F%8A%E5%85%B6%E8%AF%AD%E6%B3%95%E4%B8%8A/</url>
+      
+        <content type="html"><![CDATA[<h4 id="8-1-1JavaScript概念及其语法上"><a href="#8-1-1JavaScript概念及其语法上" class="headerlink" title="8.1.1JavaScript概念及其语法上"></a><center>8.1.1JavaScript概念及其语法上</center></h4><a id="more"></a><h2 id="JavaScript简介"><a href="#JavaScript简介" class="headerlink" title="JavaScript简介"></a>JavaScript简介</h2><p>是一种脚本语言，是动态的、弱类型、基于原型的语言</p><p>特点：</p><ol><li>语法简单，易学易用</li><li>解释性语言</li><li>跨平台</li><li>基于对象和时间驱动</li><li>可用于客户端</li></ol><p>作用：</p><ol><li>动态改变网页内容</li><li>动态改变网页外观</li><li>验证表单数据</li><li>响应事件</li></ol><p>和java的区别：</p><ol><li>java是传统编程语言，javascript是脚本语言</li><li>java语言多用于服务器端，javascript主要用于客户端</li><li>java不能直接嵌入网页运行，javascript程序可以直接嵌入网页运行</li><li>java和javascript语法结构存在差异</li></ol><p>javascript开发和运行环境：</p><p>是一种脚本语言，不需要编译成二进制文件，以文本形式存在，任何编译器都可以作为他的开发环境，通常的开发环境有：记事本、UltraEdit、Dreamwaver</p><h2 id="在HTML5中使用JavaScript"><a href="#在HTML5中使用JavaScript" class="headerlink" title="在HTML5中使用JavaScript"></a>在HTML5中使用JavaScript</h2><p>有两种方法：内嵌式，外链式</p><h3 id="内嵌式"><a href="#内嵌式" class="headerlink" title="内嵌式"></a>内嵌式</h3><p>script标签，放在head标签中</p><h3 id="外链式"><a href="#外链式" class="headerlink" title="外链式"></a>外链式</h3><p>同一段代码需要被多个网页文件所使用的时候，使用外链式</p><h2 id="数据类型与变量"><a href="#数据类型与变量" class="headerlink" title="数据类型与变量"></a>数据类型与变量</h2><h2 id="运算符与表达式"><a href="#运算符与表达式" class="headerlink" title="运算符与表达式"></a>运算符与表达式</h2><h2 id="流程控制语句"><a href="#流程控制语句" class="headerlink" title="流程控制语句"></a>流程控制语句</h2><h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2>]]></content>
+      
+      
+      <categories>
+          
+          <category> html5 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> html </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>8.1JavaScript概念及其语法</title>
+      <link href="/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web/8javaScript%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%E5%8F%8AjavaScript%E5%AF%B9%E8%B1%A1/8.1.0JavaScript%E6%A6%82%E5%BF%B5%E5%8F%8A%E5%85%B6%E8%AF%AD%E6%B3%95/"/>
+      <url>/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web/8javaScript%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%E5%8F%8AjavaScript%E5%AF%B9%E8%B1%A1/8.1.0JavaScript%E6%A6%82%E5%BF%B5%E5%8F%8A%E5%85%B6%E8%AF%AD%E6%B3%95/</url>
+      
+        <content type="html"><![CDATA[<h4 id="8-1JavaScript概念及其语法"><a href="#8-1JavaScript概念及其语法" class="headerlink" title="8.1JavaScript概念及其语法"></a><center>8.1JavaScript概念及其语法</center></h4><a id="more"></a><h1 id="见8-1-1和8-1-2"><a href="#见8-1-1和8-1-2" class="headerlink" title="见8.1.1和8.1.2"></a>见8.1.1和8.1.2</h1>]]></content>
+      
+      
+      <categories>
+          
+          <category> html5 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> html </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>7.4.2CSS3-弹性盒布局</title>
+      <link href="/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web/7CSS3%E9%A1%B5%E9%9D%A2%E5%B8%83%E5%B1%80/7.4.2CSS3-%E5%BC%B9%E6%80%A7%E7%9B%92%E5%B8%83%E5%B1%80/"/>
+      <url>/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web/7CSS3%E9%A1%B5%E9%9D%A2%E5%B8%83%E5%B1%80/7.4.2CSS3-%E5%BC%B9%E6%80%A7%E7%9B%92%E5%B8%83%E5%B1%80/</url>
+      
+        <content type="html"><![CDATA[<h4 id="7-4-2CSS3-弹性盒布局"><a href="#7-4-2CSS3-弹性盒布局" class="headerlink" title="7.4.2CSS3-弹性盒布局"></a><center>7.4.2CSS3-弹性盒布局</center></h4><a id="more"></a><h2 id="弹性盒布局"><a href="#弹性盒布局" class="headerlink" title="弹性盒布局"></a>弹性盒布局</h2><p>弹性盒是CSS3的一种新布局模式。它是一种当页面需要适应不同的屏幕大小及设备类型时确保元素拥有桥当排列的布局方式</p><ol><li>弹性盒组成<br>弹性容器的定义：选择器{display: flex;}</li><li>弹性容器的布局<br>按照子元素排列的方向不同，有横向和纵向排列两种方式，子元素的方向属性：选择器{flex-flow: 方向值 换行设置;}</li><li>子元素的布局<br>子元素在空间宽度上的分配，由flex属性设置</li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> html5 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> html </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>6.1CSS概述</title>
+      <link href="/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web/6CSS3%E8%AF%AD%E6%B3%95/6.1CSS%E6%A6%82%E8%BF%B0/"/>
+      <url>/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web/6CSS3%E8%AF%AD%E6%B3%95/6.1CSS%E6%A6%82%E8%BF%B0/</url>
+      
+        <content type="html"><![CDATA[<h4 id="6-1CSS概述"><a href="#6-1CSS概述" class="headerlink" title="6.1CSS概述"></a><center>6.1CSS概述</center></h4><a id="more"></a><h2 id="CSS概念"><a href="#CSS概念" class="headerlink" title="CSS概念"></a>CSS概念</h2><p>Cascading Style Sheets（层叠样式表）的缩写，它是一种对Web文档添加样式的简单机制，是一种表现HTML或XML等文件外观样式的计算机语言，是一种网页排版和布局设计的技术</p><h2 id="CSS特点"><a href="#CSS特点" class="headerlink" title="CSS特点"></a>CSS特点</h2><p>纯CSS布局和结构式HTML相结合能帮助设计师分离外观与结构，与传统的表格布局相比，具有以下特点：</p><ol><li>网页载入更快</li><li>降低了流量费用</li><li>修改设计时效率更高</li><li>更容易被搜索引擎收录</li></ol><h2 id="CSS功能"><a href="#CSS功能" class="headerlink" title="CSS功能"></a>CSS功能</h2><ol><li>灵活控制文字字体、颜色、大小、间距、风格及位置</li><li>随意设置文本块行高、缩进，并可加三维效果的边框</li><li>方便为元素设置不同的背景颜色和背景图片</li><li>精确控制网页中个元素的位置</li><li>可以与脚本语言相结合，产生各种动态效果</li></ol><h2 id="CSS样式发展历程"><a href="#CSS样式发展历程" class="headerlink" title="CSS样式发展历程"></a>CSS样式发展历程</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1996年12月：第一个CSS规范称为W3C的推荐标准，提供有关字体、颜色、位置和文本属性的基本信息。较为全面的规定了文档的显示样式</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1998年5月：CSS2作为W3C推荐标准发布，他在CSS1的基础上扩充和改进了许多属性，推出了一套内容和表现效果分离的方式，用DIV分割元素，用样式来定义外观，是程序员在开发过程中不必考虑显示和界面，大大提升了开发的效率</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">2010年12月：CSS3版本全新推出，通过模块化结构可以及时调整模块的内容，方便版本的更新与发布</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">2012年9月：开始设计CSS Level4版本；但是到目前为止，极少数的功能被浏览器厂商所支持</span><br></pre></td></tr></table></figure><h2 id="CSS3前景"><a href="#CSS3前景" class="headerlink" title="CSS3前景"></a>CSS3前景</h2><h3 id="CSS3的应用范围"><a href="#CSS3的应用范围" class="headerlink" title="CSS3的应用范围"></a>CSS3的应用范围</h3><ol><li>按钮效果</li><li>制作柱形图</li><li>设计下拉菜单</li><li>图片阴影效果</li><li>文本框样式</li><li>字体效果</li><li>CSS3引用气泡</li><li>动画效果</li></ol><h2 id="支持CSS3的浏览器"><a href="#支持CSS3的浏览器" class="headerlink" title="支持CSS3的浏览器"></a>支持CSS3的浏览器</h2><h3 id="对于属性的支持"><a href="#对于属性的支持" class="headerlink" title="对于属性的支持"></a>对于属性的支持</h3><p>除了Transforms 3D属性没有浏览器支持以外，Windows平台下的、Chrome和Safari对其他属性全面支持。其次是Firefox和Opera</p><h3 id="对于选择器的支持"><a href="#对于选择器的支持" class="headerlink" title="对于选择器的支持"></a>对于选择器的支持</h3><p>CSS3增加了许多的CSS选择器，可以简单实现更强大的功能，目前除了IE9以下的浏览器版本已经全部支持CSS3的选择器</p><h3 id="浏览器的前缀"><a href="#浏览器的前缀" class="headerlink" title="浏览器的前缀"></a>浏览器的前缀</h3><p>为了让设计人员设计的一个效果被各个浏览器所识别，通常可以在样式代码前面添加浏览器前缀</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">-ms-transform：rotate(30deg);/*IE9*/</span><br><span class="line">-moz-transform:rotate(30deg);/*Firefox*/</span><br><span class="line">-webkit-transform:rotate(30deg);/*Safari and Chrome*/</span><br><span class="line">-0-transform:rotate(30deg);/*Opera*/</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> html5 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> html </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>6.3在网页中应用CSS的方式</title>
+      <link href="/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web/6CSS3%E8%AF%AD%E6%B3%95/6.3%E5%9C%A8%E7%BD%91%E9%A1%B5%E4%B8%AD%E5%BA%94%E7%94%A8CSS%E7%9A%84%E6%96%B9%E5%BC%8F/"/>
+      <url>/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web/6CSS3%E8%AF%AD%E6%B3%95/6.3%E5%9C%A8%E7%BD%91%E9%A1%B5%E4%B8%AD%E5%BA%94%E7%94%A8CSS%E7%9A%84%E6%96%B9%E5%BC%8F/</url>
+      
+        <content type="html"><![CDATA[<h4 id="6-3在网页中应用CSS的方式"><a href="#6-3在网页中应用CSS的方式" class="headerlink" title="6.3在网页中应用CSS的方式"></a><center>6.3在网页中应用CSS的方式</center></h4><a id="more"></a><h2 id="CSS3应用方法"><a href="#CSS3应用方法" class="headerlink" title="CSS3应用方法"></a>CSS3应用方法</h2><p>CSS样式能够以分离网页内容和样式的形式很好的控制网页的显示。在网页中应用CSS样式有4种方法：</p><ol><li><p>内联式</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">通过标记style属性直接把CSS样式添加到HTML标签中</span><br></pre></td></tr></table></figure><p>语法格式：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;标记名 style=&quot;&quot;&gt;&lt;/标记名&gt;</span><br></pre></td></tr></table></figure></li></ol><ol start="2"><li><p>内嵌式</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">将CSS样式代码添加到HTML文档的&lt;head&gt;头部中，并用&lt;style&gt;标记定义</span><br></pre></td></tr></table></figure><p>语法格式：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;head&gt;</span><br><span class="line">&lt;style type=&quot;text/css&quot;&gt;</span><br><span class="line">选择器&#123;属性&#125;</span><br><span class="line">&lt;/style&gt;</span><br><span class="line">&lt;/head&gt;</span><br></pre></td></tr></table></figure></li></ol><ol start="3"><li><p>链入式</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">将所有的样式放在一个或者多个以.css为扩展名的外部样式表文件中，通过&lt;link /&gt;标记将外部样式表文件链接到HTML文档中</span><br></pre></td></tr></table></figure><p>语法格式：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;head&gt;</span><br><span class="line">&lt;link href=&quot;CSS文件路径&quot; type=&quot;text/css&quot; rel=&quot;stylesheet&quot;/&gt;</span><br><span class="line">&lt;/head&gt;</span><br></pre></td></tr></table></figure></li></ol><ol start="4"><li><p>导入式</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">与链入外部CSS基本相同，都是要创建一个单独的外部CSS文件，再引入到HTML文档中。只不过语法和运作方式略有差别。</span><br></pre></td></tr></table></figure><p>语法格式：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;head&gt;</span><br><span class="line">&lt;style type=&quot;text/css&quot;&gt;</span><br><span class="line">@import url(&quot;外部样式表相对路径&quot;);</span><br><span class="line">&lt;/style&gt;</span><br><span class="line">&lt;/head&gt;</span><br></pre></td></tr></table></figure></li></ol><h3 id="链入式和导入式的区别："><a href="#链入式和导入式的区别：" class="headerlink" title="链入式和导入式的区别："></a>链入式和导入式的区别：</h3><ol><li>隶属关系不同：link属于HTML标签，@import是CSS提供的载入方式</li><li>加载时间及顺序不同：link先将外部的CSS文件加载到网页中，然后再进行编译显示。而@import是浏览器先将HTML结构呈现出来，再把外部的CSS文件加载到网页中，当网速较慢的时候会先显示没有CSS的效果，加载完毕再渲染画面</li><li>兼容性不同@import只有IE5以上的版本才能识别，而link标签没有这个问题</li><li>DOM模型控制样式：使用JavaScript控制DOM改变样式时，只能使用link标签，而@import不受DOM模型的影响</li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> html5 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> html </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>6.2CSS3的基本语法</title>
+      <link href="/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web/6CSS3%E8%AF%AD%E6%B3%95/6.2CSS3%E7%9A%84%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/"/>
+      <url>/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web/6CSS3%E8%AF%AD%E6%B3%95/6.2CSS3%E7%9A%84%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/</url>
+      
+        <content type="html"><![CDATA[<h4 id="6-2CSS3的基本语法"><a href="#6-2CSS3的基本语法" class="headerlink" title="6.2CSS3的基本语法"></a><center>6.2CSS3的基本语法</center></h4><a id="more"></a><h2 id="CSS3语法格式"><a href="#CSS3语法格式" class="headerlink" title="CSS3语法格式"></a>CSS3语法格式</h2><h3 id="构造CSS的样式规则"><a href="#构造CSS的样式规则" class="headerlink" title="构造CSS的样式规则"></a>构造CSS的样式规则</h3><p>CSS样式设置规则由两部分组成</p><ol><li>选择符：作用于哪里</li><li>声明：作用的样式，由属性和值构成，中间用冒号分割</li></ol><h3 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h3><ol><li><p>如果属性的值是由多个单词组成，并且单词之间有空格，那么必须给值加上引号，如字体的名称经常是几个单词的组合</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">p&#123;</span><br><span class="line">font-family:&quot;Times New Roman&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li><li><p>如果需要对一个选择符指定多个属性时，用分号将属性分开</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">p&#123;</span><br><span class="line">text-align:center;color:red;font-family:宋体</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li><li><p>相同属性组合起来称为选择符组。如果需要给选择符组定义属性和值，只要用逗号将选择符分开即可。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">p,table&#123;</span><br><span class="line">font-size:10pt</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li><li><p>CSS3对空格和大小写一般不敏感</p></li><li><p>为CSS添加注释时，只需要用/**/将注释包裹起来即可</p></li></ol><h2 id="选择器及其应用"><a href="#选择器及其应用" class="headerlink" title="选择器及其应用"></a>选择器及其应用</h2><p>选择器也可以称之为选择符，在HTML中不同的标签是用不同的选择器来控制的</p><h3 id="选择器的类型"><a href="#选择器的类型" class="headerlink" title="选择器的类型"></a>选择器的类型</h3><ol><li><p>通用选择器</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">通用选择器用*表示，他是所有选择器中作用范围最广的，能匹配页面内的所有元素</span><br></pre></td></tr></table></figure></li></ol><ol start="2"><li><p>标签选择器</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">指用HTML标签名称作为选择器，按标签名称分类，为页面中某一类标签指定统一的CSS样式</span><br></pre></td></tr></table></figure></li></ol><ol start="3"><li><p>类选择器</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">用来为一系列的网页元素定义相同的显示样式。类选择器使用.（英文符号）进行标识，后面紧跟类名</span><br></pre></td></tr></table></figure><p>类名定义是区分大小写的</p></li><li><p>id选择器</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">用来为唯一的网页元素定义显示样式。ID选择器使用#进行标识，后面紧跟Id名</span><br></pre></td></tr></table></figure><p>id名定义是区分大小写的</p></li><li><p>伪类选择器</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">伪类是可以向某些选择器添加特殊效果的、一组CSS预定义好的类，不需要进行id和class属性的声明，就能自动的被支持CSS的浏览器所识别</span><br></pre></td></tr></table></figure><table><thead><tr><th>伪类名</th><th>描述</th></tr></thead><tbody><tr><td>:link</td><td>向未被访问的链接添加样式，目前仅适用于超链接</td></tr><tr><td>:visited</td><td>向已被访问的链接添加样式，目前仅适用于超链接</td></tr><tr><td>:active</td><td>向被激活的元素添加样式</td></tr><tr><td>:focus</td><td>向拥有键盘输入焦点的元素添加样式</td></tr><tr><td>:hover</td><td>当鼠标悬浮在元素上方是，向元素添加样式</td></tr><tr><td>:readonly</td><td>向只读元素添加样式</td></tr><tr><td>:checked</td><td>向被选中的元素添加样式</td></tr><tr><td>:disabled</td><td>向被禁用的元素添加样式</td></tr><tr><td>:enabled</td><td>向可用的元素添加样式</td></tr></tbody></table></li></ol><ol start="6"><li><p>群组选择器</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">当几个元素样式属性一样的时候，可以共同调用一个声明，元素之间用逗号分隔</span><br></pre></td></tr></table></figure></li></ol><ol start="7"><li><p>派生选择器</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">也叫后代选择器</span><br><span class="line">派生选择器允许你根据文档上下文关系来确定某个标签的样式。在派生选择器中，每一个选择器对象之间使用空格作为分隔符，除了可以派生一级后代，也可以派生出多级后代</span><br></pre></td></tr></table></figure></li></ol><ol start="8"><li><p>属性选择器</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">用于选择拥有指定属性的HRML元素设置样式</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">属性选择器包含了：属性选择器、属性值选择器、包含选择器、连接字符选择器、子串选择器、后缀选择器</span><br></pre></td></tr></table></figure></li></ol><ol start="9"><li><p>组合选择器</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">又称为子元素选择器</span><br><span class="line">用于选区某个元素的直接子元素（间接子元素不适用）子选择器元素之间使用大于号隔开</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">相邻兄弟选择器</span><br><span class="line">用于选择紧接在某元素之后的兄弟。相邻选择器元素之间使用+隔开</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">普通兄弟选择器</span><br><span class="line">用于选择具有相同父元素的元素。普通兄弟选择器元素之间使用~分开</span><br></pre></td></tr></table></figure></li></ol><p>## </p>]]></content>
       
       
       <categories>
@@ -704,36 +779,11 @@
     
     
     <entry>
-      <title>7.4.1CSS3-多列布局</title>
-      <link href="/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web/7CSS3%E9%A1%B5%E9%9D%A2%E5%B8%83%E5%B1%80/7.4.1CSS3-%E5%A4%9A%E5%88%97%E5%B8%83%E5%B1%80/"/>
-      <url>/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web/7CSS3%E9%A1%B5%E9%9D%A2%E5%B8%83%E5%B1%80/7.4.1CSS3-%E5%A4%9A%E5%88%97%E5%B8%83%E5%B1%80/</url>
+      <title>7.4多列布局及CSS3弹性盒布局</title>
+      <link href="/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web/7CSS3%E9%A1%B5%E9%9D%A2%E5%B8%83%E5%B1%80/7.4.0%E5%A4%9A%E5%88%97%E5%B8%83%E5%B1%80%E5%8F%8ACSS3%E5%BC%B9%E6%80%A7%E7%9B%92%E5%B8%83%E5%B1%80/"/>
+      <url>/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web/7CSS3%E9%A1%B5%E9%9D%A2%E5%B8%83%E5%B1%80/7.4.0%E5%A4%9A%E5%88%97%E5%B8%83%E5%B1%80%E5%8F%8ACSS3%E5%BC%B9%E6%80%A7%E7%9B%92%E5%B8%83%E5%B1%80/</url>
       
-        <content type="html"><![CDATA[<h4 id="7-4-1CSS3-多列布局"><a href="#7-4-1CSS3-多列布局" class="headerlink" title="7.4.1CSS3-多列布局"></a><center>7.4.1CSS3-多列布局</center></h4><a id="more"></a><h2 id="多列布局"><a href="#多列布局" class="headerlink" title="多列布局"></a>多列布局</h2><p>像报纸一样</p><p>让Web页面呈现多栏多列叫多列布局</p><ol><li>分栏数<br>CSS3中通过columns属性设置分栏</li><li>列间修饰<br>columns-gap设置列间距<br>columns-rule设置列间宽度、样式和颜色</li><li>横跨多列<br>columns-span默认1，跨多少列</li></ol>]]></content>
-      
-      
-      <categories>
-          
-          <category> html5 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> html </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>6.1CSS概述</title>
-      <link href="/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web/6CSS3%E8%AF%AD%E6%B3%95/6.1CSS%E6%A6%82%E8%BF%B0/"/>
-      <url>/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web/6CSS3%E8%AF%AD%E6%B3%95/6.1CSS%E6%A6%82%E8%BF%B0/</url>
-      
-        <content type="html"><![CDATA[<h4 id="6-1CSS概述"><a href="#6-1CSS概述" class="headerlink" title="6.1CSS概述"></a><center>6.1CSS概述</center></h4><a id="more"></a><h2 id="CSS概念"><a href="#CSS概念" class="headerlink" title="CSS概念"></a>CSS概念</h2><p>Cascading Style Sheets（层叠样式表）的缩写，它是一种对Web文档添加样式的简单机制，是一种表现HTML或XML等文件外观样式的计算机语言，是一种网页排版和布局设计的技术</p><h2 id="CSS特点"><a href="#CSS特点" class="headerlink" title="CSS特点"></a>CSS特点</h2><p>纯CSS布局和结构式HTML相结合能帮助设计师分离外观与结构，与传统的表格布局相比，具有以下特点：</p><ol><li>网页载入更快</li><li>降低了流量费用</li><li>修改设计时效率更高</li><li>更容易被搜索引擎收录</li></ol><h2 id="CSS功能"><a href="#CSS功能" class="headerlink" title="CSS功能"></a>CSS功能</h2><ol><li>灵活控制文字字体、颜色、大小、间距、风格及位置</li><li>随意设置文本块行高、缩进，并可加三维效果的边框</li><li>方便为元素设置不同的背景颜色和背景图片</li><li>精确控制网页中个元素的位置</li><li>可以与脚本语言相结合，产生各种动态效果</li></ol><h2 id="CSS样式发展历程"><a href="#CSS样式发展历程" class="headerlink" title="CSS样式发展历程"></a>CSS样式发展历程</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1996年12月：第一个CSS规范称为W3C的推荐标准，提供有关字体、颜色、位置和文本属性的基本信息。较为全面的规定了文档的显示样式</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1998年5月：CSS2作为W3C推荐标准发布，他在CSS1的基础上扩充和改进了许多属性，推出了一套内容和表现效果分离的方式，用DIV分割元素，用样式来定义外观，是程序员在开发过程中不必考虑显示和界面，大大提升了开发的效率</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">2010年12月：CSS3版本全新推出，通过模块化结构可以及时调整模块的内容，方便版本的更新与发布</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">2012年9月：开始设计CSS Level4版本；但是到目前为止，极少数的功能被浏览器厂商所支持</span><br></pre></td></tr></table></figure><h2 id="CSS3前景"><a href="#CSS3前景" class="headerlink" title="CSS3前景"></a>CSS3前景</h2><h3 id="CSS3的应用范围"><a href="#CSS3的应用范围" class="headerlink" title="CSS3的应用范围"></a>CSS3的应用范围</h3><ol><li>按钮效果</li><li>制作柱形图</li><li>设计下拉菜单</li><li>图片阴影效果</li><li>文本框样式</li><li>字体效果</li><li>CSS3引用气泡</li><li>动画效果</li></ol><h2 id="支持CSS3的浏览器"><a href="#支持CSS3的浏览器" class="headerlink" title="支持CSS3的浏览器"></a>支持CSS3的浏览器</h2><h3 id="对于属性的支持"><a href="#对于属性的支持" class="headerlink" title="对于属性的支持"></a>对于属性的支持</h3><p>除了Transforms 3D属性没有浏览器支持以外，Windows平台下的、Chrome和Safari对其他属性全面支持。其次是Firefox和Opera</p><h3 id="对于选择器的支持"><a href="#对于选择器的支持" class="headerlink" title="对于选择器的支持"></a>对于选择器的支持</h3><p>CSS3增加了许多的CSS选择器，可以简单实现更强大的功能，目前除了IE9以下的浏览器版本已经全部支持CSS3的选择器</p><h3 id="浏览器的前缀"><a href="#浏览器的前缀" class="headerlink" title="浏览器的前缀"></a>浏览器的前缀</h3><p>为了让设计人员设计的一个效果被各个浏览器所识别，通常可以在样式代码前面添加浏览器前缀</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">-ms-transform：rotate(30deg);/*IE9*/</span><br><span class="line">-moz-transform:rotate(30deg);/*Firefox*/</span><br><span class="line">-webkit-transform:rotate(30deg);/*Safari and Chrome*/</span><br><span class="line">-0-transform:rotate(30deg);/*Opera*/</span><br></pre></td></tr></table></figure>]]></content>
+        <content type="html"><![CDATA[<h4 id="7-4多列布局及CSS3弹性盒布局"><a href="#7-4多列布局及CSS3弹性盒布局" class="headerlink" title="7.4多列布局及CSS3弹性盒布局"></a><center>7.4多列布局及CSS3弹性盒布局</center></h4><a id="more"></a><h1 id="见7-4-1和7-4-2"><a href="#见7-4-1和7-4-2" class="headerlink" title="见7.4.1和7.4.2"></a>见7.4.1和7.4.2</h1>]]></content>
       
       
       <categories>
@@ -779,36 +829,11 @@
     
     
     <entry>
-      <title>7.4多列布局及CSS3弹性盒布局</title>
-      <link href="/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web/7CSS3%E9%A1%B5%E9%9D%A2%E5%B8%83%E5%B1%80/7.4.0%E5%A4%9A%E5%88%97%E5%B8%83%E5%B1%80%E5%8F%8ACSS3%E5%BC%B9%E6%80%A7%E7%9B%92%E5%B8%83%E5%B1%80/"/>
-      <url>/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web/7CSS3%E9%A1%B5%E9%9D%A2%E5%B8%83%E5%B1%80/7.4.0%E5%A4%9A%E5%88%97%E5%B8%83%E5%B1%80%E5%8F%8ACSS3%E5%BC%B9%E6%80%A7%E7%9B%92%E5%B8%83%E5%B1%80/</url>
+      <title>7.4.1CSS3-多列布局</title>
+      <link href="/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web/7CSS3%E9%A1%B5%E9%9D%A2%E5%B8%83%E5%B1%80/7.4.1CSS3-%E5%A4%9A%E5%88%97%E5%B8%83%E5%B1%80/"/>
+      <url>/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web/7CSS3%E9%A1%B5%E9%9D%A2%E5%B8%83%E5%B1%80/7.4.1CSS3-%E5%A4%9A%E5%88%97%E5%B8%83%E5%B1%80/</url>
       
-        <content type="html"><![CDATA[<h4 id="7-4多列布局及CSS3弹性盒布局"><a href="#7-4多列布局及CSS3弹性盒布局" class="headerlink" title="7.4多列布局及CSS3弹性盒布局"></a><center>7.4多列布局及CSS3弹性盒布局</center></h4><a id="more"></a><h1 id="见7-4-1和7-4-2"><a href="#见7-4-1和7-4-2" class="headerlink" title="见7.4.1和7.4.2"></a>见7.4.1和7.4.2</h1>]]></content>
-      
-      
-      <categories>
-          
-          <category> html5 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> html </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>8.1JavaScript概念及其语法</title>
-      <link href="/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web/8javaScript%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%E5%8F%8AjavaScript%E5%AF%B9%E8%B1%A1/8.1.0JavaScript%E6%A6%82%E5%BF%B5%E5%8F%8A%E5%85%B6%E8%AF%AD%E6%B3%95/"/>
-      <url>/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web/8javaScript%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%E5%8F%8AjavaScript%E5%AF%B9%E8%B1%A1/8.1.0JavaScript%E6%A6%82%E5%BF%B5%E5%8F%8A%E5%85%B6%E8%AF%AD%E6%B3%95/</url>
-      
-        <content type="html"><![CDATA[<h4 id="8-1JavaScript概念及其语法"><a href="#8-1JavaScript概念及其语法" class="headerlink" title="8.1JavaScript概念及其语法"></a><center>8.1JavaScript概念及其语法</center></h4><a id="more"></a><h1 id="见8-1-1和8-1-2"><a href="#见8-1-1和8-1-2" class="headerlink" title="见8.1.1和8.1.2"></a>见8.1.1和8.1.2</h1>]]></content>
+        <content type="html"><![CDATA[<h4 id="7-4-1CSS3-多列布局"><a href="#7-4-1CSS3-多列布局" class="headerlink" title="7.4.1CSS3-多列布局"></a><center>7.4.1CSS3-多列布局</center></h4><a id="more"></a><h2 id="多列布局"><a href="#多列布局" class="headerlink" title="多列布局"></a>多列布局</h2><p>像报纸一样</p><p>让Web页面呈现多栏多列叫多列布局</p><ol><li>分栏数<br>CSS3中通过columns属性设置分栏</li><li>列间修饰<br>columns-gap设置列间距<br>columns-rule设置列间宽度、样式和颜色</li><li>横跨多列<br>columns-span默认1，跨多少列</li></ol>]]></content>
       
       
       <categories>
@@ -829,11 +854,36 @@
     
     
     <entry>
-      <title>4.3表单的处理</title>
-      <link href="/2020/11/03/MD/%E5%A4%A7%E4%B8%89/Web/4%E6%9E%84%E5%BB%BAWeb%E8%A1%A8%E5%8D%95/4.3%E8%A1%A8%E5%8D%95%E7%9A%84%E5%A4%84%E7%90%86/"/>
-      <url>/2020/11/03/MD/%E5%A4%A7%E4%B8%89/Web/4%E6%9E%84%E5%BB%BAWeb%E8%A1%A8%E5%8D%95/4.3%E8%A1%A8%E5%8D%95%E7%9A%84%E5%A4%84%E7%90%86/</url>
+      <title>7.5CSS3高级应用</title>
+      <link href="/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web/7CSS3%E9%A1%B5%E9%9D%A2%E5%B8%83%E5%B1%80/7.5CSS3%E9%AB%98%E7%BA%A7%E5%BA%94%E7%94%A8/"/>
+      <url>/2020/11/06/MD/%E5%A4%A7%E4%B8%89/Web/7CSS3%E9%A1%B5%E9%9D%A2%E5%B8%83%E5%B1%80/7.5CSS3%E9%AB%98%E7%BA%A7%E5%BA%94%E7%94%A8/</url>
       
-        <content type="html"><![CDATA[<h4 id="4-3表单的处理"><a href="#4-3表单的处理" class="headerlink" title="4.3表单的处理"></a><center>4.3表单的处理</center></h4><a id="more"></a><h2 id="表单的分组"><a href="#表单的分组" class="headerlink" title="表单的分组"></a>表单的分组</h2><p>使用fieldset元素将相关的元素组合在一起</p><h3 id="fieldset基本语法"><a href="#fieldset基本语法" class="headerlink" title="fieldset基本语法"></a>fieldset基本语法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;form&gt;</span><br><span class="line">&lt;fieldset&gt;  (表单的一个子容器，将所包含的内容以边框环绕的方式显示)</span><br><span class="line">&lt;legend&gt;&lt;/legend&gt;  (为fieldset边框添加相关的标题)</span><br><span class="line">&lt;/fieldset&gt;</span><br><span class="line">&lt;/form&gt;</span><br></pre></td></tr></table></figure><h2 id="表单的验证"><a href="#表单的验证" class="headerlink" title="表单的验证"></a>表单的验证</h2><p>表单验证主要时在用户提交表单之前对用户输入的数据进行验证，看数据是否合法</p><h3 id="Email-URL验证"><a href="#Email-URL验证" class="headerlink" title="Email/URL验证"></a>Email/URL验证</h3><p>HTML5新增的Email/URL表单类型本身就是具有对表单数据进行验证的功能</p><h3 id="pattern验证"><a href="#pattern验证" class="headerlink" title="pattern验证"></a>pattern验证</h3><p>使用pattern属性验证输入字段的模式，pattern属性具有对表单中输入字段模式进行验证的功能。适合于text、url、telephone、email、password等<input>类型</p><h4 id="pattern基本语法格式"><a href="#pattern基本语法格式" class="headerlink" title="pattern基本语法格式"></a>pattern基本语法格式</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;input pattern=&quot;regexp(正则表达式)&quot;&gt;</span><br></pre></td></tr></table></figure><h2 id="表单添加组件说明"><a href="#表单添加组件说明" class="headerlink" title="表单添加组件说明"></a>表单添加组件说明</h2><p>使用label标签为扁担组件添加说明</p><h3 id="label标签"><a href="#label标签" class="headerlink" title="label标签"></a>label标签</h3><p>label标签是描述表单字段用途的文本。label元素不会向用户呈现任何特殊的效果。不过它为鼠标用户改进了可用性。如果在label元素内点击文本，就会出发此控件。就是说，当用户选择该标签时，浏览器就会自动将焦点转移到和标签相关的表单控件上</p><h3 id="label标签的属性"><a href="#label标签的属性" class="headerlink" title="label标签的属性"></a>label标签的属性</h3><ol><li>for：规定label绑定到哪个表单元素上，属性取值为表单元素的id</li><li>form：规定label字段所属的一个或多个表单。属性取值为formid</li></ol>]]></content>
+        <content type="html"><![CDATA[<h4 id="7-5CSS3高级应用"><a href="#7-5CSS3高级应用" class="headerlink" title="7.5CSS3高级应用"></a><center>7.5CSS3高级应用</center></h4><a id="more"></a><h1 id="特效应用"><a href="#特效应用" class="headerlink" title="特效应用"></a>特效应用</h1><h2 id="滤镜属性filter"><a href="#滤镜属性filter" class="headerlink" title="滤镜属性filter"></a>滤镜属性filter</h2><p>滤镜是CSS的扩展部分。CSS的滤镜技术可以将各种特效添加到标准的HTML页面上，从而设计出多姿多彩的页面</p><p>语法格式：</p><p>选择器{filter:滤镜名称(滤镜参数)}</p><p>filter有十几种取值，每种取值都带有参数</p><h3 id="常用的滤镜的名称"><a href="#常用的滤镜的名称" class="headerlink" title="常用的滤镜的名称"></a>常用的滤镜的名称</h3><p>grayscale() 灰度</p><p>sepia() 老照片</p><p>saturate() 饱和度转换</p><p>hue-ratate() 色调转换</p><p>invert() 反射效果</p><p>opacity() 透明度</p><p>brightness() 亮度效果</p><p>contrast() 对比度</p><p>blur() 模糊</p><p>drop-shadow() 阴影效果</p><h2 id="渐变gradient"><a href="#渐变gradient" class="headerlink" title="渐变gradient"></a>渐变gradient</h2><p>CSS渐变可以显示在两个或多个指定的颜色之间平稳过渡效果</p><h3 id="线性渐变"><a href="#线性渐变" class="headerlink" title="线性渐变"></a>线性渐变</h3><p>linear</p><h3 id="径向渐变"><a href="#径向渐变" class="headerlink" title="径向渐变"></a>径向渐变</h3><p>radio</p><h2 id="2D转换transform"><a href="#2D转换transform" class="headerlink" title="2D转换transform"></a>2D转换transform</h2><p>CSS3转换transform可以实现二维平面内的位移、旋转、缩放、倾斜等变换效果</p><p>变换的函数：</p><p>translate() 平移</p><p>rotate() 旋转</p><p>scale() 缩放</p><p>skew() 倾斜</p><h2 id="过渡transition"><a href="#过渡transition" class="headerlink" title="过渡transition"></a>过渡transition</h2><p>过渡属性transition允许CSS属性值在一定时间和区间内平滑的过渡，这种效果可以在鼠标单击、获得焦点、被点击或对元素任何改变中触发，并圆滑地以动画效果改变CSS地属性值。</p><p>基本语法格式：选择器{transition:属性名称 过渡时间 速度类型 延迟时间;}</p><p>发生过渡的属性名称：属性名称用来规定应用过渡效果的CSS属性名称。他的取值可以是none、all或者某一个属性名</p><p>发生过渡时间用来规定由就属性过渡到新属性所花费的时间</p><p>linear线性效果</p><p>ease缓解效果</p><p>ease-in淡入效果</p><p>ease-out淡出效果</p><p>ease-in-out渐显渐隐效果</p><p>cubic-bezier特殊立方贝塞尔曲线效果</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> html5 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> html </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>5.1HTML5中的音频与视频</title>
+      <link href="/2020/11/03/MD/%E5%A4%A7%E4%B8%89/Web/5%E9%9F%B3%E9%A2%91%E4%B8%8E%E8%A7%86%E9%A2%91/5.1HTML5%E4%B8%AD%E7%9A%84%E9%9F%B3%E9%A2%91%E4%B8%8E%E8%A7%86%E9%A2%91/"/>
+      <url>/2020/11/03/MD/%E5%A4%A7%E4%B8%89/Web/5%E9%9F%B3%E9%A2%91%E4%B8%8E%E8%A7%86%E9%A2%91/5.1HTML5%E4%B8%AD%E7%9A%84%E9%9F%B3%E9%A2%91%E4%B8%8E%E8%A7%86%E9%A2%91/</url>
+      
+        <content type="html"><![CDATA[<h4 id="5-1HTML5中的音频与视频"><a href="#5-1HTML5中的音频与视频" class="headerlink" title="5.1HTML5中的音频与视频"></a><center>5.1HTML5中的音频与视频</center></h4><a id="more"></a><h2 id="音频和视频编解码器"><a href="#音频和视频编解码器" class="headerlink" title="音频和视频编解码器"></a>音频和视频编解码器</h2><h3 id="音频编解码器"><a href="#音频编解码器" class="headerlink" title="音频编解码器"></a>音频编解码器</h3><p>定义了音频数据流编码和解码的算法。其中编码器主要是对数据流进行编码操作，用于存储和传输。音频播放器主要是对音频文件进行解码，然后进行播放操作。</p><p>主要使用的音频<strong>解码器</strong>使Vorbis和ACC</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ACC是基于MPEG-2的音频编码技术</span><br><span class="line">Ogg Vorbis是一种新的音频压缩格式，类似于MP3等的音乐格式。开源，支持多声道</span><br></pre></td></tr></table></figure><h3 id="视频编解码器"><a href="#视频编解码器" class="headerlink" title="视频编解码器"></a>视频编解码器</h3><p>定义了视频数据流编码和解码的算法。其中编码器主要是对数据流进行编码操作，用于存储和传输。视频播放器主要是对音频文件进行解码，然后进行播放操作。</p><p>目前使用较多的视频<strong>解码器</strong>是Theora、H.264和VP8</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Theora是一种一款由Xiph.org基金会发布的免费且开放的视频压缩编码技术</span><br><span class="line">H.264是一种国际电信联盟和国际标准化组织联合推出的高性能视频编码解码技术</span><br><span class="line">VP8由On2 Technologiesis开发，随后由Google发布的视频压缩格式</span><br></pre></td></tr></table></figure><h2 id="HTML5播放音频"><a href="#HTML5播放音频" class="headerlink" title="HTML5播放音频"></a>HTML5播放音频</h2><p>使用audio标签，用于音乐文件和其他视频流的播放</p><h3 id="audio基本语法"><a href="#audio基本语法" class="headerlink" title="audio基本语法"></a>audio基本语法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;audio src=&quot;&quot; controls=&quot;&quot;&gt;&lt;/audio&gt;</span><br></pre></td></tr></table></figure><p>src:规定要播放的音频的地址</p><p>controls:供添加播放、暂停和音量控件</p><p>audio目前支持三种音频格式Ogg Vorbis</p><h3 id="audio的属性"><a href="#audio的属性" class="headerlink" title="audio的属性"></a>audio的属性</h3><table><thead><tr><th>属性</th><th>值</th><th>描述</th></tr></thead><tbody><tr><td>autoplay</td><td>autoplay</td><td>如果出现该属性，则音频在就绪后马上播放</td></tr><tr><td>controls</td><td>controls</td><td>如果出现该属性，则向用户显示控件，比如播放按钮</td></tr><tr><td>loop</td><td>loop</td><td>如果出现该属性，则每当音频结束之后重新开始播放</td></tr><tr><td>preload</td><td>preload</td><td>如果出现该属性，则音频在页面页面加载时进行加载，并预备播放；如果使用“autoplay”，则忽略该属性</td></tr><tr><td>src</td><td>url</td><td>要播放的音频的url</td></tr></tbody></table><h2 id="HTML5播放视频"><a href="#HTML5播放视频" class="headerlink" title="HTML5播放视频"></a>HTML5播放视频</h2><p>使用video元素用于视频文件的播放</p><h3 id="video基本语法"><a href="#video基本语法" class="headerlink" title="video基本语法"></a>video基本语法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;video src=&quot;&quot; width=&quot;&quot; height=&quot;&quot; controls=&quot;controls&quot;&gt;</span><br><span class="line">&lt;/video&gt;</span><br></pre></td></tr></table></figure><p>video元素目前支持三种音频格式：Ogg、MPEG4、WebM</p><h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>在HTML5问世之前，在线的音频和视频都是借助Flash或者第三方工具实现的，现在HTML5也支持了这方面的功能。在一个支持HTML5的浏览器中不需要安装任何插件就可以播放音频和视频。</p>]]></content>
       
       
       <categories>
@@ -904,36 +954,11 @@
     
     
     <entry>
-      <title>5.1HTML5中的音频与视频</title>
-      <link href="/2020/11/03/MD/%E5%A4%A7%E4%B8%89/Web/5%E9%9F%B3%E9%A2%91%E4%B8%8E%E8%A7%86%E9%A2%91/5.1HTML5%E4%B8%AD%E7%9A%84%E9%9F%B3%E9%A2%91%E4%B8%8E%E8%A7%86%E9%A2%91/"/>
-      <url>/2020/11/03/MD/%E5%A4%A7%E4%B8%89/Web/5%E9%9F%B3%E9%A2%91%E4%B8%8E%E8%A7%86%E9%A2%91/5.1HTML5%E4%B8%AD%E7%9A%84%E9%9F%B3%E9%A2%91%E4%B8%8E%E8%A7%86%E9%A2%91/</url>
+      <title>4.3表单的处理</title>
+      <link href="/2020/11/03/MD/%E5%A4%A7%E4%B8%89/Web/4%E6%9E%84%E5%BB%BAWeb%E8%A1%A8%E5%8D%95/4.3%E8%A1%A8%E5%8D%95%E7%9A%84%E5%A4%84%E7%90%86/"/>
+      <url>/2020/11/03/MD/%E5%A4%A7%E4%B8%89/Web/4%E6%9E%84%E5%BB%BAWeb%E8%A1%A8%E5%8D%95/4.3%E8%A1%A8%E5%8D%95%E7%9A%84%E5%A4%84%E7%90%86/</url>
       
-        <content type="html"><![CDATA[<h4 id="5-1HTML5中的音频与视频"><a href="#5-1HTML5中的音频与视频" class="headerlink" title="5.1HTML5中的音频与视频"></a><center>5.1HTML5中的音频与视频</center></h4><a id="more"></a><h2 id="音频和视频编解码器"><a href="#音频和视频编解码器" class="headerlink" title="音频和视频编解码器"></a>音频和视频编解码器</h2><h3 id="音频编解码器"><a href="#音频编解码器" class="headerlink" title="音频编解码器"></a>音频编解码器</h3><p>定义了音频数据流编码和解码的算法。其中编码器主要是对数据流进行编码操作，用于存储和传输。音频播放器主要是对音频文件进行解码，然后进行播放操作。</p><p>主要使用的音频<strong>解码器</strong>使Vorbis和ACC</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ACC是基于MPEG-2的音频编码技术</span><br><span class="line">Ogg Vorbis是一种新的音频压缩格式，类似于MP3等的音乐格式。开源，支持多声道</span><br></pre></td></tr></table></figure><h3 id="视频编解码器"><a href="#视频编解码器" class="headerlink" title="视频编解码器"></a>视频编解码器</h3><p>定义了视频数据流编码和解码的算法。其中编码器主要是对数据流进行编码操作，用于存储和传输。视频播放器主要是对音频文件进行解码，然后进行播放操作。</p><p>目前使用较多的视频<strong>解码器</strong>是Theora、H.264和VP8</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Theora是一种一款由Xiph.org基金会发布的免费且开放的视频压缩编码技术</span><br><span class="line">H.264是一种国际电信联盟和国际标准化组织联合推出的高性能视频编码解码技术</span><br><span class="line">VP8由On2 Technologiesis开发，随后由Google发布的视频压缩格式</span><br></pre></td></tr></table></figure><h2 id="HTML5播放音频"><a href="#HTML5播放音频" class="headerlink" title="HTML5播放音频"></a>HTML5播放音频</h2><p>使用audio标签，用于音乐文件和其他视频流的播放</p><h3 id="audio基本语法"><a href="#audio基本语法" class="headerlink" title="audio基本语法"></a>audio基本语法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;audio src=&quot;&quot; controls=&quot;&quot;&gt;&lt;/audio&gt;</span><br></pre></td></tr></table></figure><p>src:规定要播放的音频的地址</p><p>controls:供添加播放、暂停和音量控件</p><p>audio目前支持三种音频格式Ogg Vorbis</p><h3 id="audio的属性"><a href="#audio的属性" class="headerlink" title="audio的属性"></a>audio的属性</h3><table><thead><tr><th>属性</th><th>值</th><th>描述</th></tr></thead><tbody><tr><td>autoplay</td><td>autoplay</td><td>如果出现该属性，则音频在就绪后马上播放</td></tr><tr><td>controls</td><td>controls</td><td>如果出现该属性，则向用户显示控件，比如播放按钮</td></tr><tr><td>loop</td><td>loop</td><td>如果出现该属性，则每当音频结束之后重新开始播放</td></tr><tr><td>preload</td><td>preload</td><td>如果出现该属性，则音频在页面页面加载时进行加载，并预备播放；如果使用“autoplay”，则忽略该属性</td></tr><tr><td>src</td><td>url</td><td>要播放的音频的url</td></tr></tbody></table><h2 id="HTML5播放视频"><a href="#HTML5播放视频" class="headerlink" title="HTML5播放视频"></a>HTML5播放视频</h2><p>使用video元素用于视频文件的播放</p><h3 id="video基本语法"><a href="#video基本语法" class="headerlink" title="video基本语法"></a>video基本语法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;video src=&quot;&quot; width=&quot;&quot; height=&quot;&quot; controls=&quot;controls&quot;&gt;</span><br><span class="line">&lt;/video&gt;</span><br></pre></td></tr></table></figure><p>video元素目前支持三种音频格式：Ogg、MPEG4、WebM</p><h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>在HTML5问世之前，在线的音频和视频都是借助Flash或者第三方工具实现的，现在HTML5也支持了这方面的功能。在一个支持HTML5的浏览器中不需要安装任何插件就可以播放音频和视频。</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> html5 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> html </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>3.2交互元素</title>
-      <link href="/2020/10/05/MD/%E5%A4%A7%E4%B8%89/Web/3%E9%A1%B5%E9%9D%A2%E5%85%83%E7%B4%A0%E5%92%8C%E5%B1%9E%E6%80%A7/3.2%E4%BA%A4%E4%BA%92%E5%85%83%E7%B4%A0/"/>
-      <url>/2020/10/05/MD/%E5%A4%A7%E4%B8%89/Web/3%E9%A1%B5%E9%9D%A2%E5%85%83%E7%B4%A0%E5%92%8C%E5%B1%9E%E6%80%A7/3.2%E4%BA%A4%E4%BA%92%E5%85%83%E7%B4%A0/</url>
-      
-        <content type="html"><![CDATA[<h4 id="3-2交互元素"><a href="#3-2交互元素" class="headerlink" title="3.2交互元素"></a><center>3.2交互元素</center></h4><a id="more"></a><p>对于应用程序来说，表现最为突出的就是交互操作</p><p>HTML5为操作新增了对应的交互体验元素：progress、meter、details、summary、menu、command等，这些元素可以在不请求服务器的情况下，改变用户选择内容与展现状态。通过这些元素可以更好的改善HTML5页面的用户体验和功能</p><h2 id="交互元素"><a href="#交互元素" class="headerlink" title="交互元素"></a>交互元素</h2><h3 id="progress元素"><a href="#progress元素" class="headerlink" title="progress元素"></a>progress元素</h3><p>属于状态交互元素。用来表示页面中某个任务完成的进度。显示可以使用整数，也可以使用百分比</p><p>progress元素的属性：</p><ul><li>max   规定任务一共需要多少工作</li><li>value   规定已经完成了多少任务</li></ul><h3 id="meter元素"><a href="#meter元素" class="headerlink" title="meter元素"></a>meter元素</h3><p>状态交换元素，和progress很像</p><p>meter元素属性：</p><ul><li>form：规定meter元素所属的一个或多个表单</li><li>high：规定被视作高的值的范围</li><li>low：规定被视作低的值的范围</li><li>max：规定范围的最大值</li><li>min：规定范围的最小值</li><li>optimum：规定度量的优化值</li><li>value：必需，规定度量的当前值</li></ul><h3 id="detail元素"><a href="#detail元素" class="headerlink" title="detail元素"></a>detail元素</h3><p>detail元素用来说明文档的详细信息，展开和折叠的交互效果</p><p>details元素的属性：</p><ul><li>Open：details元素是否可见，默认为不可见</li><li>Subject：设置元素所对应的ID号</li><li>Draggable：设置是否可以拖动元素，默认为false</li></ul><h3 id="menu元素"><a href="#menu元素" class="headerlink" title="menu元素"></a>menu元素</h3><p>是一个旧标记。一系列菜单命令的集合。</p><p>menu元素的属性：</p><ul><li>lable：规定菜单的可见标签</li><li>type：规定要显示哪种菜单类型</li></ul><h3 id="command元素"><a href="#command元素" class="headerlink" title="command元素"></a>command元素</h3><p>用于定义各种类型的命令按钮，只有commend在menu内时，该元素才是可见的</p><p>command元素的属性：</p><ul><li>checked：定义是否被选中，仅用于radio、checkbox类型</li><li>disabled：定义command是否可用</li><li>icon：定义作为commend来显示的图像URL</li><li>label：为command定义可见的label</li><li>radiogroup：定义command所属组名。类型为radio时使用</li><li>type：定义command类型，默认是command</li></ul>]]></content>
+        <content type="html"><![CDATA[<h4 id="4-3表单的处理"><a href="#4-3表单的处理" class="headerlink" title="4.3表单的处理"></a><center>4.3表单的处理</center></h4><a id="more"></a><h2 id="表单的分组"><a href="#表单的分组" class="headerlink" title="表单的分组"></a>表单的分组</h2><p>使用fieldset元素将相关的元素组合在一起</p><h3 id="fieldset基本语法"><a href="#fieldset基本语法" class="headerlink" title="fieldset基本语法"></a>fieldset基本语法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;form&gt;</span><br><span class="line">&lt;fieldset&gt;  (表单的一个子容器，将所包含的内容以边框环绕的方式显示)</span><br><span class="line">&lt;legend&gt;&lt;/legend&gt;  (为fieldset边框添加相关的标题)</span><br><span class="line">&lt;/fieldset&gt;</span><br><span class="line">&lt;/form&gt;</span><br></pre></td></tr></table></figure><h2 id="表单的验证"><a href="#表单的验证" class="headerlink" title="表单的验证"></a>表单的验证</h2><p>表单验证主要时在用户提交表单之前对用户输入的数据进行验证，看数据是否合法</p><h3 id="Email-URL验证"><a href="#Email-URL验证" class="headerlink" title="Email/URL验证"></a>Email/URL验证</h3><p>HTML5新增的Email/URL表单类型本身就是具有对表单数据进行验证的功能</p><h3 id="pattern验证"><a href="#pattern验证" class="headerlink" title="pattern验证"></a>pattern验证</h3><p>使用pattern属性验证输入字段的模式，pattern属性具有对表单中输入字段模式进行验证的功能。适合于text、url、telephone、email、password等<input>类型</p><h4 id="pattern基本语法格式"><a href="#pattern基本语法格式" class="headerlink" title="pattern基本语法格式"></a>pattern基本语法格式</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;input pattern=&quot;regexp(正则表达式)&quot;&gt;</span><br></pre></td></tr></table></figure><h2 id="表单添加组件说明"><a href="#表单添加组件说明" class="headerlink" title="表单添加组件说明"></a>表单添加组件说明</h2><p>使用label标签为扁担组件添加说明</p><h3 id="label标签"><a href="#label标签" class="headerlink" title="label标签"></a>label标签</h3><p>label标签是描述表单字段用途的文本。label元素不会向用户呈现任何特殊的效果。不过它为鼠标用户改进了可用性。如果在label元素内点击文本，就会出发此控件。就是说，当用户选择该标签时，浏览器就会自动将焦点转移到和标签相关的表单控件上</p><h3 id="label标签的属性"><a href="#label标签的属性" class="headerlink" title="label标签的属性"></a>label标签的属性</h3><ol><li>for：规定label绑定到哪个表单元素上，属性取值为表单元素的id</li><li>form：规定label字段所属的一个或多个表单。属性取值为formid</li></ol>]]></content>
       
       
       <categories>
@@ -1004,11 +1029,11 @@
     
     
     <entry>
-      <title>3.1页面元素和页面节点</title>
-      <link href="/2020/10/05/MD/%E5%A4%A7%E4%B8%89/Web/3%E9%A1%B5%E9%9D%A2%E5%85%83%E7%B4%A0%E5%92%8C%E5%B1%9E%E6%80%A7/3.1%E9%A1%B5%E9%9D%A2%E5%85%83%E7%B4%A0%E5%92%8C%E9%A1%B5%E9%9D%A2%E8%8A%82%E7%82%B9/"/>
-      <url>/2020/10/05/MD/%E5%A4%A7%E4%B8%89/Web/3%E9%A1%B5%E9%9D%A2%E5%85%83%E7%B4%A0%E5%92%8C%E5%B1%9E%E6%80%A7/3.1%E9%A1%B5%E9%9D%A2%E5%85%83%E7%B4%A0%E5%92%8C%E9%A1%B5%E9%9D%A2%E8%8A%82%E7%82%B9/</url>
+      <title>3.2交互元素</title>
+      <link href="/2020/10/05/MD/%E5%A4%A7%E4%B8%89/Web/3%E9%A1%B5%E9%9D%A2%E5%85%83%E7%B4%A0%E5%92%8C%E5%B1%9E%E6%80%A7/3.2%E4%BA%A4%E4%BA%92%E5%85%83%E7%B4%A0/"/>
+      <url>/2020/10/05/MD/%E5%A4%A7%E4%B8%89/Web/3%E9%A1%B5%E9%9D%A2%E5%85%83%E7%B4%A0%E5%92%8C%E5%B1%9E%E6%80%A7/3.2%E4%BA%A4%E4%BA%92%E5%85%83%E7%B4%A0/</url>
       
-        <content type="html"><![CDATA[<h4 id="3-1页面元素和页面节点"><a href="#3-1页面元素和页面节点" class="headerlink" title="3.1页面元素和页面节点"></a><center>3.1页面元素和页面节点</center></h4><a id="more"></a><p>HTML5的目标：通过一些新标签、新功能、为开发更加简单、独立、标准的通用Web应用提供了标准</p><p>解决了三大问题：浏览器兼容问题、文档结构不明确问题、Web应用程序功能受限问题</p><h2 id="页面结构对比"><a href="#页面结构对比" class="headerlink" title="页面结构对比"></a>页面结构对比</h2><p>HTML5之前通常直接使用div进行网页整体布局，常见的布局包括页眉、页脚、导航菜单和正文部分。为了区别文档结构中不同的div一般会为其配上不同的id名称</p><h2 id="结构元素"><a href="#结构元素" class="headerlink" title="结构元素"></a>结构元素</h2><h3 id="header标签"><a href="#header标签" class="headerlink" title="header标签"></a>header标签</h3><p>用于定义文章的页眉，其中包含多个标题、导航或普通内容</p><h3 id="article标签"><a href="#article标签" class="headerlink" title="article标签"></a>article标签</h3><p>用于表示文档、页面或者应用程序中独立的、完整的、可以肚子被外部引用的内容</p><h3 id="aside标签"><a href="#aside标签" class="headerlink" title="aside标签"></a>aside标签</h3><p>定义当前文章的附属信息，文章引用、广告等</p><h3 id="footer标签"><a href="#footer标签" class="headerlink" title="footer标签"></a>footer标签</h3><p>定义脚注等</p><h3 id="figure标签"><a href="#figure标签" class="headerlink" title="figure标签"></a>figure标签</h3><p>网站制作页面上一块独立的内容，将其移除后不会对网页上其他内容产生影响</p><h3 id="figcaption标签"><a href="#figcaption标签" class="headerlink" title="figcaption标签"></a>figcaption标签</h3><p>定义figure元素的标题；位于figure元素的第一个或者最后一个子元素的位置</p><h2 id="页面节点"><a href="#页面节点" class="headerlink" title="页面节点"></a>页面节点</h2><h3 id="section标签"><a href="#section标签" class="headerlink" title="section标签"></a>section标签</h3><p>定义文章的节，一般用于成节的内容，会在文档流中开始一个新的节。用来表现普通的文档内容或应用区块，通常由内容及其标题组成</p><h3 id="nav标签"><a href="#nav标签" class="headerlink" title="nav标签"></a>nav标签</h3><p>代表页面的一个部分，是一个可以作为页面导航的链接组，导航元素链接到其他页面或者当前页面的其他部分，使html代码在语义化方面更加精确，同时对于屏幕阅读器等设备的支持更好</p><h3 id="address标签"><a href="#address标签" class="headerlink" title="address标签"></a>address标签</h3><p>用于被作者提供该文档的联系人信息，一般放在开头或者结尾，最常用的是和其他内容包含在footer元素内。</p>]]></content>
+        <content type="html"><![CDATA[<h4 id="3-2交互元素"><a href="#3-2交互元素" class="headerlink" title="3.2交互元素"></a><center>3.2交互元素</center></h4><a id="more"></a><p>对于应用程序来说，表现最为突出的就是交互操作</p><p>HTML5为操作新增了对应的交互体验元素：progress、meter、details、summary、menu、command等，这些元素可以在不请求服务器的情况下，改变用户选择内容与展现状态。通过这些元素可以更好的改善HTML5页面的用户体验和功能</p><h2 id="交互元素"><a href="#交互元素" class="headerlink" title="交互元素"></a>交互元素</h2><h3 id="progress元素"><a href="#progress元素" class="headerlink" title="progress元素"></a>progress元素</h3><p>属于状态交互元素。用来表示页面中某个任务完成的进度。显示可以使用整数，也可以使用百分比</p><p>progress元素的属性：</p><ul><li>max   规定任务一共需要多少工作</li><li>value   规定已经完成了多少任务</li></ul><h3 id="meter元素"><a href="#meter元素" class="headerlink" title="meter元素"></a>meter元素</h3><p>状态交换元素，和progress很像</p><p>meter元素属性：</p><ul><li>form：规定meter元素所属的一个或多个表单</li><li>high：规定被视作高的值的范围</li><li>low：规定被视作低的值的范围</li><li>max：规定范围的最大值</li><li>min：规定范围的最小值</li><li>optimum：规定度量的优化值</li><li>value：必需，规定度量的当前值</li></ul><h3 id="detail元素"><a href="#detail元素" class="headerlink" title="detail元素"></a>detail元素</h3><p>detail元素用来说明文档的详细信息，展开和折叠的交互效果</p><p>details元素的属性：</p><ul><li>Open：details元素是否可见，默认为不可见</li><li>Subject：设置元素所对应的ID号</li><li>Draggable：设置是否可以拖动元素，默认为false</li></ul><h3 id="menu元素"><a href="#menu元素" class="headerlink" title="menu元素"></a>menu元素</h3><p>是一个旧标记。一系列菜单命令的集合。</p><p>menu元素的属性：</p><ul><li>lable：规定菜单的可见标签</li><li>type：规定要显示哪种菜单类型</li></ul><h3 id="command元素"><a href="#command元素" class="headerlink" title="command元素"></a>command元素</h3><p>用于定义各种类型的命令按钮，只有commend在menu内时，该元素才是可见的</p><p>command元素的属性：</p><ul><li>checked：定义是否被选中，仅用于radio、checkbox类型</li><li>disabled：定义command是否可用</li><li>icon：定义作为commend来显示的图像URL</li><li>label：为command定义可见的label</li><li>radiogroup：定义command所属组名。类型为radio时使用</li><li>type：定义command类型，默认是command</li></ul>]]></content>
       
       
       <categories>
@@ -1029,11 +1054,11 @@
     
     
     <entry>
-      <title>2.4图片标签</title>
-      <link href="/2020/09/29/MD/%E5%A4%A7%E4%B8%89/Web/2HTML5/2.4%E5%9B%BE%E7%89%87%E6%A0%87%E7%AD%BE/"/>
-      <url>/2020/09/29/MD/%E5%A4%A7%E4%B8%89/Web/2HTML5/2.4%E5%9B%BE%E7%89%87%E6%A0%87%E7%AD%BE/</url>
+      <title>3.1页面元素和页面节点</title>
+      <link href="/2020/10/05/MD/%E5%A4%A7%E4%B8%89/Web/3%E9%A1%B5%E9%9D%A2%E5%85%83%E7%B4%A0%E5%92%8C%E5%B1%9E%E6%80%A7/3.1%E9%A1%B5%E9%9D%A2%E5%85%83%E7%B4%A0%E5%92%8C%E9%A1%B5%E9%9D%A2%E8%8A%82%E7%82%B9/"/>
+      <url>/2020/10/05/MD/%E5%A4%A7%E4%B8%89/Web/3%E9%A1%B5%E9%9D%A2%E5%85%83%E7%B4%A0%E5%92%8C%E5%B1%9E%E6%80%A7/3.1%E9%A1%B5%E9%9D%A2%E5%85%83%E7%B4%A0%E5%92%8C%E9%A1%B5%E9%9D%A2%E8%8A%82%E7%82%B9/</url>
       
-        <content type="html"><![CDATA[<h4 id="2-4图片标签"><a href="#2-4图片标签" class="headerlink" title="2.4图片标签"></a><center>2.4图片标签</center></h4><a id="more"></a><h2 id="gif"><a href="#gif" class="headerlink" title="gif"></a>gif</h2><p>支持动画、无损图像格式、支持透明</p><p>常用于小图标、LOFO及其他色彩相对单一的图像</p><h2 id="png"><a href="#png" class="headerlink" title="png"></a>png</h2><p>相对于gif体积更小，支持alpha透明（全透明、半透明、全不透明）颜色过度更平滑、不支持动画、无损压缩</p><h2 id="jpg"><a href="#jpg" class="headerlink" title="jpg"></a>jpg</h2><p>显色比上面两个多得多、有损压缩</p><h2 id="网页插入图像"><a href="#网页插入图像" class="headerlink" title="网页插入图像"></a>网页插入图像</h2><h3 id="body-background"><a href="#body-background" class="headerlink" title="body background"></a>body background</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;body background=&quot;&quot;&gt;&lt;/body&gt;</span><br></pre></td></tr></table></figure><h3 id="img"><a href="#img" class="headerlink" title="img"></a>img</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;img src=&quot;&quot;&gt;</span><br></pre></td></tr></table></figure><ul><li>alt：规定图像的代替文本</li><li>src：规定图像的URL</li><li>height：规定图像的高度</li><li>ismap：把图象设置为服务器端图像映射</li><li>usemap：把图象设置为客户端图像映射</li><li>width：规定图像宽度</li></ul><h3 id="路径"><a href="#路径" class="headerlink" title="路径"></a>路径</h3><p>相对路径、绝对路径</p>]]></content>
+        <content type="html"><![CDATA[<h4 id="3-1页面元素和页面节点"><a href="#3-1页面元素和页面节点" class="headerlink" title="3.1页面元素和页面节点"></a><center>3.1页面元素和页面节点</center></h4><a id="more"></a><p>HTML5的目标：通过一些新标签、新功能、为开发更加简单、独立、标准的通用Web应用提供了标准</p><p>解决了三大问题：浏览器兼容问题、文档结构不明确问题、Web应用程序功能受限问题</p><h2 id="页面结构对比"><a href="#页面结构对比" class="headerlink" title="页面结构对比"></a>页面结构对比</h2><p>HTML5之前通常直接使用div进行网页整体布局，常见的布局包括页眉、页脚、导航菜单和正文部分。为了区别文档结构中不同的div一般会为其配上不同的id名称</p><h2 id="结构元素"><a href="#结构元素" class="headerlink" title="结构元素"></a>结构元素</h2><h3 id="header标签"><a href="#header标签" class="headerlink" title="header标签"></a>header标签</h3><p>用于定义文章的页眉，其中包含多个标题、导航或普通内容</p><h3 id="article标签"><a href="#article标签" class="headerlink" title="article标签"></a>article标签</h3><p>用于表示文档、页面或者应用程序中独立的、完整的、可以肚子被外部引用的内容</p><h3 id="aside标签"><a href="#aside标签" class="headerlink" title="aside标签"></a>aside标签</h3><p>定义当前文章的附属信息，文章引用、广告等</p><h3 id="footer标签"><a href="#footer标签" class="headerlink" title="footer标签"></a>footer标签</h3><p>定义脚注等</p><h3 id="figure标签"><a href="#figure标签" class="headerlink" title="figure标签"></a>figure标签</h3><p>网站制作页面上一块独立的内容，将其移除后不会对网页上其他内容产生影响</p><h3 id="figcaption标签"><a href="#figcaption标签" class="headerlink" title="figcaption标签"></a>figcaption标签</h3><p>定义figure元素的标题；位于figure元素的第一个或者最后一个子元素的位置</p><h2 id="页面节点"><a href="#页面节点" class="headerlink" title="页面节点"></a>页面节点</h2><h3 id="section标签"><a href="#section标签" class="headerlink" title="section标签"></a>section标签</h3><p>定义文章的节，一般用于成节的内容，会在文档流中开始一个新的节。用来表现普通的文档内容或应用区块，通常由内容及其标题组成</p><h3 id="nav标签"><a href="#nav标签" class="headerlink" title="nav标签"></a>nav标签</h3><p>代表页面的一个部分，是一个可以作为页面导航的链接组，导航元素链接到其他页面或者当前页面的其他部分，使html代码在语义化方面更加精确，同时对于屏幕阅读器等设备的支持更好</p><h3 id="address标签"><a href="#address标签" class="headerlink" title="address标签"></a>address标签</h3><p>用于被作者提供该文档的联系人信息，一般放在开头或者结尾，最常用的是和其他内容包含在footer元素内。</p>]]></content>
       
       
       <categories>
@@ -1079,11 +1104,11 @@
     
     
     <entry>
-      <title>2.3文本控制标签</title>
-      <link href="/2020/09/29/MD/%E5%A4%A7%E4%B8%89/Web/2HTML5/2.3%E6%96%87%E6%9C%AC%E6%8E%A7%E5%88%B6%E6%A0%87%E7%AD%BE/"/>
-      <url>/2020/09/29/MD/%E5%A4%A7%E4%B8%89/Web/2HTML5/2.3%E6%96%87%E6%9C%AC%E6%8E%A7%E5%88%B6%E6%A0%87%E7%AD%BE/</url>
+      <title>2.5超链接标签</title>
+      <link href="/2020/09/29/MD/%E5%A4%A7%E4%B8%89/Web/2HTML5/2.5%E8%B6%85%E9%93%BE%E6%8E%A5%E6%A0%87%E7%AD%BE/"/>
+      <url>/2020/09/29/MD/%E5%A4%A7%E4%B8%89/Web/2HTML5/2.5%E8%B6%85%E9%93%BE%E6%8E%A5%E6%A0%87%E7%AD%BE/</url>
       
-        <content type="html"><![CDATA[<h4 id="2-3文本控制标签"><a href="#2-3文本控制标签" class="headerlink" title="2.3文本控制标签"></a><center>2.3文本控制标签</center></h4><a id="more"></a><h2 id="标题段落标签"><a href="#标题段落标签" class="headerlink" title="标题段落标签"></a>标题段落标签</h2><h3 id="hi（双）"><a href="#hi（双）" class="headerlink" title="hi（双）"></a>hi（双）</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">设定HTML页面中段落的级数</span><br></pre></td></tr></table></figure><h3 id="p（双）"><a href="#p（双）" class="headerlink" title="p（双）"></a>p（双）</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">划分段落，控制文本位置</span><br></pre></td></tr></table></figure><h2 id="文本格式标签"><a href="#文本格式标签" class="headerlink" title="文本格式标签"></a>文本格式标签</h2><h3 id="br（单）"><a href="#br（单）" class="headerlink" title="br（单）"></a>br（单）</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">定义换行</span><br></pre></td></tr></table></figure><h3 id="hr（单）"><a href="#hr（单）" class="headerlink" title="hr（单）"></a>hr（单）</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">定义水平线</span><br></pre></td></tr></table></figure><ol><li>Size：宽</li><li>Width：长</li><li>Align：对齐方式</li><li>Noshade：无阴影属性</li><li>Color：颜色</li></ol><h3 id="div（双）"><a href="#div（双）" class="headerlink" title="div（双）"></a>div（双）</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">定义大块显示区</span><br></pre></td></tr></table></figure><h3 id="文本修饰标签（双）"><a href="#文本修饰标签（双）" class="headerlink" title="文本修饰标签（双）"></a>文本修饰标签（双）</h3><ol><li><p>font：字体样式</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">里面的size属性值为1-7，默认为3</span><br></pre></td></tr></table></figure></li><li><p>b：相当于strong</p></li><li><p>i：斜体</p></li><li><p>big：比周围文本大一个字体尺寸</p></li><li><p>small</p></li><li><p>s：删除线</p></li><li><p>u：下划线</p></li><li><p>sup：上标形式</p></li><li><p>sub：下标形式</p></li><li><p>strong</p></li><li><p>mark：带有记号的方式显示</p></li></ol><h3 id="span（双）"><a href="#span（双）" class="headerlink" title="span（双）"></a>span（双）</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">行内标签，用来组合文档中的行内元素</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">span和div的主要区别</span><br><span class="line">    span不换行，div换行</span><br><span class="line">    span不能包含div，div可以包含span</span><br></pre></td></tr></table></figure><h2 id="特殊字符标签"><a href="#特殊字符标签" class="headerlink" title="特殊字符标签"></a>特殊字符标签</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">可用于设定数学公式、版权信息中的特殊字符。通常以“&amp;”开始，以“;”结束</span><br><span class="line">如&amp;gt;代表&gt;</span><br></pre></td></tr></table></figure>]]></content>
+        <content type="html"><![CDATA[<h4 id="2-5超链接标签"><a href="#2-5超链接标签" class="headerlink" title="2.5超链接标签"></a><center>2.5超链接标签</center></h4><a id="more"></a><h2 id="什么是超链接"><a href="#什么是超链接" class="headerlink" title="什么是超链接"></a>什么是超链接</h2><p>跳转</p><h2 id="超链接分类"><a href="#超链接分类" class="headerlink" title="超链接分类"></a>超链接分类</h2><ul><li>按路径不同分：</li></ul><ol><li>内部链接</li><li>锚点链接</li><li>外部链接</li></ol><ul><li>按使用对象不同分</li></ul><ol><li>文本超链接</li><li>图像超链接</li><li>E-mail链接</li><li>锚点链接</li><li>多媒体文件链接</li><li>空连接</li></ol><h2 id="什么时链宿和链源"><a href="#什么时链宿和链源" class="headerlink" title="什么时链宿和链源"></a>什么时链宿和链源</h2><h3 id="链宿"><a href="#链宿" class="headerlink" title="链宿"></a>链宿</h3><p>是指要跳转的目标，这个目标可以是一个网页、一个图片、一个电子邮件地址、一个文件、一个应用程序</p><h3 id="链源"><a href="#链源" class="headerlink" title="链源"></a>链源</h3><p>引起跳转的原因，可以实文字、图像、图形区域</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;a herf=链宿&gt;链源&lt;/a&gt;</span><br></pre></td></tr></table></figure><h2 id="如何实现HTML的超链接"><a href="#如何实现HTML的超链接" class="headerlink" title="如何实现HTML的超链接"></a>如何实现HTML的超链接</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">href      链宿的路径                用于设置要跳转的目标</span><br><span class="line">name   创建文档标签             用于指定锚的名称</span><br><span class="line">title      指向链接的提示信息   使用title属性可以让鼠标悬停在超链接上的时候，显示该超链接的文字注释</span><br><span class="line">target  指定打开的目标窗口   有五种取值，默认值_self</span><br></pre></td></tr></table></figure>]]></content>
       
       
       <categories>
@@ -1104,11 +1129,36 @@
     
     
     <entry>
-      <title>2.5超链接标签</title>
-      <link href="/2020/09/29/MD/%E5%A4%A7%E4%B8%89/Web/2HTML5/2.5%E8%B6%85%E9%93%BE%E6%8E%A5%E6%A0%87%E7%AD%BE/"/>
-      <url>/2020/09/29/MD/%E5%A4%A7%E4%B8%89/Web/2HTML5/2.5%E8%B6%85%E9%93%BE%E6%8E%A5%E6%A0%87%E7%AD%BE/</url>
+      <title>2.4图片标签</title>
+      <link href="/2020/09/29/MD/%E5%A4%A7%E4%B8%89/Web/2HTML5/2.4%E5%9B%BE%E7%89%87%E6%A0%87%E7%AD%BE/"/>
+      <url>/2020/09/29/MD/%E5%A4%A7%E4%B8%89/Web/2HTML5/2.4%E5%9B%BE%E7%89%87%E6%A0%87%E7%AD%BE/</url>
       
-        <content type="html"><![CDATA[<h4 id="2-5超链接标签"><a href="#2-5超链接标签" class="headerlink" title="2.5超链接标签"></a><center>2.5超链接标签</center></h4><a id="more"></a><h2 id="什么是超链接"><a href="#什么是超链接" class="headerlink" title="什么是超链接"></a>什么是超链接</h2><p>跳转</p><h2 id="超链接分类"><a href="#超链接分类" class="headerlink" title="超链接分类"></a>超链接分类</h2><ul><li>按路径不同分：</li></ul><ol><li>内部链接</li><li>锚点链接</li><li>外部链接</li></ol><ul><li>按使用对象不同分</li></ul><ol><li>文本超链接</li><li>图像超链接</li><li>E-mail链接</li><li>锚点链接</li><li>多媒体文件链接</li><li>空连接</li></ol><h2 id="什么时链宿和链源"><a href="#什么时链宿和链源" class="headerlink" title="什么时链宿和链源"></a>什么时链宿和链源</h2><h3 id="链宿"><a href="#链宿" class="headerlink" title="链宿"></a>链宿</h3><p>是指要跳转的目标，这个目标可以是一个网页、一个图片、一个电子邮件地址、一个文件、一个应用程序</p><h3 id="链源"><a href="#链源" class="headerlink" title="链源"></a>链源</h3><p>引起跳转的原因，可以实文字、图像、图形区域</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;a herf=链宿&gt;链源&lt;/a&gt;</span><br></pre></td></tr></table></figure><h2 id="如何实现HTML的超链接"><a href="#如何实现HTML的超链接" class="headerlink" title="如何实现HTML的超链接"></a>如何实现HTML的超链接</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">href      链宿的路径                用于设置要跳转的目标</span><br><span class="line">name   创建文档标签             用于指定锚的名称</span><br><span class="line">title      指向链接的提示信息   使用title属性可以让鼠标悬停在超链接上的时候，显示该超链接的文字注释</span><br><span class="line">target  指定打开的目标窗口   有五种取值，默认值_self</span><br></pre></td></tr></table></figure>]]></content>
+        <content type="html"><![CDATA[<h4 id="2-4图片标签"><a href="#2-4图片标签" class="headerlink" title="2.4图片标签"></a><center>2.4图片标签</center></h4><a id="more"></a><h2 id="gif"><a href="#gif" class="headerlink" title="gif"></a>gif</h2><p>支持动画、无损图像格式、支持透明</p><p>常用于小图标、LOFO及其他色彩相对单一的图像</p><h2 id="png"><a href="#png" class="headerlink" title="png"></a>png</h2><p>相对于gif体积更小，支持alpha透明（全透明、半透明、全不透明）颜色过度更平滑、不支持动画、无损压缩</p><h2 id="jpg"><a href="#jpg" class="headerlink" title="jpg"></a>jpg</h2><p>显色比上面两个多得多、有损压缩</p><h2 id="网页插入图像"><a href="#网页插入图像" class="headerlink" title="网页插入图像"></a>网页插入图像</h2><h3 id="body-background"><a href="#body-background" class="headerlink" title="body background"></a>body background</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;body background=&quot;&quot;&gt;&lt;/body&gt;</span><br></pre></td></tr></table></figure><h3 id="img"><a href="#img" class="headerlink" title="img"></a>img</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;img src=&quot;&quot;&gt;</span><br></pre></td></tr></table></figure><ul><li>alt：规定图像的代替文本</li><li>src：规定图像的URL</li><li>height：规定图像的高度</li><li>ismap：把图象设置为服务器端图像映射</li><li>usemap：把图象设置为客户端图像映射</li><li>width：规定图像宽度</li></ul><h3 id="路径"><a href="#路径" class="headerlink" title="路径"></a>路径</h3><p>相对路径、绝对路径</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> html5 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> html </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>2.3文本控制标签</title>
+      <link href="/2020/09/29/MD/%E5%A4%A7%E4%B8%89/Web/2HTML5/2.3%E6%96%87%E6%9C%AC%E6%8E%A7%E5%88%B6%E6%A0%87%E7%AD%BE/"/>
+      <url>/2020/09/29/MD/%E5%A4%A7%E4%B8%89/Web/2HTML5/2.3%E6%96%87%E6%9C%AC%E6%8E%A7%E5%88%B6%E6%A0%87%E7%AD%BE/</url>
+      
+        <content type="html"><![CDATA[<h4 id="2-3文本控制标签"><a href="#2-3文本控制标签" class="headerlink" title="2.3文本控制标签"></a><center>2.3文本控制标签</center></h4><a id="more"></a><h2 id="标题段落标签"><a href="#标题段落标签" class="headerlink" title="标题段落标签"></a>标题段落标签</h2><h3 id="hi（双）"><a href="#hi（双）" class="headerlink" title="hi（双）"></a>hi（双）</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">设定HTML页面中段落的级数</span><br></pre></td></tr></table></figure><h3 id="p（双）"><a href="#p（双）" class="headerlink" title="p（双）"></a>p（双）</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">划分段落，控制文本位置</span><br></pre></td></tr></table></figure><h2 id="文本格式标签"><a href="#文本格式标签" class="headerlink" title="文本格式标签"></a>文本格式标签</h2><h3 id="br（单）"><a href="#br（单）" class="headerlink" title="br（单）"></a>br（单）</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">定义换行</span><br></pre></td></tr></table></figure><h3 id="hr（单）"><a href="#hr（单）" class="headerlink" title="hr（单）"></a>hr（单）</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">定义水平线</span><br></pre></td></tr></table></figure><ol><li>Size：宽</li><li>Width：长</li><li>Align：对齐方式</li><li>Noshade：无阴影属性</li><li>Color：颜色</li></ol><h3 id="div（双）"><a href="#div（双）" class="headerlink" title="div（双）"></a>div（双）</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">定义大块显示区</span><br></pre></td></tr></table></figure><h3 id="文本修饰标签（双）"><a href="#文本修饰标签（双）" class="headerlink" title="文本修饰标签（双）"></a>文本修饰标签（双）</h3><ol><li><p>font：字体样式</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">里面的size属性值为1-7，默认为3</span><br></pre></td></tr></table></figure></li><li><p>b：相当于strong</p></li><li><p>i：斜体</p></li><li><p>big：比周围文本大一个字体尺寸</p></li><li><p>small</p></li><li><p>s：删除线</p></li><li><p>u：下划线</p></li><li><p>sup：上标形式</p></li><li><p>sub：下标形式</p></li><li><p>strong</p></li><li><p>mark：带有记号的方式显示</p></li></ol><h3 id="span（双）"><a href="#span（双）" class="headerlink" title="span（双）"></a>span（双）</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">行内标签，用来组合文档中的行内元素</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">span和div的主要区别</span><br><span class="line">    span不换行，div换行</span><br><span class="line">    span不能包含div，div可以包含span</span><br></pre></td></tr></table></figure><h2 id="特殊字符标签"><a href="#特殊字符标签" class="headerlink" title="特殊字符标签"></a>特殊字符标签</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">可用于设定数学公式、版权信息中的特殊字符。通常以“&amp;”开始，以“;”结束</span><br><span class="line">如&amp;gt;代表&gt;</span><br></pre></td></tr></table></figure>]]></content>
       
       
       <categories>
