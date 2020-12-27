@@ -63,7 +63,7 @@
 <meta property="og:site_name" content="Jarvis-back">
 <meta property="og:description" content="2-1-5线程">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-12-27T02:18:13.856Z">
+<meta property="og:updated_time" content="2020-12-27T03:32:30.242Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="2-1-5线程">
 <meta name="twitter:description" content="2-1-5线程">
@@ -289,7 +289,7 @@
                 
               
 
-              <time title="创建时间：2020-12-27 21:17:18 / 修改时间：10:18:13" itemprop="dateCreated datePublished" datetime="2020-12-27T21:17:18+08:00">2020-12-27</time>
+              <time title="创建时间：2020-12-27 21:17:18 / 修改时间：11:32:30" itemprop="dateCreated datePublished" datetime="2020-12-27T21:17:18+08:00">2020-12-27</time>
             </span>
           
             
@@ -327,7 +327,7 @@
               
                 <span class="post-meta-item-text">本文字数：</span>
               
-              <span>7</span>
+              <span>872</span>
             </span>
           
             <span class="post-meta-item" title="阅读时长">
@@ -351,6 +351,43 @@
 
       
         <h4 id="2-1-5线程"><a href="#2-1-5线程" class="headerlink" title="2-1-5线程"></a><center>2-1-5线程</center></h4><a id="more"></a>
+
+<h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>QQ可以进行很多的功能，但是进程是程序的一次执行</p>
+<p>很多的功能不可能是由一个程序的顺序执行就能实现的</p>
+<p>传统的进程是程序执行流的最小单位</p>
+<p>因为有的进程可能需要同时执行很多的事情，而传统的进程只能串行的执行一系列程序。为此，<strong>引入了“线程”</strong>，来增加并发调度</p>
+<p>引入了线程之后，<strong>线程就是程序执行流的最小单位，是一个基本的CPU执行单元</strong>。进程只作为除CPU之外的系统资源分配单元（<strong>系统资源是分配给进程的</strong>）。</p>
+<h2 id="引入线程的变化"><a href="#引入线程的变化" class="headerlink" title="引入线程的变化"></a>引入线程的变化</h2><p>资源分配调度：进程是资源分配的基本单位，线程是调度的基本单位</p>
+<p>并发性：各线程之间也能并发，提升了并发速度</p>
+<p>系统开销：系统开销减小（同一个进程内线程切换，不需要切换进程环境，系统开销小）</p>
+<h2 id="线程的重要属性"><a href="#线程的重要属性" class="headerlink" title="线程的重要属性"></a>线程的重要属性</h2><ol>
+<li>线程是处理机调度的单位</li>
+<li>多个CPU计算机中，各个线程可占用不同的CPU</li>
+<li>每个线程都有一个线程ID、线程控制块（TCB）</li>
+<li>线程也有就绪、阻塞、运行三种基本状态</li>
+<li>线程几乎不拥有系统资源</li>
+<li>同一进程的不同线程之间共享进程的资源</li>
+<li>由于共享内存地址空间，同意进程中的线程通信甚至无需系统干预</li>
+<li>同一进程中的线程切换，不会引起进程的切换</li>
+<li>不同的进程中的线程切换，会引起进程的切换</li>
+<li>切换同进程内的线程，系统开销很小</li>
+<li>切换进程，系统开销大</li>
+</ol>
+<h2 id="实现方式"><a href="#实现方式" class="headerlink" title="实现方式"></a>实现方式</h2><h3 id="用户级线程"><a href="#用户级线程" class="headerlink" title="用户级线程"></a>用户级线程</h3><p>由应用程序通过<strong>线程库</strong>来实现，所有的线程管理者工作都由应用程序负责（包括线程切换）</p>
+<p>操作系统并意识不到线程的存在，但是用户可以感受到线程的存在</p>
+<p>用户级线程就是从用户的视角可以看到的线程</p>
+<h3 id="内核级线程"><a href="#内核级线程" class="headerlink" title="内核级线程"></a>内核级线程</h3><p>又称为 内核支持的线程</p>
+<p>内核级的线程的管理工作由操作系统内核完成。内核级线程的切换必须在核心态下才能完成</p>
+<p>内核级线程可以理解为从操作系统的角度可以看到的线程</p>
+<p>内核级线程才是真正的处理机分配的单位</p>
+<h2 id="多线程"><a href="#多线程" class="headerlink" title="多线程"></a>多线程</h2><p>在同时支持用户级线程和内核级线程的系统中，由几个用户级线程映射到几个内核级线程的问题引出了”多线程模型“的问题</p>
+<p>多线程模型：</p>
+<ol>
+<li>多对一：多个用户级线程对应一个内核级线程（并发性较弱，系统开销小）</li>
+<li>一对一：并发性很强，占用资源太多</li>
+<li>多对多：多对一和一对一的组合模式，更加合理</li>
+</ol>
+
     </div>
 
     
@@ -375,8 +412,8 @@
           <div class="post-nav">
             <div class="post-nav-next post-nav-item">
               
-                <a href="/2020/12/26/MD/大三/OS/2/2-1-2/" rel="next" title="2-1-2进程状态">
-                  <i class="fa fa-chevron-left"></i> 2-1-2进程状态
+                <a href="/2020/12/27/MD/大三/OS/1/1-7/" rel="next" title="1-7运行机制体系结构">
+                  <i class="fa fa-chevron-left"></i> 1-7运行机制体系结构
                 </a>
               
             </div>
@@ -384,10 +421,6 @@
             <span class="post-nav-divider"></span>
 
             <div class="post-nav-prev post-nav-item">
-              
-                <a href="/2020/12/27/MD/大三/OS/1/1-7/" rel="prev" title="1-7运行机制体系结构">
-                  1-7运行机制体系结构 <i class="fa fa-chevron-right"></i>
-                </a>
               
             </div>
           </div>
@@ -509,7 +542,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-5线程"><span class="nav-number">1.</span> <span class="nav-text">2-1-5线程</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-5线程"><span class="nav-number">1.</span> <span class="nav-text">2-1-5线程</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#定义"><span class="nav-number"></span> <span class="nav-text">定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#引入线程的变化"><span class="nav-number"></span> <span class="nav-text">引入线程的变化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#线程的重要属性"><span class="nav-number"></span> <span class="nav-text">线程的重要属性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实现方式"><span class="nav-number"></span> <span class="nav-text">实现方式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#用户级线程"><span class="nav-number"></span> <span class="nav-text">用户级线程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#内核级线程"><span class="nav-number"></span> <span class="nav-text">内核级线程</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#多线程"><span class="nav-number"></span> <span class="nav-text">多线程</span></a></div>
             
 
           </div>
@@ -536,12 +569,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-area-chart"></i>
     </span>
-    <span title="站点总字数">32k</span>
+    <span title="站点总字数">33k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">29 分钟</span>
+    <span title="站点阅读时长">30 分钟</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0</div>
   <span class="post-meta-divider">|</span>
