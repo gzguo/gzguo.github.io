@@ -63,7 +63,7 @@
 <meta property="og:site_name" content="Jarvis-back">
 <meta property="og:description" content="2-3-11管程">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-12-27T13:40:53.477Z">
+<meta property="og:updated_time" content="2020-12-28T02:13:37.842Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="2-3-11管程">
 <meta name="twitter:description" content="2-3-11管程">
@@ -289,11 +289,19 @@
                 
               
 
-              <time title="创建时间：2020-12-27 21:17:18 / 修改时间：21:40:53" itemprop="dateCreated datePublished" datetime="2020-12-27T21:17:18+08:00">2020-12-27</time>
+              <time title="创建时间：2020-12-27 21:17:18" itemprop="dateCreated datePublished" datetime="2020-12-27T21:17:18+08:00">2020-12-27</time>
             </span>
           
             
 
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-12-28 10:13:37" itemprop="dateModified" datetime="2020-12-28T10:13:37+08:00">2020-12-28</time>
+              </span>
             
           
             <span class="post-meta-item">
@@ -327,7 +335,7 @@
               
                 <span class="post-meta-item-text">本文字数：</span>
               
-              <span>62</span>
+              <span>500</span>
             </span>
           
             <span class="post-meta-item" title="阅读时长">
@@ -352,8 +360,33 @@
       
         <h4 id="2-3-11管程"><a href="#2-3-11管程" class="headerlink" title=" 2-3-11管程"></a><center> 2-3-11管程</center></h4><a id="more"></a>
 
-<p>信号量机制编写程序困难、容易出错</p>
-<h2 id="为什么引入"><a href="#为什么引入" class="headerlink" title="为什么引入"></a>为什么引入</h2><h2 id="定义和基本特征"><a href="#定义和基本特征" class="headerlink" title="定义和基本特征"></a>定义和基本特征</h2><h2 id="管程解决消费者生产者"><a href="#管程解决消费者生产者" class="headerlink" title="管程解决消费者生产者"></a>管程解决消费者生产者</h2><h2 id="java中类似管程的机制"><a href="#java中类似管程的机制" class="headerlink" title="java中类似管程的机制"></a>java中类似管程的机制</h2>
+<h2 id="为什么引入"><a href="#为什么引入" class="headerlink" title="为什么引入"></a>为什么引入</h2><p>引入管程之前，实现进程和互斥的主要是信号量机制。但是信号量机制编写程序困难、容易出错。人们就像设计一种机制，让人们在写程序的时候，不再需要关心复杂的PV操作。</p>
+<p>于是管程诞生，管程是一种高级同步的机制</p>
+<h2 id="定义和基本特征"><a href="#定义和基本特征" class="headerlink" title="定义和基本特征"></a>定义和基本特征</h2><p>为什么要互斥和同步？因为进程之间可能会共享某些资源</p>
+<p>管程是一种特殊的软件模块，有以下部分组成：</p>
+<ol>
+<li>局部于管程的共享数据结构说明</li>
+<li>对该数据进行操作的一组过程/函数</li>
+<li>对局部于管程的共享数据设置初始值语句</li>
+<li>管程有一个名字</li>
+</ol>
+<p>管程类似于类</p>
+<p>管程的基本特征：</p>
+<ol>
+<li>局部于管程的数据只能被局部与管程的过程所访问</li>
+<li>一个进程只有通过调用管程内的过程才能进入管程访问共享数据</li>
+<li><strong>每次仅允许一个进程在管程内执行某个内部过程</strong></li>
+</ol>
+<h2 id="管程解决消费者生产者"><a href="#管程解决消费者生产者" class="headerlink" title="管程解决消费者生产者"></a>管程解决消费者生产者</h2><p>引入管程的目的就是要更加方便地实现进程地互斥和同步</p>
+<ol>
+<li>需要在管程中定义共享数据（如生产者消费者问题地缓冲区）</li>
+<li>定义函数/入口</li>
+<li>只有通过入口才能共享数据</li>
+<li>每次只能开放一个入口，让一个进程访问（互斥特性由编译器实现）</li>
+</ol>
+<p>实际上就是使用了封装</p>
+<h2 id="java中类似管程的机制"><a href="#java中类似管程的机制" class="headerlink" title="java中类似管程的机制"></a>java中类似管程的机制</h2><p>java中的线程，多个线程调入函数，只有一个能访问到，其他的都在等待</p>
+
     </div>
 
     
@@ -378,8 +411,8 @@
           <div class="post-nav">
             <div class="post-nav-next post-nav-item">
               
-                <a href="/2020/12/27/MD/大三/OS/2/2-2-3/" rel="next" title="2-2-3调度算法的评价指标">
-                  <i class="fa fa-chevron-left"></i> 2-2-3调度算法的评价指标
+                <a href="/2020/12/27/MD/大三/OS/2/2-1-5/" rel="next" title="2-1-5线程">
+                  <i class="fa fa-chevron-left"></i> 2-1-5线程
                 </a>
               
             </div>
@@ -387,10 +420,6 @@
             <span class="post-nav-divider"></span>
 
             <div class="post-nav-prev post-nav-item">
-              
-                <a href="/2020/12/27/MD/大三/OS/2/2-2-5/" rel="prev" title="2-2-5分时系统的调度算法">
-                  2-2-5分时系统的调度算法 <i class="fa fa-chevron-right"></i>
-                </a>
               
             </div>
           </div>
@@ -447,7 +476,7 @@
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">66</span>
+          <span class="site-state-item-count">68</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -539,12 +568,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-area-chart"></i>
     </span>
-    <span title="站点总字数">37k</span>
+    <span title="站点总字数">39k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">34 分钟</span>
+    <span title="站点阅读时长">36 分钟</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0</div>
   <span class="post-meta-divider">|</span>
