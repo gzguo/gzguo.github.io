@@ -55,19 +55,19 @@
   };
 </script>
 
-  <meta name="description" content="Welcome">
-<meta name="keywords" content="Welcome">
+  <meta name="description" content="3-1-2内存管理">
+<meta name="keywords" content="OS">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Welcome">
-<meta property="og:url" content="http://github.com/gzguo/gzguo.github.io.git/2020/09/29/hello-world/index.html">
+<meta property="og:title" content="3-1-2内存管理">
+<meta property="og:url" content="http://github.com/gzguo/gzguo.github.io.git/2020/12/25/MD/大三/OS/3/3-1-2/index.html">
 <meta property="og:site_name" content="Jarvis-back">
-<meta property="og:description" content="Welcome">
+<meta property="og:description" content="3-1-2内存管理">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-09-29T11:56:14.107Z">
+<meta property="og:updated_time" content="2020-12-31T13:14:47.739Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Welcome">
-<meta name="twitter:description" content="Welcome">
-  <link rel="canonical" href="http://github.com/gzguo/gzguo.github.io.git/2020/09/29/hello-world/">
+<meta name="twitter:title" content="3-1-2内存管理">
+<meta name="twitter:description" content="3-1-2内存管理">
+  <link rel="canonical" href="http://github.com/gzguo/gzguo.github.io.git/2020/12/25/MD/大三/OS/3/3-1-2/">
 
 
 <script id="page-configurations">
@@ -81,7 +81,7 @@
   };
 </script>
 
-  <title>Welcome | Jarvis-back</title>
+  <title>3-1-2内存管理 | Jarvis-back</title>
   
 
 
@@ -258,7 +258,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://github.com/gzguo/gzguo.github.io.git/2020/09/29/hello-world/">
+    <link itemprop="mainEntityOfPage" href="http://github.com/gzguo/gzguo.github.io.git/2020/12/25/MD/大三/OS/3/3-1-2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="jarvis">
@@ -272,7 +272,7 @@
       <header class="post-header">
 
         
-          <h1 class="post-title" itemprop="name headline">Welcome
+          <h1 class="post-title" itemprop="name headline">3-1-2内存管理
 
             
           </h1>
@@ -289,12 +289,33 @@
                 
               
 
-              <time title="创建时间：2020-09-29 20:04:08 / 修改时间：19:56:14" itemprop="dateCreated datePublished" datetime="2020-09-29T20:04:08+08:00">2020-09-29</time>
+              <time title="创建时间：2020-12-25 21:17:18" itemprop="dateCreated datePublished" datetime="2020-12-25T21:17:18+08:00">2020-12-25</time>
             </span>
           
             
 
             
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-12-31 21:14:47" itemprop="dateModified" datetime="2020-12-31T21:14:47+08:00">2020-12-31</time>
+              </span>
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/OS/" itemprop="url" rel="index"><span itemprop="name">OS</span></a></span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -314,7 +335,7 @@
               
                 <span class="post-meta-item-text">本文字数：</span>
               
-              <span>439</span>
+              <span>795</span>
             </span>
           
             <span class="post-meta-item" title="阅读时长">
@@ -337,21 +358,45 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h4 id="Welcome"><a href="#Welcome" class="headerlink" title="Welcome"></a><center>Welcome</center></h4><a id="more"></a>
+        <h4 id="3-1-2内存管理"><a href="#3-1-2内存管理" class="headerlink" title="3-1-2内存管理"></a><center>3-1-2内存管理</center></h4><a id="more"></a>
 
-<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+<h2 id="内存空间的分配与回收"><a href="#内存空间的分配与回收" class="headerlink" title="内存空间的分配与回收"></a>内存空间的分配与回收</h2><p>操作系统怎么记录内存的分配情况</p>
+<p>很多位置可以分配，具体该分配哪一块</p>
+<p>运行结束之后，如何回收进程占用的内存</p>
+<p>方法：</p>
+<h3 id="连续分配"><a href="#连续分配" class="headerlink" title="连续分配"></a>连续分配</h3><p>连续分配：为用户进程分配的必须是一个连续的内存空间</p>
+<ol>
+<li><p>单一连续分配</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">内存被分为系统区和用户区。系统区通常在低地址部分，用于存放操作系统进程的相关数据。用户区用于存放用户进程的相关数据，用户程序独占整个用户区空间。</span><br><span class="line">优点：实现简单，没有外部碎片，不需要内存保护</span><br><span class="line">缺点：有内部碎片</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>固定分区分配</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">分为固定分区，每个分区中只能装入一道作业，可以分区大小相等，也可以是分区大小不等</span><br><span class="line">分区说明表：对内存中的分区进行说明（用数据结构来表示）</span><br><span class="line">优点：实现简单，没有外部碎片</span><br><span class="line">缺点：程序太大要采用覆盖技术、会产生内部碎片内存利用率低</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>动态分区分配</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">可变分区分配：不会预先划分内存分区，而是在进程装入内存的时候，根据进程大小动态的建立分区</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+</li>
+</ol>
+<h3 id="非连续分配"><a href="#非连续分配" class="headerlink" title="非连续分配"></a>非连续分配</h3><h2 id="内存空间扩充"><a href="#内存空间扩充" class="headerlink" title="内存空间扩充"></a>内存空间扩充</h2><p>从逻辑上对内存进行扩充</p>
+<p>技术：</p>
+<ol>
+<li><p>覆盖技术</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">内存中分为一个固定区和若干个覆盖区</span><br><span class="line">需要常驻内存段放在固定区中 ，调入后就不再调出（除非运行结束）</span><br><span class="line">不常用的端放在覆盖区，需要用到时调入内存，用不到时调出内存</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>交换技术</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">内存空间紧张时，系统将内存中的某些进程暂时换出内存，把外存中某些具备运行条件的进程换入内存</span><br><span class="line">存在一个对换区</span><br><span class="line">注意：PCB是常驻内存的，不会被换出</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>虚拟存储技术</p>
+</li>
+</ol>
+<h2 id="地址转换"><a href="#地址转换" class="headerlink" title="地址转换"></a>地址转换</h2><p>为了使程序员写程序方便，程序员写程序时应该只关注指令、数据的逻辑地址。而逻辑地址到物理地址的转换（地址重定位）应该由操作系统负责，这样就保证了程序员不再关注物理内存</p>
+<p>这里有三种装入方式（绝对、可重定位、动态运行时）</p>
+<h2 id="内存保护"><a href="#内存保护" class="headerlink" title="内存保护"></a>内存保护</h2><p>用户进程不能访问操作系统的内存空间，也不能访问其他进程的空间</p>
+<p>方法：</p>
+<ol>
+<li>上下限寄存器</li>
+<li>重定位寄存器（基址寄存器）、界地址寄存器（限长寄存器）-&gt;存放进程的最大逻辑地址</li>
+</ol>
 
     </div>
 
@@ -367,7 +412,7 @@
           
           <div class="post-tags">
             
-              <a href="/tags/Welcome/" rel="tag"># Welcome</a>
+              <a href="/tags/OS/" rel="tag"># OS</a>
             
           </div>
         
@@ -377,8 +422,8 @@
           <div class="post-nav">
             <div class="post-nav-next post-nav-item">
               
-                <a href="/2020/09/28/MD/大三/Web/1Web前端开发概述/1.1Web前端开发概述/" rel="next" title="1.1Web前端开发概述">
-                  <i class="fa fa-chevron-left"></i> 1.1Web前端开发概述
+                <a href="/2020/12/25/MD/大三/OS/3/3-1-1/" rel="next" title="3-1-1内存基础">
+                  <i class="fa fa-chevron-left"></i> 3-1-1内存基础
                 </a>
               
             </div>
@@ -387,8 +432,8 @@
 
             <div class="post-nav-prev post-nav-item">
               
-                <a href="/2020/09/29/MD/大三/Web/2HTML5/2.6表格标签/" rel="prev" title="2.6表格标签">
-                  2.6表格标签 <i class="fa fa-chevron-right"></i>
+                <a href="/2020/12/26/MD/大三/OS/2/2-1-4/" rel="prev" title="2-1-4进程通信">
+                  2-1-4进程通信 <i class="fa fa-chevron-right"></i>
                 </a>
               
             </div>
@@ -511,7 +556,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#Welcome"><span class="nav-number">1.</span> <span class="nav-text">Welcome</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-number"></span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-number"></span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-number"></span> <span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-number"></span> <span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-number"></span> <span class="nav-text">Deploy to remote sites</span></a></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-1-2内存管理"><span class="nav-number">1.</span> <span class="nav-text">3-1-2内存管理</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#内存空间的分配与回收"><span class="nav-number"></span> <span class="nav-text">内存空间的分配与回收</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#连续分配"><span class="nav-number"></span> <span class="nav-text">连续分配</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#非连续分配"><span class="nav-number"></span> <span class="nav-text">非连续分配</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#内存空间扩充"><span class="nav-number"></span> <span class="nav-text">内存空间扩充</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#地址转换"><span class="nav-number"></span> <span class="nav-text">地址转换</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#内存保护"><span class="nav-number"></span> <span class="nav-text">内存保护</span></a></div>
             
 
           </div>
