@@ -63,7 +63,7 @@
 <meta property="og:site_name" content="Jarvis-back">
 <meta property="og:description" content="2-2-5分时系统的调度算法">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-12-27T09:27:59.597Z">
+<meta property="og:updated_time" content="2021-01-01T12:01:49.664Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="2-2-5分时系统的调度算法">
 <meta name="twitter:description" content="2-2-5分时系统的调度算法">
@@ -289,11 +289,19 @@
                 
               
 
-              <time title="创建时间：2020-12-27 21:17:18 / 修改时间：17:27:59" itemprop="dateCreated datePublished" datetime="2020-12-27T21:17:18+08:00">2020-12-27</time>
+              <time title="创建时间：2020-12-27 21:17:18" itemprop="dateCreated datePublished" datetime="2020-12-27T21:17:18+08:00">2020-12-27</time>
             </span>
           
             
 
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-01-01 20:01:49" itemprop="dateModified" datetime="2021-01-01T20:01:49+08:00">2021-01-01</time>
+              </span>
             
           
             <span class="post-meta-item">
@@ -356,7 +364,7 @@
 <p>公平、轮流为各个进程服务。让每个进程在一定时间间隔内都可以得到响应</p>
 <p>按照时间片来进行执行，时间片的大小可能固定，也可以动态</p>
 <p>只有进程调度才能使用这个算法</p>
-<p><strong>抢占式</strong>的算法，通过时钟中断来通知CPU时间片已到</p>
+<p><strong>抢占式</strong>的算法，通过<strong>时钟中断</strong>来通知CPU时间片已到</p>
 <p>不会导致饥饿</p>
 <h2 id="优先级调度"><a href="#优先级调度" class="headerlink" title="优先级调度"></a>优先级调度</h2><p>实时操作系统的出现，需要根据紧急程度来决定优先处理的顺序</p>
 <p>每个作业/进程都有自己的优先级，调度是选择优先级最高的作业/进程</p>
@@ -370,7 +378,7 @@
 </ol>
 <p>比较适合用于实时操作系统</p>
 <p>会发生饥饿</p>
-<h2 id="多级反馈队列调度算法"><a href="#多级反馈队列调度算法" class="headerlink" title="多级反馈队列调度算法"></a>多级反馈队列调度算法</h2><p>对所有上面的算法的折中权衡</p>
+<h2 id="多级反馈队列调度算法"><a href="#多级反馈队列调度算法" class="headerlink" title="多级反馈队列调度算法"></a>多级反馈队列调度算法</h2><p><strong>对所有上面的算法的折中权衡</strong></p>
 <p><strong>抢占式</strong>的算法</p>
 <p>设置多级就绪队列，各级队列优先级从高到低，时间片从小到大。新进程到达时先进入第一级队列，按照FCFS原则分配时间片。如果时间片用完还没有执行完就进入下一级队列队尾。反复执行上面的过程。</p>
 <p>可能会发生饥饿</p>
@@ -399,8 +407,8 @@
           <div class="post-nav">
             <div class="post-nav-next post-nav-item">
               
-                <a href="/2020/12/27/MD/大三/OS/2/2-3-6/" rel="next" title="2-3-6生产者和消费者">
-                  <i class="fa fa-chevron-left"></i> 2-3-6生产者和消费者
+                <a href="/2020/12/27/MD/大三/OS/2/2-3-11/" rel="next" title="2-3-11管程">
+                  <i class="fa fa-chevron-left"></i> 2-3-11管程
                 </a>
               
             </div>
@@ -408,6 +416,10 @@
             <span class="post-nav-divider"></span>
 
             <div class="post-nav-prev post-nav-item">
+              
+                <a href="/2020/12/27/MD/大三/OS/1/1-7/" rel="prev" title="1-7运行机制体系结构">
+                  1-7运行机制体系结构 <i class="fa fa-chevron-right"></i>
+                </a>
               
             </div>
           </div>
@@ -547,7 +559,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2021</span>
   <span class="with-love" id="animate">
     <i class="fa fa-user"></i>
   </span>

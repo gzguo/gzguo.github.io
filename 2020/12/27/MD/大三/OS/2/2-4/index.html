@@ -63,7 +63,7 @@
 <meta property="og:site_name" content="Jarvis-back">
 <meta property="og:description" content="2-4死锁">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-12-28T03:45:58.041Z">
+<meta property="og:updated_time" content="2021-01-01T12:08:04.529Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="2-4死锁">
 <meta name="twitter:description" content="2-4死锁">
@@ -300,7 +300,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-12-28 11:45:58" itemprop="dateModified" datetime="2020-12-28T11:45:58+08:00">2020-12-28</time>
+                <time title="修改时间：2021-01-01 20:08:04" itemprop="dateModified" datetime="2021-01-01T20:08:04+08:00">2021-01-01</time>
               </span>
             
           
@@ -365,16 +365,16 @@
 <p>饥饿：长期得不到资源，无法向前推进（SPF：长进程饥饿）（就绪/阻塞）</p>
 <p>死循环：某进程一直跳不出某个循环的现象，可能是BUG也可能是故意为之（可以是运行态）</p>
 <h2 id="死锁产生的必要条件"><a href="#死锁产生的必要条件" class="headerlink" title="死锁产生的必要条件"></a>死锁产生的必要条件</h2><ol>
-<li><p>互斥条件</p>
+<li><p><strong>互斥条件</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">只有对必须互斥使用的资源的争抢才会导致死锁</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>不可剥夺条件</p>
+<li><p><strong>不可剥夺条件</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">资源不能被抢走</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>请求和保持条件</p>
+<li><p><strong>请求和保持条件</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">进程已经拥有一个资源，提出了新的资源请求。新的资源被阻塞，旧的资源不愿意释放</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>循环等待条件</p>
+<li><p><strong>循环等待条件</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">存在一种进程的循环等待链</span><br><span class="line">死锁一定有循环等待，但是循环等待未必死锁</span><br></pre></td></tr></table></figure>
 
 </li>
@@ -399,9 +399,9 @@
 <li>反复的申请和释放资源导致系统开销大，降低了系统的吞吐量</li>
 <li>如果是第一种方法，可能会导致饥饿现象</li>
 </ol>
-<h2 id="破坏请求和保持条件"><a href="#破坏请求和保持条件" class="headerlink" title="破坏请求和保持条件"></a>破坏请求和保持条件</h2><p>静态分配方法：一旦申请就申请全部需要的资源，否则等待</p>
+<h2 id="破坏请求和保持条件"><a href="#破坏请求和保持条件" class="headerlink" title="破坏请求和保持条件"></a>破坏请求和保持条件</h2><p>静态分配方法：<strong>一旦申请就申请全部需要的资源</strong>，否则等待</p>
 <p>缺点：可能导致饥饿，而且资源利用率会降低</p>
-<h2 id="破坏循环等待条件"><a href="#破坏循环等待条件" class="headerlink" title="破坏循环等待条件"></a>破坏循环等待条件</h2><p>循序资源分配法：给系统中的资源编号，规定每个进程必须按编号递增的顺序请求资源，同类资源一次申请完。持有大编号的资源必然包含小编号的资源，不能形成循环</p>
+<h2 id="破坏循环等待条件"><a href="#破坏循环等待条件" class="headerlink" title="破坏循环等待条件"></a>破坏循环等待条件</h2><p>循序资源分配法：给系统中的资源编号，<strong>规定每个进程必须按编号递增的顺序请求资源</strong>，同类资源一次申请完。持有大编号的资源必然包含小编号的资源，不能形成循环</p>
 <p>缺点：</p>
 <ol>
 <li>不方便新增设备，有可能重新分配所有设备</li>
@@ -411,7 +411,7 @@
 <h1 id="避免死锁（动态策略）"><a href="#避免死锁（动态策略）" class="headerlink" title="避免死锁（动态策略）"></a>避免死锁（动态策略）</h1><h2 id="什么是安全序列"><a href="#什么是安全序列" class="headerlink" title="什么是安全序列"></a>什么是安全序列</h2><p>系统按照安全序列的顺序分配资源，则每个进程都可以完成，只要找到一个安全序列，系统就是安全状态。可以有多个安全序列</p>
 <p>系统找不到任何一个安全序列，那么系统就会进入不安全状态</p>
 <p>如果系统处于安全状态，就一定不会发生死锁。如果进入不安全状态，就有可能会发生死锁</p>
-<p>银行家算法：在资源分配之前判断这次分配是否会导致系统进入不安全状态，已决定分配请求</p>
+<p><strong>银行家算法</strong>：在资源分配之前判断这次分配是否会导致系统进入不安全状态，已决定分配请求</p>
 <p>银行家算法的步骤：</p>
 <ol>
 <li>检查申请的资源数是否大于声明的最大需求</li>
@@ -438,9 +438,9 @@
 <p>如果按照某种顺序可以消除所有边，就成这个图是可以完全简化的，此时一定没有死锁发生（可以找到安全序列）</p>
 <p>不能消除就会发生死锁 ，最终还连着边的进程就是处于死锁状态的进程</p>
 <h2 id="解除死锁的方法"><a href="#解除死锁的方法" class="headerlink" title="解除死锁的方法"></a>解除死锁的方法</h2><ol>
-<li>资源剥夺法：挂起，暂时放到外存上</li>
-<li>撤销进程法：强制撤销进程</li>
-<li>进程回退法：回退到避免死锁的地步</li>
+<li><strong>资源剥夺法</strong>：挂起，暂时放到外存上</li>
+<li><strong>撤销进程法</strong>：强制撤销进程</li>
+<li><strong>进程回退法</strong>：回退到避免死锁的地步</li>
 </ol>
 
     </div>
@@ -467,8 +467,8 @@
           <div class="post-nav">
             <div class="post-nav-next post-nav-item">
               
-                <a href="/2020/12/27/MD/大三/OS/2/2-2-3/" rel="next" title="2-2-3调度算法的评价指标">
-                  <i class="fa fa-chevron-left"></i> 2-2-3调度算法的评价指标
+                <a href="/2020/12/27/MD/大三/OS/2/2-3-5/" rel="next" title="2-3-5信号量实现进程同步互斥">
+                  <i class="fa fa-chevron-left"></i> 2-3-5信号量实现进程同步互斥
                 </a>
               
             </div>
@@ -477,8 +477,8 @@
 
             <div class="post-nav-prev post-nav-item">
               
-                <a href="/2020/12/27/MD/大三/OS/2/2-2-1/" rel="prev" title="2-2-1处理机调度">
-                  2-2-1处理机调度 <i class="fa fa-chevron-right"></i>
+                <a href="/2020/12/27/MD/大三/OS/2/2-3-1/" rel="prev" title="2-3-1进程同步、互斥">
+                  2-3-1进程同步、互斥 <i class="fa fa-chevron-right"></i>
                 </a>
               
             </div>
@@ -619,7 +619,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2021</span>
   <span class="with-love" id="animate">
     <i class="fa fa-user"></i>
   </span>

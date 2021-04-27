@@ -63,7 +63,7 @@
 <meta property="og:site_name" content="Jarvis-back">
 <meta property="og:description" content="2-3-1进程同步、互斥">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-12-27T11:59:51.801Z">
+<meta property="og:updated_time" content="2021-01-01T12:02:46.756Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="2-3-1进程同步、互斥">
 <meta name="twitter:description" content="2-3-1进程同步、互斥">
@@ -289,11 +289,19 @@
                 
               
 
-              <time title="创建时间：2020-12-27 21:17:18 / 修改时间：19:59:51" itemprop="dateCreated datePublished" datetime="2020-12-27T21:17:18+08:00">2020-12-27</time>
+              <time title="创建时间：2020-12-27 21:17:18" itemprop="dateCreated datePublished" datetime="2020-12-27T21:17:18+08:00">2020-12-27</time>
             </span>
           
             
 
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-01-01 20:02:46" itemprop="dateModified" datetime="2021-01-01T20:02:46+08:00">2021-01-01</time>
+              </span>
             
           
             <span class="post-meta-item">
@@ -355,10 +363,10 @@
 <h2 id="进程同步"><a href="#进程同步" class="headerlink" title="进程同步"></a>进程同步</h2><p>进程具有异步性的特征，异步性就是各并发执行的进程以各自独立的、不可预知的速度向前推进</p>
 <p>有时候需要进程同步机制来实现进程之间的同步</p>
 <p>进程同步就是用来解决进程异步的问题</p>
-<p>同步也成为直接制约关系，他们之间有一种相互制约的关系，这种制约关系源于他们之间的相互合作。</p>
+<p><strong>同步也称为直接制约关系</strong>，他们之间有一种相互制约的关系，这种制约关系源于他们之间的相互合作。</p>
 <h2 id="进程互斥"><a href="#进程互斥" class="headerlink" title="进程互斥"></a>进程互斥</h2><p>临界资源：一个时间段内只允许一个进程使用的资源</p>
 <p>互斥也成为间接制约关系，当资源被释放之后才可以被其他进程访问</p>
-<p>对临界资源的互斥访问可以分为四个部分：进入区（上锁）、临界区（执行操作）、退出区（解锁）、剩余区（其余操作）</p>
+<p>对临界资源的互斥访问可以分为四个部分：<strong>进入区（上锁）、临界区（执行操作）、退出区（解锁）、剩余区（其余操作）</strong></p>
 <p>为了实现对临界资源的互斥访问，同时保证系统的整体性能，需要遵循下面的规则：</p>
 <ol>
 <li>空闲让进：临界区空闲时，可以允许一个请求进入临界区的进程立即进入临界区</li>
@@ -391,8 +399,8 @@
           <div class="post-nav">
             <div class="post-nav-next post-nav-item">
               
-                <a href="/2020/12/27/MD/大三/OS/2/2-3-11/" rel="next" title="2-3-11管程">
-                  <i class="fa fa-chevron-left"></i> 2-3-11管程
+                <a href="/2020/12/27/MD/大三/OS/2/2-4/" rel="next" title="2-4死锁">
+                  <i class="fa fa-chevron-left"></i> 2-4死锁
                 </a>
               
             </div>
@@ -543,7 +551,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2021</span>
   <span class="with-love" id="animate">
     <i class="fa fa-user"></i>
   </span>
